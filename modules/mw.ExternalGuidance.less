@@ -1,0 +1,42 @@
+@import 'mediawiki.mixins';
+@import 'mediawiki.ui/variables';
+
+.eg-machine-translation-banner {
+	font-size: 1.1em;
+	padding: 10px;
+	background-color: @colorGray15;
+	border: solid 1px @colorGray14;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	& .eg-machine-translation-banner-header {
+		color: @colorGray2;
+		.background-image( 'images/translation.svg' );
+		padding-left: 30px;
+		background-repeat: no-repeat;
+		background-size: 24px;
+	}
+	& .eg-machine-translation-banner-action {
+		color: @colorProgressive;
+		cursor: pointer;
+		float: right;
+		.background-image( 'images/edit.svg' );
+		padding-left: 30px;
+		background-repeat: no-repeat;
+		background-size: 24px;
+		&:hover {
+			color: @colorProgressiveActive;
+		}
+	}
+}
+
+.heading-holder .hlist {
+	display: none;
+}
+
+// Hide the edit icons in section headers
+.content .in-block > span.mw-editsection,
+.content .mw-parser-output > h2 > span.mw-editsection {
+	display: none;
+}

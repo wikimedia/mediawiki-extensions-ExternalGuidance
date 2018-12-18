@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Santhosh Thottingal"
+		]
+	},
+	"externalguidance-desc": "{{desc|name=ExternalGuidance|url=https://www.mediawiki.org/wiki/Extension:ExternalGuidance}}",
+	"externalguidance-machine-translation-heading": "Header label shown below the title for a page in a machine translation context",
+	"externalguidance-machine-translation-contribute": "Label for contribute action for a page in a machine translation context "
+}

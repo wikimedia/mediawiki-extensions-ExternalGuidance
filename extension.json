@@ -1,0 +1,77 @@
+{
+	"name": "ExternalGuidance",
+	"version": "1.0.0",
+	"author": [
+		"Santhosh Thottingal",
+		"..."
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:ExternalGuidance",
+	"descriptionmsg": "externalguidance-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"AutoloadClasses": {
+		"MediaWiki\\Extension\\ExternalGuidance\\Hooks": "includes/Hooks.php"
+	},
+	"ConfigRegistry": {
+		"ExternalGuidance": "GlobalVarConfig::newInstance"
+	},
+	"config": {
+		"ExternalGuidanceSimulate": {
+			"value": false,
+			"description": "Simulate that the page is in an external context like machine translation."
+		},
+		"ExternalGuidanceMTReferrers": {
+			"value": [],
+			"description": "Host names of machine translation services"
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "MediaWiki\\Extension\\ExternalGuidance\\Hooks::addModules",
+		"ResourceLoaderGetConfigVars": "MediaWiki\\Extension\\ExternalGuidance\\Hooks::addConfig"
+	},
+	"MessagesDirs": {
+		"ExternalGuidance": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"mw.externalguidance.init": {
+			"targets": [ "mobile", "desktop" ],
+			"skinScripts": {
+				"minerva": [ "mw.ExternalGuidance.init.js" ]
+			},
+			"position": "top"
+		},
+		"mw.externalguidance": {
+			"targets": [ "mobile", "desktop" ],
+			"skinScripts": {
+				"minerva": [ "mw.ExternalGuidance.js" ]
+			},
+			"skinStyles": {
+				"minerva": [ "mw.ExternalGuidance.less"]
+			},
+			"messages": [
+				"externalguidance-machine-translation-heading",
+				"externalguidance-machine-translation-contribute"
+			],
+			"dependencies": [
+				"oojs-ui.styles.icons-editing-core"
+			]
+		},
+		"mw.externalguidance.simulate": {
+			"targets": [ "mobile", "desktop" ],
+			"skinScripts": {
+				"minerva": [ "mw.ExternalGuidance.simulate.js" ]
+			},
+			"position": "top"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "ExternalGuidance/modules"
+	},
+	"manifest_version": 2
+}
