@@ -31,12 +31,12 @@
 	}
 }
 
-.heading-holder .hlist {
-	display: none;
-}
-
-// Hide the edit icons in section headers
-.content .in-block > span.mw-editsection,
-.content .mw-parser-output > h2 > span.mw-editsection {
-	display: none;
+// Hide the top actions bar and edit icons in section headers.
+// Usage of important is intentional to prevent any override
+// since these actions are broken in external context.
+/* stylelint-disable declaration-no-important */
+.heading-holder .hlist,
+.content .in-block span.mw-editsection,
+.content .mw-parser-output span.mw-editsection {
+	display: none !important;
 }
