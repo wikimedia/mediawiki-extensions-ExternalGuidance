@@ -41,7 +41,10 @@ class Hooks {
 	 * @param array &$vars
 	 */
 	public static function addConfig( array &$vars ) {
-		global $wgExternalGuidanceMTReferrers;
+		global $wgExternalGuidanceMTReferrers, $wgExternalGuidanceSiteTemplates,
+			$wgExternalGuidanceDomainCodeMapping;
 		$vars['wgExternalGuidanceMTReferrers'] = $wgExternalGuidanceMTReferrers;
+		$vars['wgExternalGuidanceSiteTemplates'] = $wgExternalGuidanceSiteTemplates;
+		$vars['wgExternalGuidanceDomainCodeMapping'] = $wgExternalGuidanceDomainCodeMapping;
 	}
 }
