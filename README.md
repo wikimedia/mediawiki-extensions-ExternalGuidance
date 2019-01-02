@@ -15,6 +15,12 @@ Clone the repository as follows:
  git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ExternalGuidance.git
 ```
 
+Add this to the LocalSettings.php to enable the extension
+
+```lang=php
+wfLoadExtension( 'ExternalGuidance' );
+```
+
 ## Configuration
 
 ### Simulating the external context
@@ -33,7 +39,7 @@ Note that by default, this is disabled.
 To activate the External Guidance for certain machine translation services, you can configure their hostnames in `ExternalGuidanceMTReferrers` configuration. The value is an array. An example:
 
 ```lang=php
-$GLOBALS['wgExternalGuidanceMTReferrers']: [ "translate.google.com", "translate.googleusercontent.com" ];
+$GLOBALS['wgExternalGuidanceMTReferrers'] = [ "translate.google.com", "translate.googleusercontent.com" ];
 ```
 
 This means, if a MediaWiki page is presented to user by a host translate.google.com, this extension features will be triggered.
