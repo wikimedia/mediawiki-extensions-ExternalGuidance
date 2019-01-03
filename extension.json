@@ -75,6 +75,9 @@
 			"skinScripts": {
 				"minerva": [ "mw.ExternalGuidance.init.js" ]
 			},
+			"dependencies": [
+				"mediawiki.Uri"
+			],
 			"position": "top"
 		},
 		"mw.externalguidance": {
@@ -87,12 +90,14 @@
 			},
 			"messages": [
 				"externalguidance-machine-translation-heading",
-				"externalguidance-machine-translation-contribute"
+				"externalguidance-machine-translation-contribute",
+				"externalguidance-machine-translation-page-exist",
+				"externalguidance-machine-translation-page-missing"
 			],
 			"dependencies": [
-				"oojs-ui.styles.icons-editing-core",
+				"mw.externalguidance.icons",
 				"mw.externalguidance.sitemapper",
-				"mw.externalguidance.icons"
+				"oojs-ui.styles.icons-editing-core"
 			]
 		},
 		"mw.externalguidance.icons": {
@@ -115,7 +120,10 @@
 			"targets": [ "mobile", "desktop" ],
 			"skinScripts": {
 				"minerva": [ "mw.ExternalGuidance.sitemapper.js" ]
-			}
+			},
+			"dependencies": [
+				"mediawiki.ForeignApi"
+			]
 		},
 		"mw.externalguidance.special": {
 			"targets": [ "mobile", "desktop" ],

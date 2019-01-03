@@ -20,6 +20,12 @@
 		var $banner, $headerContainer, $contribute, $contributeIcon, $contributeContainer,
 			$headerIcon, $header, specialPageURL;
 
+		// Start fetching jquery.uls.data - we will need it for autonym
+		// jquery.uls.data is relatively large module. Hence it is not fetched earlier.
+		mw.loader.load( 'jquery.uls.data' );
+
+		this.checkPageExists( this.sourceLanguage, this.targetLanguage, this.sourcePage )
+			.then( this.showPageStatus.bind( this ) );
 		specialPageURL = this.sitemapper.getPageUrl(
 			this.targetLanguage,
 			'Special:ExternalGuidance',
@@ -54,6 +60,63 @@
 			.addClass( 'eg-machine-translation-banner' )
 			.append( $headerContainer, $contributeContainer );
 		this.$container.append( $banner );
+	};
+
+	/**
+	 * Render the status of target page existence
+	 * @param {string} title
+	 */
+	MachineTranslationContext.prototype.showPageStatus = function ( title ) {
+		var $status = $( '<div>' ).addClass( 'eg-machine-translation-page-status' );
+
+		if ( title ) {
+			$status.append(
+				mw.message( 'externalguidance-machine-translation-page-exist', title ).parseDom()
+			);
+		} else {
+			mw.loader.using( 'jquery.uls.data' ).then( function () {
+				$status
+					.addClass( 'missing' )
+					.text( mw.msg( 'externalguidance-machine-translation-page-missing',
+						$.uls.data.getAutonym( this.targetLanguage )
+					) );
+			}.bind( this ) );
+		}
+
+		this.$container.append( $status );
+	};
+
+	/**
+	 * Check if the title corresponding to source title exist in target language
+	 * @param {string } from
+	 * @param {string } to
+	 * @param {string } title
+	 * @return {jQuery.Promise}
+	 */
+	MachineTranslationContext.prototype.checkPageExists = function ( from, to, title ) {
+		return this.sitemapper.getApi( from ).get( {
+			action: 'query',
+			titles: title,
+			prop: 'langlinks',
+			lllimit: 1,
+			formatversion: 2,
+			lllang: this.sitemapper.getWikiDomainCode( to ),
+			redirects: true
+		} ).then( function ( response ) {
+			var i, page, result,
+				pages = response.query.pages;
+			for ( i = 0; i < pages.length; i++ ) {
+				page = pages[ i ];
+				if ( page.langlinks && page.langlinks.length > 0 ) {
+					result = page.langlinks.find( function ( item ) {
+						return item.lang === to;
+					} );
+					return result.title;
+				}
+			}
+			return false;
+
+		} );
 	};
 
 	/**

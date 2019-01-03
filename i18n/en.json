@@ -18,5 +18,7 @@
 	"externalguidance-specialpage-contribute-expand": "The existing article may be missing information. Consider expanding the article with the facts you learned from the translation.",
 	"externalguidance-specialpage-contribute-expand-action": "Expand the existing article",
 	"externalguidance-specialpage-contribute-improve-source": "Improving the original article will also help people reading translations of it.",
-	"externalguidance-specialpage-contribute-improve-source-action": "Edit the original version in $1"
+	"externalguidance-specialpage-contribute-improve-source-action": "Edit the original version in $1",
+	"externalguidance-machine-translation-page-exist": "Community-created content on this topic [[$1|is also available]]",
+	"externalguidance-machine-translation-page-missing": "Missing in $1"
 }
