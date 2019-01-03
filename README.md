@@ -43,3 +43,26 @@ $GLOBALS['wgExternalGuidanceMTReferrers'] = [ "translate.google.com", "translate
 ```
 
 This means, if a MediaWiki page is presented to user by a host translate.google.com, this extension features will be triggered.
+
+### Configure site URL templates for other language wikis
+
+Since this extension is for wiki systems with a wiki per language, we need to know how to navigate to those wikis. Also we will require to use the apis of those wikis. `ExternalGuidanceSiteTemplates` configuration allows to define them. The value for this configuration is a key-value pair as illustrated below:
+
+```lang=json
+{
+    "view": "//$1.wikipedia.org/wiki/$2",
+    "action": "//$1.wikipedia.org/w/index.php?title=$2",
+    "api": "//$1.wikipedia.org/w/api.php"
+}
+```
+
+### Configure language to domain mapping
+
+For various reasons, the domain name in the URLs for wikis may not be same as the language code. At least in wikipedia, that is the case. This configuration allows to define that mapping using `ExternalGuidanceDomainCodeMapping` configuration as illustrated below:
+
+```lang=json
+{
+    "be-tarask": "be-x-old",
+    "bho": "bh"
+}
+```

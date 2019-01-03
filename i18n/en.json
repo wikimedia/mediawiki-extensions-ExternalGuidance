@@ -6,5 +6,17 @@
 	},
 	"externalguidance-desc": "Wikipedia content gets exposed externally in different ways, and this project intends to make it easy for people to be able to return to the origin and contribute to it.",
 	"externalguidance-machine-translation-heading": "Automatic translation",
-	"externalguidance-machine-translation-contribute": "Contribute"
+	"externalguidance-machine-translation-contribute": "Contribute",
+	"externalguidance-specialpage-title": "Improving automatic content",
+	"externalguidance-specialpage-mt-intro": "$1 is written by volunteers from all over the world. This article is automatically translated from a version in $2, and can't be edited directly in $3, but you can still help.",
+	"externalguidance-specialpage-mt-pageexist": "There is a version of this page manually started by editors in $1 that you can help expand.",
+	"externalguidance-specialpage-intro-machine": "Automatic translation provides a useful overview but it is not always accurate.",
+	"externalguidance-specialpage-intro-human": "It is much better to have an article created by humans!",
+	"externalguidance-specialpage-contribute-title": "Ways to contribute",
+	"externalguidance-specialpage-contribute-create": "Create an article in $1 to include the facts you learned from the translation.",
+	"externalguidance-specialpage-contribute-create-action": "Start an article for this topic",
+	"externalguidance-specialpage-contribute-expand": "The existing article may be missing information. Consider expanding the article with the facts you learned from the translation.",
+	"externalguidance-specialpage-contribute-expand-action": "Expand the existing article",
+	"externalguidance-specialpage-contribute-improve-source": "Improving the original article will also help people reading translations of it.",
+	"externalguidance-specialpage-contribute-improve-source-action": "Edit the original version in $1"
 }

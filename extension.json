@@ -12,8 +12,16 @@
 	"requires": {
 		"MediaWiki": ">= 1.32.0"
 	},
+	"ExtensionMessagesFiles": {
+		"ExternalGuidanceAliases": "ExternalGuidance.alias.php"
+	},
 	"AutoloadClasses": {
-		"MediaWiki\\Extension\\ExternalGuidance\\Hooks": "includes/Hooks.php"
+		"MediaWiki\\Extension\\ExternalGuidance\\Hooks": "includes/Hooks.php",
+		"MediaWiki\\Extension\\ExternalGuidance\\SiteMapper": "includes/SiteMapper.php",
+		"MediaWiki\\Extension\\ExternalGuidance\\SpecialExternalGuidance": "specials/SpecialExternalGuidance.php"
+	},
+	"SpecialPages": {
+		"ExternalGuidance": "MediaWiki\\Extension\\ExternalGuidance\\SpecialExternalGuidance"
 	},
 	"ConfigRegistry": {
 		"ExternalGuidance": "GlobalVarConfig::newInstance"
@@ -26,6 +34,30 @@
 		"ExternalGuidanceMTReferrers": {
 			"value": [],
 			"description": "Host names of machine translation services"
+		},
+		"ExternalGuidanceSiteTemplates": {
+			"value": {
+				"view": "//$1.wikipedia.org/wiki/$2",
+				"action": "//$1.wikipedia.org/w/index.php?title=$2",
+				"api": "//$1.wikipedia.org/w/api.php"
+			},
+			"description": "URL templates for sites corresponding to other languages"
+		},
+		"ExternalGuidanceDomainCodeMapping": {
+			"value": {
+				"be-tarask": "be-x-old",
+				"bho": "bh",
+				"crh-latn": "crh",
+				"gsw": "als",
+				"lzh": "zh-classical",
+				"nan": "zh-min-nan",
+				"nb": "no",
+				"rup": "roa-rup",
+				"sgs": "bat-smg",
+				"vro": "fiu-vro",
+				"yue": "zh-yue"
+			},
+			"description": "Language to domain name mapping"
 		}
 	},
 	"Hooks": {
@@ -58,7 +90,8 @@
 				"externalguidance-machine-translation-contribute"
 			],
 			"dependencies": [
-				"oojs-ui.styles.icons-editing-core"
+				"oojs-ui.styles.icons-editing-core",
+				"mw.externalguidance.sitemapper"
 			]
 		},
 		"mw.externalguidance.simulate": {
@@ -67,6 +100,18 @@
 				"minerva": [ "mw.ExternalGuidance.simulate.js" ]
 			},
 			"position": "top"
+		},
+		"mw.externalguidance.sitemapper": {
+			"targets": [ "mobile", "desktop" ],
+			"skinScripts": {
+				"minerva": [ "mw.ExternalGuidance.sitemapper.js" ]
+			}
+		},
+		"mw.externalguidance.special": {
+			"targets": [ "mobile", "desktop" ],
+			"skinStyles": {
+				"minerva": [ "mw.ExternalGuidance.special.less" ]
+			}
 		}
 	},
 	"ResourceFileModulePaths": {
