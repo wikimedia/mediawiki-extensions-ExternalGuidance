@@ -4,30 +4,34 @@
 .eg-machine-translation-banner {
 	box-sizing: border-box;
 	font-size: 1.1em;
-	padding: 10px;
+	padding: 5px 0;
 	background-color: @colorGray15;
 	border: solid 1px @colorGray14;
 	overflow: hidden;
 	position: absolute;
 	width: 100%;
 	bottom: 0;
-	& .eg-machine-translation-banner-header {
-		color: @colorGray2;
-		.background-image( 'images/robot.svg' );
-		padding-left: 30px;
-		background-repeat: no-repeat;
-		background-size: 24px;
+
+	.mw-ui-icon {
+		vertical-align: middle;
 	}
-	& .eg-machine-translation-banner-action {
-		color: @colorProgressive;
+
+	> .eg-machine-translation-banner-header-container {
+		float: left;
+		margin-left: -1em;
+		& .eg-machine-translation-banner-header {
+			color: @colorGray2;
+		}
+	}
+
+	> .eg-machine-translation-banner-action-container {
 		cursor: pointer;
 		float: right;
-		.background-image( 'images/edit.svg' );
-		padding-left: 30px;
-		background-repeat: no-repeat;
-		background-size: 24px;
-		&:hover {
-			color: @colorProgressiveActive;
+		.eg-machine-translation-banner-action {
+			color: @colorProgressive;
+			&:hover {
+				color: @colorProgressiveActive;
+			}
 		}
 	}
 }

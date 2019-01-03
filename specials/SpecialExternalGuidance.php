@@ -77,9 +77,11 @@ class SpecialExternalGuidance extends SpecialPage {
 				Language::fetchLanguageName( $targetLanguage ) );
 		}
 
-		$out->wrapWikiMsg( "<div class='eg-sp-intro-machine'>\n$1\n</div>",
+		$out->wrapWikiMsg( "<span class='eg-sp-intro-machine'>" .
+			"<span class='mw-ui-icon mw-ui-icon-element mw-ui-icon-eg-robot'></span>\n$1\n</span>",
 			'externalguidance-specialpage-intro-machine' );
-		$out->wrapWikiMsg( "<div class='eg-sp-intro-human'>\n$1\n</div>",
+		$out->wrapWikiMsg( "<span class='eg-sp-intro-human'>" .
+			"<span class='mw-ui-icon mw-ui-icon-element mw-ui-icon-eg-user'></span>\n$1\n</span>",
 			'externalguidance-specialpage-intro-human' );
 		$out->wrapWikiMsg( "<h3 class='eg-sp-ways-to-contribute'>\n$1\n</h3>",
 			'externalguidance-specialpage-contribute-title' );

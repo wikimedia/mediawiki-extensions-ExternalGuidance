@@ -17,7 +17,8 @@
 	}
 
 	MachineTranslationContext.prototype.init = function () {
-		var $banner, $contribute, $header, specialPageURL;
+		var $banner, $headerContainer, $contribute, $contributeIcon, $contributeContainer,
+			$headerIcon, $header, specialPageURL;
 
 		specialPageURL = this.sitemapper.getPageUrl(
 			this.targetLanguage,
@@ -29,10 +30,15 @@
 				service: this.service
 			}
 		);
-
+		$headerIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-eg-robot' );
 		$header = $( '<span>' )
 			.addClass( 'eg-machine-translation-banner-header' )
 			.html( mw.msg( 'externalguidance-machine-translation-heading' ) );
+
+		$headerContainer = $( '<div>' )
+			.addClass( 'eg-machine-translation-banner-header-container' )
+			.append( $headerIcon, $header );
+		$contributeIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-edit' );
 		$contribute = $( '<a>' )
 			.attr( {
 				href: specialPageURL,
@@ -41,9 +47,12 @@
 			} )
 			.addClass( 'eg-machine-translation-banner-action' )
 			.html( mw.msg( 'externalguidance-machine-translation-contribute' ) );
+		$contributeContainer = $( '<div>' )
+			.addClass( 'eg-machine-translation-banner-action-container' )
+			.append( $contributeIcon, $contribute );
 		$banner = $( '<div>' )
 			.addClass( 'eg-machine-translation-banner' )
-			.append( $header, $contribute );
+			.append( $headerContainer, $contributeContainer );
 		this.$container.append( $banner );
 	};
 
