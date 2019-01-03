@@ -91,8 +91,18 @@
 			],
 			"dependencies": [
 				"oojs-ui.styles.icons-editing-core",
-				"mw.externalguidance.sitemapper"
+				"mw.externalguidance.sitemapper",
+				"mw.externalguidance.icons"
 			]
+		},
+		"mw.externalguidance.icons": {
+			"position": "top",
+			"class": "ResourceLoaderImageModule",
+			"selector": ".mw-ui-icon-eg-{name}:before",
+			"images": {
+				"robot": "images/robot.svg",
+				"user": "images/userAvatar.svg"
+			}
 		},
 		"mw.externalguidance.simulate": {
 			"targets": [ "mobile", "desktop" ],
@@ -109,9 +119,7 @@
 		},
 		"mw.externalguidance.special": {
 			"targets": [ "mobile", "desktop" ],
-			"skinStyles": {
-				"minerva": [ "mw.ExternalGuidance.special.less" ]
-			}
+			"dependencies": ["mw.externalguidance.icons"]
 		}
 	},
 	"ResourceFileModulePaths": {
