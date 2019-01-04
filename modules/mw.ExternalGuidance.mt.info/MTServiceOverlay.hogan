@@ -1,0 +1,7 @@
+<section class="overlay-content-body">
+    <p>{{mtProvidedBy}}</p>
+    <a href="{{mtPrivacyTermsLink}}">{{mtPrivacyTerms}}</a>
+    <h3>{{accessWikiTitle}}</h3>
+    <p>{{accessWiki}}</p>
+    <a href="{{learnToContributeLink}}">{{learnToContribute}}</a>
+</section>

@@ -128,6 +128,30 @@
 		"mw.externalguidance.special": {
 			"targets": [ "mobile", "desktop" ],
 			"dependencies": ["mw.externalguidance.icons"]
+		},
+		"mw.externalguidance.mt.info": {
+			"targets": [ "mobile", "desktop" ],
+			"dependencies": [
+				"mobile.startup"
+			],
+			"scripts": [
+				"mw.ExternalGuidance.mt.info/MTServiceInfo.js"
+			],
+			"styles":[
+				"mw.ExternalGuidance.mt.info/MTServiceOverlay.less"
+			],
+			"templates": {
+				"MTServiceOverlay.hogan": "mw.ExternalGuidance.mt.info/MTServiceOverlay.hogan"
+			},
+			"messages": [
+				"externalguidance-machine-translation-provider-info-title",
+				"externalguidance-machine-translation-provider-info",
+				"externalguidance-machine-translation-provider-terms",
+				"externalguidance-machine-translation-access-source-title",
+				"externalguidance-machine-translation-access-source-page-missing",
+				"externalguidance-machine-translation-access-source-page-exist",
+				"externalguidance-machine-translation-contribute-link"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
