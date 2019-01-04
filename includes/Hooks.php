@@ -30,9 +30,10 @@ class Hooks {
 	 */
 	public static function addModules( $out, $skin ) {
 		global $wgExternalGuidanceSimulate;
-		$out->addModules( 'mw.externalguidance.init' );
 		if ( $wgExternalGuidanceSimulate === true ) {
 			$out->addModules( 'mw.externalguidance.simulate' );
+		} else {
+			$out->addModules( 'mw.externalguidance.init' );
 		}
 	}
 
