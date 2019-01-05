@@ -1,10 +1,23 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Wladek92"
 		]
 	},
 	"externalguidance-desc": "Le contenu de Wikipédia est exposé en externe de diverses façons, et ce projet tente de faciliter la possibilité pour les gens de revenir à l’origine et d’y contribuer.",
 	"externalguidance-machine-translation-heading": "Traduction automatique",
-	"externalguidance-machine-translation-contribute": "Contribuer"
+	"externalguidance-machine-translation-contribute": "Contribuer",
+	"externalguidance-specialpage-title": "Améliorer le contenu automatique",
+	"externalguidance-specialpage-mt-intro": "$1 est écrit par des bénévoles du monde entier. Cet article est traduit automatiquement depuis une version en $2, et ne peut être modifié directement en $3, mais vous pouvez toujours aider.",
+	"externalguidance-specialpage-mt-pageexist": "Il y a une version de cette page commencée manuellement par les éditeurs en $1, que vous pouvez aider à développer.",
+	"externalguidance-specialpage-intro-machine": "La traduction automatique fournit une vue d’ensemble utile, mais ne correspond pas toujours.",
+	"externalguidance-specialpage-intro-human": "Il est bien mieux d’avoir un article créé par des humains !",
+	"externalguidance-specialpage-contribute-title": "Manières de contribuer",
+	"externalguidance-specialpage-contribute-create": "Créer un article en $1 pour inclure les faits que vous avez appris de la traduction.",
+	"externalguidance-specialpage-contribute-create-action": "Commencer un article pour ce sujet",
+	"externalguidance-specialpage-contribute-expand": "L’article existant peut avoir des informations manquantes. Envisagez de le développer avec les faits que vous avez appris de la traduction.",
+	"externalguidance-specialpage-contribute-expand-action": "Développer l’article existant",
+	"externalguidance-specialpage-contribute-improve-source": "L’amélioration de l’article d’origine aidera aussi les gens qui en lisent les traductions.",
+	"externalguidance-specialpage-contribute-improve-source-action": "Modifier la version originale en $1"
 }

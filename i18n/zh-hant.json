@@ -6,5 +6,17 @@
 	},
 	"externalguidance-desc": "維基百科內容以各種不同方式公開於外，此專案是旨在讓人們能容易返回至原有內容上，並對其做出貢獻。",
 	"externalguidance-machine-translation-heading": "自動翻譯",
-	"externalguidance-machine-translation-contribute": "貢獻"
+	"externalguidance-machine-translation-contribute": "貢獻",
+	"externalguidance-specialpage-title": "增進自動化內容",
+	"externalguidance-specialpage-mt-intro": "$1是由來自於全世界的志工們所編寫。此條目有來自在$2自動翻譯的版本，因此不能在$3直接編輯，但您仍可做出協助。",
+	"externalguidance-specialpage-mt-pageexist": "此頁面有來自於編輯者在$1手動起始的版本，您可以協助擴充。",
+	"externalguidance-specialpage-intro-machine": "自動翻譯可提供有用的概述，但並非一定是準確的。",
+	"externalguidance-specialpage-intro-human": "由人類所建立的條目會是更好的！",
+	"externalguidance-specialpage-contribute-title": "貢獻方式",
+	"externalguidance-specialpage-contribute-create": "在$1建立含有您從翻譯內容裡所了解到的實情的條目。",
+	"externalguidance-specialpage-contribute-create-action": "開始一個此主題的條目",
+	"externalguidance-specialpage-contribute-expand": "現有條目可能缺少資訊。考慮以您從翻譯內容裡所了解到的實情來擴充條目。",
+	"externalguidance-specialpage-contribute-expand-action": "擴充現有條目",
+	"externalguidance-specialpage-contribute-improve-source": "改善原有條目可幫助人們閱讀相關的翻譯內容。",
+	"externalguidance-specialpage-contribute-improve-source-action": "編輯在$1的原始版本"
 }

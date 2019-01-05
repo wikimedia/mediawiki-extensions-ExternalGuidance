@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"B20180"
+		]
+	},
+	"externalguidance-specialpage-title": "ปรับปรุงเนื้อหาอัตโนมัติ",
+	"externalguidance-specialpage-mt-pageexist": "มีเวอร์ชันของหน้านี้ที่เริ่มด้วยมือโดยผู้แก้ไขใน $1 ซึ่งคุณสามารถช่วยขยายได้",
+	"externalguidance-specialpage-intro-machine": "การแปลอัตโนมัติให้ภาพรวมที่เป็นประโยชน์ แต่ไม่แม่นยำเสมอไป",
+	"externalguidance-specialpage-intro-human": "มันจะดีกว่ามากหากมีบทความที่มนุษย์สร้างขึ้น !",
+	"externalguidance-specialpage-contribute-expand-action": "ขยายบทความที่มีอยู่",
+	"externalguidance-specialpage-contribute-improve-source": "การปรับปรุงบทความต้นฉบับจะช่วยให้ผู้คนอ่านคำแปลได้",
+	"externalguidance-specialpage-contribute-improve-source-action": "แก้ไขเวอร์ชันต้นฉบับใน $1"
+}

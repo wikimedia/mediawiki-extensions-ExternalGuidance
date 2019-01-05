@@ -1,10 +1,23 @@
 {
 	"@metadata": {
 		"authors": [
-			"ديفيد"
+			"ديفيد",
+			"Meno25"
 		]
 	},
 	"externalguidance-desc": "يتم عرض محتوى ويكيبيديا خارجيا بطرق مختلفة، ويهدف هذا المشروع إلى تسهيل قدرة الأشخاص على العودة إلى الأصل والمساهمة فيه.",
 	"externalguidance-machine-translation-heading": "الترجمة الآلية",
-	"externalguidance-machine-translation-contribute": "ساهم"
+	"externalguidance-machine-translation-contribute": "ساهم",
+	"externalguidance-specialpage-title": "تحسين المحتوى التلقائي",
+	"externalguidance-specialpage-mt-intro": "تتم كتابة $1 من قبل متطوعين من جميع أنحاء العالم، تتم ترجمة هذه المقالة تلقائيا من إصدار في $2، ولا يمكن تعديلها مباشرةً في $3، ولكن لا يزال بإمكانك المساعدة.",
+	"externalguidance-specialpage-mt-pageexist": "هناك نسخة من هذه الصفحة التي بدأها المحررون يدويا في $1 والتي يمكنك المساعدة في توسيعها.",
+	"externalguidance-specialpage-intro-machine": "تقدم الترجمة الآلية نظرة عامة مفيدة ولكنها ليست دقيقة دائما.",
+	"externalguidance-specialpage-intro-human": "من الأفضل أن يكون لديك مقال تم إنشاؤه بواسطة البشر!",
+	"externalguidance-specialpage-contribute-title": "طرق للمساهمة",
+	"externalguidance-specialpage-contribute-create": "أنشئ مقالة في $1 لتضمين الحقائق التي تعلمتها من الترجمة.",
+	"externalguidance-specialpage-contribute-create-action": "ابدأ مقالة لهذا الموضوع",
+	"externalguidance-specialpage-contribute-expand": "قد تكون المقالة الموجودة مفتقدة للمعلومات; فكر في توسيع المقالة بالحقائق التي تعلمتها من الترجمة.",
+	"externalguidance-specialpage-contribute-expand-action": "توسيع المقالة الموجودة",
+	"externalguidance-specialpage-contribute-improve-source": "تحسين المقالة الأصلية سيساعد أيضا الأشخاص في قراءة ترجماتها.",
+	"externalguidance-specialpage-contribute-improve-source-action": "تحرير النسخة الأصلية في $1"
 }
