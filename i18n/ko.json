@@ -5,5 +5,11 @@
 		]
 	},
 	"externalguidance-machine-translation-heading": "자동 번역",
-	"externalguidance-machine-translation-contribute": "기여"
+	"externalguidance-machine-translation-contribute": "기여",
+	"externalguidance-specialpage-intro-machine": "자동 번역은 유용한 개요를 제공하지만 언제나 정확한 것은 아닙니다.",
+	"externalguidance-specialpage-intro-human": "사람이 만든 문서가 훨씬 더 좋습니다!",
+	"externalguidance-specialpage-contribute-title": "기여 방법",
+	"externalguidance-specialpage-contribute-create-action": "이 주제로 문서 시작하기",
+	"externalguidance-specialpage-contribute-expand": "기존 문서에는 없는 정보가 있을 수 있습니다. 번역을 통해 배운 사실로 문서 확장을 고려하십시오.",
+	"externalguidance-specialpage-contribute-expand-action": "기존 문서 확장"
 }
