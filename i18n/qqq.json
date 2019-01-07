@@ -18,5 +18,7 @@
 	"externalguidance-specialpage-contribute-expand": "A short note saying the user can expand the existing article.",
 	"externalguidance-specialpage-contribute-expand-action": "Button label to expand the existing article.",
 	"externalguidance-specialpage-contribute-improve-source": "A short note to indicate the source article can also be improved.",
-	"externalguidance-specialpage-contribute-improve-source-action": "Button label for improving source article."
+	"externalguidance-specialpage-contribute-improve-source-action": "Button label for improving source article.",
+	"externalguidance-machine-translation-page-exist": "Message shown when the page exist in target language. $1 is target language title",
+	"externalguidance-machine-translation-page-missing": "Message shown when the page is missing in target language. $1 - Target language autonym"
 }
