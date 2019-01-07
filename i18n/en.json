@@ -27,5 +27,11 @@
 	"externalguidance-machine-translation-access-source-title": "Access $1",
 	"externalguidance-machine-translation-access-source-page-missing": "Use the “View original” option above to access the original content on $1 with additional reading and editing tools. You can help to improve this content anytime.",
 	"externalguidance-machine-translation-access-source-page-exist": "Use the “View original” option above to access the original content on $1 with additional reading and editing tools. A community-created page for this topic already exists and you can help to improve it anytime.",
-	"externalguidance-machine-translation-contribute-link": "Learn how you can contribute"
+	"externalguidance-machine-translation-contribute-link": "Learn how you can contribute",
+	"externalguidance-specialpage-createpage-title":"Create a new page",
+	"externalguidance-specialpage-createpage-title-label":"Title",
+	"externalguidance-specialpage-createpage-button-label":"Create a new page",
+	"externalguidance-specialpage-createpage-button-label-edit":"Edit existing page",
+	"externalguidance-specialpage-createpage-desc":"A new page with this title will be created on $1",
+	"externalguidance-specialpage-createpage-page-exist":"A page with this title already exists."
 }

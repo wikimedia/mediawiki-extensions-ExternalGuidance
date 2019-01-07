@@ -76,6 +76,6 @@
 			.replace( '$1', domain.replace( /\$/g, '$$$$' ) )
 			.replace( '$2', mw.util.wikiUrlencode( title ).replace( /\$/g, '$$$$' ) ) + extra;
 	};
-
+	mw.eg = mw.eg || {};
 	mw.eg.SiteMapper = SiteMapper;
 }() );
