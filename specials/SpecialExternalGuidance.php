@@ -86,13 +86,20 @@ class SpecialExternalGuidance extends SpecialPage {
 		$out->wrapWikiMsg( "<h3 class='eg-sp-ways-to-contribute'>\n$1\n</h3>",
 			'externalguidance-specialpage-contribute-title' );
 
+		$editParams = [
+			// Invoke VisualEditor
+			"veaction" => "edit",
+			// See T212405 and T209132
+			"campaign" => "external-machine-translation"
+		 ];
+
 		if ( $pageExists ) {
 			$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-expand-action' )->text();
 			$out->addHTML( Html::rawElement(
 				'a',
 				[
 					'class' => "eg-sp-contribute-primary-action mw-ui-button mw-ui-primary mw-ui-progressive",
-					'href' => SiteMapper::getPageURL( $targetLanguage, $sourcePage, [ "action" => "edit" ] )
+					'href' => SiteMapper::getPageURL( $targetLanguage, $sourcePage, $editParams )
 				],
 				$actionLabel
 			) );
@@ -103,7 +110,7 @@ class SpecialExternalGuidance extends SpecialPage {
 				'a',
 				[
 					'class' => "eg-sp-contribute-primary-action mw-ui-button mw-ui-primary mw-ui-progressive",
-					'href' => SiteMapper::getPageURL( $targetLanguage, $sourcePage, [ "action" => "edit" ] )
+					'href' => SiteMapper::getPageURL( $targetLanguage, $sourcePage, $editParams )
 				],
 				$actionLabel
 			) );
@@ -117,7 +124,7 @@ class SpecialExternalGuidance extends SpecialPage {
 			'a',
 			[
 				'class' => "eg-sp-contribute-secondary-action mw-ui-button",
-				'href' => SiteMapper::getPageURL( $sourceLanguage, $sourcePage, [ "action" => "edit" ] )
+				'href' => SiteMapper::getPageURL( $sourceLanguage, $sourcePage, $editParams )
 			],
 			$actionLabel
 		) );
