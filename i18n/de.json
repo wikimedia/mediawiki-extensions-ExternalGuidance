@@ -18,5 +18,7 @@
 	"externalguidance-specialpage-contribute-expand": "Dem vorhandenen Artikel könnten Informationen fehlen. Ziehe in Erwägung, ihn mit den Tatsachen zu erweitern, die du von der Übersetzung gelernt hast.",
 	"externalguidance-specialpage-contribute-expand-action": "Erweitere den vorhandenen Artikel",
 	"externalguidance-specialpage-contribute-improve-source": "Verbesserungen am ursprünglichen Artikel helfen auch Menschen, die seine Übersetzungen lesen.",
-	"externalguidance-specialpage-contribute-improve-source-action": "Bearbeite die ursprüngliche Version auf $1"
+	"externalguidance-specialpage-contribute-improve-source-action": "Bearbeite die ursprüngliche Version auf $1",
+	"externalguidance-machine-translation-page-exist": "Gemeinschaftserstellter Inhalt zu diesem Thema [[$1|ist ebenfalls verfügbar]]",
+	"externalguidance-machine-translation-page-missing": "Fehlt auf $1"
 }

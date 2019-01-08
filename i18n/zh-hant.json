@@ -18,5 +18,7 @@
 	"externalguidance-specialpage-contribute-expand": "現有條目可能缺少資訊。考慮以您從翻譯內容裡所了解到的實情來擴充條目。",
 	"externalguidance-specialpage-contribute-expand-action": "擴充現有條目",
 	"externalguidance-specialpage-contribute-improve-source": "改善原有條目可幫助人們閱讀相關的翻譯內容。",
-	"externalguidance-specialpage-contribute-improve-source-action": "編輯在$1的原始版本"
+	"externalguidance-specialpage-contribute-improve-source-action": "編輯在$1的原始版本",
+	"externalguidance-machine-translation-page-exist": "在此主題的社群所見內容[[$1|也可用]]",
+	"externalguidance-machine-translation-page-missing": "缺少$1版本"
 }

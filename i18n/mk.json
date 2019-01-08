@@ -6,5 +6,7 @@
 	},
 	"externalguidance-desc": "Википедиините содржини се излагаат во јавноста на различни начини. Овој проект има за цел да ги доведе луѓето до изворот на сознанијата и да им даде можност да учествуваат во истите.",
 	"externalguidance-machine-translation-heading": "Автоматски превод",
-	"externalguidance-machine-translation-contribute": "Придонесувајте"
+	"externalguidance-machine-translation-contribute": "Придонесувајте",
+	"externalguidance-specialpage-title": "Подобрување на автоматски содржини",
+	"externalguidance-specialpage-mt-intro": "$1 е заеднички труд на доброволци од целиот свет. Статијава е автоматски превод од верзијата на $2 и не може да се менува непосредно во $3, но сепак можете да помогнете."
 }

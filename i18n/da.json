@@ -9,5 +9,6 @@
 	"externalguidance-specialpage-contribute-title": "Måder du kan bidrage",
 	"externalguidance-specialpage-contribute-create-action": "Start en artikel om dette emne",
 	"externalguidance-specialpage-contribute-expand-action": "Udvid den eksisterende artikel",
-	"externalguidance-specialpage-contribute-improve-source-action": "Rediger den originale version i $1"
+	"externalguidance-specialpage-contribute-improve-source-action": "Rediger den originale version i $1",
+	"externalguidance-machine-translation-page-missing": "Mangler i $1"
 }

@@ -19,5 +19,7 @@
 	"externalguidance-specialpage-contribute-expand": "قد تكون المقالة الموجودة مفتقدة للمعلومات; فكر في توسيع المقالة بالحقائق التي تعلمتها من الترجمة.",
 	"externalguidance-specialpage-contribute-expand-action": "توسيع المقالة الموجودة",
 	"externalguidance-specialpage-contribute-improve-source": "تحسين المقالة الأصلية سيساعد أيضا الأشخاص في قراءة ترجماتها.",
-	"externalguidance-specialpage-contribute-improve-source-action": "تحرير النسخة الأصلية في $1"
+	"externalguidance-specialpage-contribute-improve-source-action": "تحرير النسخة الأصلية في $1",
+	"externalguidance-machine-translation-page-exist": "المحتوى المنشأ بواسطة المجتمع حول هذا الموضوع [[$1|متوفر أيضا]]",
+	"externalguidance-machine-translation-page-missing": "مفقود في $1"
 }
