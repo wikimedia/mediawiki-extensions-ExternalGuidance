@@ -4,5 +4,7 @@
 			"Vlad5250"
 		]
 	},
-	"externalguidance-machine-translation-heading": "Автоматичен превод"
+	"externalguidance-machine-translation-heading": "Автоматичен превод",
+	"externalguidance-specialpage-title": "Подобряване на автоматично съдържание",
+	"externalguidance-specialpage-mt-intro": "$1 е съвместен труд на доброволци от целия свят. Статията е автоматичен превод от версията на $2 и не може да бъде променена непосредно в $3, но все пак можете да помогнете."
 }

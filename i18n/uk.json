@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"externalguidance-desc": "Контент Вікіпедії відтворюється на зовнішніх ресурсах у різні способи, і метою цього проекту є зробити так, щоб людям було легко потрапити туди, звідки була взята інформація, і зробити свій внесок у Вікіпедію.",
+	"externalguidance-machine-translation-heading": "Автоматичний переклад",
+	"externalguidance-machine-translation-contribute": "Зробити внесок",
+	"externalguidance-specialpage-title": "Покращення автоматичного контенту",
+	"externalguidance-specialpage-mt-intro": "$1 пишеться волонтерами з усього світу. Цю статтю перекладено автоматично з версії мовою $2, і її не можна редагувати безпосередньо мовою $3, але Ви все ще можете допомогти.",
+	"externalguidance-specialpage-mt-pageexist": "Існує версія цієї сторінки, яку започаткували редактори мовою $1 вручну, яку Ви можете допомогти розширити.",
+	"externalguidance-specialpage-intro-machine": "Автоматичний переклад забезпечує корисний загальний огляд, але не завжди є точним.",
+	"externalguidance-specialpage-intro-human": "Значно краще, коли статтю створюють люди!",
+	"externalguidance-specialpage-contribute-title": "Способи зробити внесок",
+	"externalguidance-specialpage-contribute-create": "Створіть статтю мовою $1, щоб згадати в ній факти, про які Ви дізнались із перекладу.",
+	"externalguidance-specialpage-contribute-create-action": "Започаткувати статтю на цю тему",
+	"externalguidance-specialpage-contribute-expand": "В наявній статті може бути недостатньо інформації. Розгляньте можливість розширення її за допомогою фактів, про які Ви дізнались із перекладу.",
+	"externalguidance-specialpage-contribute-expand-action": "Розширити наявну статтю",
+	"externalguidance-specialpage-contribute-improve-source": "Поліпшення оригінальної статті теж полегшить людям сприйняття її перекладів.",
+	"externalguidance-specialpage-contribute-improve-source-action": "Редагувати оригінальну версію мовою $1",
+	"externalguidance-machine-translation-page-exist": "[[$1|Також доступний]] контент на цю тему, створений спільнотою",
+	"externalguidance-machine-translation-page-missing": "Відсутня мовою $1"
+}

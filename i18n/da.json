@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Saederup92"
+			"Saederup92",
+			"Kranix"
 		]
 	},
 	"externalguidance-machine-translation-heading": "Automatisk oversættelse",
@@ -10,5 +11,5 @@
 	"externalguidance-specialpage-contribute-create-action": "Start en artikel om dette emne",
 	"externalguidance-specialpage-contribute-expand-action": "Udvid den eksisterende artikel",
 	"externalguidance-specialpage-contribute-improve-source-action": "Rediger den originale version i $1",
-	"externalguidance-machine-translation-page-missing": "Mangler i $1"
+	"externalguidance-machine-translation-page-missing": "Mangler på $1"
 }

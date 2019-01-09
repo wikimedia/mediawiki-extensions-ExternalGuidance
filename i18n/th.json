@@ -12,5 +12,6 @@
 	"externalguidance-specialpage-contribute-create-action": "เริ่มบทความสำหรับหัวข้อนี้",
 	"externalguidance-specialpage-contribute-expand-action": "ขยายบทความที่มีอยู่",
 	"externalguidance-specialpage-contribute-improve-source": "การปรับปรุงบทความต้นฉบับจะช่วยให้ผู้คนอ่านคำแปลได้",
-	"externalguidance-specialpage-contribute-improve-source-action": "แก้ไขเวอร์ชันต้นฉบับใน $1"
+	"externalguidance-specialpage-contribute-improve-source-action": "แก้ไขเวอร์ชันต้นฉบับใน $1",
+	"externalguidance-machine-translation-page-missing": "ไม่พบใน $1"
 }

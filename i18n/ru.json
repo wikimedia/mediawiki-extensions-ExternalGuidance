@@ -6,5 +6,7 @@
 	},
 	"externalguidance-desc": "Википедийное содержание выкладывается различными способами. Этот проект направлен на то, чтобы привести людей к источнику знаний и дать им возможность участвовать в них.",
 	"externalguidance-machine-translation-heading": "Автоматический перевод",
-	"externalguidance-machine-translation-contribute": "Внесите вклад"
+	"externalguidance-machine-translation-contribute": "Внесите вклад",
+	"externalguidance-specialpage-title": "Улучшение автоматического контента",
+	"externalguidance-specialpage-mt-intro": "$1 является общим трудом добровольцев из всего мира. Эта статья — автоматический перевод версии на $2 и не может быть отредактирована непосредственно в $3, но вы всё ещё можете помочь."
 }
