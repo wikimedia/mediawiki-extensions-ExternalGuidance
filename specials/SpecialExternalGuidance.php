@@ -66,6 +66,7 @@ class SpecialExternalGuidance extends SpecialPage {
 		// This wiki should match the target language since the "contribute" link takes the user
 		// to this special page in target language.
 		$pageExists = $sourcePageTitle->isKnown();
+		$out->addHTML( '<div class="eg-sp">' );
 		$out->addWikiMsg( 'externalguidance-specialpage-mt-intro',
 			$wgSitename,
 			Language::fetchLanguageName( $sourceLanguage ),
@@ -76,16 +77,18 @@ class SpecialExternalGuidance extends SpecialPage {
 			$out->addWikiMsg( "externalguidance-specialpage-mt-pageexist",
 				Language::fetchLanguageName( $targetLanguage ) );
 		}
-
-		$out->wrapWikiMsg( "<span class='eg-sp-intro-machine'>" .
-			"<span class='mw-ui-icon mw-ui-icon-element mw-ui-icon-eg-robot'></span>\n$1\n</span>",
+		$out->addHTML( '<ul>' );
+		$out->wrapWikiMsg(
+			"<li class='eg-sp-intro-machine mw-ui-icon-before mw-ui-icon mw-ui-icon-eg-robot'>" .
+			"<div>$1</div></li>",
 			'externalguidance-specialpage-intro-machine' );
-		$out->wrapWikiMsg( "<span class='eg-sp-intro-human'>" .
-			"<span class='mw-ui-icon mw-ui-icon-element mw-ui-icon-eg-user'></span>\n$1\n</span>",
+		$out->wrapWikiMsg(
+			"<li class='eg-sp-intro-human mw-ui-icon-before mw-ui-icon mw-ui-icon-eg-user'>" .
+			"<div>$1</div></li>",
 			'externalguidance-specialpage-intro-human' );
+		$out->addHTML( '</ul>' );
 		$out->wrapWikiMsg( "<h3 class='eg-sp-ways-to-contribute'>\n$1\n</h3>",
 			'externalguidance-specialpage-contribute-title' );
-
 		$editParams = [
 			// Invoke VisualEditor
 			"veaction" => "edit",
@@ -123,11 +126,13 @@ class SpecialExternalGuidance extends SpecialPage {
 		$out->addHTML( Html::rawElement(
 			'a',
 			[
-				'class' => "eg-sp-contribute-secondary-action mw-ui-button",
+				'class' => "eg-sp-contribute-secondary-action mw-ui-button mw-ui-quiet",
 				'href' => SiteMapper::getPageURL( $sourceLanguage, $sourcePage, $editParams )
 			],
 			$actionLabel
 		) );
 		$out->addWikiMsg( 'externalguidance-specialpage-contribute-improve-source' );
+		$out->addHTML( '</div>' );
 	}
+
 }
