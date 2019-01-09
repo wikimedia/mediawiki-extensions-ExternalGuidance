@@ -84,6 +84,8 @@
 			.append( $headerContainer, $contributeContainer );
 
 		this.$container.append( $status, $banner );
+
+		this.rewriteMenuUrls( this.targetLanguage );
 	};
 
 	/**
@@ -194,6 +196,23 @@
 
 			return overlay;
 		}.bind( this ) );
+	};
+
+	/**
+	 * Rewrite the menu URLs so that they point to target language
+	 * @param {string} targetLanguage
+	 */
+	MachineTranslationContext.prototype.rewriteMenuUrls = function ( targetLanguage ) {
+		var newUri, $menuLinks;
+
+		$menuLinks = $( 'nav .menu a' );
+		newUri = new mw.Uri( this.sitemapper.getPageUrl( targetLanguage, '' ) );
+		$menuLinks.each( function () {
+			var originalUri = new mw.Uri( $( this ).attr( 'href' ) );
+			newUri.path = originalUri.path;
+			newUri.query = originalUri.query;
+			$( this ).attr( 'href', newUri.toString() );
+		} );
 	};
 
 	/**
