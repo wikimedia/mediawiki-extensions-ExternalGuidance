@@ -81,6 +81,10 @@
 			$status.append(
 				mw.message( 'externalguidance-machine-translation-page-exist', title ).parseDom()
 			);
+			$status.find( 'a' ).attr( {
+				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
+				target: '_parent' // Open in parent frame, not in the iframe (if any) by the MT service
+			} );
 		} else {
 			mw.loader.using( 'jquery.uls.data' ).then( function () {
 				$status
