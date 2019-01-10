@@ -7,5 +7,12 @@
 	"externalguidance-desc": "Innehåll på Wikipedia exponeras externt på olika sätt och detta projekt avser att göra det enkelt för folk att återvända till ursprunget och bidra till det.",
 	"externalguidance-machine-translation-heading": "Automatisk översättning",
 	"externalguidance-machine-translation-contribute": "Bidra",
-	"externalguidance-specialpage-title": "Förbättrar automatiskt innehåll"
+	"externalguidance-specialpage-title": "Förbättrar automatiskt innehåll",
+	"externalguidance-specialpage-mt-pageexist": "Det finns en version av denna sida som manuellt startades av redigeraren $1 som du hjälpa till att utöka.",
+	"externalguidance-specialpage-intro-machine": "Automatisk översättning ger en användbar översikt men är inte alltid exakt.",
+	"externalguidance-specialpage-intro-human": "Det är mycket bättre att ha en artikel skapad av människor!",
+	"externalguidance-specialpage-contribute-title": "Sätt att bidrag",
+	"externalguidance-specialpage-contribute-improve-source-action": "Redigera originalversionen i $1",
+	"externalguidance-machine-translation-page-exist": "Innehåll om detta ämne som har skapats av gemenskapen [[$1|finns också tillgängligt]]",
+	"externalguidance-machine-translation-page-missing": "Saknas på $1"
 }
