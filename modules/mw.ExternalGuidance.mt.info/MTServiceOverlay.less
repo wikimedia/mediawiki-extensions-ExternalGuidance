@@ -1,0 +1,18 @@
+.mtservice-info-overlay {
+	padding-top: 0;
+
+	a,
+	p,
+	h3 {
+		line-height: 1.4em;
+		margin: 1em;
+	}
+
+	> .overlay-header-container {
+		// Override the absolute positioning of overlay header to work
+		// with the page inside an iframe. The `padding-top: 0;` above
+		// is also related.
+		/* stylelint-disable declaration-no-important */
+		position: relative !important;
+	}
+}

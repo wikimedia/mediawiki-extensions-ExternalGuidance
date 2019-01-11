@@ -20,5 +20,12 @@
 	"externalguidance-specialpage-contribute-improve-source": "A short note to indicate the source article can also be improved.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Button label for improving source article.",
 	"externalguidance-machine-translation-page-exist": "Message shown when the page exist in target language. $1 is target language title",
-	"externalguidance-machine-translation-page-missing": "Message shown when the page is missing in target language. $1 - Target language autonym"
+	"externalguidance-machine-translation-page-missing": "Message shown when the page is missing in target language. $1 - Target language autonym",
+	"externalguidance-machine-translation-provider-info-title": "Title text for the overlay that shows the machine translation service information",
+	"externalguidance-machine-translation-provider-info": "Message stating that content is translated. $1 is the wiki project name, $2 is the MT service name.",
+	"externalguidance-machine-translation-provider-terms": "Label for link that takes to the privacy terms of service provider",
+	"externalguidance-machine-translation-access-source-title": "Heading text for the section explaining how to access the original source. $1 is wiki project name",
+	"externalguidance-machine-translation-access-source-page-missing": "A brief note on how to access the original source article when that page does not exist yet. $1 is wiki project name",
+	"externalguidance-machine-translation-access-source-page-exist": "A brief note on how to access the original source article when that page already exist. $1 is wiki project name",
+	"externalguidance-machine-translation-contribute-link": "Label for the link that takes the user to a special page that explains various ways to contribute"
 }

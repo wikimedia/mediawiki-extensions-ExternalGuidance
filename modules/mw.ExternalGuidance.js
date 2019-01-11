@@ -13,20 +13,27 @@
 		this.sourcePage = options.page;
 		this.service = options.service;
 		this.$container = $( '.heading-holder' );
+		this.specialPageURL = null;
 		this.sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
+		this.checkPageExistsRequest = null;
+		this.privacyLinks = {
+			Google: 'https://policies.google.com/'
+		};
 	}
 
 	MachineTranslationContext.prototype.init = function () {
 		var $banner, $headerContainer, $contribute, $contributeIcon, $contributeContainer,
-			$headerIcon, $header, specialPageURL;
+			$headerIcon, $header;
 
 		// Start fetching jquery.uls.data - we will need it for autonym
 		// jquery.uls.data is relatively large module. Hence it is not fetched earlier.
 		mw.loader.load( 'jquery.uls.data' );
 
-		this.checkPageExists( this.sourceLanguage, this.targetLanguage, this.sourcePage )
-			.then( this.showPageStatus.bind( this ) );
-		specialPageURL = this.sitemapper.getPageUrl(
+		this.checkPageExistsRequest = this.checkPageExists(
+			this.sourceLanguage, this.targetLanguage, this.sourcePage );
+		this.checkPageExistsRequest.then( this.showPageStatus.bind( this ) );
+
+		this.specialPageURL = this.sitemapper.getPageUrl(
 			this.targetLanguage,
 			'Special:ExternalGuidance',
 			{
@@ -43,11 +50,12 @@
 
 		$headerContainer = $( '<div>' )
 			.addClass( 'eg-machine-translation-banner-header-container' )
-			.append( $headerIcon, $header );
+			.append( $headerIcon, $header )
+			.on( 'click', this.showServiceProviderInfo.bind( this ) );
 		$contributeIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-edit' );
 		$contribute = $( '<a>' )
 			.attr( {
-				href: specialPageURL,
+				href: this.specialPageURL,
 				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
 				target: '_parent' // Open in parent frame, not in the iframe (if any) by the MT service
 			} )
@@ -132,6 +140,28 @@
 		}
 
 		return targetLanguage;
+	};
+
+	MachineTranslationContext.prototype.showServiceProviderInfo = function () {
+		$.when(
+			this.checkPageExistsRequest,
+			mw.loader.using( 'mw.externalguidance.mt.info' )
+		).then( function ( targetTitle ) {
+			var overlay, privacyLink,
+				MTServiceOverlay = mw.mobileFrontend.require( 'mw.ExternalGuidance.mt.info/MTServiceOverlay' );
+
+			privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
+				this.privacyLinks.Google : null;
+			overlay = new MTServiceOverlay( {
+				sourceLanguage: this.sourceLanguage,
+				projectName: mw.config.get( 'wgSiteName' ),
+				serviceName: this.service,
+				mtPrivacyTermsLink: privacyLink,
+				learnToContributeLink: this.specialPageURL,
+				targetPageExists: !!targetTitle
+			} );
+			overlay.show();
+		}.bind( this ) );
 	};
 
 	/**

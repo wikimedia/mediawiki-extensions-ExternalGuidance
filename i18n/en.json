@@ -20,5 +20,12 @@
 	"externalguidance-specialpage-contribute-improve-source": "Improving the original article will also help people reading translations of it.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Edit the original version in $1",
 	"externalguidance-machine-translation-page-exist": "Community-created content on this topic [[$1|is also available]]",
-	"externalguidance-machine-translation-page-missing": "Missing in $1"
+	"externalguidance-machine-translation-page-missing": "Missing in $1",
+	"externalguidance-machine-translation-provider-info-title": "Automatic translation from $1",
+	"externalguidance-machine-translation-provider-info": "This $1 content is translated and delivered to you by $2.",
+	"externalguidance-machine-translation-provider-terms": "Check privacy and terms",
+	"externalguidance-machine-translation-access-source-title": "Access $1",
+	"externalguidance-machine-translation-access-source-page-missing": "Use the “View original” option above to access the original content on $1 with additional reading and editing tools. You can help to improve this content anytime.",
+	"externalguidance-machine-translation-access-source-page-exist": "Use the “View original” option above to access the original content on $1 with additional reading and editing tools. A community-created page for this topic already exists and you can help to improve it anytime.",
+	"externalguidance-machine-translation-contribute-link": "Learn how you can contribute"
 }
