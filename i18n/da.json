@@ -11,5 +11,7 @@
 	"externalguidance-specialpage-contribute-create-action": "Start en artikel om dette emne",
 	"externalguidance-specialpage-contribute-expand-action": "Udvid den eksisterende artikel",
 	"externalguidance-specialpage-contribute-improve-source-action": "Rediger den originale version i $1",
-	"externalguidance-machine-translation-page-missing": "Mangler på $1"
+	"externalguidance-machine-translation-page-missing": "Mangler på $1",
+	"externalguidance-machine-translation-provider-info-title": "Automatisk oversættelse fra $1",
+	"externalguidance-machine-translation-contribute-link": "Lær hvordan du kan bidrage"
 }

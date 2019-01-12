@@ -20,5 +20,12 @@
 	"externalguidance-specialpage-contribute-improve-source": "Поліпшення оригінальної статті теж полегшить людям сприйняття її перекладів.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Редагувати оригінальну версію мовою $1",
 	"externalguidance-machine-translation-page-exist": "[[$1|Також доступний]] контент на цю тему, створений спільнотою",
-	"externalguidance-machine-translation-page-missing": "Відсутня мовою $1"
+	"externalguidance-machine-translation-page-missing": "Відсутня мовою $1",
+	"externalguidance-machine-translation-provider-info-title": "АВтоматичний переклад з мови $1",
+	"externalguidance-machine-translation-provider-info": "Цей контент із сайту $1 перекладено й доставлено Вам за допомогою $2.",
+	"externalguidance-machine-translation-provider-terms": "Переглянути політику й умови приватності",
+	"externalguidance-machine-translation-access-source-title": "Доступ до сайту $1",
+	"externalguidance-machine-translation-access-source-page-missing": "Скористайтеся опцією «Переглянути оригінал» вгорі, щоб отримати доступ до оригінального контенту на сайті $1 із додатковими інструментами для перегляду й редагування. Ви можете поліпшити цей контент у будь-який час.",
+	"externalguidance-machine-translation-access-source-page-exist": "Скористайтеся опцією «Переглянути оригінал» вгорі, щоб отримати доступ до оригінального контенту на сайті $1 із додатковими інструментами для перегляду й редагування. Створена спільнотою сторінка на цю тему вже існує, і Ви можете допомогти з її поліпшенням у будь-який час.",
+	"externalguidance-machine-translation-contribute-link": "Дізнайтесь, як можна зробити свій внесок"
 }

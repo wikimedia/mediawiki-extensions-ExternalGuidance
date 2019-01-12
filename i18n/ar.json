@@ -21,5 +21,12 @@
 	"externalguidance-specialpage-contribute-improve-source": "تحسين المقالة الأصلية سيساعد أيضا الأشخاص في قراءة ترجماتها.",
 	"externalguidance-specialpage-contribute-improve-source-action": "تحرير النسخة الأصلية في $1",
 	"externalguidance-machine-translation-page-exist": "المحتوى المنشأ بواسطة المجتمع حول هذا الموضوع [[$1|متوفر أيضا]]",
-	"externalguidance-machine-translation-page-missing": "مفقود في $1"
+	"externalguidance-machine-translation-page-missing": "مفقود في $1",
+	"externalguidance-machine-translation-provider-info-title": "الترجمة الآلية من $1",
+	"externalguidance-machine-translation-provider-info": "يتم ترجمة محتوى $1 هذا وتسليمه لك بواسطة $2.",
+	"externalguidance-machine-translation-provider-terms": "تحقق من الخصوصية والشروط",
+	"externalguidance-machine-translation-access-source-title": "الوصول إلى $1",
+	"externalguidance-machine-translation-access-source-page-missing": "استخدم الخيار \"عرض الأصل\" أعلاه للوصول إلى المحتوى الأصلي على $1 مع أدوات إضافية للقراءة والتعديل، يمكنك المساعدة في تحسين هذا المحتوى في أي وقت.",
+	"externalguidance-machine-translation-access-source-page-exist": "استخدم الخيار \"عرض الأصل\" أعلاه للوصول إلى المحتوى الأصلي على $1 مع أدوات إضافية للقراءة والتعديل، توجد بالفعل صفحة تم إنشاؤها بواسطة المجتمع لهذا الموضوع ويمكنك المساعدة في تحسينها في أي وقت.",
+	"externalguidance-machine-translation-contribute-link": "تعلم كيف يمكنك المساهمة"
 }

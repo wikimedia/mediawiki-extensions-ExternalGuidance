@@ -20,5 +20,12 @@
 	"externalguidance-specialpage-contribute-improve-source": "Melhorar o artigo original também ajudará as pessoas que lerem as traduções.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Editar a versão original em $1",
 	"externalguidance-machine-translation-page-exist": "[[$1|Também está disponível]] conteúdo criado pela comunidade sobre este assunto",
-	"externalguidance-machine-translation-page-missing": "Não existe em $1"
+	"externalguidance-machine-translation-page-missing": "Não existe em $1",
+	"externalguidance-machine-translation-provider-info-title": "Tradução automática realizada por $1",
+	"externalguidance-machine-translation-provider-info": "Este conteúdo da wiki $1 é-lhe fornecido traduzido por $2",
+	"externalguidance-machine-translation-provider-terms": "Ver privacidade e condições",
+	"externalguidance-machine-translation-access-source-title": "Aceder à wiki $1",
+	"externalguidance-machine-translation-access-source-page-missing": "Use a opção acima \"Ver original\" para aceder ao conteúdo original na wiki $1, com ferramentas adicionais de leitura e edição. Pode ajudar a melhorar este conteúdo quando quiser.",
+	"externalguidance-machine-translation-access-source-page-exist": "Use a opção acima \"Ver original\" para aceder ao conteúdo original na wiki $1, com ferramentas adicionais de leitura e edição. Já existe uma página para este assunto, criada pela comunidade, e pode ajudar a melhorá-la quando quiser.",
+	"externalguidance-machine-translation-contribute-link": "Saiba como pode contribuir"
 }
