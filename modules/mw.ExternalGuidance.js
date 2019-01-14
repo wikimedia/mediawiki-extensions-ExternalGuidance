@@ -1,4 +1,8 @@
 ( function ( M ) {
+	var mobile = M.require( 'mobile.startup' ),
+		Overlay = mobile.Overlay,
+		overlayManager = mobile.OverlayManager.getSingleton();
+
 	/**
 	 * @class
 	 * @param {Object} options
@@ -23,8 +27,7 @@
 
 	MachineTranslationContext.prototype.init = function () {
 		var $banner, $headerContainer, $contribute, $contributeIcon, $contributeContainer,
-			$headerIcon, $header,
-			overlayManager = M.require( 'mobile.startup/OverlayManager' ).getSingleton();
+			$headerIcon, $header;
 
 		// Start fetching jquery.uls.data - we will need it for autonym
 		// jquery.uls.data is relatively large module. Hence it is not fetched earlier.
@@ -148,23 +151,34 @@
 		return targetLanguage;
 	};
 
+	/**
+	 * Show the machine translation service information in an overlay.
+	 * @return {jQuery.Promise}
+	 */
 	MachineTranslationContext.prototype.showServiceProviderInfo = function () {
 		return $.when(
 			this.checkPageExistsRequest,
-			mw.loader.using( 'mw.externalguidance.mt.info' )
+			mw.loader.using( [ 'jquery.uls.data', 'mw.externalguidance.mtinfo' ] )
 		).then( function ( targetTitle ) {
 			var overlay,
-				MTServiceOverlay = mw.mobileFrontend.require( 'mw.ExternalGuidance.mt.info/MTServiceOverlay' ),
+				MTServiceInfo = mw.mobileFrontend.require( 'mw.ExternalGuidance/MTServiceInfo' ),
 				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
 					this.privacyLinks.Google : null;
-			overlay = new MTServiceOverlay( {
+
+			overlay = new Overlay( {
+				className: 'overlay eg-mtservice-info-overlay',
+				heading: mw.msg( 'externalguidance-machine-translation-provider-info-title',
+					$.uls.data.getAutonym( this.sourceLanguage ) )
+			} );
+
+			overlay.$( '.overlay-content' ).append( new MTServiceInfo( {
 				sourceLanguage: this.sourceLanguage,
 				projectName: mw.config.get( 'wgSiteName' ),
 				serviceName: this.service,
 				mtPrivacyTermsLink: privacyLink,
 				learnToContributeLink: this.specialPageURL,
 				targetPageExists: !!targetTitle
-			} );
+			} ).$el );
 			return overlay;
 		}.bind( this ) );
 	};

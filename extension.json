@@ -135,20 +135,17 @@
 			},
 			"dependencies": ["mw.externalguidance.icons"]
 		},
-		"mw.externalguidance.mt.info": {
+		"mw.externalguidance.mtinfo": {
 			"targets": [ "mobile", "desktop" ],
 			"dependencies": [
 				"mobile.startup"
 			],
 			"scripts": [
-				"mw.ExternalGuidance.mt.info/MTServiceInfo.js"
+				"mw.ExternalGuidance.mtinfo.js"
 			],
 			"styles":[
-				"mw.ExternalGuidance.mt.info/MTServiceOverlay.less"
+				"mw.ExternalGuidance.mtinfo.less"
 			],
-			"templates": {
-				"MTServiceOverlay.hogan": "mw.ExternalGuidance.mt.info/MTServiceOverlay.hogan"
-			},
 			"messages": [
 				"externalguidance-machine-translation-provider-info-title",
 				"externalguidance-machine-translation-provider-info",

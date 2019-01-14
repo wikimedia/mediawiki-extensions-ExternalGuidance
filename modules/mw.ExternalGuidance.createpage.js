@@ -128,11 +128,11 @@
 		);
 
 		overlay.$( '.overlay-content' ).append(
-			( new RequestTitleForm( {
+			new RequestTitleForm( {
 				projectName: options.projectName,
 				targetLanguage: options.targetLanguage,
 				sourcePage: options.sourcePage
-			} ) ).$el
+			} ).$el
 		);
 		return overlay;
 	}
