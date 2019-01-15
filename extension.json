@@ -127,6 +127,9 @@
 		},
 		"mw.externalguidance.special": {
 			"targets": [ "mobile", "desktop" ],
+			"skinStyles": {
+				"minerva": [ "mw.ExternalGuidance.specialpage.less"]
+			},
 			"dependencies": ["mw.externalguidance.icons"]
 		},
 		"mw.externalguidance.mt.info": {
