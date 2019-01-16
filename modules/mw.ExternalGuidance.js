@@ -165,7 +165,7 @@
 			this.checkPageExistsRequest,
 			mw.loader.using( [ 'jquery.uls.data', 'mw.externalguidance.mtinfo' ] )
 		).then( function ( targetTitle ) {
-			var overlay,
+			var overlay, trackName,
 				MTServiceInfo = mw.mobileFrontend.require( 'mw.ExternalGuidance/MTServiceInfo' ),
 				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
 					this.privacyLinks.Google : null;
@@ -184,6 +184,11 @@
 				learnToContributeLink: this.specialPageURL,
 				targetPageExists: !!targetTitle
 			} ).$el );
+
+			trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'mtinfo',
+				this.service, this.sourceLanguage, this.targetLanguage ];
+			mw.track( trackName.join( '.' ), 1 );
+
 			return overlay;
 		}.bind( this ) );
 	};
@@ -203,13 +208,16 @@
 	}
 
 	ExternalGuidance.prototype.init = function () {
-		var instance;
+		var instance, trackName;
 
 		if ( !ExternalGuidance.contextMap[ this.contextName ] ) {
 			throw Error( 'Unknown context' );
 		}
 		instance = new ExternalGuidance.contextMap[ this.contextName ]( this.options );
 		instance.init();
+		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'init',
+			this.options.service, this.options.from, this.options.to ];
+		mw.track( trackName.join( '.' ), 1 );
 	};
 
 	/**

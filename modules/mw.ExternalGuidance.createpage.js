@@ -45,6 +45,13 @@
 	 * @instance
 	 */
 	RequestTitleForm.prototype.onCreateButtonClick = function () {
+		var trackName,
+			query = mw.Uri().query;
+
+		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'createpage',
+			query.service, query.from, query.to ];
+
+		mw.track( trackName.join( '.' ), 1 );
 		location.href = this.sitemapper.getPageUrl(
 			this.options.targetLanguage,
 			this.$( '.eg-create-page-title' ).val(),
@@ -148,9 +155,15 @@
 	}
 
 	$( function () {
-		var $button = $( '.eg-sp-contribute-create' );
+		var trackName,
+			query = mw.Uri().query,
+			$button = $( '.eg-sp-contribute-create' );
 		overlayManager.add( '/create-article', openCreatePageOverlay );
 		$button.on( 'click', overlayManager.router.navigate.bind( null, '/create-article' ) );
+
+		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
+			query.service, query.from, query.to ];
+		mw.track( trackName.join( '.' ), 1 );
 	} );
 
 }( mw.mobileFrontend ) );
