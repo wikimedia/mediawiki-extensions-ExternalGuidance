@@ -101,7 +101,7 @@ class SpecialExternalGuidance extends SpecialPage {
 			$out->addHTML( Html::rawElement(
 				'a',
 				[
-					'class' => "eg-sp-contribute-primary-action mw-ui-button mw-ui-primary mw-ui-progressive",
+					'class' => "eg-sp-contribute-expand mw-ui-button mw-ui-primary mw-ui-progressive",
 					'href' => SiteMapper::getPageURL( $targetLanguage, $sourcePage, $editParams )
 				],
 				$actionLabel
@@ -110,15 +110,16 @@ class SpecialExternalGuidance extends SpecialPage {
 		} else {
 			$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-create-action' )->text();
 			$out->addHTML( Html::rawElement(
-				'a',
+				'button',
 				[
-					'class' => "eg-sp-contribute-primary-action mw-ui-button mw-ui-primary mw-ui-progressive",
-					'href' => SiteMapper::getPageURL( $targetLanguage, $sourcePage, $editParams )
+					'class' => "eg-sp-contribute-create mw-ui-button mw-ui-primary mw-ui-progressive",
 				],
 				$actionLabel
 			) );
 			$out->addWikiMsg( 'externalguidance-specialpage-contribute-create',
 				Language::fetchLanguageName( $targetLanguage ) );
+
+			$out->addModules( 'mw.externalguidance.createpage' );
 		}
 
 		$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-improve-source-action',

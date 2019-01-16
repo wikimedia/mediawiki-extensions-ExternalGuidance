@@ -155,6 +155,27 @@
 				"externalguidance-machine-translation-access-source-page-exist",
 				"externalguidance-machine-translation-contribute-link"
 			]
+		},
+		"mw.externalguidance.createpage": {
+			"targets": [ "mobile", "desktop" ],
+			"dependencies": [
+				"mobile.startup",
+				"mw.externalguidance.sitemapper"
+			],
+			"scripts": [
+				"mw.ExternalGuidance.createpage.js"
+			],
+			"styles":[
+				"mw.ExternalGuidance.createpage.less"
+			],
+			"messages": [
+				"externalguidance-specialpage-createpage-title",
+				"externalguidance-specialpage-createpage-title-label",
+				"externalguidance-specialpage-createpage-button-label",
+				"externalguidance-specialpage-createpage-button-label-edit",
+				"externalguidance-specialpage-createpage-desc",
+				"externalguidance-specialpage-createpage-page-exist"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {

@@ -1,4 +1,4 @@
-( function () {
+( function ( M ) {
 	/**
 	 * @class
 	 * @param {Object} options
@@ -23,7 +23,8 @@
 
 	MachineTranslationContext.prototype.init = function () {
 		var $banner, $headerContainer, $contribute, $contributeIcon, $contributeContainer,
-			$headerIcon, $header;
+			$headerIcon, $header,
+			overlayManager = M.require( 'mobile.startup/OverlayManager' ).getSingleton();
 
 		// Start fetching jquery.uls.data - we will need it for autonym
 		// jquery.uls.data is relatively large module. Hence it is not fetched earlier.
@@ -43,6 +44,7 @@
 				service: this.service
 			}
 		);
+		overlayManager.add( '/machine-translation-info', this.showServiceProviderInfo.bind( this ) );
 		$headerIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-eg-robot' );
 		$header = $( '<span>' )
 			.addClass( 'eg-machine-translation-banner-header' )
@@ -51,7 +53,7 @@
 		$headerContainer = $( '<div>' )
 			.addClass( 'eg-machine-translation-banner-header-container' )
 			.append( $headerIcon, $header )
-			.on( 'click', this.showServiceProviderInfo.bind( this ) );
+			.on( 'click', overlayManager.router.navigate.bind( null, '/machine-translation-info' ) );
 		$contributeIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-edit' );
 		$contribute = $( '<a>' )
 			.attr( {
@@ -147,15 +149,14 @@
 	};
 
 	MachineTranslationContext.prototype.showServiceProviderInfo = function () {
-		$.when(
+		return $.when(
 			this.checkPageExistsRequest,
 			mw.loader.using( 'mw.externalguidance.mt.info' )
 		).then( function ( targetTitle ) {
-			var overlay, privacyLink,
-				MTServiceOverlay = mw.mobileFrontend.require( 'mw.ExternalGuidance.mt.info/MTServiceOverlay' );
-
-			privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
-				this.privacyLinks.Google : null;
+			var overlay,
+				MTServiceOverlay = mw.mobileFrontend.require( 'mw.ExternalGuidance.mt.info/MTServiceOverlay' ),
+				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
+					this.privacyLinks.Google : null;
 			overlay = new MTServiceOverlay( {
 				sourceLanguage: this.sourceLanguage,
 				projectName: mw.config.get( 'wgSiteName' ),
@@ -164,7 +165,7 @@
 				learnToContributeLink: this.specialPageURL,
 				targetPageExists: !!targetTitle
 			} );
-			overlay.show();
+			return overlay;
 		}.bind( this ) );
 	};
 
@@ -200,4 +201,4 @@
 	};
 
 	mw.eg.ExternalGuidance = ExternalGuidance;
-}() );
+}( mw.mobileFrontend ) );
