@@ -47,25 +47,28 @@
 		overlayManager.add( '/machine-translation-info', this.showServiceProviderInfo.bind( this ) );
 		$headerIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-eg-robot' );
 		$header = $( '<span>' )
-			.addClass( 'eg-machine-translation-banner-header' )
+			.attr( { translate: 'no' } ) // Do not translate this banner
+			.addClass( 'eg-machine-translation-banner-header-label notranslate' )
 			.html( mw.msg( 'externalguidance-machine-translation-heading' ) );
 
 		$headerContainer = $( '<div>' )
 			.addClass( 'eg-machine-translation-banner-header-container' )
 			.append( $headerIcon, $header )
 			.on( 'click', overlayManager.router.navigate.bind( null, '/machine-translation-info' ) );
-		$contributeIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-edit' );
-		$contribute = $( '<a>' )
+		$contributeIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-edit-progressive' );
+		$contribute = $( '<span>' )
+			.attr( { translate: 'no' } ) // Do not translate this banner
+			.addClass( 'eg-machine-translation-banner-action-label notranslate' )
+			.html( mw.msg( 'externalguidance-machine-translation-contribute' ) );
+		$contributeContainer = $( '<a>' )
+			.addClass( 'eg-machine-translation-banner-action-container' )
 			.attr( {
 				href: this.specialPageURL,
 				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
 				target: '_parent' // Open in parent frame, not in the iframe (if any) by the MT service
 			} )
-			.addClass( 'eg-machine-translation-banner-action' )
-			.html( mw.msg( 'externalguidance-machine-translation-contribute' ) );
-		$contributeContainer = $( '<div>' )
-			.addClass( 'eg-machine-translation-banner-action-container' )
 			.append( $contributeIcon, $contribute );
+
 		$banner = $( '<div>' )
 			.addClass( 'eg-machine-translation-banner' )
 			.append( $headerContainer, $contributeContainer );
