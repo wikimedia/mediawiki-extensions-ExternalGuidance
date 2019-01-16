@@ -83,7 +83,9 @@
 	 * @param {string} title
 	 */
 	MachineTranslationContext.prototype.showPageStatus = function ( title ) {
-		var $status = $( '<div>' ).addClass( 'eg-machine-translation-page-status' );
+		var $status = $( '<div>' )
+			.attr( { translate: 'no' } )
+			.addClass( 'eg-machine-translation-page-status notranslate' );
 
 		if ( title ) {
 			$status.append(
