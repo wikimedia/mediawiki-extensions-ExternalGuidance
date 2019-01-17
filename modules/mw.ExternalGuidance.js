@@ -27,15 +27,22 @@
 
 	MachineTranslationContext.prototype.init = function () {
 		var $banner, $headerContainer, $contribute, $contributeIcon, $contributeContainer,
-			$headerIcon, $header;
+			$headerIcon, $header, $status;
 
 		// Start fetching jquery.uls.data - we will need it for autonym
 		// jquery.uls.data is relatively large module. Hence it is not fetched earlier.
 		mw.loader.load( 'jquery.uls.data' );
 
+		$status = $( '<div>' )
+			.attr( { translate: 'no' } )
+			.addClass( 'eg-machine-translation-page-status notranslate' );
+
 		this.checkPageExistsRequest = this.checkPageExists(
 			this.sourceLanguage, this.targetLanguage, this.sourcePage );
-		this.checkPageExistsRequest.then( this.showPageStatus.bind( this ) );
+
+		this.checkPageExistsRequest.then( function ( title ) {
+			this.showPageStatus( title, $status );
+		}.bind( this ) );
 
 		this.specialPageURL = this.sitemapper.getPageUrl(
 			this.targetLanguage,
@@ -75,18 +82,16 @@
 		$banner = $( '<div>' )
 			.addClass( 'eg-machine-translation-banner' )
 			.append( $headerContainer, $contributeContainer );
-		this.$container.append( $banner );
+
+		this.$container.append( $status, $banner );
 	};
 
 	/**
 	 * Render the status of target page existence
-	 * @param {string} title
+	 * @param {string} title Target page
+	 * @param {jQuery} $status Container for showing the status
 	 */
-	MachineTranslationContext.prototype.showPageStatus = function ( title ) {
-		var $status = $( '<div>' )
-			.attr( { translate: 'no' } )
-			.addClass( 'eg-machine-translation-page-status notranslate' );
-
+	MachineTranslationContext.prototype.showPageStatus = function ( title, $status ) {
 		if ( title ) {
 			$status.append(
 				mw.message( 'externalguidance-machine-translation-page-exist', title ).parseDom()
@@ -104,8 +109,6 @@
 					) );
 			}.bind( this ) );
 		}
-
-		this.$container.append( $status );
 	};
 
 	/**
