@@ -1,25 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Santhosh Thottingal"
+			"Santhosh Thottingal",
+			"Santhosh.thottingal"
 		]
 	},
 	"externalguidance-desc": "{{desc|name=ExternalGuidance|url=https://www.mediawiki.org/wiki/Extension:ExternalGuidance}}",
 	"externalguidance-machine-translation-heading": "Header label shown below the title for a page in a machine translation context",
 	"externalguidance-machine-translation-contribute": "Label for contribute action for a page in a machine translation context",
 	"externalguidance-specialpage-title": "Title for Special:ExternalGuidance",
-	"externalguidance-specialpage-mt-intro": "A brief explanation on why you cannot edit on a machine translated page",
-	"externalguidance-specialpage-mt-pageexist": "There is a version of this page manually started by editors in $1 that you can help expand.",
+	"externalguidance-specialpage-mt-intro": "A brief explanation on why you cannot edit on a machine translated page.\n\n$1 is Source wiki project name.\n$2 is source language name.\n$3 is target language name.",
+	"externalguidance-specialpage-mt-pageexist": "Message shown in the Special:ExternalGuidance page when the page already exist in target language. \n\n$1 is the language name.",
 	"externalguidance-specialpage-intro-machine": "A short note on why machine translation can be bad.",
 	"externalguidance-specialpage-intro-human": "A short note on why human translations are better.",
 	"externalguidance-specialpage-contribute-title": "Title for section that lists the ways to contribute.",
-	"externalguidance-specialpage-contribute-create": "A short note saying the article can be created.",
+	"externalguidance-specialpage-contribute-create": "A short note saying the article can be created.\n\n$1 is target language name",
 	"externalguidance-specialpage-contribute-create-action": "Button label to create a new article.",
 	"externalguidance-specialpage-contribute-expand": "A short note saying the user can expand the existing article.",
 	"externalguidance-specialpage-contribute-expand-action": "Button label to expand the existing article.",
 	"externalguidance-specialpage-contribute-improve-source": "A short note to indicate the source article can also be improved.",
-	"externalguidance-specialpage-contribute-improve-source-action": "Button label for improving source article.",
-	"externalguidance-machine-translation-page-exist": "Message shown when the page exist in target language. $1 is target language title",
+	"externalguidance-specialpage-contribute-improve-source-action": "Button label for improving source article.\n\n$1 is language name",
+	"externalguidance-machine-translation-page-exist": "Message shown when the page exist in target language. \n\n$1 is target language title",
 	"externalguidance-machine-translation-page-missing": "Message shown when the page is missing in target language. $1 - Target language autonym",
 	"externalguidance-machine-translation-provider-info-title": "Title text for the overlay that shows the machine translation service information",
 	"externalguidance-machine-translation-provider-info": "Message stating that content is translated. $1 is the wiki project name, $2 is the MT service name.",
@@ -28,10 +29,10 @@
 	"externalguidance-machine-translation-access-source-page-missing": "A brief note on how to access the original source article when that page does not exist yet. $1 is wiki project name",
 	"externalguidance-machine-translation-access-source-page-exist": "A brief note on how to access the original source article when that page already exist. $1 is wiki project name",
 	"externalguidance-machine-translation-contribute-link": "Label for the link that takes the user to a special page that explains various ways to contribute",
-	"externalguidance-specialpage-createpage-title":"Title for the overlay that helps to choose the title for new page",
-	"externalguidance-specialpage-createpage-title-label":"Label for the title",
-	"externalguidance-specialpage-createpage-button-label":"Label for the button",
-	"externalguidance-specialpage-createpage-button-label-edit":"Label for the button when the page exists already",
-	"externalguidance-specialpage-createpage-desc":"A brief description on what happens if you click on button. $1 is project name",
-	"externalguidance-specialpage-createpage-page-exist":"Error message shown when the entered title already exists."
+	"externalguidance-specialpage-createpage-title": "Title for the overlay that helps to choose the title for new page",
+	"externalguidance-specialpage-createpage-title-label": "Label for the title",
+	"externalguidance-specialpage-createpage-button-label": "Label for the button",
+	"externalguidance-specialpage-createpage-button-label-edit": "Label for the button when the page exists already",
+	"externalguidance-specialpage-createpage-desc": "A brief description on what happens if you click on button. $1 is project name",
+	"externalguidance-specialpage-createpage-page-exist": "Error message shown when the entered title already exists."
 }

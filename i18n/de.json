@@ -27,5 +27,11 @@
 	"externalguidance-machine-translation-access-source-title": "Auf $1 zugreifen",
 	"externalguidance-machine-translation-access-source-page-missing": "Verwende die Option „Original ansehen“ oben, um auf den ursprünglichen Inhalt auf $1 mit zusätzlichen Lese- und Bearbeitungswerkzeugen zuzugreifen. Du kannst jederzeit bei der Verbesserung dieses Inhalts helfen.",
 	"externalguidance-machine-translation-access-source-page-exist": "Verwende die Option „Original ansehen“ oben, um auf den ursprünglichen Inhalt auf $1 mit zusätzlichen Lese- und Bearbeitungswerkzeugen zuzugreifen. Eine von der Gemeinschaft erstellte Seite für dieses Thema ist bereits vorhanden und du kannst jederzeit bei ihrer Verbesserung helfen.",
-	"externalguidance-machine-translation-contribute-link": "Erfahre, wie du mitmachen kannst."
+	"externalguidance-machine-translation-contribute-link": "Erfahre, wie du mitmachen kannst.",
+	"externalguidance-specialpage-createpage-title": "Eine neue Seite erstellen",
+	"externalguidance-specialpage-createpage-title-label": "Titel",
+	"externalguidance-specialpage-createpage-button-label": "Eine neue Seite erstellen",
+	"externalguidance-specialpage-createpage-button-label-edit": "Vorhandene Seite bearbeiten",
+	"externalguidance-specialpage-createpage-desc": "Eine neue Seite mit diesem Titel wird auf $1 erstellt",
+	"externalguidance-specialpage-createpage-page-exist": "Eine Seite mit diesem Titel ist bereits vorhanden."
 }

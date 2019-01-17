@@ -27,5 +27,11 @@
 	"externalguidance-machine-translation-access-source-title": "Aceder à wiki $1",
 	"externalguidance-machine-translation-access-source-page-missing": "Use a opção acima \"Ver original\" para aceder ao conteúdo original na wiki $1, com ferramentas adicionais de leitura e edição. Pode ajudar a melhorar este conteúdo quando quiser.",
 	"externalguidance-machine-translation-access-source-page-exist": "Use a opção acima \"Ver original\" para aceder ao conteúdo original na wiki $1, com ferramentas adicionais de leitura e edição. Já existe uma página para este assunto, criada pela comunidade, e pode ajudar a melhorá-la quando quiser.",
-	"externalguidance-machine-translation-contribute-link": "Saiba como pode contribuir"
+	"externalguidance-machine-translation-contribute-link": "Saiba como pode contribuir",
+	"externalguidance-specialpage-createpage-title": "Criar uma página nova",
+	"externalguidance-specialpage-createpage-title-label": "Título",
+	"externalguidance-specialpage-createpage-button-label": "Criar uma página nova",
+	"externalguidance-specialpage-createpage-button-label-edit": "Editar página existente",
+	"externalguidance-specialpage-createpage-desc": "Será criada uma página nova com este título no projeto $1",
+	"externalguidance-specialpage-createpage-page-exist": "Já existe uma página com este título."
 }

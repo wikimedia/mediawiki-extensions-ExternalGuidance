@@ -23,6 +23,10 @@
 	"externalguidance-machine-translation-page-exist": "Le contenu de communauté créée sur ce sujet [[$1|est aussi disponible]]",
 	"externalguidance-machine-translation-page-missing": "Absent en $1",
 	"externalguidance-machine-translation-provider-info-title": "Traduction automatique de $1",
+	"externalguidance-machine-translation-provider-info": "Ce contenu $1 est traduit et vous est fourni par $2.",
+	"externalguidance-machine-translation-provider-terms": "Vérifier la confidentialité et les conditions",
 	"externalguidance-machine-translation-access-source-title": "Accès à $1",
+	"externalguidance-machine-translation-access-source-page-missing": "Utiliser l’option « Afficher l’original » ci-dessus pour accéder au contenu d’origine de $1 avec des outils de lecture et de modification supplémentaires. Vous pouvez aider à améliorer ce contenu à tout moment.",
+	"externalguidance-machine-translation-access-source-page-exist": "Utiliser la nouvelle option « Afficher l’original » ci-dessus pour accéder au contenu d’origine de $1 avec des outils de lecture et de modification supplémentaires. Une page créée par la communauté pour ce sujet existe déjà et vous pouvez aider à l’améliorer n’importe quand.",
 	"externalguidance-machine-translation-contribute-link": "Apprendre comment contribuer"
 }

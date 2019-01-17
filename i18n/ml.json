@@ -1,10 +1,30 @@
 {
 	"@metadata": {
 		"authors": [
-			"Santhosh.thottingal"
+			"Santhosh.thottingal",
+			"Praveenp"
 		]
 	},
 	"externalguidance-desc": "വിക്കിപീഡിയ ഉള്ളടക്കം പലരീതിയിൽ വിക്കിക്കുപുറത്ത് ഉപയോഗിക്കുന്നുണ്ട്. അവ ഉപയോഗിക്കുന്നവരെ ആ ഉള്ളടക്കത്തിന്റെ ഉറവിടത്തിലേക്ക് ക്ഷണിക്കുന്നതിനും കൂടുതൽ ഉള്ളടക്കം സംഭാവന ചെയ്യുന്നതിനും ഈ സംരംഭം ലക്ഷ്യമിടുന്നു.",
 	"externalguidance-machine-translation-heading": "യാന്ത്രികപരിഭാഷ",
-	"externalguidance-machine-translation-contribute": "തിരുത്തുക"
+	"externalguidance-machine-translation-contribute": "തിരുത്തുക",
+	"externalguidance-specialpage-title": "യാന്ത്രികതർജ്ജമ മെച്ചപ്പെടുത്തൽ",
+	"externalguidance-specialpage-mt-intro": "ലോകമെമ്പാടുമുള്ള സന്നദ്ധപ്രവർത്തകരാണ് $1 എഴുതിയിരിക്കുന്നത്. ഈ ലേഖനം $2 ഭാഷയിലെ ഒരു പതിപ്പിൽ നിന്നും യാന്ത്രികതർജ്ജമ ചെയ്തതാണ്. അതുകൊണ്ട് $3 ഭാഷയിൽ നിങ്ങൾക്ക് നേരിട്ട് തിരുത്താൻ കഴിയില്ല എങ്കിലും സഹായിക്കാനാകും",
+	"externalguidance-specialpage-mt-pageexist": "$1 ഭാഷയിൽ ഈ ലേഖനത്തിന്റെ ഒരു പതിപ്പ് നിലവിലുണ്ട്. അത് വികസിപ്പിക്കാൻ നിങ്ങൾക്ക് സഹായിക്കാം",
+	"externalguidance-specialpage-intro-machine": "യാന്ത്രികതർജ്ജമ ഉപയോഗ്രപ്രദമായേക്കാം എങ്കിലും കൃത്യമാവണമെന്നില്ല.",
+	"externalguidance-specialpage-intro-human": "നമ്മൾ തന്നെ ലേഖനം എഴുതുന്നതാണ് അതിനേക്കാൾ നല്ലത്!",
+	"externalguidance-specialpage-contribute-title": "സംഭാവന ചെയ്യാനുള്ള മാർഗ്ഗങ്ങൾ",
+	"externalguidance-specialpage-contribute-create": "തർജ്ജമയിൽ നിന്നും മനസ്സിലായ കാര്യങ്ങൾ വെച്ച് $1 ഭാഷയിൽ പുതുതായി ഒരു ലേഖനം തുടങ്ങുക.",
+	"externalguidance-specialpage-contribute-create-action": "ഈ വിഷയത്തിൽ ഒരു ലേഖനം തുടങ്ങുക",
+	"externalguidance-specialpage-contribute-expand": "നിലവിലുള്ള ലേഖനം അപൂർണ്ണമായേക്കാം. തർജ്ജമയിൽ നിന്നും മനസ്സിലായ കാര്യങ്ങൾവെച്ച് ആ ലേഖനം വികസിപ്പിക്കാം",
+	"externalguidance-specialpage-contribute-expand-action": "നിലവിലുള്ള ലേഖനം വികസിപ്പിക്കുക",
+	"externalguidance-specialpage-contribute-improve-source": "മൂലഭാഷയിലുള്ള ലേഖനം വികസിപ്പിക്കുന്നതിലൂടെ അതിന്റെ തർജ്ജമ ആളുകൾക്കു വായിക്കാൻ സാധിക്കും.",
+	"externalguidance-specialpage-contribute-improve-source-action": "$1 ഭാഷയിലെ ലേഖനം തിരുത്തുക.",
+	"externalguidance-machine-translation-page-exist": "ഈ വിഷയത്തിൽ സമൂഹം-സൃഷ്ടിയായ ഉള്ളടക്കം [[$1|ലഭ്യമാണ്]]",
+	"externalguidance-machine-translation-page-missing": "$1 ഭാഷയിൽ ഇല്ല",
+	"externalguidance-machine-translation-provider-info-title": "$1 ഭാഷയിൽ നിന്നുള്ള യാന്ത്രികതർജ്ജമ",
+	"externalguidance-machine-translation-provider-info": "$1 സംരംഭത്തിലെ ഈ ഉള്ളടക്കം $2 ഉപയോഗിച്ച് തർജ്ജമചെയ്ത് തന്നതാണ്.",
+	"externalguidance-machine-translation-provider-terms": "സ്വകാര്യതയും മറ്റു നയങ്ങളും പരിശോധിക്കുക",
+	"externalguidance-machine-translation-access-source-title": "$1 കാണുക",
+	"externalguidance-machine-translation-contribute-link": "എങ്ങനെ സംഭാവന ചെയ്യാമെന്നു വായിക്കുക."
 }

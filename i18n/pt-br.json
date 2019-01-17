@@ -27,5 +27,11 @@
 	"externalguidance-machine-translation-access-source-title": "Acesso $1",
 	"externalguidance-machine-translation-access-source-page-missing": "Use a opção acima \"Ver original\" para acessar ao conteúdo original na wiki $1, com ferramentas adicionais de leitura e edição. Pode ajudar a melhorar este conteúdo quando quiser.",
 	"externalguidance-machine-translation-access-source-page-exist": "Use a opção acima \"Ver original\" para acessar ao conteúdo original na wiki $1, com ferramentas adicionais de leitura e edição. Já existe uma página para este assunto, criada pela comunidade, e pode ajudar a melhorá-la quando quiser.",
-	"externalguidance-machine-translation-contribute-link": "Saiba como você pode contribuir"
+	"externalguidance-machine-translation-contribute-link": "Saiba como você pode contribuir",
+	"externalguidance-specialpage-createpage-title": "Criar uma nova página",
+	"externalguidance-specialpage-createpage-title-label": "Título",
+	"externalguidance-specialpage-createpage-button-label": "Criar uma nova página",
+	"externalguidance-specialpage-createpage-button-label-edit": "Editar página existente",
+	"externalguidance-specialpage-createpage-desc": "Uma nova página com este título será criada em $1",
+	"externalguidance-specialpage-createpage-page-exist": "Uma página com este título já existe."
 }

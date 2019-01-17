@@ -27,5 +27,11 @@
 	"externalguidance-machine-translation-access-source-title": "Доступ до сайту $1",
 	"externalguidance-machine-translation-access-source-page-missing": "Скористайтеся опцією «Переглянути оригінал» вгорі, щоб отримати доступ до оригінального контенту на сайті $1 із додатковими інструментами для перегляду й редагування. Ви можете поліпшити цей контент у будь-який час.",
 	"externalguidance-machine-translation-access-source-page-exist": "Скористайтеся опцією «Переглянути оригінал» вгорі, щоб отримати доступ до оригінального контенту на сайті $1 із додатковими інструментами для перегляду й редагування. Створена спільнотою сторінка на цю тему вже існує, і Ви можете допомогти з її поліпшенням у будь-який час.",
-	"externalguidance-machine-translation-contribute-link": "Дізнайтесь, як можна зробити свій внесок"
+	"externalguidance-machine-translation-contribute-link": "Дізнайтесь, як можна зробити свій внесок",
+	"externalguidance-specialpage-createpage-title": "Створити нову сторінку",
+	"externalguidance-specialpage-createpage-title-label": "Назва",
+	"externalguidance-specialpage-createpage-button-label": "Створити нову сторінку",
+	"externalguidance-specialpage-createpage-button-label-edit": "Редагувати вже наявну сторінку",
+	"externalguidance-specialpage-createpage-desc": "Нову сторінку з такою назвою буде створено на сайті $1",
+	"externalguidance-specialpage-createpage-page-exist": "сторінка з такою назвою вже існує."
 }

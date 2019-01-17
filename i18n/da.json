@@ -13,5 +13,10 @@
 	"externalguidance-specialpage-contribute-improve-source-action": "Rediger den originale version i $1",
 	"externalguidance-machine-translation-page-missing": "Mangler på $1",
 	"externalguidance-machine-translation-provider-info-title": "Automatisk oversættelse fra $1",
-	"externalguidance-machine-translation-contribute-link": "Lær hvordan du kan bidrage"
+	"externalguidance-machine-translation-contribute-link": "Lær hvordan du kan bidrage",
+	"externalguidance-specialpage-createpage-title": "Opret en ny side",
+	"externalguidance-specialpage-createpage-title-label": "Titel",
+	"externalguidance-specialpage-createpage-button-label": "Opret en ny side",
+	"externalguidance-specialpage-createpage-button-label-edit": "Rediger eksisterende side",
+	"externalguidance-specialpage-createpage-page-exist": "En side med denne titel findes allerede."
 }

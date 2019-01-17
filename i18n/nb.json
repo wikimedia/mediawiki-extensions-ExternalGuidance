@@ -4,5 +4,10 @@
 			"Orf3us"
 		]
 	},
-	"externalguidance-machine-translation-heading": "Automatisk oversettelse"
+	"externalguidance-machine-translation-heading": "Automatisk oversettelse",
+	"externalguidance-specialpage-createpage-title": "Opprett ny side",
+	"externalguidance-specialpage-createpage-title-label": "Tittel",
+	"externalguidance-specialpage-createpage-button-label": "Opprett ny side",
+	"externalguidance-specialpage-createpage-button-label-edit": "Rediger eksisterende side",
+	"externalguidance-specialpage-createpage-page-exist": "En side med denne tittelen eksisterer allerede"
 }
