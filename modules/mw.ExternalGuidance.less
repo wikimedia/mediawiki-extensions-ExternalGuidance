@@ -13,6 +13,17 @@
 	width: 100%;
 	bottom: 0;
 
+	animation: appear-eg-banner 0.5s;
+
+	@keyframes appear-eg-banner {
+		from {
+			opacity: 0;
+		}
+		to   {
+			opacity: 1;
+		}
+	}
+
 	.mw-ui-icon {
 		vertical-align: middle;
 
@@ -64,11 +75,9 @@
 }
 
 // Hide the top actions bar and edit icons in section headers.
-// Usage of important is intentional to prevent any override
-// since these actions are broken in external context.
-/* stylelint-disable declaration-no-important */
 .heading-holder .hlist,
 .content .in-block span.mw-editsection,
 .content .mw-parser-output span.mw-editsection {
-	display: none !important;
+	.transition( opacity 0.5s ease-out );
+	opacity: 0;
 }
