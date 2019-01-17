@@ -171,7 +171,7 @@
 					this.privacyLinks.Google : null;
 
 			overlay = new Overlay( {
-				className: 'overlay eg-mtservice-info-overlay',
+				className: 'overlay eg-mtservice-info-overlay notranslate',
 				heading: mw.msg( 'externalguidance-machine-translation-provider-info-title',
 					$.uls.data.getAutonym( this.sourceLanguage ) )
 			} );
