@@ -9,5 +9,14 @@
 	"externalguidance-machine-translation-heading": "Аутоматски превод",
 	"externalguidance-machine-translation-contribute": "Допринесите",
 	"externalguidance-specialpage-contribute-title": "Начини да допринесете",
-	"externalguidance-specialpage-contribute-expand-action": "Проширите постојећи чланак"
+	"externalguidance-specialpage-contribute-expand-action": "Проширите постојећи чланак",
+	"externalguidance-machine-translation-provider-terms": "Погледајте приватност и услове",
+	"externalguidance-machine-translation-access-source-title": "Приступ пројекту $1",
+	"externalguidance-machine-translation-contribute-link": "Научите како можете да допринесете",
+	"externalguidance-specialpage-createpage-title": "Прављење нове странице",
+	"externalguidance-specialpage-createpage-title-label": "Наслов",
+	"externalguidance-specialpage-createpage-button-label": "Направи нову страницу",
+	"externalguidance-specialpage-createpage-button-label-edit": "Уредите постојећу страницу",
+	"externalguidance-specialpage-createpage-desc": "Нова страница са овим насловом биће направљена на пројекту $1",
+	"externalguidance-specialpage-createpage-page-exist": "Страница са овим насловом већ постоји."
 }

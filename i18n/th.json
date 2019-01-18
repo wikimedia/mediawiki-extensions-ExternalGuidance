@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"B20180"
+			"B20180",
+			"Horus"
 		]
 	},
 	"externalguidance-specialpage-title": "ปรับปรุงเนื้อหาอัตโนมัติ",
@@ -15,7 +16,11 @@
 	"externalguidance-specialpage-contribute-improve-source-action": "แก้ไขเวอร์ชันต้นฉบับใน $1",
 	"externalguidance-machine-translation-page-missing": "ไม่พบใน $1",
 	"externalguidance-machine-translation-provider-info-title": "การแปลอัตโนมัติจาก $1",
-	"externalguidance-machine-translation-provider-terms": "ตรวจสอบความเป็นส่วนตัวและข้อกำหนด",
+	"externalguidance-machine-translation-provider-terms": "ตรวจสอบภาวะเฉพาะส่วนตัวและข้อกำหนด",
 	"externalguidance-machine-translation-access-source-title": "เข้าถึง $1",
-	"externalguidance-machine-translation-contribute-link": "เรียนรู้วิธีที่คุณสามารถมีส่วนร่วม"
+	"externalguidance-machine-translation-contribute-link": "เรียนรู้วิธีที่คุณสามารถมีส่วนร่วม",
+	"externalguidance-specialpage-createpage-title": "สร้างหน้าใหม่",
+	"externalguidance-specialpage-createpage-title-label": "ชื่อเรื่อง",
+	"externalguidance-specialpage-createpage-button-label": "สร้างหน้าใหม่",
+	"externalguidance-specialpage-createpage-page-exist": "มีหน้าที่ใช้ชื่อเรื่องนี้แล้ว"
 }

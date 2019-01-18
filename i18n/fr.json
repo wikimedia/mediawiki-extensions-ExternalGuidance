@@ -28,5 +28,11 @@
 	"externalguidance-machine-translation-access-source-title": "Accès à $1",
 	"externalguidance-machine-translation-access-source-page-missing": "Utiliser l’option « Afficher l’original » ci-dessus pour accéder au contenu d’origine de $1 avec des outils de lecture et de modification supplémentaires. Vous pouvez aider à améliorer ce contenu à tout moment.",
 	"externalguidance-machine-translation-access-source-page-exist": "Utiliser la nouvelle option « Afficher l’original » ci-dessus pour accéder au contenu d’origine de $1 avec des outils de lecture et de modification supplémentaires. Une page créée par la communauté pour ce sujet existe déjà et vous pouvez aider à l’améliorer n’importe quand.",
-	"externalguidance-machine-translation-contribute-link": "Apprendre comment contribuer"
+	"externalguidance-machine-translation-contribute-link": "Apprendre comment contribuer",
+	"externalguidance-specialpage-createpage-title": "Créer une nouvelle page",
+	"externalguidance-specialpage-createpage-title-label": "Titre",
+	"externalguidance-specialpage-createpage-button-label": "Créer une nouvelle page",
+	"externalguidance-specialpage-createpage-button-label-edit": "Modifier une page existante",
+	"externalguidance-specialpage-createpage-desc": "Une nouvelle page avec ce titre sera créée sur $1",
+	"externalguidance-specialpage-createpage-page-exist": "Une page avec ce titre existe déja."
 }
