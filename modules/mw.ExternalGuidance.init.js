@@ -1,12 +1,30 @@
 ( function () {
 
-	var context = {
+	var context, originalUserLang = mw.config.get( 'wgUserLanguage' );
+
+	/**
+	 * Clean up the target language set by MT services to a valid language code
+	 * @param {string } targetLanguage
+	 * @return {string}
+	 */
+	function getTargetLanguage( targetLanguage ) {
+		// Google translate somtiems uses lang in the form of
+		// targetLanguageCode-x-mtfrom-sourceLanguageCode. Example: id-x-mtfrom-en
+		if ( targetLanguage.indexOf( '-x-mtfrom-' ) > 0 ) {
+			return targetLanguage.split( '-' )[ 0 ];
+		}
+
+		return targetLanguage;
+	}
+
+	context = {
 		info: {
 			from: mw.config.get( 'wgContentLanguage' ),
-			to: document.documentElement.lang,
+			to: getTargetLanguage( document.documentElement.lang ),
 			page: mw.config.get( 'wgTitle' )
 		}
 	};
+
 	/**
 	 * Detect the external service context in which the page is being presented
 	 * @return {Object} The context object with context name and extra information in 'info' key
@@ -41,8 +59,14 @@
 		mw.log( '[ExternalGuidance] Context detected ' + JSON.stringify( context ) );
 		// Namespace initialization
 		mw.eg = {};
+		// Tell ResourceLoader to fetch modules and messages for the target language,
+		// which may be different from wgUserLanguage in case of MT.
+		mw.config.set( 'wgUserLanguage', context.info.to );
 		mw.loader.using( [ 'mw.externalguidance' ] ).then( function () {
-			var eg = new mw.eg.ExternalGuidance( context.name, context.info );
+			var eg;
+			// Restore original wgUserLanguage
+			mw.config.set( 'wgUserLanguage', originalUserLang );
+			eg = new mw.eg.ExternalGuidance( context.name, context.info );
 			eg.init();
 		} );
 	}

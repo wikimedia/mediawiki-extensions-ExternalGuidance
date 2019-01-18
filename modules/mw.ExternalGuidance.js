@@ -13,7 +13,7 @@
 	 */
 	function MachineTranslationContext( options ) {
 		this.sourceLanguage = options.from;
-		this.targetLanguage = this.getTargetLanguage( options.to );
+		this.targetLanguage = options.to;
 		this.sourcePage = options.page;
 		this.service = options.service;
 		this.$container = $( '.heading-holder' );
@@ -147,25 +147,15 @@
 	};
 
 	/**
-	 * Clean up the target language set by MT services to a valid language code
-	 * @param {string } targetLanguage
-	 * @return {string}
-	 */
-	MachineTranslationContext.prototype.getTargetLanguage = function ( targetLanguage ) {
-		// Google translate somtiems uses lang in the form of
-		// targetLanguageCode-x-mtfrom-sourceLanguageCode. Example: id-x-mtfrom-en
-		if ( targetLanguage.indexOf( '-x-mtfrom-' ) > 0 ) {
-			targetLanguage = targetLanguage.split( '-' )[ 0 ];
-		}
-
-		return targetLanguage;
-	};
-
-	/**
 	 * Show the machine translation service information in an overlay.
 	 * @return {jQuery.Promise}
 	 */
 	MachineTranslationContext.prototype.showServiceProviderInfo = function () {
+		var originalUserLang = mw.config.get( 'wgUserLanguage' );
+		// Tell ResourceLoader to fetch modules and messages for the target language,
+		// which may be different from wgUserLanguage in case of MT.
+		mw.config.set( 'wgUserLanguage', this.targetLanguage );
+
 		return $.when(
 			this.checkPageExistsRequest,
 			mw.loader.using( [ 'jquery.uls.data', 'mw.externalguidance.mtinfo' ] )
@@ -174,6 +164,9 @@
 				MTServiceInfo = mw.mobileFrontend.require( 'mw.ExternalGuidance/MTServiceInfo' ),
 				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
 					this.privacyLinks.Google : null;
+
+			// Restore wgUserLanguage
+			mw.config.set( 'wgUserLanguage', originalUserLang );
 
 			overlay = new Overlay( {
 				className: 'overlay eg-mtservice-info-overlay notranslate',
