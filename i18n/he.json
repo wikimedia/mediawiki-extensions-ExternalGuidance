@@ -1,9 +1,36 @@
 {
 	"@metadata": {
 		"authors": [
-			"Strayblues"
+			"Strayblues",
+			"Amire80"
 		]
 	},
+	"externalguidance-desc": "התוכן של ויקיפדיה חשוף כלפי חוץ בדרכים שונות, והפרויקט הזה אמור לאפשר לאנשים לחזור בקלות למקור ולתרום לו.",
 	"externalguidance-machine-translation-heading": "תרגום אוטומטי",
-	"externalguidance-specialpage-contribute-title": "איך אפשר לתרום?"
+	"externalguidance-machine-translation-contribute": "תרומה",
+	"externalguidance-specialpage-title": "שיפור של תוכן אוטומטי",
+	"externalguidance-specialpage-mt-intro": "מתנדבים מכל העולם כותבים את $1. הערך הזה תורגם אוטומטית מגרסה ב$2, ואי־אפשר לערוך אותו ישירות ב־$3, אבל באפשרותך בכל זאת לעזור.",
+	"externalguidance-specialpage-mt-pageexist": "יש גרסה של הערך הזה שהתחילו עורכים ב{{GRAMMAR:תחילית|$1}} שבאפשרותך לעזור להרחיב.",
+	"externalguidance-specialpage-intro-machine": "תרגום אוטומטי מספק מבט כולל שימושי, אבל הוא לא תמיד נכון.",
+	"externalguidance-specialpage-intro-human": "הרבה יותר טוב שיהיה ערך שנכתב על־ידי בני־אדם!",
+	"externalguidance-specialpage-contribute-title": "דרכים לתרום",
+	"externalguidance-specialpage-contribute-create": "ליצור ערך ב{{GRAMMAR:תחילית|$1}} שכולל את העובדות שלמדת מהתרגום.",
+	"externalguidance-specialpage-contribute-create-action": "להתחיל ערך על הנושא הזה",
+	"externalguidance-specialpage-contribute-expand": "ייתכן שבערך הקיים חסר מידע. אפשר לשקול להרחיב את הערך עם עובדות שלמדת מהתרגום.",
+	"externalguidance-specialpage-contribute-expand-action": "להרחיב את הערך הקיים",
+	"externalguidance-specialpage-contribute-improve-source": "שיפור הערך המקורי יעוזר לאנשים שקוראים תרגומים שלו.",
+	"externalguidance-specialpage-contribute-improve-source-action": "עריכת הגרסה המקורית ב{{GRMMAR:תחילית|$1}}",
+	"externalguidance-machine-translation-page-exist": "[[$1|זמין גם תוכן]] שנוצר על־ידי הקהילה",
+	"externalguidance-machine-translation-page-missing": "חסר ב{{GRAMMAR:תחילית|$1}}",
+	"externalguidance-machine-translation-provider-info-title": "תרגום אוטומטי מ{{GRAMMAR:תחילית|$1}}",
+	"externalguidance-machine-translation-provider-info": "תוכן זה של $1 מתורגם ומובא לך על־די $2.",
+	"externalguidance-machine-translation-provider-terms": "בדיקת פרטיות ותנאים",
+	"externalguidance-machine-translation-access-source-title": "גישה ל{{GRAMMAR:תחילית|$1}}",
+	"externalguidance-machine-translation-contribute-link": "ללמוד איך אפשר לתרום",
+	"externalguidance-specialpage-createpage-title": "יצירת דף חדש",
+	"externalguidance-specialpage-createpage-title-label": "כותרת",
+	"externalguidance-specialpage-createpage-button-label": "יצירת דף חדש",
+	"externalguidance-specialpage-createpage-button-label-edit": "עריכת דף קיים",
+	"externalguidance-specialpage-createpage-desc": "דף חדש עם הכותרת הזאת ייווצר ב{{GRAMMAR:תחילית|$1}}",
+	"externalguidance-specialpage-createpage-page-exist": "דף בשם כזה כבר קיים."
 }

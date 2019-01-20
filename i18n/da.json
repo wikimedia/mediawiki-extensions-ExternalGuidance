@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Saederup92",
-			"Kranix"
+			"Kranix",
+			"Palnatoke"
 		]
 	},
 	"externalguidance-machine-translation-heading": "Automatisk oversættelse",
@@ -17,6 +18,6 @@
 	"externalguidance-specialpage-createpage-title": "Opret en ny side",
 	"externalguidance-specialpage-createpage-title-label": "Titel",
 	"externalguidance-specialpage-createpage-button-label": "Opret en ny side",
-	"externalguidance-specialpage-createpage-button-label-edit": "Rediger eksisterende side",
+	"externalguidance-specialpage-createpage-button-label-edit": "Redigér eksisterende side",
 	"externalguidance-specialpage-createpage-page-exist": "En side med denne titel findes allerede."
 }

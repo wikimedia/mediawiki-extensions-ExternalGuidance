@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Santhosh Thottingal",
-			"Santhosh.thottingal"
+			"Santhosh.thottingal",
+			"Robby"
 		]
 	},
 	"externalguidance-desc": "{{desc|name=ExternalGuidance|url=https://www.mediawiki.org/wiki/Extension:ExternalGuidance}}",
@@ -30,7 +31,7 @@
 	"externalguidance-machine-translation-access-source-page-exist": "A brief note on how to access the original source article when that page already exist. $1 is wiki project name",
 	"externalguidance-machine-translation-contribute-link": "Label for the link that takes the user to a special page that explains various ways to contribute",
 	"externalguidance-specialpage-createpage-title": "Title for the overlay that helps to choose the title for new page",
-	"externalguidance-specialpage-createpage-title-label": "Label for the title",
+	"externalguidance-specialpage-createpage-title-label": "Label for the title\n{{Identical|Title}}",
 	"externalguidance-specialpage-createpage-button-label": "Label for the button",
 	"externalguidance-specialpage-createpage-button-label-edit": "Label for the button when the page exists already",
 	"externalguidance-specialpage-createpage-desc": "A brief description on what happens if you click on button. $1 is project name",

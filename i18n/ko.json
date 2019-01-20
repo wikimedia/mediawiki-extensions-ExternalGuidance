@@ -16,5 +16,11 @@
 	"externalguidance-machine-translation-provider-info": "$1 내용은 번역된 다음 $2에 의해 당신에게 전달됩니다.",
 	"externalguidance-machine-translation-provider-terms": "개인 정보 및 이용 조항 확인",
 	"externalguidance-machine-translation-access-source-title": "$1 접근",
-	"externalguidance-machine-translation-contribute-link": "기여하는 방법 알아보기"
+	"externalguidance-machine-translation-contribute-link": "기여하는 방법 알아보기",
+	"externalguidance-specialpage-createpage-title": "새 문서 만들기",
+	"externalguidance-specialpage-createpage-title-label": "제목",
+	"externalguidance-specialpage-createpage-button-label": "새 문서 만들기",
+	"externalguidance-specialpage-createpage-button-label-edit": "기존 문서 편집하기",
+	"externalguidance-specialpage-createpage-desc": "이 제목의 새 문서는 $1에 생성됩니다",
+	"externalguidance-specialpage-createpage-page-exist": "이 제목의 문서가 이미 존재합니다."
 }
