@@ -36,7 +36,10 @@
 					mw.msg( 'externalguidance-machine-translation-access-source-page-missing', this.options.projectName )
 				),
 			$( '<a>' )
-				.attr( 'href', this.options.learnToContributeLink )
+				.attr( {
+					href: this.options.learnToContributeLink,
+					target: '_parent'
+				} )
 				.text( mw.msg( 'externalguidance-machine-translation-contribute-link', this.options.projectName ) )
 		] );
 
