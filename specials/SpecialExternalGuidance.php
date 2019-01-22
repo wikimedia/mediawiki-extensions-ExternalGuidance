@@ -112,7 +112,7 @@ class SpecialExternalGuidance extends SpecialPage {
 			$out->addHTML( Html::rawElement(
 				'button',
 				[
-					'class' => "eg-sp-contribute-create mw-ui-button mw-ui-primary mw-ui-progressive",
+					'class' => "eg-sp-contribute-create mw-ui-button mw-ui-progressive",
 				],
 				$actionLabel
 			) );
@@ -127,7 +127,7 @@ class SpecialExternalGuidance extends SpecialPage {
 		$out->addHTML( Html::rawElement(
 			'a',
 			[
-				'class' => "eg-sp-contribute-secondary-action mw-ui-button mw-ui-quiet",
+				'class' => "eg-sp-contribute-secondary-action mw-ui-button",
 				'href' => SiteMapper::getPageURL( $sourceLanguage, $sourcePage, $editParams )
 			],
 			$actionLabel
