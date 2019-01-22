@@ -75,7 +75,7 @@
 			.attr( {
 				href: this.specialPageURL,
 				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
-				target: '_parent' // Open in parent frame, not in the iframe (if any) by the MT service
+				target: '_blank' // Open in new window/tab, not in the iframe (if any) by the MT service
 			} )
 			.append( $contributeIcon, $contribute );
 
@@ -100,7 +100,7 @@
 			);
 			$status.find( 'a' ).attr( {
 				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
-				target: '_parent' // Open in parent frame, not in the iframe (if any) by the MT service
+				target: '_blank' // Open in new windows/tab, not in the iframe (if any) by the MT service
 			} );
 		} else {
 			mw.loader.using( 'jquery.uls.data' ).then( function () {
