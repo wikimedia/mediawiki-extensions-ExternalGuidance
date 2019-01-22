@@ -38,7 +38,7 @@
 			$( '<a>' )
 				.attr( {
 					href: this.options.learnToContributeLink,
-					target: '_parent'
+					target: '_blank'
 				} )
 				.text( mw.msg( 'externalguidance-machine-translation-contribute-link', this.options.projectName ) )
 		] );
