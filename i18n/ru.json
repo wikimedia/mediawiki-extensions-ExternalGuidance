@@ -13,5 +13,6 @@
 	"externalguidance-specialpage-createpage-title-label": "Название",
 	"externalguidance-specialpage-createpage-button-label": "Создать новую страницу",
 	"externalguidance-specialpage-createpage-button-label-edit": "Редактировать существующую страницу",
+	"externalguidance-specialpage-createpage-desc": "На $1 будет создана новая страница с этим названием",
 	"externalguidance-specialpage-createpage-page-exist": "Страница с таким названием уже существует."
 }

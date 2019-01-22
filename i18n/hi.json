@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gopalindians"
+			"Gopalindians",
+			"Prong$31"
 		]
 	},
 	"externalguidance-specialpage-title": "स्वचालित सामग्री में सुधार",
@@ -9,5 +10,11 @@
 	"externalguidance-specialpage-intro-human": "मनुष्यों द्वारा बनाया गया लेख होना बहुत बेहतर है!",
 	"externalguidance-specialpage-contribute-expand-action": "वर्तमान लेख का विस्तार करें",
 	"externalguidance-specialpage-contribute-improve-source": "आप इस टिकट पत्र को साझा नहीं कर सकते, क्योंकि यह अब क्वेरी योग्य नहीं है",
-	"externalguidance-specialpage-contribute-improve-source-action": "$1 में मूल संस्करण संपादित करें"
+	"externalguidance-specialpage-contribute-improve-source-action": "$1 में मूल संस्करण संपादित करें",
+	"externalguidance-machine-translation-contribute-link": "योगदान देना सीखें",
+	"externalguidance-specialpage-createpage-title": "नया पृष्ठ बनायें",
+	"externalguidance-specialpage-createpage-title-label": "शीर्षक",
+	"externalguidance-specialpage-createpage-button-label": "नया पृष्ठ बनायें",
+	"externalguidance-specialpage-createpage-button-label-edit": "पहले से बनें पृष्ठ सम्पादित करें",
+	"externalguidance-specialpage-createpage-page-exist": "इस शीर्षक से पृष्ठ पहले से उपलब्ध है।"
 }
