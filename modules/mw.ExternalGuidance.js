@@ -204,7 +204,10 @@
 			var originalUri = new mw.Uri( $( this ).attr( 'href' ) );
 			newUri.path = originalUri.path;
 			newUri.query = originalUri.query;
-			$( this ).attr( 'href', newUri.toString() );
+			$( this ).attr( {
+				href: newUri.toString(),
+				target: '_blank'
+			} );
 		} );
 	};
 
