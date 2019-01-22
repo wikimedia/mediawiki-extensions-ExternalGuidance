@@ -11,6 +11,7 @@
 	"externalguidance-machine-translation-contribute": "Label for contribute action for a page in a machine translation context",
 	"externalguidance-specialpage-title": "Title for Special:ExternalGuidance",
 	"externalguidance-specialpage-mt-intro": "A brief explanation on why you cannot edit on a machine translated page.\n\n$1 is Source wiki project name.\n$2 is source language name.\n$3 is target language name.",
+	"externalguidance-specialpage-mt-intro-pageexist": "A brief explanation on why you cannot edit on a machine translated page.\n\n$1 is Source wiki project name.\n$2 is source language name.",
 	"externalguidance-specialpage-mt-pageexist": "Message shown in the Special:ExternalGuidance page when the page already exist in target language. \n\n$1 is the language name.",
 	"externalguidance-specialpage-intro-machine": "A short note on why machine translation can be bad.",
 	"externalguidance-specialpage-intro-human": "A short note on why human translations are better.",

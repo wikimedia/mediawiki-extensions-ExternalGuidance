@@ -67,15 +67,20 @@ class SpecialExternalGuidance extends SpecialPage {
 		// to this special page in target language.
 		$pageExists = $sourcePageTitle->isKnown();
 		$out->addHTML( '<div class="eg-sp">' );
-		$out->addWikiMsg( 'externalguidance-specialpage-mt-intro',
-			$wgSitename,
-			Language::fetchLanguageName( $sourceLanguage ),
-			Language::fetchLanguageName( $targetLanguage )
-		);
 
 		if ( $pageExists ) {
+			$out->addWikiMsg( 'externalguidance-specialpage-mt-intro-pageexist',
+				$wgSitename,
+				Language::fetchLanguageName( $sourceLanguage )
+			);
 			$out->addWikiMsg( "externalguidance-specialpage-mt-pageexist",
 				Language::fetchLanguageName( $targetLanguage ) );
+		} else {
+			$out->addWikiMsg( 'externalguidance-specialpage-mt-intro',
+				$wgSitename,
+				Language::fetchLanguageName( $sourceLanguage ),
+				Language::fetchLanguageName( $targetLanguage )
+			);
 		}
 		$out->addHTML( '<ul>' );
 		$out->wrapWikiMsg(
