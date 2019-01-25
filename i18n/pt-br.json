@@ -9,6 +9,7 @@
 	"externalguidance-machine-translation-contribute": "Contribuir",
 	"externalguidance-specialpage-title": "Melhoramento do conteúdo automático",
 	"externalguidance-specialpage-mt-intro": "$1 é escrito por voluntários de todo o mundo. Este artigo é traduzido de forma automática de uma versão em $2, e não pode ser editado diretamente em $3, mas ainda assim você pode ajudar.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 é escrito por voluntários de todo o mundo. Este artigo é traduzido automaticamente de uma versão em $2 e não pode ser editado diretamente.",
 	"externalguidance-specialpage-mt-pageexist": "Há uma versão desta página iniciada manualmente por editores em $1 que você pode ajudar a expandir.",
 	"externalguidance-specialpage-intro-machine": "A tradução automática fornece uma perspetiva geral que pode ser útil mas nem sempre é correta.",
 	"externalguidance-specialpage-intro-human": "É muito melhor ter um artigo criado por pessoas!",

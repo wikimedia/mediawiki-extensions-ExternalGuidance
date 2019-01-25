@@ -10,6 +10,7 @@
 	"externalguidance-machine-translation-contribute": "ساهم",
 	"externalguidance-specialpage-title": "تحسين المحتوى التلقائي",
 	"externalguidance-specialpage-mt-intro": "تتم كتابة $1 من قبل متطوعين من جميع أنحاء العالم، تتم ترجمة هذه المقالة تلقائيا من إصدار في $2، ولا يمكن تعديلها مباشرةً في $3، ولكن لا يزال بإمكانك المساعدة.",
+	"externalguidance-specialpage-mt-intro-pageexist": "تتم كتابة $1 من قبل متطوعين من جميع أنحاء العالم، تتم ترجمة هذه المقالة تلقائيا من إصدار في $2، ولا يمكن تعديلها مباشرةً.",
 	"externalguidance-specialpage-mt-pageexist": "هناك نسخة من هذه الصفحة التي بدأها المحررون يدويا في $1 والتي يمكنك المساعدة في توسيعها.",
 	"externalguidance-specialpage-intro-machine": "تقدم الترجمة الآلية نظرة عامة مفيدة ولكنها ليست دقيقة دائما.",
 	"externalguidance-specialpage-intro-human": "من الأفضل أن يكون لديك مقال تم إنشاؤه بواسطة البشر!",
