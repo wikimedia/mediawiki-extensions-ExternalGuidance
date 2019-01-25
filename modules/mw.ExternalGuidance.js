@@ -158,7 +158,7 @@
 
 		return $.when(
 			this.checkPageExistsRequest,
-			mw.loader.using( [ 'jquery.uls.data', 'mw.externalguidance.mtinfo' ] )
+			mw.loader.using( 'jquery.uls.data' )
 		).then( function ( targetTitle ) {
 			var overlay, trackName,
 				MTServiceInfo = mw.mobileFrontend.require( 'mw.ExternalGuidance/MTServiceInfo' ),

@@ -9,7 +9,6 @@
 		}
 	};
 
-	mw.eg = {};
 	mw.loader.using( [ 'mw.externalguidance' ] ).then( function () {
 		var eg = new mw.eg.ExternalGuidance( context.name, context.info );
 		eg.init();
