@@ -9,6 +9,7 @@
 	"externalguidance-machine-translation-contribute": "Зробити внесок",
 	"externalguidance-specialpage-title": "Покращення автоматичного контенту",
 	"externalguidance-specialpage-mt-intro": "$1 пишеться волонтерами з усього світу. Цю статтю перекладено автоматично з версії мовою $2, і її не можна редагувати безпосередньо мовою $3, але Ви все ще можете допомогти.",
+	"externalguidance-specialpage-mt-intro-pageexist": "Сайт $1 пишуть волонтери з усього світу. Цю статтю автоматично перекладено з версії мовою $2, і її неможливо редагувати напряму.",
 	"externalguidance-specialpage-mt-pageexist": "Існує версія цієї сторінки, яку започаткували редактори мовою $1 вручну, яку Ви можете допомогти розширити.",
 	"externalguidance-specialpage-intro-machine": "Автоматичний переклад забезпечує корисний загальний огляд, але не завжди є точним.",
 	"externalguidance-specialpage-intro-human": "Значно краще, коли статтю створюють люди!",
