@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Elroy"
 		]
 	},
 	"externalguidance-machine-translation-heading": "Automatische vertaling",
-	"externalguidance-machine-translation-contribute": "Bijdragen"
+	"externalguidance-machine-translation-contribute": "Bijdragen",
+	"externalguidance-specialpage-createpage-button-label": "Nieuwe pagina maken"
 }
