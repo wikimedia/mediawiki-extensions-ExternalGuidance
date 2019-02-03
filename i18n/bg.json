@@ -7,6 +7,7 @@
 	"externalguidance-machine-translation-heading": "Автоматичен превод",
 	"externalguidance-specialpage-title": "Подобряване на автоматично съдържание",
 	"externalguidance-specialpage-mt-intro": "$1 е съвместен труд на доброволци от целия свят. Статията е автоматичен превод от версията на $2 и не може да бъде променена непосредно в $3, но все пак можете да помогнете.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 е съвместен труд на доброволци от целия свят. Статията е автоматичен превод от версията на $2 и не може да бъде променена непосредно.",
 	"externalguidance-specialpage-mt-pageexist": "Съществува версия на страницата, ръчно започнала от редактори на $1. Присъединете се и разширете я.",
 	"externalguidance-specialpage-intro-machine": "Автоматичният превод дава представа, но не е винаги точен.",
 	"externalguidance-specialpage-intro-human": "Много е по-добро кога иматме статия, направена от хора!",
