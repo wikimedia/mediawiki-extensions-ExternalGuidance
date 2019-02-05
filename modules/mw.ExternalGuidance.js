@@ -161,7 +161,7 @@
 			mw.loader.using( [ 'jquery.uls.data', 'mw.externalguidance.mtinfo' ] )
 		).then( function ( targetTitle ) {
 			var overlay, trackName,
-				MTServiceInfo = mw.mobileFrontend.require( 'mw.ExternalGuidance/MTServiceInfo' ),
+				MTServiceInfo = M.require( 'mw.ExternalGuidance/MTServiceInfo' ),
 				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
 					this.privacyLinks.Google : null;
 
