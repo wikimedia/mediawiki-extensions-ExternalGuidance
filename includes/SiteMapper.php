@@ -20,9 +20,7 @@ class SiteMapper {
 			[ $domain, $title ],
 			$wgExternalGuidanceSiteTemplates['view']
 		);
-		$url = wfAppendQuery( $url, $params );
-
-		return $url;
+		return wfAppendQuery( $url, $params );
 	}
 
 	/**
@@ -34,11 +32,7 @@ class SiteMapper {
 	public static function getDomainCode( $language ) {
 		global $wgExternalGuidanceDomainCodeMapping;
 
-		if ( isset( $wgExternalGuidanceDomainCodeMapping[$language] ) ) {
-			return $wgExternalGuidanceDomainCodeMapping[$language];
-		}
-
-		return $language;
+		return $wgExternalGuidanceDomainCodeMapping[$language] ?? $language;
 	}
 
 	/**
@@ -51,10 +45,9 @@ class SiteMapper {
 		global $wgContentTranslationSiteTemplates;
 
 		$domain = self::getDomainCode( $language );
+
 		// $wgContentTranslationSiteTemplates['api'] is protocol relative path
 		$url = 'https:' . str_replace( '$1', $domain, $wgContentTranslationSiteTemplates['api'] );
-		$url = wfAppendQuery( $url, $params );
-
-		return $url;
+		return wfAppendQuery( $url, $params );
 	}
 }

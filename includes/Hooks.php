@@ -19,6 +19,9 @@
 
 namespace MediaWiki\Extension\ExternalGuidance;
 
+use OutputPage;
+use Skin;
+
 /**
  * Hooks for ExternalGuidance extension
  */

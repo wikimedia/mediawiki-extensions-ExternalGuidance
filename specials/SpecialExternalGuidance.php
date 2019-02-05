@@ -8,11 +8,13 @@
 
 namespace MediaWiki\Extension\ExternalGuidance;
 
+use OutputPage;
 use Title;
 use SpecialPage;
 use Language;
 use Html;
 use MWException;
+use WebRequest;
 
 /**
  * Welcoming page from an ExternalGuidance contribution entry point
@@ -47,7 +49,7 @@ class SpecialExternalGuidance extends SpecialPage {
 
 	/**
 	 * Machine translation context based guidance rendering
-	 * @param RequestContext $request
+	 * @param WebRequest $request
 	 * @param OutputPage $out
 	 */
 	protected function mtContextGuidance( $request, $out ) {
@@ -85,28 +87,28 @@ class SpecialExternalGuidance extends SpecialPage {
 		$out->addHTML( '<ul>' );
 		$out->wrapWikiMsg(
 			"<li class='eg-sp-intro-machine mw-ui-icon-before mw-ui-icon mw-ui-icon-eg-robot'>" .
-			"<div>$1</div></li>",
+			'<div>$1</div></li>',
 			'externalguidance-specialpage-intro-machine' );
 		$out->wrapWikiMsg(
 			"<li class='eg-sp-intro-human mw-ui-icon-before mw-ui-icon mw-ui-icon-eg-user'>" .
-			"<div>$1</div></li>",
+			'<div>$1</div></li>',
 			'externalguidance-specialpage-intro-human' );
 		$out->addHTML( '</ul>' );
 		$out->wrapWikiMsg( "<h3 class='eg-sp-ways-to-contribute'>\n$1\n</h3>",
 			'externalguidance-specialpage-contribute-title' );
 		$editParams = [
 			// Invoke VisualEditor
-			"veaction" => "edit",
+			'veaction' => 'edit',
 			// See T212405 and T209132
-			"campaign" => "external-machine-translation"
+			'campaign' => 'external-machine-translation'
 		 ];
 
 		if ( $pageExists ) {
 			$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-expand-action' )->text();
-			$out->addHTML( Html::rawElement(
+			$out->addHTML( Html::element(
 				'a',
 				[
-					'class' => "eg-sp-contribute-expand mw-ui-button mw-ui-primary mw-ui-progressive",
+					'class' => 'eg-sp-contribute-expand mw-ui-button mw-ui-primary mw-ui-progressive',
 					'href' => SiteMapper::getPageURL( $targetLanguage, $sourcePage, $editParams )
 				],
 				$actionLabel
@@ -114,10 +116,10 @@ class SpecialExternalGuidance extends SpecialPage {
 			$out->addWikiMsg( 'externalguidance-specialpage-contribute-expand' );
 		} else {
 			$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-create-action' )->text();
-			$out->addHTML( Html::rawElement(
+			$out->addHTML( Html::element(
 				'button',
 				[
-					'class' => "eg-sp-contribute-create mw-ui-button mw-ui-progressive",
+					'class' => 'eg-sp-contribute-create mw-ui-button mw-ui-progressive',
 				],
 				$actionLabel
 			) );
@@ -129,10 +131,10 @@ class SpecialExternalGuidance extends SpecialPage {
 
 		$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-improve-source-action',
 			Language::fetchLanguageName( $sourceLanguage ) )->text();
-		$out->addHTML( Html::rawElement(
+		$out->addHTML( Html::element(
 			'a',
 			[
-				'class' => "eg-sp-contribute-secondary-action mw-ui-button",
+				'class' => 'eg-sp-contribute-secondary-action mw-ui-button',
 				'href' => SiteMapper::getPageURL( $sourceLanguage, $sourcePage, $editParams )
 			],
 			$actionLabel
