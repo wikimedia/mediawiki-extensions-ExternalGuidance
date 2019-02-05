@@ -70,7 +70,7 @@
 			var eg;
 			// Restore original wgUserLanguage
 			mw.config.set( 'wgUserLanguage', originalUserLang );
-			eg = new mw.eg.ExternalGuidance( context.name, context.info );
+			eg = new mw.ExternalGuidance( context.name, context.info );
 			eg.init();
 		} );
 	}
