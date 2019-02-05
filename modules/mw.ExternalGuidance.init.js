@@ -62,8 +62,7 @@
 			return;
 		}
 		mw.log( '[ExternalGuidance] Context detected ' + JSON.stringify( context ) );
-		// Namespace initialization
-		mw.eg = {};
+
 		// Tell ResourceLoader to fetch modules and messages for the target language,
 		// which may be different from wgUserLanguage in case of MT.
 		mw.config.set( 'wgUserLanguage', context.info.to );
