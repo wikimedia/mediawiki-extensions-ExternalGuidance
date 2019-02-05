@@ -202,13 +202,11 @@
 		$menuLinks = $( 'nav .menu a' );
 		newUri = new mw.Uri( this.sitemapper.getPageUrl( targetLanguage, '' ) );
 		$menuLinks.each( function () {
-			var originalUri = new mw.Uri( $( this ).attr( 'href' ) );
+			var originalUri = new mw.Uri( this.href );
 			newUri.path = originalUri.path;
 			newUri.query = originalUri.query;
-			$( this ).attr( {
-				href: newUri.toString(),
-				target: '_blank'
-			} );
+			this.href = newUri.toString();
+			this.target = '_blank';
 		} );
 	};
 
