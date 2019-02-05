@@ -48,6 +48,7 @@
 		var trackName,
 			query = mw.Uri().query;
 
+		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.createpage
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'createpage',
 			query.service, query.from, query.to ];
 
@@ -160,7 +161,7 @@
 			$button = $( '.eg-sp-contribute-create' );
 		overlayManager.add( '/create-article', openCreatePageOverlay );
 		$button.on( 'click', overlayManager.router.navigate.bind( null, '/create-article' ) );
-
+		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.specialpage
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
 			query.service, query.from, query.to ];
 		mw.track( trackName.join( '.' ), 1 );
