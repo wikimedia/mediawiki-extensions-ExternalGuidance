@@ -183,6 +183,7 @@
 				targetPageExists: !!targetTitle
 			} ).$el );
 
+			// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.mtinfo
 			trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'mtinfo',
 				this.service, this.sourceLanguage, this.targetLanguage ];
 			mw.track( trackName.join( '.' ), 1 );
@@ -233,6 +234,7 @@
 		}
 		instance = new ExternalGuidance.contextMap[ this.contextName ]( this.options );
 		instance.init();
+		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.init
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'init',
 			this.options.service, this.options.from, this.options.to ];
 		mw.track( trackName.join( '.' ), 1 );
