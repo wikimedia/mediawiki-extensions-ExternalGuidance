@@ -245,5 +245,5 @@
 		'machine-translation': MachineTranslationContext
 	};
 
-	mw.eg.ExternalGuidance = ExternalGuidance;
+	mw.ExternalGuidance = ExternalGuidance;
 }( mw.mobileFrontend ) );
