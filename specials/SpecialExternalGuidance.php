@@ -64,7 +64,15 @@ class SpecialExternalGuidance extends SpecialPage {
 		if ( !$sourcePage || !$sourceLanguage || !$targetLanguage ) {
 			throw new MWException( __METHOD__ . ": One of the mandatory parameters missing" );
 		}
-		$sourcePageTitle = Title::newFromText( $sourcePage );
+
+		if ( !Language::isKnownLanguageTag( $sourceLanguage ) ||
+			!Language::isKnownLanguageTag( $targetLanguage )
+		) {
+			throw new MWException( __METHOD__ . ": Invalid language code" );
+		}
+		// Create the title instance after validation. Throws MalformedTitleException if invalid.
+		$sourcePageTitle = Title::newFromTextThrow( $sourcePage );
+
 		// This wiki should match the target language since the "contribute" link takes the user
 		// to this special page in target language.
 		$pageExists = $sourcePageTitle->isKnown();
