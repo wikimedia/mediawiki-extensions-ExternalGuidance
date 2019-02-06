@@ -164,12 +164,39 @@
 		} );
 	}
 
+	function onContributeToOriginalClick() {
+		var trackName,
+			query = mw.Uri().query,
+			sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
+			editParams = {
+				veaction: 'edit',
+				campaign: 'external-machine-translation'
+			};
+
+		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.edit-original
+		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'edit-original',
+			query.service, query.from, query.to ];
+
+		mw.track( trackName.join( '.' ), 1 );
+		mw.track( 'event.ExternalGuidance', {
+			action: 'edit-original',
+			session_token: mw.user.sessionId(),
+			source_language: query.from,
+			target_language: query.to,
+			service: query.service,
+			title: query.page
+		} );
+		location.href = sitemapper.getPageUrl( query.from, query.page, editParams );
+	}
+
 	$( function () {
 		var trackName,
 			query = mw.Uri().query,
-			$button = $( '.eg-sp-contribute-create' );
+			$createButton = $( '.eg-sp-contribute-create' ),
+			$contributeToOriginalButton = $( '.eg-sp-contribute-to-original' );
 		overlayManager.add( '/create-article', openCreatePageOverlay );
-		$button.on( 'click', overlayManager.router.navigate.bind( null, '/create-article' ) );
+		$createButton.on( 'click', overlayManager.router.navigate.bind( null, '/create-article' ) );
+		$contributeToOriginalButton.on( 'click', onContributeToOriginalClick );
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.specialpage
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
 			query.service, query.from, query.to ];

@@ -140,10 +140,9 @@ class SpecialExternalGuidance extends SpecialPage {
 		$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-improve-source-action',
 			Language::fetchLanguageName( $sourceLanguage ) )->text();
 		$out->addHTML( Html::element(
-			'a',
+			'button',
 			[
-				'class' => 'eg-sp-contribute-secondary-action mw-ui-button',
-				'href' => SiteMapper::getPageURL( $sourceLanguage, $sourcePage, $editParams )
+				'class' => 'eg-sp-contribute-to-original mw-ui-button'
 			],
 			$actionLabel
 		) );
