@@ -85,7 +85,12 @@
 
 		this.$container.append( $status, $banner );
 
-		this.rewriteMenuUrls( this.targetLanguage );
+		if ( this.sourceLanguage === 'en' ) {
+			// Rewrite the menu URLs to target language. The current implementation would work only
+			// if source is English. This is because en.wikipedia.org/wiki/Special:UserLogin
+			// changed to id.wikipedia.org/wiki/Special:UserLogin will work, but not the reverse.
+			this.rewriteMenuUrls( this.targetLanguage );
+		}
 	};
 
 	/**
