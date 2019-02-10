@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"SPramudya (WMF)"
+		]
+	},
+	"externalguidance-desc": "Konten Wikipedia terekspos secara eksternal melalui berbagai cara yang berbeda, dan proyek ini bermaksud untuk memudahkan seseorang untuk dapat kembali ke laman asal dan berkontribusi didalamnya.",
+	"externalguidance-machine-translation-heading": "Terjemahan otomatis",
+	"externalguidance-machine-translation-contribute": "Berkontribusi",
+	"externalguidance-specialpage-title": "Meningkatkan konten otomatis",
+	"externalguidance-specialpage-mt-intro": "$1 ditulis oleh para relawan dari seluruh dunia. Artikel ini diterjemahkan secara otomatis dari versi dalam $2, dan tidak dapat disunting secara langsung dalam $3, tetapi Anda masih dapat membantu.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 ditulis oleh relawan dari seluruh dunia. Artikel ini diterjemahkan secara otomatis dari versi dalam $2, dan tidak dapat disunting secara langsung.",
+	"externalguidance-specialpage-mt-pageexist": "Terdapat versi lain dari laman ini yang dimulai secara manual oleh para editor dalam $1 yang dapat Anda bantu kembangkan.",
+	"externalguidance-specialpage-intro-machine": "Terjemahan otomatis memberikan gambaran umum yang berguna namun tidak selalu akurat.",
+	"externalguidance-specialpage-intro-human": "Jauh lebih baik memiliki artikel yang dibuat oleh manusia!",
+	"externalguidance-specialpage-contribute-title": "Cara berkontribusi",
+	"externalguidance-specialpage-contribute-create": "Buat artikel dalam $1 untuk memasukkan fakta-fakta yang Anda dapatkan dari terjemahan.",
+	"externalguidance-specialpage-contribute-create-action": "Mulai artikel untuk topik ini",
+	"externalguidance-specialpage-contribute-expand": "Artikel yang sudah tersedia mungkin memiliki informasi yang hilang. Pertimbangkan untuk mengembangkan artikel dengan fakta- fakta yang Anda dapatkan dari terjemahan.",
+	"externalguidance-specialpage-contribute-expand-action": "Kembangkan artikel yang sudah tersedia",
+	"externalguidance-specialpage-contribute-improve-source": "Memperbaiki artikel asli juga akan membantu seseorang untuk membaca terjemahannya.",
+	"externalguidance-specialpage-contribute-improve-source-action": "Sunting versi asli dalam $1",
+	"externalguidance-machine-translation-page-exist": "Konten yang dibuat komunitas tentang topik ini [[$1|juga tersedia]]",
+	"externalguidance-machine-translation-page-missing": "Belum tersedia dalam $1",
+	"externalguidance-machine-translation-provider-info-title": "Terjemahan otomatis dari $1",
+	"externalguidance-machine-translation-provider-info": "Konten $1 ini diterjemahkan dan disediakan untuk anda oleh $2.",
+	"externalguidance-machine-translation-provider-terms": "Periksa privasi dan ketentuan-ketentuan yang ada",
+	"externalguidance-machine-translation-access-source-title": "Akses $1",
+	"externalguidance-machine-translation-access-source-page-missing": "Gunakan opsi \"Lihat asli\" di atas untuk mengakses konten asli pada $1 dengan menggunakan alat bacaan dan penyuntingan tambahan. Anda dapat membantu meningkatkan konten ini kapan saja.",
+	"externalguidance-machine-translation-access-source-page-exist": "Gunakan opsi \"Lihat asli\" di atas untuk mengakses konten asli pada $1 dengan menggunakan alat bacaan dan penyuntingan tambahan. Laman yang dibuat komunitas untuk topik ini sudah tersedia dan Anda dapat membantu meningkatkannya kapan saja.",
+	"externalguidance-machine-translation-contribute-link": "Pelajari bagaimana Anda dapat berkontribusi",
+	"externalguidance-specialpage-createpage-title": "Buat laman baru",
+	"externalguidance-specialpage-createpage-title-label": "Judul",
+	"externalguidance-specialpage-createpage-button-label": "Buat laman baru",
+	"externalguidance-specialpage-createpage-button-label-edit": "Sunting halaman yang tersedia",
+	"externalguidance-specialpage-createpage-desc": "Laman baru dengan judul ini akan dibuat dengan $1",
+	"externalguidance-specialpage-createpage-page-exist": "Laman dengan judul ini sudah tersedia."
+}
