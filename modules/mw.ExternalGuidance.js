@@ -16,7 +16,7 @@
 		this.targetLanguage = options.to;
 		this.sourcePage = options.page;
 		this.service = options.service;
-		this.$container = $( '.heading-holder' );
+		this.$container = $( '#page-actions' );
 		this.specialPageURL = null;
 		this.sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
 		this.checkPageExistsRequest = null;
@@ -26,8 +26,7 @@
 	}
 
 	MachineTranslationContext.prototype.init = function () {
-		var $banner, $headerContainer, $contribute, $contributeIcon, $contributeContainer,
-			$headerIcon, $header, $status;
+		var $headerContainer, $contribute, $contributeContainer, $header, $status;
 
 		// Start fetching jquery.uls.data - we will need it for autonym
 		// jquery.uls.data is relatively large module. Hence it is not fetched earlier.
@@ -55,35 +54,39 @@
 			}
 		);
 		overlayManager.add( '/machine-translation-info', this.showServiceProviderInfo.bind( this ) );
-		$headerIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-eg-robot' );
 		$header = $( '<span>' )
 			.attr( { translate: 'no' } ) // Do not translate this banner
-			.addClass( 'eg-machine-translation-banner-header-label notranslate' )
+			.addClass( 'eg-machine-translation-banner-header-label mw-ui-icon mw-ui-icon-before ' +
+				' mw-ui-icon-eg-robot notranslate' )
 			.html( mw.msg( 'externalguidance-machine-translation-heading' ) );
 
-		$headerContainer = $( '<div>' )
+		$headerContainer = $( '<li>' )
 			.addClass( 'eg-machine-translation-banner-header-container' )
-			.append( $headerIcon, $header )
+			.append( $header )
 			.on( 'click', overlayManager.router.navigate.bind( null, '/machine-translation-info' ) );
-		$contributeIcon = $( '<span>' ).addClass( 'mw-ui-icon mw-ui-icon-element mw-ui-icon-edit-progressive' );
-		$contribute = $( '<span>' )
-			.attr( { translate: 'no' } ) // Do not translate this banner
-			.addClass( 'eg-machine-translation-banner-action-label notranslate' )
-			.html( mw.msg( 'externalguidance-machine-translation-contribute' ) );
-		$contributeContainer = $( '<a>' )
-			.addClass( 'eg-machine-translation-banner-action-container' )
+
+		$contribute = $( '<a>' )
+			.addClass( 'mw-ui-icon mw-ui-icon-before mw-ui-icon-edit-progressive ' +
+				' eg-machine-translation-banner-action-label notranslate' )
 			.attr( {
+				translate: 'no', // Do not translate this banner
 				href: this.specialPageURL,
 				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
 				target: '_blank' // Open in new window/tab, not in the iframe (if any) by the MT service
 			} )
-			.append( $contributeIcon, $contribute );
+			.append(
+				// Wrap the label in a span so that we can hide text and show icon on small screens
+				$( '<span>' ).html( mw.msg( 'externalguidance-machine-translation-contribute' ) )
+			);
+		$contributeContainer = $( '<li>' )
+			.addClass( 'eg-machine-translation-banner-action-container' )
+			.append( $contribute );
 
-		$banner = $( '<div>' )
+		this.$container
+			.empty() // Remove existing page actions
 			.addClass( 'eg-machine-translation-banner' )
-			.append( $headerContainer, $contributeContainer );
-
-		this.$container.append( $status, $banner );
+			.append( $headerContainer, $contributeContainer )
+			.before( $status );
 
 		if ( this.sourceLanguage === 'en' ) {
 			// Rewrite the menu URLs to target language. The current implementation would work only
