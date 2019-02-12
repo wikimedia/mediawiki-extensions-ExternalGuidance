@@ -163,6 +163,9 @@
 			]
 		}
 	},
+	"EventLoggingSchemas": {
+		"ExternalGuidance": 18870832
+	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
 		"remoteExtPath": "ExternalGuidance/modules"

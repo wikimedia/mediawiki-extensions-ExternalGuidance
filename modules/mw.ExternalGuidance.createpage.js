@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 ( function ( M ) {
 	var mobile = M.require( 'mobile.startup' ),
 		View = mobile.View,
@@ -53,6 +54,14 @@
 			query.service, query.from, query.to ];
 
 		mw.track( trackName.join( '.' ), 1 );
+		mw.track( 'event.ExternalGuidance', {
+			action: 'createpage',
+			session_token: mw.user.sessionId(),
+			source_language: query.from,
+			target_language: query.to,
+			service: query.service,
+			title: this.options.sourcePage
+		} );
 		location.href = this.sitemapper.getPageUrl(
 			this.options.targetLanguage,
 			this.$( '.eg-create-page-title' ).val(),
@@ -165,6 +174,14 @@
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
 			query.service, query.from, query.to ];
 		mw.track( trackName.join( '.' ), 1 );
+		mw.track( 'event.ExternalGuidance', {
+			action: 'specialpage',
+			session_token: mw.user.sessionId(),
+			source_language: query.from,
+			target_language: query.to,
+			service: query.service,
+			title: query.page
+		} );
 	} );
 
 }( mw.mobileFrontend ) );
