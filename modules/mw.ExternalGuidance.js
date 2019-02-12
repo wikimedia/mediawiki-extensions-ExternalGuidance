@@ -95,6 +95,8 @@
 			// changed to id.wikipedia.org/wiki/Special:UserLogin will work, but not the reverse.
 			this.rewriteMenuUrls( this.targetLanguage );
 		}
+
+		this.removeFooterLinkToDesktop();
 	};
 
 	/**
@@ -224,6 +226,13 @@
 			this.href = newUri.toString();
 			this.target = '_blank';
 		} );
+	};
+
+	/**
+	 * Remove the footer link that says "Desktop". See T212197#4942773.
+	 */
+	MachineTranslationContext.prototype.removeFooterLinkToDesktop = function () {
+		$( '#footer-places-desktop-toggle' ).remove();
 	};
 
 	/**
