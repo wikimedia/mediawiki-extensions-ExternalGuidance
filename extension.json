@@ -163,8 +163,12 @@
 			]
 		}
 	},
-	"EventLoggingSchemas": {
-		"ExternalGuidance": 18870832
+	"attributes": {
+		"EventLogging": {
+			"Schemas": {
+				"ExternalGuidance": 18870832
+			}
+		}
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
