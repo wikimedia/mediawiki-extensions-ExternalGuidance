@@ -23,17 +23,6 @@ wfLoadExtension( 'ExternalGuidance' );
 
 ## Configuration
 
-### Simulating the external context
-
-Sometimes, especially while developing the extension, you may want to simulate that the MediaWiki pages are presented in a context
-that triggers the External Guidance. For that enable the `ExternalGuidanceSimulate` configuration. You can do this by setting the following value in LocalSettings.php
-
-```lang=php
-$GLOBALS['wgExternalGuidanceSimulate'] = true;
-```
-
-Note that by default, this is disabled.
-
 ### Configure the external machine translation hosts that trigger this extension
 
 To activate the External Guidance for certain machine translation services, you can configure their hostnames in `ExternalGuidanceMTReferrers` configuration. The value is an array. An example:

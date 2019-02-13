@@ -35,11 +35,6 @@ class SpecialExternalGuidance extends SpecialPage {
 	 * @inheritDoc
 	 */
 	public function execute( $parameters ) {
-		global $wgExternalGuidanceSimulate;
-
-		// No need of simulation in this page. Avoid unwanted side effects because of that
-		// while developing and testing
-		$wgExternalGuidanceSimulate = false;
 		$request = $this->getRequest();
 		$this->setHeaders();
 		$this->outputHeader();
@@ -134,7 +129,6 @@ class SpecialExternalGuidance extends SpecialPage {
 			$out->addWikiMsg( 'externalguidance-specialpage-contribute-create',
 				Language::fetchLanguageName( $targetLanguage ) );
 
-			$out->addModules( 'mw.externalguidance.createpage' );
 		}
 
 		$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-improve-source-action',

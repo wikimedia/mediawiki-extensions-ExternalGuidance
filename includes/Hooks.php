@@ -31,16 +31,8 @@ class Hooks {
 	 * @param Skin $skin
 	 * Hook: BeforePageDisplay
 	 */
-	public static function addModules( $out, $skin ) {
-		global $wgExternalGuidanceSimulate;
-
-		if ( $skin->getSkinName() !== 'minerva' ) {
-			return;
-		}
-
-		if ( $wgExternalGuidanceSimulate === true ) {
-			$out->addModules( 'mw.externalguidance.simulate' );
-		} else {
+	public static function addModules( OutputPage $out, Skin $skin ) {
+		if ( $skin->getSkinName() === 'minerva' ) {
 			$out->addModules( 'mw.externalguidance.init' );
 		}
 	}
@@ -56,4 +48,5 @@ class Hooks {
 		$vars['wgExternalGuidanceSiteTemplates'] = $wgExternalGuidanceSiteTemplates;
 		$vars['wgExternalGuidanceDomainCodeMapping'] = $wgExternalGuidanceDomainCodeMapping;
 	}
+
 }

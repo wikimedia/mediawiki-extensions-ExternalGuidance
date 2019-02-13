@@ -31,10 +31,6 @@
 		"ExternalGuidance": "GlobalVarConfig::newInstance"
 	},
 	"config": {
-		"ExternalGuidanceSimulate": {
-			"value": false,
-			"description": "Simulate that the page is in an external context like machine translation."
-		},
 		"ExternalGuidanceMTReferrers": {
 			"value": [],
 			"description": "Host names of machine translation services"
@@ -77,7 +73,7 @@
 		"mw.externalguidance.init": {
 			"targets": [ "mobile" ],
 			"skinScripts": {
-				"minerva": [ "mw.ExternalGuidance.init.js" ]
+				"minerva": [ "mw.externalguidance.init/init.js" ]
 			},
 			"dependencies": [
 				"mediawiki.Uri"
@@ -86,10 +82,17 @@
 		"mw.externalguidance": {
 			"targets": [ "mobile" ],
 			"skinScripts": {
-				"minerva": [ "mw.ExternalGuidance.js", "mw.ExternalGuidance.mtinfo.js" ]
+				"minerva": [
+					"mw.externalguidance/core.js",
+					"mw.externalguidance/sitemapper.js",
+					"mw.externalguidance/mtinfo.js"
+				]
 			},
 			"skinStyles": {
-				"minerva": [ "mw.ExternalGuidance.less", "mw.ExternalGuidance.mtinfo.less"]
+				"minerva": [
+					"mw.externalguidance/main.less",
+					"mw.externalguidance/mtinfo.less"
+				]
 			},
 			"messages": [
 				"externalguidance-machine-translation-heading",
@@ -106,8 +109,8 @@
 			],
 			"dependencies": [
 				"mobile.startup",
+				"mediawiki.ForeignApi",
 				"mw.externalguidance.icons",
-				"mw.externalguidance.sitemapper",
 				"oojs-ui.styles.icons-editing-core"
 			]
 		},
@@ -119,39 +122,15 @@
 				"user": "images/userAvatar.svg"
 			}
 		},
-		"mw.externalguidance.simulate": {
-			"targets": [ "mobile" ],
-			"skinScripts": {
-				"minerva": [ "mw.ExternalGuidance.simulate.js" ]
-			}
-		},
-		"mw.externalguidance.sitemapper": {
-			"targets": [ "mobile" ],
-			"skinScripts": {
-				"minerva": [ "mw.ExternalGuidance.sitemapper.js" ]
-			},
-			"dependencies": [
-				"mediawiki.ForeignApi"
-			]
-		},
 		"mw.externalguidance.special": {
-			"targets": [ "mobile" ],
-			"skinStyles": {
-				"minerva": [ "mw.ExternalGuidance.specialpage.less"]
-			},
-			"dependencies": ["mw.externalguidance.icons"]
-		},
-		"mw.externalguidance.createpage": {
-			"targets": [ "mobile" ],
-			"dependencies": [
-				"mobile.startup",
-				"mw.externalguidance.sitemapper"
-			],
+			"targets": [ "mobile", "desktop" ],
 			"scripts": [
-				"mw.ExternalGuidance.createpage.js"
+				"mw.externalguidance/sitemapper.js",
+				"mw.externalguidance.special/createpage.js"
 			],
-			"styles":[
-				"mw.ExternalGuidance.createpage.less"
+			"styles": [
+				"mw.externalguidance.special/specialpage.less",
+				"mw.externalguidance.special/createpage.less"
 			],
 			"messages": [
 				"externalguidance-specialpage-createpage-title",
@@ -160,6 +139,11 @@
 				"externalguidance-specialpage-createpage-button-label-edit",
 				"externalguidance-specialpage-createpage-desc",
 				"externalguidance-specialpage-createpage-page-exist"
+			],
+			"dependencies": [
+				"mobile.startup",
+				"mediawiki.ForeignApi",
+				"mw.externalguidance.icons"
 			]
 		}
 	},
