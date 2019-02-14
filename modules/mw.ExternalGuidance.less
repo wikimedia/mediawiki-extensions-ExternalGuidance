@@ -13,14 +13,14 @@
 	border-bottom: solid 1px @colorGray14;
 	overflow: hidden;
 	width: 100%;
-
 	animation: appear-eg-banner 0.5s;
 
 	@keyframes appear-eg-banner {
 		from {
 			opacity: 0;
 		}
-		to   {
+
+		to {
 			opacity: 1;
 		}
 	}
@@ -38,6 +38,7 @@
 	> .eg-machine-translation-banner-header-container {
 		cursor: pointer;
 		float: left;
+
 		.eg-machine-translation-banner-header-label {
 			color: @colorGray5;
 			vertical-align: middle;
@@ -50,14 +51,17 @@
 		float: right;
 		text-decoration: none;
 		color: @colorProgressive;
+
 		&:hover {
 			color: @colorProgressiveActive;
 		}
+
 		a.eg-machine-translation-banner-action-label {
 			vertical-align: middle;
 			font-size: 16px;
 			position: relative;
 			margin: 0;
+
 			span {
 				@media only screen and ( max-width: 500px ) {
 					// In small screens, like mobile phones, hide the label for edit action
@@ -66,7 +70,6 @@
 			}
 		}
 	}
-
 }
 
 .eg-machine-translation-page-status {

@@ -27,9 +27,12 @@
 
 	RequestTitleForm.prototype.postRender = function () {
 		var $heading = $( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-title-label' ) ),
-			$input = $( '<input type="text" class="mw-ui-input eg-create-page-title" autofocus/>' )
+			$input = $( '<input>' )
+				.attr( 'type', 'text' )
+				.addClass( 'mw-ui-input eg-create-page-title' )
+				.attr( 'autofocus', 'autofocus' )
 				.val( this.options.sourcePage ),
-			$p = $( '<p class="eg-create-page-desc">' )
+			$p = $( '<p>' ).addClass( 'eg-create-page-desc' )
 				.text( mw.msg( 'externalguidance-specialpage-createpage-desc', this.options.projectName ) ),
 			$btn = $( '<button>' )
 				.addClass( 'eg-create-page-button mw-ui-button mw-ui-primary mw-ui-progressive' )
@@ -195,7 +198,9 @@
 	$( function () {
 		var trackName,
 			query = mw.Uri().query,
+			// eslint-disable-next-line jquery/no-global-selector
 			$createButton = $( '.eg-sp-contribute-create' ),
+			// eslint-disable-next-line jquery/no-global-selector
 			$contributeToOriginalButton = $( '.eg-sp-contribute-to-original' );
 		overlayManager.add( '/create-article', openCreatePageOverlay );
 		$createButton.on( 'click', overlayManager.router.navigate.bind( null, '/create-article' ) );
