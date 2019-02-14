@@ -11,7 +11,7 @@
 			veaction: 'edit',
 			campaign: 'external-machine-translation'
 		};
-
+		this.pageExist = null;
 		this.sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
 		View.call( this, {
 			events: {
@@ -50,12 +50,13 @@
 			query = mw.Uri().query;
 
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.createpage
-		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'createpage',
+		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance',
+			this.pageExist ? 'editpage' : 'createpage',
 			query.service, query.from, query.to ];
 
 		mw.track( trackName.join( '.' ), 1 );
 		mw.track( 'event.ExternalGuidance', {
-			action: 'createpage',
+			action: this.pageExist ? 'editpage' : 'createpage',
 			session_token: mw.user.sessionId(),
 			source_language: query.from,
 			target_language: query.to,
@@ -84,6 +85,7 @@
 				$button.prop( 'disabled', !title );
 
 				if ( titleExist ) {
+					this.pageExist = true;
 					form.$( '.eg-create-page-desc' )
 						.addClass( 'eg-create-page-error' )
 						.text(
@@ -91,6 +93,7 @@
 						);
 					$button.text( mw.msg( 'externalguidance-specialpage-createpage-button-label-edit' ) );
 				} else {
+					this.pageExist = false;
 					form.$( '.eg-create-page-desc' )
 						.removeClass( 'eg-create-page-error' )
 						.text(
