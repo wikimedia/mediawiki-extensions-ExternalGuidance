@@ -39,7 +39,7 @@ class SpecialExternalGuidance extends SpecialPage {
 		$this->setHeaders();
 		$this->outputHeader();
 		// Currently we have only one context - Machine translation. So using it unconditionally.
-		$this->mtContextGuidance( $request,  $this->getOutput() );
+		$this->mtContextGuidance( $request, $this->getOutput() );
 	}
 
 	/**
@@ -47,7 +47,7 @@ class SpecialExternalGuidance extends SpecialPage {
 	 * @param WebRequest $request
 	 * @param OutputPage $out
 	 */
-	protected function mtContextGuidance( $request, $out ) {
+	public function mtContextGuidance( $request, $out ) {
 		global $wgSitename;
 
 		$out->addModules( 'mw.externalguidance.special' );
