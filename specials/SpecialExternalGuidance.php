@@ -123,6 +123,7 @@ class SpecialExternalGuidance extends SpecialPage {
 				'button',
 				[
 					'class' => 'eg-sp-contribute-create mw-ui-button mw-ui-progressive',
+					'disabled' => true
 				],
 				$actionLabel
 			) );
@@ -136,7 +137,8 @@ class SpecialExternalGuidance extends SpecialPage {
 		$out->addHTML( Html::element(
 			'button',
 			[
-				'class' => 'eg-sp-contribute-to-original mw-ui-button mw-ui-progressive mw-ui-quiet'
+				'class' => 'eg-sp-contribute-to-original mw-ui-button mw-ui-progressive mw-ui-quiet',
+				'disabled' => true
 			],
 			$actionLabel
 		) );

@@ -204,8 +204,12 @@
 			// eslint-disable-next-line jquery/no-global-selector
 			$contributeToOriginalButton = $( '.eg-sp-contribute-to-original' );
 		overlayManager.add( '/create-article', openCreatePageOverlay );
-		$createButton.on( 'click', overlayManager.router.navigate.bind( null, '/create-article' ) );
-		$contributeToOriginalButton.on( 'click', onContributeToOriginalClick );
+		$createButton
+			.prop( 'disabled', false )
+			.on( 'click', overlayManager.router.navigate.bind( null, '/create-article' ) );
+		$contributeToOriginalButton
+			.prop( 'disabled', false )
+			.on( 'click', onContributeToOriginalClick );
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.specialpage
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
 			query.service, query.from, query.to ];
