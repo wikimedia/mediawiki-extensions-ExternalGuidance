@@ -196,11 +196,38 @@
 		location.href = sitemapper.getPageUrl( query.from, query.page, editParams );
 	}
 
+	function onExpandTargetArticleClick() {
+		var trackName,
+			query = mw.Uri().query,
+			sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
+			editParams = {
+				veaction: 'edit',
+				campaign: 'external-machine-translation'
+			};
+
+		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.editpage
+		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'editpage',
+			query.service, query.from, query.to ];
+
+		mw.track( trackName.join( '.' ), 1 );
+		mw.track( 'event.ExternalGuidance', {
+			action: 'editpage',
+			session_token: mw.user.sessionId(),
+			source_language: query.from,
+			target_language: query.to,
+			service: query.service,
+			title: query.page
+		} );
+		location.href = sitemapper.getPageUrl( query.to, query.page, editParams );
+	}
+
 	$( function () {
 		var trackName,
 			query = mw.Uri().query,
 			// eslint-disable-next-line jquery/no-global-selector
 			$createButton = $( '.eg-sp-contribute-create' ),
+			// eslint-disable-next-line jquery/no-global-selector
+			$expandButton = $( '.eg-sp-contribute-expand' ),
 			// eslint-disable-next-line jquery/no-global-selector
 			$contributeToOriginalButton = $( '.eg-sp-contribute-to-original' );
 		overlayManager.add( '/create-article', openCreatePageOverlay );
@@ -210,6 +237,9 @@
 		$contributeToOriginalButton
 			.prop( 'disabled', false )
 			.on( 'click', onContributeToOriginalClick );
+		$expandButton
+			.prop( 'disabled', false )
+			.on( 'click', onExpandTargetArticleClick );
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.specialpage
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
 			query.service, query.from, query.to ];
