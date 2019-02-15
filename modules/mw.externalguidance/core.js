@@ -108,7 +108,9 @@
 	MachineTranslationContext.prototype.showPageStatus = function ( title, $status ) {
 		if ( title ) {
 			$status.append(
-				mw.message( 'externalguidance-machine-translation-page-exist', title ).parseDom()
+				mw.message( 'externalguidance-machine-translation-page-exist',
+					this.sitemapper.getPageUrl( this.targetLanguage, title )
+				).parseDom()
 			);
 			$status.find( 'a' ).attr( {
 				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
