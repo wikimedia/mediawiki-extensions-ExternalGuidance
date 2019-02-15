@@ -38,7 +38,7 @@
 				.addClass( 'eg-create-page-button mw-ui-button mw-ui-primary mw-ui-progressive' )
 				.text( mw.msg( 'externalguidance-specialpage-createpage-button-label' ) );
 		this.$el.append( [ $heading, $input, $p, $btn ] );
-		this.$( '.eg-create-page-title' ).focus();
+		this.$el.find( '.eg-create-page-title' ).trigger( 'focus' );
 		this.onTitleInput();
 		View.prototype.postRender.apply( this, arguments );
 	};
@@ -50,7 +50,7 @@
 	 */
 	RequestTitleForm.prototype.onCreateButtonClick = function () {
 		var trackName,
-			updatedTitle = this.$( '.eg-create-page-title' ).val(),
+			updatedTitle = this.$el.find( '.eg-create-page-title' ).val(),
 			query = mw.Uri().query;
 
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.createpage
@@ -81,8 +81,8 @@
 	 */
 	RequestTitleForm.prototype.onTitleInput = function () {
 		var form = this,
-			$button = this.$( '.eg-create-page-button' ),
-			title = this.$( '.eg-create-page-title' ).val();
+			$button = this.$el.find( '.eg-create-page-button' ),
+			title = this.$el.find( '.eg-create-page-title' ).val();
 
 		this.checkPageExist( this.options.targetLanguage, title )
 			.then( function ( titleExist ) {
@@ -90,7 +90,7 @@
 
 				if ( titleExist ) {
 					this.pageExist = true;
-					form.$( '.eg-create-page-desc' )
+					form.$el.find( '.eg-create-page-desc' )
 						.addClass( 'eg-create-page-error' )
 						.text(
 							mw.msg( 'externalguidance-specialpage-createpage-page-exist' )
@@ -98,7 +98,7 @@
 					$button.text( mw.msg( 'externalguidance-specialpage-createpage-button-label-edit' ) );
 				} else {
 					this.pageExist = false;
-					form.$( '.eg-create-page-desc' )
+					form.$el.find( '.eg-create-page-desc' )
 						.removeClass( 'eg-create-page-error' )
 						.text(
 							mw.msg( 'externalguidance-specialpage-createpage-desc', this.options.projectName )
@@ -151,7 +151,7 @@
 			}, options )
 		);
 
-		overlay.$( '.overlay-content' ).append(
+		overlay.$el.find( '.overlay-content' ).append(
 			new RequestTitleForm( {
 				projectName: options.projectName,
 				targetLanguage: options.targetLanguage,

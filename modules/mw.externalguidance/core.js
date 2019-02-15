@@ -190,7 +190,7 @@
 					$.uls.data.getAutonym( this.sourceLanguage ) )
 			} );
 
-			overlay.$( '.overlay-content' ).append( new MTServiceInfo( {
+			overlay.$el.find( '.overlay-content' ).append( new MTServiceInfo( {
 				sourceLanguage: this.sourceLanguage,
 				projectName: mw.config.get( 'wgSiteName' ),
 				serviceName: this.service,
