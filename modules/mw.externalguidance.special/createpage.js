@@ -216,9 +216,9 @@
 			source_language: query.from,
 			target_language: query.to,
 			service: query.service,
-			title: query.page
+			title: query.targettitle
 		} );
-		location.href = sitemapper.getPageUrl( query.to, query.page, editParams );
+		location.href = sitemapper.getPageUrl( query.to, query.targettitle, editParams );
 	}
 
 	$( function () {

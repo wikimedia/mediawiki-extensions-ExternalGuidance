@@ -19,7 +19,7 @@
 		this.service = options.service;
 		// eslint-disable-next-line jquery/no-global-selector
 		this.$container = $( '#page-actions' );
-		this.specialPageURL = null;
+		this.targetPage = null;
 		this.sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
 		this.checkPageExistsRequest = null;
 		this.privacyLinks = {
@@ -41,20 +41,15 @@
 		this.checkPageExistsRequest = this.checkPageExists(
 			this.sourceLanguage, this.targetLanguage, this.sourcePage );
 
-		this.checkPageExistsRequest.then( function ( title ) {
-			this.showPageStatus( title, $status );
+		this.checkPageExistsRequest.then( function ( targetTitle ) {
+			this.showPageStatus( targetTitle, $status );
+			if ( targetTitle ) {
+				this.targetPage = targetTitle;
+				// The page exists. So update the contribute link to use that title.
+				$contribute.attr( 'href', this.getContributeLink() );
+			}
 		}.bind( this ) );
 
-		this.specialPageURL = this.sitemapper.getPageUrl(
-			this.targetLanguage,
-			'Special:ExternalGuidance',
-			{
-				from: this.sourceLanguage,
-				to: this.targetLanguage,
-				page: this.sourcePage,
-				service: this.service
-			}
-		);
 		overlayManager.add( '/machine-translation-info', this.showServiceProviderInfo.bind( this ) );
 		$header = $( '<span>' )
 			.attr( { translate: 'no' } ) // Do not translate this banner
@@ -67,19 +62,7 @@
 			.append( $header )
 			.on( 'click', overlayManager.router.navigate.bind( null, '/machine-translation-info' ) );
 
-		$contribute = $( '<a>' )
-			.addClass( 'mw-ui-icon mw-ui-icon-before mw-ui-icon-edit-progressive ' +
-				' eg-machine-translation-banner-action-label notranslate' )
-			.attr( {
-				translate: 'no', // Do not translate this banner
-				href: this.specialPageURL,
-				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
-				target: '_blank' // Open in new window/tab, not in the iframe (if any) by the MT service
-			} )
-			.append(
-				// Wrap the label in a span so that we can hide text and show icon on small screens
-				$( '<span>' ).html( mw.msg( 'externalguidance-machine-translation-contribute' ) )
-			);
+		$contribute = this.getContributeLinkElement();
 		$contributeContainer = $( '<li>' )
 			.addClass( 'eg-machine-translation-banner-action-container' )
 			.append( $contribute );
@@ -98,6 +81,36 @@
 		}
 
 		this.removeFooterLinkToDesktop();
+	};
+
+	MachineTranslationContext.prototype.getContributeLink = function () {
+		return this.sitemapper.getPageUrl(
+			this.targetLanguage,
+			'Special:ExternalGuidance',
+			{
+				from: this.sourceLanguage,
+				to: this.targetLanguage,
+				page: this.sourcePage,
+				targettitle: this.targetPage,
+				service: this.service
+			}
+		);
+	};
+
+	MachineTranslationContext.prototype.getContributeLinkElement = function () {
+		return $( '<a>' )
+			.addClass( 'mw-ui-icon mw-ui-icon-before mw-ui-icon-edit-progressive ' +
+				' eg-machine-translation-banner-action-label notranslate' )
+			.attr( {
+				translate: 'no', // Do not translate this banner
+				href: this.getContributeLink(),
+				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
+				target: '_blank' // Open in new window/tab, not in the iframe (if any) by the MT service
+			} )
+			.append(
+				// Wrap the label in a span so that we can hide text and show icon on small screens
+				$( '<span>' ).html( mw.msg( 'externalguidance-machine-translation-contribute' ) )
+			);
 	};
 
 	/**
@@ -144,10 +157,12 @@
 			lllang: this.sitemapper.getWikiDomainCode( to ),
 			redirects: true
 		} ).then( function ( response ) {
-			var result,
+			var i, page, result,
 				pages = response.query.pages;
-			pages.forEach( function ( page ) {
+			for ( i = 0; i < pages.length; i++ ) {
+				page = pages[ i ];
 				if ( page.langlinks && page.langlinks.length > 0 ) {
+					// eslint-disable-next-line no-loop-func
 					page.langlinks.some( function ( item ) {
 						if ( item.lang === to ) {
 							result = item;
@@ -156,7 +171,7 @@
 					} );
 					return result.title;
 				}
-			} );
+			}
 			return false;
 
 		} );
@@ -195,7 +210,7 @@
 				projectName: mw.config.get( 'wgSiteName' ),
 				serviceName: this.service,
 				mtPrivacyTermsLink: privacyLink,
-				learnToContributeLink: this.specialPageURL,
+				learnToContributeLink: this.getContributeLink(),
 				targetPageExists: !!targetTitle
 			} ).$el );
 
