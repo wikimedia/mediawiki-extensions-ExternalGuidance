@@ -50,6 +50,7 @@
 	 */
 	RequestTitleForm.prototype.onCreateButtonClick = function () {
 		var trackName,
+			updatedTitle = this.$( '.eg-create-page-title' ).val(),
 			query = mw.Uri().query;
 
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.createpage
@@ -64,11 +65,11 @@
 			source_language: query.from,
 			target_language: query.to,
 			service: query.service,
-			title: this.options.sourcePage
+			title: updatedTitle
 		} );
 		location.href = this.sitemapper.getPageUrl(
 			this.options.targetLanguage,
-			this.$( '.eg-create-page-title' ).val(),
+			updatedTitle,
 			this.editParams
 		);
 	};
