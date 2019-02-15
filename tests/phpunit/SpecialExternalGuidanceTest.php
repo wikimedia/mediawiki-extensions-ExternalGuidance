@@ -10,38 +10,49 @@ use MWException;
 use InvalidArgumentException;
 
 /**
- * @covers MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance
+ * @coversDefaultClass \MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance
  */
 class SpecialExternalGuidanceTest extends MediaWikiTestCase {
-
 	/**
-	 * @covers MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance::mtContextGuidance
+	 * @covers ::mtContextGuidance
+	 * @param RequestContext $context
+	 * @param SpecialExternalGuidance $page
+	 * @param array $params
+	 * @param string $expected For both cases in provider, just MWExceptions are raised.
+	 * @dataProvider provideMTContextGuidanceData
 	 */
-	public function testMTContextGuidanceWithParamMissing() {
-		$context = new RequestContext();
-		$page = new SpecialExternalGuidance();
-		$params = [ 'from' => 'en', 'to' => 'id', 'service' => 'ServiceX' ];
+	public function testMTContextGuidanceWithInvalidData(
+		RequestContext $context,
+		SpecialExternalGuidance $page,
+		array $params,
+		$expected
+	) {
 		$request = new FauxRequest( $params );
 		$context->setRequest( $request );
 		$page->setContext( $context );
 		$output = $context->getOutput();
-		$this->setExpectedException( MWException::class );
+		$this->setExpectedException( $expected );
 		$page->mtContextGuidance( $request, $output );
 	}
 
-	/**
-	 * @covers MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance::mtContextGuidance
-	 */
-	public function testMTContextGuidanceWithWrongLanguage() {
+	public function provideMTContextGuidanceData() {
 		$context = new RequestContext();
 		$page = new SpecialExternalGuidance();
-		$params = [ 'from' => 'xxxxx', 'to' => 'id', 'page' => 'TestPage', 'service' => 'ServiceX' ];
-		$request = new FauxRequest( $params );
-		$context->setRequest( $request );
-		$page->setContext( $context );
-		$output = $context->getOutput();
-		$this->setExpectedException( InvalidArgumentException::class );
-		$page->mtContextGuidance( $request, $output );
+
+		return [
+			[
+				$context, $page,
+				// With missing parameter but valid language (en)
+				[ 'from' => 'en', 'to' => 'id', 'service' => 'ServiceX' ],
+				MWException::class
+			],
+			[
+				$context, $page,
+				// With wrong language (xxxxx) but valid parameter (TestPage)
+				[ 'from' => 'xxxxx', 'to' => 'id', 'page' => 'TestPage', 'service' => 'ServiceX' ],
+				InvalidArgumentException::class
+			]
+		];
 	}
 
 }
