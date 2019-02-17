@@ -20,7 +20,7 @@
 	"externalguidance-specialpage-contribute-expand-action": "Desenvolver o artigo existente",
 	"externalguidance-specialpage-contribute-improve-source": "Melhorar o artigo original também ajudará as pessoas que lerem as traduções.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Editar a versão original em $1",
-	"externalguidance-machine-translation-page-exist": "[[$1|Também está disponível]] conteúdo criado pela comunidade sobre este assunto",
+	"externalguidance-machine-translation-page-exist": "[$1 Também está disponível] conteúdo criado pela comunidade sobre este assunto",
 	"externalguidance-machine-translation-page-missing": "Não existe em $1",
 	"externalguidance-machine-translation-provider-info-title": "Tradução automática realizada por $1",
 	"externalguidance-machine-translation-provider-info": "Este conteúdo da wiki $1 é traduzido e entregue a você por $2",

@@ -20,7 +20,7 @@
 	"externalguidance-specialpage-contribute-expand-action": "Проширете ја постоечката статија",
 	"externalguidance-specialpage-contribute-improve-source": "Подобрувајќи ја изворната статија ќе им помогнете на оние кои читаат нејзин превод.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Уредете ја изворната верзија на $1",
-	"externalguidance-machine-translation-page-exist": "[[$1|На располагање е]] и содржина направена од заедницата на оваа тема",
+	"externalguidance-machine-translation-page-exist": "[$1 На располагање е] и содржина направена од заедницата на оваа тема",
 	"externalguidance-machine-translation-page-missing": "Недостасува на $1",
 	"externalguidance-machine-translation-provider-info-title": "Автоматски превод од $1",
 	"externalguidance-machine-translation-provider-info": "Оваа содржина на $1 е преведена и овозможена од $2.",

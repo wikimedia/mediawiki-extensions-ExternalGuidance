@@ -21,7 +21,7 @@
 	"externalguidance-specialpage-contribute-expand-action": "להרחיב את הערך הקיים",
 	"externalguidance-specialpage-contribute-improve-source": "שיפור הערך המקורי יעזור לאנשים שקוראים תרגומים שלו.",
 	"externalguidance-specialpage-contribute-improve-source-action": "עריכת הגרסה המקורית ב{{GRMMAR:תחילית|$1}}",
-	"externalguidance-machine-translation-page-exist": "[[$1|זמין גם תוכן]] שנוצר על־ידי הקהילה",
+	"externalguidance-machine-translation-page-exist": "[$1 זמין גם תוכן] שנוצר על־ידי הקהילה",
 	"externalguidance-machine-translation-page-missing": "חסר ב{{GRAMMAR:תחילית|$1}}",
 	"externalguidance-machine-translation-provider-info-title": "תרגום אוטומטי מ{{GRAMMAR:תחילית|$1}}",
 	"externalguidance-machine-translation-provider-info": "תוכן זה של $1 מתורגם ומובא לך על־די $2.",

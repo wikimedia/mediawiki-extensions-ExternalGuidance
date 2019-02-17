@@ -20,7 +20,7 @@
 	"externalguidance-specialpage-contribute-expand-action": "Розширити наявну статтю",
 	"externalguidance-specialpage-contribute-improve-source": "Поліпшення оригінальної статті теж полегшить людям сприйняття її перекладів.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Редагувати оригінальну версію мовою $1",
-	"externalguidance-machine-translation-page-exist": "[[$1|Також доступний]] контент на цю тему, створений спільнотою",
+	"externalguidance-machine-translation-page-exist": "[$1 Також доступний] контент на цю тему, створений спільнотою",
 	"externalguidance-machine-translation-page-missing": "Відсутня мовою $1",
 	"externalguidance-machine-translation-provider-info-title": "АВтоматичний переклад з мови $1",
 	"externalguidance-machine-translation-provider-info": "Цей контент із сайту $1 перекладено й доставлено Вам за допомогою $2.",

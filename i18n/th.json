@@ -14,6 +14,7 @@
 	"externalguidance-specialpage-contribute-expand-action": "ขยายบทความที่มีอยู่",
 	"externalguidance-specialpage-contribute-improve-source": "การปรับปรุงบทความต้นฉบับจะช่วยให้ผู้คนอ่านคำแปลได้",
 	"externalguidance-specialpage-contribute-improve-source-action": "แก้ไขเวอร์ชันต้นฉบับใน $1",
+	"externalguidance-machine-translation-page-exist": "เนื้อหาที่สร้างโดยชุมชนในหัวข้อนี้ [$1 ยังมีอยู่]",
 	"externalguidance-machine-translation-page-missing": "ไม่พบใน $1",
 	"externalguidance-machine-translation-provider-info-title": "การแปลอัตโนมัติจาก $1",
 	"externalguidance-machine-translation-provider-terms": "ตรวจสอบภาวะเฉพาะส่วนตัวและข้อกำหนด",

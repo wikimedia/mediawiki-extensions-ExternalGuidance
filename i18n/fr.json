@@ -21,7 +21,7 @@
 	"externalguidance-specialpage-contribute-expand-action": "Développer l’article existant",
 	"externalguidance-specialpage-contribute-improve-source": "L’amélioration de l’article d’origine aidera aussi les gens qui en lisent les traductions.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Modifier la version originale en $1",
-	"externalguidance-machine-translation-page-exist": "Le contenu de communauté créée sur ce sujet [[$1|est aussi disponible]]",
+	"externalguidance-machine-translation-page-exist": "Contenu créé par la communauté sur ce sujet [$1 est aussi disponible]",
 	"externalguidance-machine-translation-page-missing": "Absent en $1",
 	"externalguidance-machine-translation-provider-info-title": "Traduction automatique de $1",
 	"externalguidance-machine-translation-provider-info": "Ce contenu $1 est traduit et vous est fourni par $2.",

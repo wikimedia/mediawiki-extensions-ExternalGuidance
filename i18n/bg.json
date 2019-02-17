@@ -16,7 +16,7 @@
 	"externalguidance-specialpage-contribute-expand-action": "Разширете съществуващата статия",
 	"externalguidance-specialpage-contribute-improve-source": "Подобрявайки изходната статия, ще помогнете на онези, които четат неин превод.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Редактирайте изходната версия на $1",
-	"externalguidance-machine-translation-page-exist": "[[$1|На разположение е]] и съдържание, направено от общността на тази тема",
+	"externalguidance-machine-translation-page-exist": "[$1 На разположение е] и съдържание, направено от общността на тази тема",
 	"externalguidance-machine-translation-page-missing": "Липсва на $1",
 	"externalguidance-machine-translation-provider-info-title": "Автоматичен превод от $1",
 	"externalguidance-machine-translation-provider-info": "Това съдържание на $1 е преведено и позволено от $2.",

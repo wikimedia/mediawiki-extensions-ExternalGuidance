@@ -7,5 +7,6 @@
 	"externalguidance-specialpage-createpage-title": "नयाँ पृष्ठ बनाउनुहोस्",
 	"externalguidance-specialpage-createpage-title-label": "शीर्षक",
 	"externalguidance-specialpage-createpage-button-label": "नयाँ पृष्ठ सृजना गर्नुहोस्",
-	"externalguidance-specialpage-createpage-button-label-edit": "भएकै पृष्ठलाई सम्पादन गर्नुहोस्"
+	"externalguidance-specialpage-createpage-button-label-edit": "भएकै पृष्ठलाई सम्पादन गर्नुहोस्",
+	"externalguidance-specialpage-createpage-page-exist": "यस शीर्षकको साथमा एक पृष्ठ पहिल्यै अवस्थित छ।"
 }

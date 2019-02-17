@@ -13,7 +13,7 @@
 	"externalguidance-specialpage-intro-human": "Det är mycket bättre att ha en artikel skapad av människor!",
 	"externalguidance-specialpage-contribute-title": "Sätt att bidrag",
 	"externalguidance-specialpage-contribute-improve-source-action": "Redigera originalversionen i $1",
-	"externalguidance-machine-translation-page-exist": "Innehåll om detta ämne som har skapats av gemenskapen [[$1|finns också tillgängligt]]",
+	"externalguidance-machine-translation-page-exist": "Innehåll om detta ämne som har skapats av gemenskapen [$1 finns också tillgängligt]",
 	"externalguidance-machine-translation-page-missing": "Saknas på $1",
 	"externalguidance-specialpage-createpage-title": "Skapa en ny sida",
 	"externalguidance-specialpage-createpage-title-label": "Titel",
