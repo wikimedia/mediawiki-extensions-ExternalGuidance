@@ -21,7 +21,7 @@ use WebRequest;
  */
 class SpecialExternalGuidance extends SpecialPage {
 	public function __construct() {
-		parent::__construct( 'ExternalGuidance' );
+		parent::__construct( 'ExternalGuidance', '', false );
 	}
 
 	/**
