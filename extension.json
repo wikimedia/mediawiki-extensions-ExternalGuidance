@@ -57,6 +57,10 @@
 				"yue": "zh-yue"
 			},
 			"description": "Language to domain name mapping"
+		},
+		"ExternalGuidanceKnownServices": {
+			"value": ["Google"],
+			"description": "Valid list of service names"
 		}
 	},
 	"Hooks": {

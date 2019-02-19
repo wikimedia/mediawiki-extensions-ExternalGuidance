@@ -50,21 +50,23 @@
 	 */
 	RequestTitleForm.prototype.onCreateButtonClick = function () {
 		var trackName,
-			updatedTitle = this.$el.find( '.eg-create-page-title' ).val(),
-			query = mw.Uri().query;
+			updatedTitle = this.$( '.eg-create-page-title' ).val();
 
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.createpage
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance',
 			this.pageExist ? 'editpage' : 'createpage',
-			query.service, query.from, query.to ];
+			mw.config.get( 'wgExternalGuidanceService' ),
+			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
+		];
 
 		mw.track( trackName.join( '.' ), 1 );
 		mw.track( 'event.ExternalGuidance', {
 			action: this.pageExist ? 'editpage' : 'createpage',
 			session_token: mw.user.sessionId(),
-			source_language: query.from,
-			target_language: query.to,
-			service: query.service,
+			source_language: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			target_language: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
+			service: mw.config.get( 'wgExternalGuidanceService' ),
 			title: updatedTitle
 		} );
 		location.href = this.sitemapper.getPageUrl(
@@ -162,18 +164,17 @@
 	}
 
 	function openCreatePageOverlay() {
-		var query = mw.Uri().query;
 
 		return createPageOverlay( {
 			projectName: mw.config.get( 'wgSiteName' ),
-			targetLanguage: query.to,
-			sourcePage: query.page
+			targetLanguage: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
+			sourcePage: mw.config.get( 'wgExternalGuidanceSourcePage' )
 		} );
+
 	}
 
 	function onContributeToOriginalClick() {
 		var trackName,
-			query = mw.Uri().query,
 			sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
 			editParams = {
 				veaction: 'edit',
@@ -182,23 +183,28 @@
 
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.edit-original
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'edit-original',
-			query.service, query.from, query.to ];
-
+			mw.config.get( 'wgExternalGuidanceService' ),
+			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
+		];
 		mw.track( trackName.join( '.' ), 1 );
 		mw.track( 'event.ExternalGuidance', {
 			action: 'edit-original',
 			session_token: mw.user.sessionId(),
-			source_language: query.from,
-			target_language: query.to,
-			service: query.service,
-			title: query.page
+			source_language: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			target_language: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
+			service: mw.config.get( 'wgExternalGuidanceService' ),
+			title: mw.config.get( 'wgExternalGuidanceSourcePage' )
 		} );
-		location.href = sitemapper.getPageUrl( query.from, query.page, editParams );
+		location.href = sitemapper.getPageUrl(
+			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			mw.config.get( 'wgExternalGuidanceSourcePage' ),
+			editParams
+		);
 	}
 
 	function onExpandTargetArticleClick() {
 		var trackName,
-			query = mw.Uri().query,
 			sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
 			editParams = {
 				veaction: 'edit',
@@ -207,23 +213,29 @@
 
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.editpage
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'editpage',
-			query.service, query.from, query.to ];
+			mw.config.get( 'wgExternalGuidanceService' ),
+			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
+		];
 
 		mw.track( trackName.join( '.' ), 1 );
 		mw.track( 'event.ExternalGuidance', {
 			action: 'editpage',
 			session_token: mw.user.sessionId(),
-			source_language: query.from,
-			target_language: query.to,
-			service: query.service,
-			title: query.targettitle
+			source_language: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			target_language: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
+			service: mw.config.get( 'wgExternalGuidanceService' ),
+			title: mw.config.get( 'wgExternalGuidanceTargetPage' )
 		} );
-		location.href = sitemapper.getPageUrl( query.to, query.targettitle, editParams );
+		location.href = sitemapper.getPageUrl(
+			mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
+			mw.config.get( 'wgExternalGuidanceTargetPage' ),
+			editParams
+		);
 	}
 
 	$( function () {
 		var trackName,
-			query = mw.Uri().query,
 			// eslint-disable-next-line jquery/no-global-selector
 			$createButton = $( '.eg-sp-contribute-create' ),
 			// eslint-disable-next-line jquery/no-global-selector
@@ -242,15 +254,18 @@
 			.on( 'click', onExpandTargetArticleClick );
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.specialpage
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
-			query.service, query.from, query.to ];
+			mw.config.get( 'wgExternalGuidanceService' ),
+			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
+		];
 		mw.track( trackName.join( '.' ), 1 );
 		mw.track( 'event.ExternalGuidance', {
 			action: 'specialpage',
 			session_token: mw.user.sessionId(),
-			source_language: query.from,
-			target_language: query.to,
-			service: query.service,
-			title: query.page
+			source_language: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			target_language: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
+			service: mw.config.get( 'wgExternalGuidanceService' ),
+			title: mw.config.get( 'wgExternalGuidanceSourcePage' )
 		} );
 	} );
 

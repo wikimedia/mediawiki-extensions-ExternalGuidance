@@ -7,6 +7,7 @@ use MediaWikiTestCase;
 use RequestContext;
 use FauxRequest;
 use MWException;
+use InvalidArgumentException;
 
 /**
  * @covers MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance
@@ -39,7 +40,7 @@ class SpecialExternalGuidanceTest extends MediaWikiTestCase {
 		$context->setRequest( $request );
 		$page->setContext( $context );
 		$output = $context->getOutput();
-		$this->setExpectedException( MWException::class );
+		$this->setExpectedException( InvalidArgumentException::class );
 		$page->mtContextGuidance( $request, $output );
 	}
 
