@@ -21,7 +21,6 @@
 	},
 	"AutoloadClasses": {
 		"MediaWiki\\Extension\\ExternalGuidance\\Hooks": "includes/Hooks.php",
-		"MediaWiki\\Extension\\ExternalGuidance\\SiteMapper": "includes/SiteMapper.php",
 		"MediaWiki\\Extension\\ExternalGuidance\\SpecialExternalGuidance": "specials/SpecialExternalGuidance.php"
 	},
 	"SpecialPages": {

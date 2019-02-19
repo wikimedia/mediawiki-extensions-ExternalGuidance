@@ -109,10 +109,10 @@ class SpecialExternalGuidance extends SpecialPage {
 		if ( $pageExists ) {
 			$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-expand-action' )->text();
 			$out->addHTML( Html::element(
-				'a',
+				'button',
 				[
 					'class' => 'eg-sp-contribute-expand mw-ui-button mw-ui-primary mw-ui-progressive',
-					'href' => SiteMapper::getPageURL( $targetLanguage, $sourcePage, $editParams )
+					'disabled' => true
 				],
 				$actionLabel
 			) );
