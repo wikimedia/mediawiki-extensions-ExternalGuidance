@@ -69,11 +69,11 @@
 			service: mw.config.get( 'wgExternalGuidanceService' ),
 			title: updatedTitle
 		} );
-		location.href = this.sitemapper.getPageUrl(
+		window.open( this.sitemapper.getPageUrl(
 			this.options.targetLanguage,
 			updatedTitle,
 			this.editParams
-		);
+		), '_blank' );
 	};
 
 	/**
@@ -196,11 +196,11 @@
 			service: mw.config.get( 'wgExternalGuidanceService' ),
 			title: mw.config.get( 'wgExternalGuidanceSourcePage' )
 		} );
-		location.href = sitemapper.getPageUrl(
+		window.open( sitemapper.getPageUrl(
 			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
 			mw.config.get( 'wgExternalGuidanceSourcePage' ),
 			editParams
-		);
+		), '_blank' );
 	}
 
 	function onExpandTargetArticleClick() {
@@ -227,11 +227,11 @@
 			service: mw.config.get( 'wgExternalGuidanceService' ),
 			title: mw.config.get( 'wgExternalGuidanceTargetPage' )
 		} );
-		location.href = sitemapper.getPageUrl(
+		window.open( sitemapper.getPageUrl(
 			mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
 			mw.config.get( 'wgExternalGuidanceTargetPage' ),
 			editParams
-		);
+		), '_blank' );
 	}
 
 	$( function () {
