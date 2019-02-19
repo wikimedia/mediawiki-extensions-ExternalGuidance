@@ -14,6 +14,7 @@ use SpecialPage;
 use Language;
 use Html;
 use MWException;
+use InvalidArgumentException;
 use WebRequest;
 
 /**
@@ -48,17 +49,17 @@ class SpecialExternalGuidance extends SpecialPage {
 	 * @param OutputPage $out
 	 */
 	public function mtContextGuidance( $request, $out ) {
-		global $wgSitename;
+		global $wgSitename, $wgExternalGuidanceKnownServices;
 
 		$targetPageTitle = null;
 		$pageExists = false;
-
-		$out->addModules( 'mw.externalguidance.special' );
 
 		$sourceLanguage = $request->getVal( 'from' );
 		$targetLanguage = $request->getVal( 'to' );
 		$sourcePage = $request->getVal( 'page' );
 		$targetPage = $request->getVal( 'targettitle' );
+		$service = $request->getVal( 'service' );
+
 		if ( !$sourcePage || !$sourceLanguage || !$targetLanguage ) {
 			throw new MWException( __METHOD__ . ": One of the mandatory parameters missing" );
 		}
@@ -66,8 +67,13 @@ class SpecialExternalGuidance extends SpecialPage {
 		if ( !Language::isKnownLanguageTag( $sourceLanguage ) ||
 			!Language::isKnownLanguageTag( $targetLanguage )
 		) {
-			throw new MWException( __METHOD__ . ": Invalid language code" );
+			throw new InvalidArgumentException( " Invalid language code" );
 		}
+
+		if ( !$service || !in_array( $service, $wgExternalGuidanceKnownServices ) ) {
+			throw new InvalidArgumentException( "Invalid service name" );
+		}
+
 		// Create the title instance after validation. Throws MalformedTitleException if invalid.
 		$sourcePageTitle = Title::newFromTextThrow( $sourcePage );
 		if ( $targetPage ) {
@@ -150,6 +156,19 @@ class SpecialExternalGuidance extends SpecialPage {
 		) );
 		$out->addWikiMsg( 'externalguidance-specialpage-contribute-improve-source' );
 		$out->addHTML( '</div>' );
+
+		$out->addModules( 'mw.externalguidance.special' );
+		$out->addJsConfigVars( [
+			'wgExternalGuidanceSourcePage' => $sourcePageTitle->getPrefixedText(),
+			'wgExternalGuidanceSourceLanguage' => $sourceLanguage,
+			'wgExternalGuidanceTargetLanguage' => $targetLanguage,
+			'wgExternalGuidanceService' => $service,
+		] );
+		if ( $pageExists ) {
+			$out->addJsConfigVars(
+				'wgExternalGuidanceTargetPage', $targetPageTitle->getPrefixedText()
+			);
+		}
 	}
 
 }
