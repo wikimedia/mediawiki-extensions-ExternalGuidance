@@ -59,7 +59,7 @@
 		if ( context.info.to === originalUserLang ) {
 			// It is observed that sometimes the MT engine will fail to translate the page, leaving
 			// document unmodified. Detect such cases and abort.
-			return;
+			// return;
 		}
 		mw.log( '[ExternalGuidance] Context detected ' + JSON.stringify( context ) );
 

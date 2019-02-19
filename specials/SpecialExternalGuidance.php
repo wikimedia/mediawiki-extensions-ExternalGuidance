@@ -50,12 +50,15 @@ class SpecialExternalGuidance extends SpecialPage {
 	public function mtContextGuidance( $request, $out ) {
 		global $wgSitename;
 
+		$targetPageTitle = null;
+		$pageExists = false;
+
 		$out->addModules( 'mw.externalguidance.special' );
 
 		$sourceLanguage = $request->getVal( 'from' );
 		$targetLanguage = $request->getVal( 'to' );
 		$sourcePage = $request->getVal( 'page' );
-		// TODO: We also get service name. Use that for the analytics wiring.
+		$targetPage = $request->getVal( 'targettitle' );
 		if ( !$sourcePage || !$sourceLanguage || !$targetLanguage ) {
 			throw new MWException( __METHOD__ . ": One of the mandatory parameters missing" );
 		}
@@ -67,10 +70,13 @@ class SpecialExternalGuidance extends SpecialPage {
 		}
 		// Create the title instance after validation. Throws MalformedTitleException if invalid.
 		$sourcePageTitle = Title::newFromTextThrow( $sourcePage );
+		if ( $targetPage ) {
+			$targetPageTitle = Title::newFromTextThrow( $targetPage );
+			// This wiki should match the target language since the "contribute" link takes the user
+			// to this special page in target language.
+			$pageExists = $targetPageTitle->isKnown();
+		}
 
-		// This wiki should match the target language since the "contribute" link takes the user
-		// to this special page in target language.
-		$pageExists = $sourcePageTitle->isKnown();
 		$out->addHTML( '<div class="eg-sp">' );
 
 		if ( $pageExists ) {
