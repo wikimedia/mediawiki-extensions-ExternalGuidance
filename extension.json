@@ -141,10 +141,16 @@
 				"externalguidance-specialpage-createpage-button-label",
 				"externalguidance-specialpage-createpage-button-label-edit",
 				"externalguidance-specialpage-createpage-desc",
-				"externalguidance-specialpage-createpage-page-exist"
+				"externalguidance-specialpage-createpage-page-exist",
+				"externalguidance-specialpage-createpage-methods-header",
+				"externalguidance-specialpage-createpage-create-from-scratch",
+				"externalguidance-specialpage-createpage-create-from-translation"
 			],
 			"dependencies": [
 				"mobile.startup",
+				"mediawiki.ui.radio",
+				"mediawiki.jqueryMsg",
+				"jquery.uls.data",
 				"mediawiki.ForeignApi",
 				"mw.externalguidance.icons"
 			]
@@ -153,7 +159,7 @@
 	"attributes": {
 		"EventLogging": {
 			"Schemas": {
-				"ExternalGuidance": 18873656
+				"ExternalGuidance": 18903973
 			}
 		}
 	},

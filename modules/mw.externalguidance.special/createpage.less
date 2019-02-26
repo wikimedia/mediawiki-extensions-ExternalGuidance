@@ -3,7 +3,7 @@
 .eg-createpage-overlay {
 	margin: 1em;
 
-	input {
+	.eg-create-page-title {
 		margin: 1em 0;
 		width: 80%;
 	}
@@ -19,5 +19,9 @@
 
 	.eg-create-page-error {
 		color: @colorDestructive;
+	}
+
+	.eg-create-page-error + .eg-create-page-method-selection {
+		display: none;
 	}
 }

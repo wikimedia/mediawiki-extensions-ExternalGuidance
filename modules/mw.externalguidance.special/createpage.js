@@ -19,6 +19,7 @@
 				'click .eg-create-page-button': 'onCreateButtonClick'
 			},
 			projectName: options.projectName,
+			sourceLanguage: options.sourceLanguage,
 			targetLanguage: options.targetLanguage,
 			sourcePage: options.sourcePage
 		} );
@@ -26,7 +27,8 @@
 	OO.inheritClass( RequestTitleForm, View );
 
 	RequestTitleForm.prototype.postRender = function () {
-		var $heading = $( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-title-label' ) ),
+		var $pageCreationOptions = $( [] ),
+			$heading = $( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-title-label' ) ),
 			$input = $( '<input>' )
 				.attr( 'type', 'text' )
 				.addClass( 'mw-ui-input eg-create-page-title' )
@@ -37,7 +39,11 @@
 			$btn = $( '<button>' )
 				.addClass( 'eg-create-page-button mw-ui-button mw-ui-primary mw-ui-progressive' )
 				.text( mw.msg( 'externalguidance-specialpage-createpage-button-label' ) );
-		this.$el.append( [ $heading, $input, $p, $btn ] );
+
+		if ( this.isDesktop() ) {
+			$pageCreationOptions = this.showPageCreationOptions();
+		}
+		this.$el.append( [ $heading, $input, $p, $pageCreationOptions, $btn ] );
 		this.$el.find( '.eg-create-page-title' ).trigger( 'focus' );
 		this.onTitleInput();
 		View.prototype.postRender.apply( this, arguments );
@@ -49,12 +55,14 @@
 	 * @instance
 	 */
 	RequestTitleForm.prototype.onCreateButtonClick = function () {
-		var trackName,
-			updatedTitle = this.$( '.eg-create-page-title' ).val();
+		var trackName, action,
+			updatedTitle = this.$( '.eg-create-page-title' ).val(),
+			method = this.getPageCreateMethod() || 'create';
 
+		action = this.pageExist ? 'editpage' : ( method === 'translate' ? 'createpage-translate' : 'createpage' );
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.createpage
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance',
-			this.pageExist ? 'editpage' : 'createpage',
+			action,
 			mw.config.get( 'wgExternalGuidanceService' ),
 			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
 			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
@@ -62,18 +70,91 @@
 
 		mw.track( trackName.join( '.' ), 1 );
 		mw.track( 'event.ExternalGuidance', {
-			action: this.pageExist ? 'editpage' : 'createpage',
+			action: action,
 			session_token: mw.user.sessionId(),
 			source_language: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
 			target_language: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
 			service: mw.config.get( 'wgExternalGuidanceService' ),
 			title: updatedTitle
 		} );
-		window.open( this.sitemapper.getPageUrl(
-			this.options.targetLanguage,
-			updatedTitle,
-			this.editParams
-		), '_blank' );
+
+		if ( action === 'createpage-translate' ) {
+			delete this.editParams.veaction;
+			window.open( this.sitemapper.getCXUrl(
+				this.options.sourcePage,
+				updatedTitle,
+				this.options.sourceLanguage,
+				this.options.targetLanguage,
+				{ campaign: 'external-machine-translation' }
+			), '_blank' );
+		} else {
+			window.open( this.sitemapper.getPageUrl(
+				this.options.targetLanguage,
+				updatedTitle,
+				this.editParams
+			), '_blank' );
+		}
+	};
+
+	/**
+	 * Get the current selected method for creating new page
+	 * @return {string} 'create' or 'translate'
+	 */
+	RequestTitleForm.prototype.getPageCreateMethod = function () {
+		return this.$el.find( '[name=eg-create-method]:checked' ).val();
+	};
+
+	/**
+	 * Check if the current page is in a desktop context
+	 *
+	 * @return {boolean}
+	 */
+	RequestTitleForm.prototype.isDesktop = function () {
+		return mw.config.get( 'wgMFMode', 'desktop' ) === 'desktop';
+	};
+
+	/**
+	 * Render the options to create a new page.
+	 * @return {jQuery}
+	 */
+	RequestTitleForm.prototype.showPageCreationOptions = function () {
+		var $container = $( '<div>' ).addClass( 'eg-create-page-method-selection' );
+
+		$container.append(
+			// Header
+			$( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-methods-header' ) ),
+			// Translate option
+			$( '<div>' ).addClass( 'mw-ui-radio' ).append(
+				$( '<input>' ).attr( {
+					type: 'radio',
+					value: 'translate',
+					id: 'eg-translate',
+					name: 'eg-create-method'
+				} ),
+				$( '<label>' ).attr( {
+					for: 'eg-translate'
+				} ).html( mw.message( 'externalguidance-specialpage-createpage-create-from-scratch',
+					$.uls.data.getAutonym( this.options.sourceLanguage ),
+					$.uls.data.getAutonym( this.options.targetLanguage )
+				).parseDom() )
+			),
+			// Start from scratch option. Default option.
+			$( '<div>' ).addClass( 'mw-ui-radio' ).append(
+				$( '<input>' ).attr( {
+					type: 'radio',
+					checked: 'checked',
+					value: 'create',
+					id: 'eg-create',
+					name: 'eg-create-method'
+				} ),
+				$( '<label>' ).attr( {
+					for: 'eg-create'
+				} ).html( mw.message( 'externalguidance-specialpage-createpage-create-from-translation' )
+					.parseDom() )
+			)
+		);
+
+		return $container;
 	};
 
 	/**
@@ -156,6 +237,7 @@
 		overlay.$el.find( '.overlay-content' ).append(
 			new RequestTitleForm( {
 				projectName: options.projectName,
+				sourceLanguage: options.sourceLanguage,
 				targetLanguage: options.targetLanguage,
 				sourcePage: options.sourcePage
 			} ).$el
@@ -167,6 +249,7 @@
 
 		return createPageOverlay( {
 			projectName: mw.config.get( 'wgSiteName' ),
+			sourceLanguage: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
 			targetLanguage: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
 			sourcePage: mw.config.get( 'wgExternalGuidanceSourcePage' )
 		} );
