@@ -32,7 +32,11 @@ class Hooks {
 	 * Hook: BeforePageDisplay
 	 */
 	public static function addModules( OutputPage $out, Skin $skin ) {
-		if ( $skin->getSkinName() === 'minerva' ) {
+		global $wgExternalGuidanceEnableContextDetection;
+
+		if ( $wgExternalGuidanceEnableContextDetection === true &&
+			$skin->getSkinName() === 'minerva'
+		) {
 			$out->addModules( 'mw.externalguidance.init' );
 		}
 	}
