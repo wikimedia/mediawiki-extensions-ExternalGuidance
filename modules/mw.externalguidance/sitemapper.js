@@ -76,6 +76,42 @@
 			.replace( '$1', domain.replace( /\$/g, '$$$$' ) )
 			.replace( '$2', mw.util.wikiUrlencode( title ).replace( /\$/g, '$$$$' ) ) + extra;
 	};
+
+	/**
+	 * Get the URL for Special:CX on the needed wiki
+	 * according to given source and target title and the target language.
+	 *
+	 * @param {string} sourceTitle
+	 * @param {string} targetTitle
+	 * @param {string} sourceLanguage
+	 * @param {string} targetLanguage
+	 * @param {Object} [extra] Additional query parameters
+	 * @return {string} URL
+	 */
+	SiteMapper.prototype.getCXUrl = function (
+		sourceTitle,
+		targetTitle,
+		sourceLanguage,
+		targetLanguage,
+		extra
+	) {
+		var cxPage, queryParams, uri;
+
+		cxPage = 'Special:ContentTranslation';
+		queryParams = $.extend( {
+			page: sourceTitle,
+			from: sourceLanguage,
+			to: targetLanguage,
+			targettitle: targetTitle
+		}, extra );
+
+		uri = new mw.Uri( this.getPageUrl( targetLanguage, cxPage ) );
+		$.extend( uri.query, queryParams );
+
+		return uri.toString();
+
+	};
+
 	mw.eg = mw.eg || {};
 	mw.eg.SiteMapper = SiteMapper;
 }() );
