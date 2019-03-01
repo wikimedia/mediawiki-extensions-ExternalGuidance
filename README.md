@@ -55,3 +55,11 @@ For various reasons, the domain name in the URLs for wikis may not be same as th
     "bho": "bh"
 }
 ```
+
+### Enable or Disable external context detection
+
+If the context detection is not required in a wiki, but want to have Special:ExternalGuidance to accept traffic from the context detected from other wikis, use the following configuration
+
+```lang=php
+$wgExternalGuidanceEnableContextDetection = false;
+```

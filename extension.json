@@ -61,6 +61,10 @@
 		"ExternalGuidanceKnownServices": {
 			"value": ["Google"],
 			"description": "Valid list of service names"
+		},
+		"ExternalGuidanceEnableContextDetection": {
+			"value": true,
+			"description": "Enable external context detection in the wiki where this is deployed. If not enabled, the Special:ExternalGuidance will be present, so that users can come from a different wiki where context detection is enabled."
 		}
 	},
 	"Hooks": {
