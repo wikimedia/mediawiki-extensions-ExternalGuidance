@@ -22,6 +22,8 @@
 	"externalguidance-specialpage-contribute-improve-source-action": "編輯在$1的原始版本",
 	"externalguidance-machine-translation-page-exist": "在此主題的社群所見內容[$1 也可用]",
 	"externalguidance-specialpage-createpage-methods-header": "如何開始",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>從翻譯開始。</strong>會一開始採用自動翻譯內容，您需要對於$1與$2有良好的能力以檢閱並改善初始翻譯內容",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>從頭開始。</strong>開始一個空白頁面來創建條目",
 	"externalguidance-machine-translation-page-missing": "缺少$1版本",
 	"externalguidance-machine-translation-provider-info-title": "來自於$1的自動翻譯",
 	"externalguidance-machine-translation-provider-info": "此$1內容已由$2所翻譯並傳遞給您。",

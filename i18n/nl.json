@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"Elroy"
+			"Elroy",
+			"Romaine"
 		]
 	},
 	"externalguidance-machine-translation-heading": "Automatische vertaling",
 	"externalguidance-machine-translation-contribute": "Bijdragen",
+	"externalguidance-specialpage-createpage-methods-header": "Hoe beginnen",
 	"externalguidance-specialpage-createpage-button-label": "Nieuwe pagina maken"
 }
