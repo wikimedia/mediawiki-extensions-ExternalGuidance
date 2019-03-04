@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Piramidion"
+			"Piramidion",
+			"Vlad5250"
 		]
 	},
 	"externalguidance-desc": "Контент Вікіпедії відтворюється на зовнішніх ресурсах у різні способи, і метою цього проекту є зробити так, щоб людям було легко потрапити туди, звідки була взята інформація, і зробити свій внесок у Вікіпедію.",
@@ -21,6 +22,9 @@
 	"externalguidance-specialpage-contribute-improve-source": "Поліпшення оригінальної статті теж полегшить людям сприйняття її перекладів.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Редагувати оригінальну версію мовою $1",
 	"externalguidance-machine-translation-page-exist": "[$1 Також доступний] контент на цю тему, створений спільнотою",
+	"externalguidance-specialpage-createpage-methods-header": "З чого почати",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Почніть з перекладу.</strong> Як початкова точка Вам послугує автоматичний переклад. Щоб переглядати і покращувати початковий переклад, Вам потрібні добрі знання $1 і $2",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>Почніть з нуля.</strong> Розпочніть порожню сторінку для створення статті",
 	"externalguidance-machine-translation-page-missing": "Відсутня мовою $1",
 	"externalguidance-machine-translation-provider-info-title": "АВтоматичний переклад з мови $1",
 	"externalguidance-machine-translation-provider-info": "Цей контент із сайту $1 перекладено й доставлено Вам за допомогою $2.",
