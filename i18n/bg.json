@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250"
+			"Vlad5250",
+			"StanProg"
 		]
 	},
 	"externalguidance-machine-translation-heading": "Автоматичен превод",
@@ -18,6 +19,8 @@
 	"externalguidance-specialpage-contribute-improve-source-action": "Редактирайте изходната версия на $1",
 	"externalguidance-machine-translation-page-exist": "[$1 На разположение е] и съдържание, направено от общността на тази тема",
 	"externalguidance-specialpage-createpage-methods-header": "Как се започва",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Започнете от превода.</strong> Като отправна точка, ще Ви послужи автоматичния превод. За да прегледате и подобрите първоначалния превод, ще се нуждаете от добро познаване на $1 и $2",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>Започнете от нулата.</strong> Започнете с празна страница, за да създадете статията",
 	"externalguidance-machine-translation-page-missing": "Липсва на $1",
 	"externalguidance-machine-translation-provider-info-title": "Автоматичен превод от $1",
 	"externalguidance-machine-translation-provider-info": "Това съдържание на $1 е преведено и позволено от $2.",
