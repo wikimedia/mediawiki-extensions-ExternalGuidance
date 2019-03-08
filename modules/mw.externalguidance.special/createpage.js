@@ -56,7 +56,7 @@
 	 */
 	RequestTitleForm.prototype.onCreateButtonClick = function () {
 		var trackName, action,
-			updatedTitle = this.$( '.eg-create-page-title' ).val(),
+			updatedTitle = this.$el.find( '.eg-create-page-title' ).val(),
 			method = this.getPageCreateMethod() || 'create';
 
 		action = this.pageExist ? 'editpage' : ( method === 'translate' ? 'createpage-translate' : 'createpage' );
