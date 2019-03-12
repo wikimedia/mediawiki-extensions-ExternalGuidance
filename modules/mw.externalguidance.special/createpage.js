@@ -123,11 +123,12 @@
 		$container.append(
 			// Header
 			$( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-methods-header' ) ),
-			// Translate option
+			// Translate option - Default option.
 			$( '<div>' ).addClass( 'mw-ui-radio' ).append(
 				$( '<input>' ).attr( {
 					type: 'radio',
 					value: 'translate',
+					checked: 'checked',
 					id: 'eg-translate',
 					name: 'eg-create-method'
 				} ),
@@ -138,11 +139,10 @@
 					$.uls.data.getAutonym( this.options.targetLanguage )
 				).parseDom() )
 			),
-			// Start from scratch option. Default option.
+			// Start from scratch option.
 			$( '<div>' ).addClass( 'mw-ui-radio' ).append(
 				$( '<input>' ).attr( {
 					type: 'radio',
-					checked: 'checked',
 					value: 'create',
 					id: 'eg-create',
 					name: 'eg-create-method'
