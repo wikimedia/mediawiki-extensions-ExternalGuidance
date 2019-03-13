@@ -319,11 +319,11 @@
 
 	$( function () {
 		var trackName,
-			// eslint-disable-next-line jquery/no-global-selector
+			// eslint-disable-next-line no-jquery/no-global-selector
 			$createButton = $( '.eg-sp-contribute-create' ),
-			// eslint-disable-next-line jquery/no-global-selector
+			// eslint-disable-next-line no-jquery/no-global-selector
 			$expandButton = $( '.eg-sp-contribute-expand' ),
-			// eslint-disable-next-line jquery/no-global-selector
+			// eslint-disable-next-line no-jquery/no-global-selector
 			$contributeToOriginalButton = $( '.eg-sp-contribute-to-original' );
 		overlayManager.add( '/create-article', openCreatePageOverlay );
 		$createButton

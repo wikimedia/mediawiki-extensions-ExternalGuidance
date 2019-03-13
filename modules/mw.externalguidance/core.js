@@ -17,7 +17,7 @@
 		this.targetLanguage = options.to;
 		this.sourcePage = options.page;
 		this.service = options.service;
-		// eslint-disable-next-line jquery/no-global-selector
+		// eslint-disable-next-line no-jquery/no-global-selector
 		this.$container = $( '#page-actions' );
 		this.targetPage = null;
 		this.sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
@@ -237,7 +237,7 @@
 	MachineTranslationContext.prototype.rewriteMenuUrls = function ( targetLanguage ) {
 		var newUri, $menuLinks;
 
-		// eslint-disable-next-line jquery/no-global-selector
+		// eslint-disable-next-line no-jquery/no-global-selector
 		$menuLinks = $( 'nav .menu a' );
 		newUri = new mw.Uri( this.sitemapper.getPageUrl( targetLanguage, '' ) );
 		$menuLinks.each( function () {
@@ -253,7 +253,7 @@
 	 * Remove the footer link that says "Desktop". See T212197#4942773.
 	 */
 	MachineTranslationContext.prototype.removeFooterLinkToDesktop = function () {
-		// eslint-disable-next-line jquery/no-global-selector
+		// eslint-disable-next-line no-jquery/no-global-selector
 		$( '#footer-places-desktop-toggle' ).remove();
 	};
 
