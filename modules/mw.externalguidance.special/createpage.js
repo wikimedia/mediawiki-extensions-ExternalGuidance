@@ -79,7 +79,6 @@
 		} );
 
 		if ( action === 'createpage-translate' ) {
-			delete this.editParams.veaction;
 			window.open( this.sitemapper.getCXUrl(
 				this.options.sourcePage,
 				updatedTitle,
