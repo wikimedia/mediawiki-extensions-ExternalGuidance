@@ -37,5 +37,6 @@
 	"externalguidance-specialpage-createpage-button-label":"Create a new page",
 	"externalguidance-specialpage-createpage-button-label-edit":"Edit existing page",
 	"externalguidance-specialpage-createpage-desc":"A new page with this title will be created on $1",
-	"externalguidance-specialpage-createpage-page-exist":"A page with this title already exists."
+	"externalguidance-specialpage-createpage-page-exist": "A page with this title already exists.",
+	"externalguidance-specialpage-param-missing": "One of the mandatory parameters is missing."
 }

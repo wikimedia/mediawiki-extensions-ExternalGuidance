@@ -39,5 +39,6 @@
 	"externalguidance-specialpage-createpage-button-label": "Label for the button",
 	"externalguidance-specialpage-createpage-button-label-edit": "Label for the button when the page exists already",
 	"externalguidance-specialpage-createpage-desc": "A brief description on what happens if you click on button. $1 is project name",
-	"externalguidance-specialpage-createpage-page-exist": "Error message shown when the entered title already exists."
+	"externalguidance-specialpage-createpage-page-exist": "Error message shown when the entered title already exists.",
+	"externalguidance-specialpage-param-missing": "Error message shown when the Special:ExternalGuidance page accessed without any parameters."
 }

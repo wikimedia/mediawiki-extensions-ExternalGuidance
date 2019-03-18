@@ -13,7 +13,7 @@ use Title;
 use SpecialPage;
 use Language;
 use Html;
-use MWException;
+use ErrorPageError;
 use InvalidArgumentException;
 use WebRequest;
 
@@ -61,7 +61,8 @@ class SpecialExternalGuidance extends SpecialPage {
 		$service = $request->getVal( 'service' );
 
 		if ( !$sourcePage || !$sourceLanguage || !$targetLanguage ) {
-			throw new MWException( __METHOD__ . ": One of the mandatory parameters missing" );
+			throw new ErrorPageError( 'externalguidance-specialpage-title',
+				'externalguidance-specialpage-param-missing' );
 		}
 
 		if ( !Language::isKnownLanguageTag( $sourceLanguage ) ||
