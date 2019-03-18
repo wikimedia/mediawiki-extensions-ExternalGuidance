@@ -11,7 +11,7 @@
 	"externalguidance-specialpage-mt-intro": "$1是由來自於全世界的志工們所編寫。此條目來自$2版本的自動翻譯內容，因此不能在$3直接編輯，但您仍可做出協助。",
 	"externalguidance-specialpage-mt-intro-pageexist": "$1是由來自於全世界的志工們所編寫。此條目來自$2版本的自動翻譯內容，因此不能直接編輯。",
 	"externalguidance-specialpage-mt-pageexist": "此頁面有來自於編輯者在$1手動起始的版本，您可以協助擴充。",
-	"externalguidance-specialpage-intro-machine": "自動翻譯可提供有用的概述，但並非一定是準確的。",
+	"externalguidance-specialpage-intro-machine": "自動翻譯可提供有用的概述，但並非一定準確。",
 	"externalguidance-specialpage-intro-human": "由人類所建立的條目會是更好的！",
 	"externalguidance-specialpage-contribute-title": "貢獻方式",
 	"externalguidance-specialpage-contribute-create": "在$1建立含有您從翻譯內容裡所了解到的實情的條目。",
@@ -37,5 +37,6 @@
 	"externalguidance-specialpage-createpage-button-label": "建立新頁面",
 	"externalguidance-specialpage-createpage-button-label-edit": "編輯現有的頁面",
 	"externalguidance-specialpage-createpage-desc": "帶此標題的新頁面會建在$1上。",
-	"externalguidance-specialpage-createpage-page-exist": "已存在帶此標題的頁面。"
+	"externalguidance-specialpage-createpage-page-exist": "已存在帶此標題的頁面。",
+	"externalguidance-specialpage-param-missing": "缺少所需參數其一。"
 }

@@ -38,5 +38,6 @@
 	"externalguidance-specialpage-createpage-button-label": "إنشاء صفحة جديدة",
 	"externalguidance-specialpage-createpage-button-label-edit": "تعديل صفحة موجودة",
 	"externalguidance-specialpage-createpage-desc": "صفحة جديدة بهذا العنوان سيتم إنشاؤها على $1",
-	"externalguidance-specialpage-createpage-page-exist": "توجد صفحة بهذا العنوان بالفعل."
+	"externalguidance-specialpage-createpage-page-exist": "توجد صفحة بهذا العنوان بالفعل.",
+	"externalguidance-specialpage-param-missing": "أحد الوسائط الإلزامية مفقود."
 }
