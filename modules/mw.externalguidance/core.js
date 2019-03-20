@@ -73,12 +73,9 @@
 			.append( $headerContainer, $contributeContainer )
 			.before( $status );
 
-		if ( this.sourceLanguage === 'en' ) {
-			// Rewrite the menu URLs to target language. The current implementation would work only
-			// if source is English. This is because en.wikipedia.org/wiki/Special:UserLogin
-			// changed to id.wikipedia.org/wiki/Special:UserLogin will work, but not the reverse.
-			this.rewriteMenuUrls( this.targetLanguage );
-		}
+		// The menu links in collapsed side manu get rendered after the page is loaded.
+		// We can wait for few seconds to that happen. It is all hidden from user anyway.
+		setTimeout( this.rewriteMenuUrls.bind( this, this.targetLanguage ), 3000 );
 
 		this.removeFooterLinkToDesktop();
 	};
@@ -232,19 +229,44 @@
 
 	/**
 	 * Rewrite the menu URLs so that they point to target language
+	 * Change special page titles to canonical titles.
 	 * @param {string} targetLanguage
 	 */
 	MachineTranslationContext.prototype.rewriteMenuUrls = function ( targetLanguage ) {
-		var newUri, $menuLinks;
+		var $menuLinks, titleMap,
+			sitemapper = this.sitemapper;
+
+		// Map titles to their canonical titles
+		titleMap = {
+			home: 'Main_Page',
+			random: 'Special:Random',
+			watchlist: 'Special:Watchlist',
+			login: 'Special:UserLogin',
+			nearby: 'Special:Nearby',
+			settings: 'Special:MobileOptions'
+		};
 
 		// eslint-disable-next-line no-jquery/no-global-selector
 		$menuLinks = $( 'nav .menu a' );
-		newUri = new mw.Uri( this.sitemapper.getPageUrl( targetLanguage, '' ) );
 		$menuLinks.each( function () {
-			var originalUri = new mw.Uri( this.href );
-			newUri.path = originalUri.path;
-			newUri.query = originalUri.query;
-			this.href = newUri.toString();
+			var newUri, eventName,
+				originalUri = new mw.Uri( this.href );
+
+			// The key to know which special page this link points is data-event-name
+			eventName = this.dataset.eventName;
+			if ( titleMap[ eventName ] ) {
+				if ( originalUri.query.title ) {
+					newUri = originalUri;
+					// Change the host to new domain.
+					newUri.host = new mw.Uri( sitemapper.getPageUrl( targetLanguage ) ).host;
+					// Change the title query value
+					newUri.query.title = titleMap[ eventName ];
+				} else {
+					newUri = new mw.Uri( sitemapper.getPageUrl(
+						targetLanguage, titleMap[ eventName ], originalUri.query ) );
+				}
+				this.href = newUri.toString();
+			}
 			this.target = '_blank';
 		} );
 	};
