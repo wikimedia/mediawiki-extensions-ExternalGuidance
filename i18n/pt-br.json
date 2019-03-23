@@ -37,5 +37,6 @@
 	"externalguidance-specialpage-createpage-button-label": "Criar uma nova página",
 	"externalguidance-specialpage-createpage-button-label-edit": "Editar página existente",
 	"externalguidance-specialpage-createpage-desc": "Uma nova página com este título será criada em $1",
-	"externalguidance-specialpage-createpage-page-exist": "Uma página com este título já existe."
+	"externalguidance-specialpage-createpage-page-exist": "Uma página com este título já existe.",
+	"externalguidance-specialpage-param-missing": "Falta um dos parâmetros obrigatórios."
 }
