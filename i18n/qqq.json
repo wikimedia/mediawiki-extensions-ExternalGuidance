@@ -3,7 +3,8 @@
 		"authors": [
 			"Santhosh Thottingal",
 			"Santhosh.thottingal",
-			"Robby"
+			"Robby",
+			"Amire80"
 		]
 	},
 	"externalguidance-desc": "{{desc|name=ExternalGuidance|url=https://www.mediawiki.org/wiki/Extension:ExternalGuidance}}",
@@ -11,7 +12,7 @@
 	"externalguidance-machine-translation-contribute": "Label for contribute action for a page in a machine translation context",
 	"externalguidance-specialpage-title": "Title for Special:ExternalGuidance",
 	"externalguidance-specialpage-mt-intro": "A brief explanation on why you cannot edit on a machine translated page.\n\n$1 is Source wiki project name.\n$2 is source language name.\n$3 is target language name.",
-	"externalguidance-specialpage-mt-intro-pageexist": "A brief explanation on why you cannot edit on a machine translated page.\n\n$1 is Source wiki project name.\n$2 is source language name.",
+	"externalguidance-specialpage-mt-intro-pageexist": "A brief explanation on why you cannot edit on a machine-translated page.\n\n$1 is the source wiki project name, such as \"Wikipedia\".\n\n$2 is the source language name.",
 	"externalguidance-specialpage-mt-pageexist": "Message shown in the Special:ExternalGuidance page when the page already exist in target language. \n\n$1 is the language name.",
 	"externalguidance-specialpage-intro-machine": "A short note on why machine translation can be bad.",
 	"externalguidance-specialpage-intro-human": "A short note on why human translations are better.",
@@ -31,8 +32,8 @@
 	"externalguidance-machine-translation-provider-info": "Message stating that content is translated. $1 is the wiki project name, $2 is the MT service name.",
 	"externalguidance-machine-translation-provider-terms": "Label for link that takes to the privacy terms of service provider",
 	"externalguidance-machine-translation-access-source-title": "Heading text for the section explaining how to access the original source. $1 is wiki project name",
-	"externalguidance-machine-translation-access-source-page-missing": "A brief note on how to access the original source article when that page does not exist yet. $1 is wiki project name",
-	"externalguidance-machine-translation-access-source-page-exist": "A brief note on how to access the original source article when that page already exist. $1 is wiki project name",
+	"externalguidance-machine-translation-access-source-page-missing": "A brief note on how to access the original source article when that page does not exist yet.\n\n* $1 is wiki project name, such as \"Wikipedia\".\n* \"View original\" is a part of the Google Translate interface. It appears as the label \"View:\" and two buttons: \"Translation\" and \"Original\". See an example at https://translate.google.com/translate?sl=auto&u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FYehoshua_Bar-Hillel",
+	"externalguidance-machine-translation-access-source-page-exist": "A brief note on how to access the original source article when that page already exist.\n\n* $1 is wiki project name, such as \"Wikipedia\".\n\n* \"View original\" is a part of the Google Translate interface. It appears as the label \"View:\" and two buttons: \"Translation\" and \"Original\". See an example at https://translate.google.com/translate?sl=auto&u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FYehoshua_Bar-Hillel",
 	"externalguidance-machine-translation-contribute-link": "Label for the link that takes the user to a special page that explains various ways to contribute",
 	"externalguidance-specialpage-createpage-title": "Title for the overlay that helps to choose the title for new page",
 	"externalguidance-specialpage-createpage-title-label": "Label for the title\n{{Identical|Title}}",

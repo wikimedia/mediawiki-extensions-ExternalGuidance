@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"SPramudya (WMF)",
-			"Joseagush"
+			"Joseagush",
+			"Veracious"
 		]
 	},
 	"externalguidance-desc": "Konten Wikipedia terekspos secara eksternal melalui berbagai cara yang berbeda, dan proyek ini bermaksud untuk memudahkan seseorang untuk dapat kembali ke laman asal dan berkontribusi didalamnya.",
@@ -39,5 +40,5 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Sunting halaman yang tersedia",
 	"externalguidance-specialpage-createpage-desc": "Laman baru dengan judul ini akan dibuat dengan $1",
 	"externalguidance-specialpage-createpage-page-exist": "Laman dengan judul ini sudah tersedia.",
-	"externalguidance-specialpage-param-missing": "Salah satu parameter wajib tidak ada."
+	"externalguidance-specialpage-param-missing": "Salah satu dari parameter yang wajib tidak ditemukan."
 }
