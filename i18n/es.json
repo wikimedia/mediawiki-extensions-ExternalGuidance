@@ -17,5 +17,6 @@
 	"externalguidance-specialpage-contribute-expand": "Es posible que al artículo existente le falte información. Considera ampliarlo con los datos que has aprendido de la traducción.",
 	"externalguidance-specialpage-contribute-expand-action": "Ampliar el artículo existente",
 	"externalguidance-specialpage-contribute-improve-source": "Mejorar el artículo original también ayuda a las personas que leen las traducciones de este.",
-	"externalguidance-specialpage-contribute-improve-source-action": "Editar la versión original en $1"
+	"externalguidance-specialpage-contribute-improve-source-action": "Editar la versión original en $1",
+	"externalguidance-specialpage-param-missing": "Falta uno de los parámetros obligatorios."
 }
