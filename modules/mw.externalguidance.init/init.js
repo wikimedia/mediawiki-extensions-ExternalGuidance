@@ -8,13 +8,21 @@
 	 * @return {string}
 	 */
 	function getTargetLanguage( targetLanguage ) {
-		// Google translate somtiems uses lang in the form of
+		// Google language codes can differ from the language codes that we use.
+		var googleLanguageNameMap = {
+			no: 'nb',
+			iw: 'he',
+			jw: 'jv',
+			'zh-CN': 'zh'
+		};
+
+		// Google translate sometimes uses lang in the form of
 		// targetLanguageCode-x-mtfrom-sourceLanguageCode. Example: id-x-mtfrom-en
 		if ( targetLanguage.indexOf( '-x-mtfrom-' ) > 0 ) {
-			return targetLanguage.split( '-' )[ 0 ];
+			targetLanguage = targetLanguage.split( '-' )[ 0 ];
 		}
 
-		return targetLanguage;
+		return googleLanguageNameMap[ targetLanguage ] || targetLanguage;
 	}
 
 	context = {
