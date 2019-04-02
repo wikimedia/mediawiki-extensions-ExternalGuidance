@@ -78,7 +78,6 @@
 	},
 	"ResourceModules": {
 		"mw.externalguidance.init": {
-			"targets": [ "mobile" ],
 			"skinScripts": {
 				"minerva": [ "mw.externalguidance.init/init.js" ]
 			},
@@ -87,7 +86,6 @@
 			]
 		},
 		"mw.externalguidance": {
-			"targets": [ "mobile" ],
 			"skinScripts": {
 				"minerva": [
 					"mw.externalguidance/core.js",
@@ -130,7 +128,6 @@
 			}
 		},
 		"mw.externalguidance.special": {
-			"targets": [ "mobile", "desktop" ],
 			"scripts": [
 				"mw.externalguidance/sitemapper.js",
 				"mw.externalguidance.special/createpage.js"
