@@ -38,5 +38,6 @@
 	"externalguidance-specialpage-createpage-button-label": "Створити нову сторінку",
 	"externalguidance-specialpage-createpage-button-label-edit": "Редагувати вже наявну сторінку",
 	"externalguidance-specialpage-createpage-desc": "Нову сторінку з такою назвою буде створено на сайті $1",
-	"externalguidance-specialpage-createpage-page-exist": "сторінка з такою назвою вже існує."
+	"externalguidance-specialpage-createpage-page-exist": "сторінка з такою назвою вже існує.",
+	"externalguidance-specialpage-param-missing": "Один із обов'язкових параметрів відсутній."
 }
