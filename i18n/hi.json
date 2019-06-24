@@ -2,19 +2,43 @@
 	"@metadata": {
 		"authors": [
 			"Gopalindians",
-			"Prong$31"
+			"Prong$31",
+			"MKaur"
 		]
 	},
+	"externalguidance-desc": "विकिपीडिया सामग्री अलग-अलग तरीकों से बाहरी रूप से उजागर होती है, और यह परियोजना लोगों का मूल में लौटना और इसके लिए योगदान करना आसान बनाती है।",
+	"externalguidance-machine-translation-heading": "स्वतः अनुवाद",
+	"externalguidance-machine-translation-contribute": "योगदान दें",
 	"externalguidance-specialpage-title": "स्वचालित सामग्री में सुधार",
+	"externalguidance-specialpage-mt-intro": "$1 को दुनिया भर के स्वयंसेवकों द्वारा लिखा जाता है। यह लेख स्वचालित रूप से $2 में एक संस्करण से अनुवादित है, और सीधे $3 में संपादित नहीं किया जा सकता, लेकिन आप अभी भी मदद कर सकते हैं।",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 को दुनिया भर के स्वयंसेवकों द्वारा लिखा जाता है। यह लेख स्वचालित रूप से $2 में एक संस्करण से अनुवादित है, और इसे सीधे संपादित नहीं किया जा सकता।",
 	"externalguidance-specialpage-mt-pageexist": "$1 में संपादकों द्वारा मैन्युअल रूप से शुरू किए गए इस पृष्ठ का एक संस्करण है जिसे आप विस्तार करने में मदद कर सकते हैं।",
+	"externalguidance-specialpage-intro-machine": "स्वचालित अनुवाद एक उपयोगी अवलोकन प्रदान करता है लेकिन यह हमेशा सटीक नहीं होता।",
 	"externalguidance-specialpage-intro-human": "मनुष्यों द्वारा बनाया गया लेख होना बहुत बेहतर है!",
+	"externalguidance-specialpage-contribute-title": "योगदान करने के तरीके",
+	"externalguidance-specialpage-contribute-create": "अनुवाद से आपके द्वारा सीखे गए तथ्यों को शामिल करने के लिए $1 में लेख बनाएँ।",
+	"externalguidance-specialpage-contribute-create-action": "इस विषय पर लेख शुरू करें",
+	"externalguidance-specialpage-contribute-expand": "मौजूदा लेख में जानकारी की कमी हो सकती है। अनुवाद से सीखे गए तथ्यों के साथ लेख का विस्तार करने पर विचार करें।",
 	"externalguidance-specialpage-contribute-expand-action": "वर्तमान लेख का विस्तार करें",
 	"externalguidance-specialpage-contribute-improve-source": "आप इस टिकट पत्र को साझा नहीं कर सकते, क्योंकि यह अब क्वेरी योग्य नहीं है",
 	"externalguidance-specialpage-contribute-improve-source-action": "$1 में मूल संस्करण संपादित करें",
+	"externalguidance-machine-translation-page-exist": "इस विषय पर समुदाय-निर्मित सामग्री [$1 भी उपलब्ध है]",
+	"externalguidance-specialpage-createpage-methods-header": "कैसे शुरू करें",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong> अनुवाद से प्रारंभ करें। </strong>\nस्वचालित अनुवाद का उपयोग प्रारंभिक बिंदु के रूप में किया जाएगा।\nप्रारंभिक अनुवाद की समीक्षा और सुधार के लिए आपको $1 और $2 दोनों की अच्छी महारत होनी चाहिए।",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong> शुरू से शुरू करें। </strong>\nलेख बनाने के लिए खाली पृष्ठ से शुरू करें",
+	"externalguidance-machine-translation-page-missing": "$1 में मौजूद नहीं",
+	"externalguidance-machine-translation-provider-info-title": "$1 से स्वचालित अनुवाद",
+	"externalguidance-machine-translation-provider-info": "यह $1 सामग्री अनुवादित है और $2 द्वारा आप तक पहुंचाई गयी है।",
+	"externalguidance-machine-translation-provider-terms": "गोपनीयता और शर्तें जांचें",
+	"externalguidance-machine-translation-access-source-title": "$1 तक पहुंचें",
+	"externalguidance-machine-translation-access-source-page-missing": "अतिरिक्त पढ़ने और संपादन टूल के साथ $1 पर मूल सामग्री तक पहुंचने के लिए ऊपर \"मूल देखें\" विकल्प का उपयोग करें। आप इस सामग्री को कभी भी सुधारने में मदद कर सकते हैं।",
+	"externalguidance-machine-translation-access-source-page-exist": "अतिरिक्त पढ़ने और संपादन टूल के साथ $1 पर मूल सामग्री तक पहुंचने के लिए ऊपर \"मूल देखें\" विकल्प का उपयोग करें। इस विषय के लिए एक समुदाय-निर्मित पृष्ठ पहले से मौजूद है और आप इसे कभी भी सुधारने में मदद कर सकते हैं।",
 	"externalguidance-machine-translation-contribute-link": "योगदान देना सीखें",
 	"externalguidance-specialpage-createpage-title": "नया पृष्ठ बनायें",
 	"externalguidance-specialpage-createpage-title-label": "शीर्षक",
 	"externalguidance-specialpage-createpage-button-label": "नया पृष्ठ बनायें",
 	"externalguidance-specialpage-createpage-button-label-edit": "पहले से बनें पृष्ठ सम्पादित करें",
-	"externalguidance-specialpage-createpage-page-exist": "इस शीर्षक से पृष्ठ पहले से उपलब्ध है।"
+	"externalguidance-specialpage-createpage-desc": "इस शीर्षक के साथ एक नया पृष्ठ $1 पर बनाया जाएगा",
+	"externalguidance-specialpage-createpage-page-exist": "इस शीर्षक से पृष्ठ पहले से उपलब्ध है।",
+	"externalguidance-specialpage-param-missing": "अनिवार्य मापदंडों में से एक की कमी है।"
 }
