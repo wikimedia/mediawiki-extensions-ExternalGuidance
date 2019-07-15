@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"A Chinese Wikipedian"
+			"A Chinese Wikipedian",
+			"WQL"
 		]
 	},
+	"externalguidance-machine-translation-contribute": "贡献",
 	"externalguidance-specialpage-createpage-title-label": "职位"
 }
