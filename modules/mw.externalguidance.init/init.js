@@ -71,14 +71,8 @@
 		}
 		mw.log( '[ExternalGuidance] Context detected ' + JSON.stringify( context ) );
 
-		// Tell ResourceLoader to fetch modules and messages for the target language,
-		// which may be different from wgUserLanguage in case of MT.
-		mw.config.set( 'wgUserLanguage', context.info.to );
 		mw.loader.using( [ 'mw.externalguidance' ] ).then( function () {
-			var eg;
-			// Restore original wgUserLanguage
-			mw.config.set( 'wgUserLanguage', originalUserLang );
-			eg = new mw.ExternalGuidance( context.name, context.info );
+			var eg = new mw.ExternalGuidance( context.name, context.info );
 			eg.init();
 		} );
 	}

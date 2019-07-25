@@ -35,8 +35,7 @@
 		mw.loader.load( 'jquery.uls.data' );
 
 		$status = $( '<div>' )
-			.attr( { translate: 'no' } )
-			.addClass( 'eg-machine-translation-page-status notranslate' );
+			.addClass( 'eg-machine-translation-page-status' );
 
 		this.checkPageExistsRequest = this.checkPageExists(
 			this.sourceLanguage, this.targetLanguage, this.sourcePage );
@@ -52,9 +51,8 @@
 
 		overlayManager.add( '/machine-translation-info', this.showServiceProviderInfo.bind( this ) );
 		$header = $( '<span>' )
-			.attr( { translate: 'no' } ) // Do not translate this banner
 			.addClass( 'eg-machine-translation-banner-header-label mw-ui-icon mw-ui-icon-before ' +
-				' mw-ui-icon-eg-robot notranslate' )
+				' mw-ui-icon-eg-robot' )
 			.html( mw.msg( 'externalguidance-machine-translation-heading' ) );
 
 		$headerContainer = $( '<li>' )
@@ -97,9 +95,8 @@
 	MachineTranslationContext.prototype.getContributeLinkElement = function () {
 		return $( '<a>' )
 			.addClass( 'mw-ui-icon mw-ui-icon-before mw-ui-icon-edit-progressive ' +
-				' eg-machine-translation-banner-action-label notranslate' )
+				' eg-machine-translation-banner-action-label' )
 			.attr( {
-				translate: 'no', // Do not translate this banner
 				href: this.getContributeLink(),
 				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
 				target: '_blank' // Open in new window/tab, not in the iframe (if any) by the MT service
@@ -179,11 +176,6 @@
 	 * @return {jQuery.Promise}
 	 */
 	MachineTranslationContext.prototype.showServiceProviderInfo = function () {
-		var originalUserLang = mw.config.get( 'wgUserLanguage' );
-		// Tell ResourceLoader to fetch modules and messages for the target language,
-		// which may be different from wgUserLanguage in case of MT.
-		mw.config.set( 'wgUserLanguage', this.targetLanguage );
-
 		return $.when(
 			this.checkPageExistsRequest,
 			mw.loader.using( 'jquery.uls.data' )
@@ -193,11 +185,8 @@
 				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
 					this.privacyLinks.Google : null;
 
-			// Restore wgUserLanguage
-			mw.config.set( 'wgUserLanguage', originalUserLang );
-
 			overlay = new Overlay( {
-				className: 'overlay eg-mtservice-info-overlay notranslate',
+				className: 'overlay eg-mtservice-info-overlay',
 				heading: mw.msg( 'externalguidance-machine-translation-provider-info-title',
 					$.uls.data.getAutonym( this.sourceLanguage ) )
 			} );
