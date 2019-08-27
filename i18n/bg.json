@@ -26,13 +26,13 @@
 	"externalguidance-machine-translation-provider-info": "Това съдържание на $1 е преведено и доставено от $2.",
 	"externalguidance-machine-translation-provider-terms": "Проверка на поверителност и условия",
 	"externalguidance-machine-translation-access-source-title": "Достъп до $1",
-	"externalguidance-machine-translation-access-source-page-missing": "Използвайте възможността „Преглед на източника“ за да дойдете до изходното съдържание на $1, как и допълнителни инструменти за четене и редактиране. Можете да помогнете с подобряването на това съдържание във всяко време.",
-	"externalguidance-machine-translation-access-source-page-exist": "Използвайте възможността „Преглед на източника“ за да дойдете до изходното съдържание на $1, как и допълнителни инструменти за четене и редактиране. На тази тема вече съществува страница, направена от общността. Помогнете с нейното подобряване във всяко време.",
-	"externalguidance-machine-translation-contribute-link": "Узнайте как да участвате",
+	"externalguidance-machine-translation-access-source-page-missing": "Използвайте опция „Преглед на оригинала“ за достъп до оригиналното съдържание на $1 чрез допълнителни инструменти за четене и редактиране. Можете да помогнете за подобряването на това съдържание по всяко време.",
+	"externalguidance-machine-translation-access-source-page-exist": "Използвайте опция „Преглед на оригинала“ за достъп до оригиналното съдържание на $1 чрез допълнителни инструменти за четене и редактиране. Страница, създадена от общността вече съществува, а вие можете да я подобрите по всяко време.",
+	"externalguidance-machine-translation-contribute-link": "Научете как можете да допринасяте",
 	"externalguidance-specialpage-createpage-title": "Създаване на нова страница",
 	"externalguidance-specialpage-createpage-title-label": "Заглавие",
 	"externalguidance-specialpage-createpage-button-label": "Създаване на нова страница",
-	"externalguidance-specialpage-createpage-button-label-edit": "Редактирайте съществуваща страница",
-	"externalguidance-specialpage-createpage-desc": "На $1 ще бъде създадена нова страница с такова заглавие",
-	"externalguidance-specialpage-createpage-page-exist": "Вече съществува страница с такова заглавие."
+	"externalguidance-specialpage-createpage-button-label-edit": "Редактиране на съществуваща страница",
+	"externalguidance-specialpage-createpage-desc": "Нова страница с това заглавие ще бъде създадена на $1",
+	"externalguidance-specialpage-createpage-page-exist": "Страница с това заглавие вече съществува."
 }
