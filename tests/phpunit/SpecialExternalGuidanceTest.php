@@ -31,7 +31,7 @@ class SpecialExternalGuidanceTest extends MediaWikiTestCase {
 		$context->setRequest( $request );
 		$page->setContext( $context );
 		$output = $context->getOutput();
-		$this->setExpectedException( $expected );
+		$this->expectException( $expected );
 		$page->mtContextGuidance( $request, $output );
 	}
 
