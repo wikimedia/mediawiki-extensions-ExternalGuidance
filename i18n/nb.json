@@ -1,13 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
-			"Orf3us"
+			"Orf3us",
+			"Jon Harald Søby"
 		]
 	},
 	"externalguidance-machine-translation-heading": "Automatisk oversettelse",
+	"externalguidance-specialpage-createpage-methods-header": "Hvordan begynne",
+	"externalguidance-machine-translation-page-missing": "Mangler på $1",
+	"externalguidance-machine-translation-provider-info-title": "Automatisk oversettelse fra $1",
+	"externalguidance-machine-translation-provider-info": "Dette $1-innholdet er oversatt og levert av $2.",
+	"externalguidance-machine-translation-provider-terms": "Sjekk personvern og vilkår",
+	"externalguidance-machine-translation-contribute-link": "Lær hvordan du kan bidra",
 	"externalguidance-specialpage-createpage-title": "Opprett ny side",
 	"externalguidance-specialpage-createpage-title-label": "Tittel",
 	"externalguidance-specialpage-createpage-button-label": "Opprett ny side",
 	"externalguidance-specialpage-createpage-button-label-edit": "Rediger eksisterende side",
-	"externalguidance-specialpage-createpage-page-exist": "En side med denne tittelen eksisterer allerede"
+	"externalguidance-specialpage-createpage-desc": "En ny side med denne tittelen blir opprettet på $1",
+	"externalguidance-specialpage-createpage-page-exist": "En side med denne tittelen eksisterer allerede",
+	"externalguidance-specialpage-param-missing": "Én av de påkrevde parameterne mangler."
 }

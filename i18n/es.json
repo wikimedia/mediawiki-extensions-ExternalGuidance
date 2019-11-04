@@ -18,5 +18,12 @@
 	"externalguidance-specialpage-contribute-expand-action": "Ampliar el artículo existente",
 	"externalguidance-specialpage-contribute-improve-source": "Mejorar el artículo original también ayuda a las personas que leen las traducciones de este.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Editar la versión original en $1",
+	"externalguidance-machine-translation-provider-info-title": "Traducción automática por $1",
+	"externalguidance-specialpage-createpage-title": "Crear una página nueva",
+	"externalguidance-specialpage-createpage-title-label": "Título",
+	"externalguidance-specialpage-createpage-button-label": "Crear una página nueva",
+	"externalguidance-specialpage-createpage-button-label-edit": "Editar una página existente",
+	"externalguidance-specialpage-createpage-desc": "Se creará una página con este título en $1",
+	"externalguidance-specialpage-createpage-page-exist": "Ya existe una página con este título.",
 	"externalguidance-specialpage-param-missing": "Falta uno de los parámetros obligatorios."
 }
