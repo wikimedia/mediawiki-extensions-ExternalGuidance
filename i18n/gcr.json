@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Léon973"
+			"Léon973",
+			"LeGuyanaisPure"
 		]
 	},
 	"externalguidance-machine-translation-contribute": "Kontribiyé",
 	"externalguidance-specialpage-contribute-title": "Mannyè pou kontribiyé",
-	"externalguidance-machine-translation-contribute-link": "Anprann kouman kontribiyé"
+	"externalguidance-machine-translation-contribute-link": "Anprann kouman kontribiyé",
+	"externalguidance-specialpage-createpage-desc": "Roun nouvèl paj ké sa tit ké fika kréyé asou $1"
 }
