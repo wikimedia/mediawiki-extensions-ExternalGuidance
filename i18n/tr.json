@@ -2,11 +2,43 @@
 	"@metadata": {
 		"authors": [
 			"Hedda",
-			"Mirzali"
+			"Mirzali",
+			"BaRaN6161 TURK"
 		]
 	},
 	"externalguidance-desc": "Vikipedi içeriği dışarıdan farklı şekillerde açığa çıkmaktadır ve bu proje, insanların başnoktaya dönebilmelerini ve katkıda bulunabilmelerini kolaylaştırmayı amaçlamaktadır.",
 	"externalguidance-machine-translation-heading": "Otomatik çeviri",
 	"externalguidance-machine-translation-contribute": "Katkıda bulun",
-	"externalguidance-machine-translation-page-exist": "Bu konuyla ilgili topluluk tarafından oluşturulan içerik [$1 de mevcut]"
+	"externalguidance-specialpage-title": "Otomatik içeriği geliştirme",
+	"externalguidance-specialpage-mt-intro": "$1 dünyanın her yerinden gönüllüler tarafından yazılıyor. Bu makale otomatik olarak $2 olan bir sürümden çevrilmiştir ve doğrudan $3 olarak düzenlenemez, ancak yine de yardımcı olabilirsiniz.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 dünyanın her yerinden gönüllüler tarafından yazılıyor. Bu makale $2  bir sürümden otomatik olarak çevrilmiştir ve doğrudan düzenlenemez.",
+	"externalguidance-specialpage-mt-pageexist": "Bu sayfanın editörler tarafından $1 manüel olarak başlatılan ve genişletmenize yardımcı olabilecek bir sürümü var.",
+	"externalguidance-specialpage-intro-machine": "Otomatik çeviri faydalı bir genel bakış sağlar, ancak her zaman doğru değildir.",
+	"externalguidance-specialpage-intro-human": "İnsanlar tarafından oluşturulan bir makaleye sahip olmak çok daha iyidir!",
+	"externalguidance-specialpage-contribute-title": "Katkıda bulunma yolları",
+	"externalguidance-specialpage-contribute-create": "Çeviriden öğrendiğiniz gerçekleri dahil etmek için $1 bir makale oluşturun.",
+	"externalguidance-specialpage-contribute-create-action": "Bu konu için bir makale başlatın",
+	"externalguidance-specialpage-contribute-expand": "Mevcut makalede bilgi eksik olabilir. Makaleyi çeviriden öğrendiğiniz gerçeklerle genişletmeyi düşünün.",
+	"externalguidance-specialpage-contribute-expand-action": "Mevcut makaleyi genişlet",
+	"externalguidance-specialpage-contribute-improve-source": "Orijinal makalenin geliştirilmesi, insanların makalelerin çevirilerini okumasına da yardımcı olacaktır.",
+	"externalguidance-specialpage-contribute-improve-source-action": "Orijinal sürümü $1 olarak düzenleyin",
+	"externalguidance-machine-translation-page-exist": "Bu konuyla ilgili topluluk tarafından oluşturulan içerik [$1 de mevcut]",
+	"externalguidance-specialpage-createpage-methods-header": "Nasıl başlatılır",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Çeviriden başla.</strong> Otomatik çeviri, başlangıç noktası olarak kullanılacaktır. İlk çeviriyi gözden geçirmek ve geliştirmek için hem $1 hem de $2 için iyi bir komuta ihtiyacınız var",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>Sıfırdan başlayın.</strong> Makaleyi oluşturmak için boş bir sayfa ile başlayın",
+	"externalguidance-machine-translation-page-missing": "$1 eksik",
+	"externalguidance-machine-translation-provider-info-title": "$1 otomatik çeviri",
+	"externalguidance-machine-translation-provider-info": "Bu $1 içerik çevrilir ve size $2 karşılığında teslim edilir.",
+	"externalguidance-machine-translation-provider-terms": "Gizliliği ve şartları kontrol edin",
+	"externalguidance-machine-translation-access-source-title": "Erişim $1",
+	"externalguidance-machine-translation-access-source-page-missing": "Ek okuma ve düzenleme araçlarıyla orijinal içeriğe $1 üzerinden erişmek için yukarıdaki “Orijinali görüntüle” seçeneğini kullanın. Bu içeriğin geliştirilmesine istediğiniz zaman yardımcı olabilirsiniz.",
+	"externalguidance-machine-translation-access-source-page-exist": "Ek okuma ve düzenleme araçlarıyla orijinal içeriğe $1 üzerinden erişmek için yukarıdaki “Orijinali görüntüle” seçeneğini kullanın. Bu konu için topluluk tarafından oluşturulan bir sayfa zaten var ve bunu istediğiniz zaman geliştirmenize yardımcı olabilirsiniz.",
+	"externalguidance-machine-translation-contribute-link": "Nasıl katkıda bulunabileceğinizi öğrenin",
+	"externalguidance-specialpage-createpage-title": "Yeni bir sayfa oluştur",
+	"externalguidance-specialpage-createpage-title-label": "Başlık",
+	"externalguidance-specialpage-createpage-button-label": "Yeni bir sayfa oluştur",
+	"externalguidance-specialpage-createpage-button-label-edit": "Mevcut sayfayı düzenle",
+	"externalguidance-specialpage-createpage-desc": "Bu başlığa sahip yeni bir sayfa $1 oluşturulacak",
+	"externalguidance-specialpage-createpage-page-exist": "Bu başlığa sahip bir sayfa zaten var.",
+	"externalguidance-specialpage-param-missing": "Zorunlu parametrelerden biri eksik."
 }
