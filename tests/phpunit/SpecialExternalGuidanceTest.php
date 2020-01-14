@@ -2,12 +2,12 @@
 
 namespace MediaWiki\Extension\ExternalGuidance\Tests;
 
+use FauxRequest;
+use InvalidArgumentException;
 use MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance;
 use MediaWikiTestCase;
-use RequestContext;
-use FauxRequest;
 use MWException;
-use InvalidArgumentException;
+use RequestContext;
 
 /**
  * @coversDefaultClass \MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance

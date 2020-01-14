@@ -8,13 +8,13 @@
 
 namespace MediaWiki\Extension\ExternalGuidance;
 
-use OutputPage;
-use Title;
-use SpecialPage;
-use Language;
-use Html;
 use ErrorPageError;
+use Html;
 use InvalidArgumentException;
+use Language;
+use OutputPage;
+use SpecialPage;
+use Title;
 use WebRequest;
 
 /**
