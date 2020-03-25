@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"아라"
 		]
 	},
 	"externalguidance-machine-translation-heading": "자동 번역",
@@ -16,7 +17,7 @@
 	"externalguidance-machine-translation-page-missing": "$1(으)로 없음",
 	"externalguidance-machine-translation-provider-info-title": "$1에서 자동 번역",
 	"externalguidance-machine-translation-provider-info": "$1 내용은 번역된 다음 $2에 의해 당신에게 전달됩니다.",
-	"externalguidance-machine-translation-provider-terms": "개인 정보 및 이용 조항 확인",
+	"externalguidance-machine-translation-provider-terms": "개인정보 및 약관 확인",
 	"externalguidance-machine-translation-access-source-title": "$1 접근",
 	"externalguidance-machine-translation-contribute-link": "기여하는 방법 알아보기",
 	"externalguidance-specialpage-createpage-title": "새 문서 만들기",
