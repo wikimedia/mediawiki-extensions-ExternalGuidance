@@ -19,9 +19,8 @@
 	"ExtensionMessagesFiles": {
 		"ExternalGuidanceAliases": "ExternalGuidance.alias.php"
 	},
-	"AutoloadClasses": {
-		"MediaWiki\\Extension\\ExternalGuidance\\Hooks": "includes/Hooks.php",
-		"MediaWiki\\Extension\\ExternalGuidance\\SpecialExternalGuidance": "includes/SpecialExternalGuidance.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\ExternalGuidance\\": "includes/"
 	},
 	"SpecialPages": {
 		"ExternalGuidance": "MediaWiki\\Extension\\ExternalGuidance\\SpecialExternalGuidance"
