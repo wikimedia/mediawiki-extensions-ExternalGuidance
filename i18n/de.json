@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kghbln",
 			"Metalhead64"
 		]
 	},
-	"externalguidance-desc": "Wikipedia-Inhalte werden auf verschiedene Weise extern entlarvt und dieses Projekt soll es für Menschen einfach machen, zum Ursprung zurückzukehren und dort beizutragen.",
+	"externalguidance-desc": "Bietet Wikipedia-Inhalte externen Nutzern auf verschiedene Arten an und ermuntert zu deren Entstehung beizutragen",
 	"externalguidance-machine-translation-heading": "Automatische Übersetzung",
 	"externalguidance-machine-translation-contribute": "Beitragen",
 	"externalguidance-specialpage-title": "Automatischen Inhalt verbessern",
