@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Diman Russkov",
 			"Vlad5250"
 		]
 	},
@@ -9,10 +10,15 @@
 	"externalguidance-machine-translation-contribute": "Внесите вклад",
 	"externalguidance-specialpage-title": "Улучшение автоматического контента",
 	"externalguidance-specialpage-mt-intro": "$1 является общим трудом добровольцев из всего мира. Эта статья — автоматический перевод версии на $2 и не может быть отредактирована непосредственно в $3, но вы всё ещё можете помочь.",
+	"externalguidance-specialpage-contribute-create-action": "Начать статью по этой теме",
+	"externalguidance-specialpage-contribute-improve-source-action": "Править оригинальную версию на $1",
+	"externalguidance-specialpage-createpage-methods-header": "С чего начать",
+	"externalguidance-machine-translation-contribute-link": "Узнайте, как вы можете внести свой вклад",
 	"externalguidance-specialpage-createpage-title": "Создать новую страницу",
 	"externalguidance-specialpage-createpage-title-label": "Название",
 	"externalguidance-specialpage-createpage-button-label": "Создать новую страницу",
 	"externalguidance-specialpage-createpage-button-label-edit": "Редактировать существующую страницу",
 	"externalguidance-specialpage-createpage-desc": "На $1 будет создана новая страница с этим названием",
-	"externalguidance-specialpage-createpage-page-exist": "Страница с таким названием уже существует."
+	"externalguidance-specialpage-createpage-page-exist": "Страница с таким названием уже существует.",
+	"externalguidance-specialpage-param-missing": "Один из обязательных параметров отсутствует."
 }
