@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Afaz"
+			"Afaz",
+			"Kkairri"
 		]
 	},
-	"externalguidance-desc": "ウィキペディアのコンテンツはさまざまな方法で外部に公開されている。このプロジェクトでは、人々が元の記事に戻って編集できるようにする。"
+	"externalguidance-desc": "ウィキペディアのコンテンツはさまざまな方法で外部に公開されている。このプロジェクトでは、人々が元の記事に戻って編集できるようにする。",
+	"externalguidance-machine-translation-heading": "自動翻訳",
+	"externalguidance-specialpage-intro-machine": "自動翻訳は役立つ概要を提供しますが、常に正確なわけではありません。",
+	"externalguidance-machine-translation-provider-info-title": "$1からの自動翻訳"
 }
