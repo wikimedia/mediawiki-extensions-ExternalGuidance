@@ -109,6 +109,7 @@
 
 	/**
 	 * Render the status of target page existence
+	 *
 	 * @param {string} title Target page
 	 * @param {jQuery} $status Container for showing the status
 	 */
@@ -136,6 +137,7 @@
 
 	/**
 	 * Check if the title corresponding to source title exist in target language
+	 *
 	 * @param {string } from
 	 * @param {string } to
 	 * @param {string } title
@@ -173,6 +175,7 @@
 
 	/**
 	 * Show the machine translation service information in an overlay.
+	 *
 	 * @return {jQuery.Promise}
 	 */
 	MachineTranslationContext.prototype.showServiceProviderInfo = function () {
@@ -219,6 +222,7 @@
 	/**
 	 * Rewrite the menu URLs so that they point to target language
 	 * Change special page titles to canonical titles.
+	 *
 	 * @param {string} targetLanguage
 	 */
 	MachineTranslationContext.prototype.rewriteMenuUrls = function ( targetLanguage ) {

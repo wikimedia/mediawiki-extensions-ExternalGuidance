@@ -51,6 +51,7 @@
 
 	/**
 	 * Click handler for create-page button
+	 *
 	 * @memberof CreatePageOverlay
 	 * @instance
 	 */
@@ -97,6 +98,7 @@
 
 	/**
 	 * Get the current selected method for creating new page
+	 *
 	 * @return {string} 'create' or 'translate'
 	 */
 	RequestTitleForm.prototype.getPageCreateMethod = function () {
@@ -114,6 +116,7 @@
 
 	/**
 	 * Render the options to create a new page.
+	 *
 	 * @return {jQuery}
 	 */
 	RequestTitleForm.prototype.showPageCreationOptions = function () {
@@ -158,6 +161,7 @@
 
 	/**
 	 * Title input handler
+	 *
 	 * @memberof CreatePageOverlay
 	 * @instance
 	 */

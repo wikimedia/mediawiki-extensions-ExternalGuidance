@@ -4,6 +4,7 @@
 
 	/**
 	 * Clean up the target language set by MT services to a valid language code
+	 *
 	 * @param {string } targetLanguage
 	 * @return {string}
 	 */
@@ -35,6 +36,7 @@
 
 	/**
 	 * Detect the external service context in which the page is being presented
+	 *
 	 * @return {Object} The context object with context name and extra information in 'info' key
 	 */
 	function detectContext() {
