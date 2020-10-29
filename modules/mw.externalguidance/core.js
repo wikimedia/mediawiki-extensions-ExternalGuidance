@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+/* eslint-disable camelcase, mediawiki/class-doc */
 ( function ( M ) {
 	var mobile = M.require( 'mobile.startup' ),
 		Overlay = mobile.Overlay,
