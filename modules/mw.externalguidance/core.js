@@ -49,7 +49,12 @@
 			}
 		}.bind( this ) );
 
-		overlayManager.add( '/machine-translation-info', this.showServiceProviderInfo.bind( this ) );
+		this.showServiceProviderInfo().then( function ( overlay ) {
+			overlayManager.add( '/machine-translation-info', function () {
+				return overlay;
+			} );
+		} );
+
 		$header = $( '<span>' )
 			.addClass( 'eg-machine-translation-banner-header-label mw-ui-icon mw-ui-icon-before ' +
 				' mw-ui-icon-eg-robot' )
