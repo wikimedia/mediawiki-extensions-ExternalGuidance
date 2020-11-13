@@ -41,5 +41,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Label for the button when the page exists already",
 	"externalguidance-specialpage-createpage-desc": "A brief description on what happens if you click on button. $1 is project name",
 	"externalguidance-specialpage-createpage-page-exist": "Error message shown when the entered title already exists.",
-	"externalguidance-specialpage-param-missing": "Error message shown when the Special:ExternalGuidance page accessed without any parameters."
+	"externalguidance-specialpage-param-missing": "Error message shown when Special:ExternalGuidance is used without all four of the required parameters.",
+	"externalguidance-specialpage-invalid-language": "Error message shown when Special:ExternalGuidance is used with an invalid language code.",
+	"externalguidance-specialpage-invalid-service": "Error message shown when Special:ExternalGuidance is used with an invalid service name."
 }

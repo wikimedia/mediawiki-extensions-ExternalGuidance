@@ -10,7 +10,6 @@ namespace MediaWiki\Extension\ExternalGuidance;
 
 use ErrorPageError;
 use Html;
-use InvalidArgumentException;
 use Language;
 use OutputPage;
 use SpecialPage;
@@ -60,19 +59,33 @@ class SpecialExternalGuidance extends SpecialPage {
 		$targetPage = $request->getVal( 'targettitle' );
 		$service = $request->getVal( 'service' );
 
-		if ( !$sourcePage || !$sourceLanguage || !$targetLanguage ) {
-			throw new ErrorPageError( 'externalguidance-specialpage-title',
-				'externalguidance-specialpage-param-missing' );
+		if ( !$service || !$sourcePage || !$sourceLanguage || !$targetLanguage ) {
+			throw new ErrorPageError(
+				'externalguidance-specialpage-title',
+				'externalguidance-specialpage-param-missing'
+			);
 		}
 
-		if ( !Language::isKnownLanguageTag( $sourceLanguage ) ||
-			!Language::isKnownLanguageTag( $targetLanguage )
-		) {
-			throw new InvalidArgumentException( " Invalid language code" );
+		if ( !Language::isKnownLanguageTag( $sourceLanguage ) ) {
+			throw new ErrorPageError(
+				'externalguidance-specialpage-title',
+				'externalguidance-specialpage-invalid-language',
+				[ $sourceLanguage ]
+			);
 		}
-
-		if ( !$service || !in_array( $service, $wgExternalGuidanceKnownServices ) ) {
-			throw new InvalidArgumentException( "Invalid service name" );
+		if ( !Language::isKnownLanguageTag( $targetLanguage ) ) {
+			throw new ErrorPageError(
+				'externalguidance-specialpage-title',
+				'externalguidance-specialpage-invalid-language',
+				[ $targetLanguage ]
+			);
+		}
+		if ( !in_array( $service, $wgExternalGuidanceKnownServices ) ) {
+			throw new ErrorPageError(
+				'externalguidance-specialpage-title',
+				'externalguidance-specialpage-invalid-service',
+				[ $service ]
+			);
 		}
 
 		// Create the title instance after validation. Throws MalformedTitleException if invalid.
