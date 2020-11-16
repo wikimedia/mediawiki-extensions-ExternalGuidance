@@ -38,7 +38,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Edit existing page",
 	"externalguidance-specialpage-createpage-desc": "A new page with this title will be created on $1",
 	"externalguidance-specialpage-createpage-page-exist": "A page with this title already exists.",
-	"externalguidance-specialpage-param-missing": "One of the mandatory parameters (`from`, `to`, `page`, and `language`) is missing.",
+	"externalguidance-specialpage-param-missing": "One of the mandatory parameters (\"from\", \"to\", \"page\", and \"language\") is missing.",
 	"externalguidance-specialpage-invalid-language": "The language specified, $1, is not a valid language code.",
 	"externalguidance-specialpage-invalid-service": "The service specified, $1, is not a valid service name."
 }
