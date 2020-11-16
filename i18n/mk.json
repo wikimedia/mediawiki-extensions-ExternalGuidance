@@ -38,5 +38,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Уредете постоечка страница",
 	"externalguidance-specialpage-createpage-desc": "На $1 ќе биде направена нова страница со овој наслов",
 	"externalguidance-specialpage-createpage-page-exist": "Веќе постои страница со таков наслов.",
-	"externalguidance-specialpage-param-missing": "Недостасува еден од задолжителните параметри."
+	"externalguidance-specialpage-param-missing": "Недостасува еден од задолжителните параметри („from“, „to“, „page“ и „language“).",
+	"externalguidance-specialpage-invalid-language": "$1 не претставува важечки јазичен код.",
+	"externalguidance-specialpage-invalid-service": "$1 не претставува важечко име на служба."
 }

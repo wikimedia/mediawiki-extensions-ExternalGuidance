@@ -41,5 +41,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Mevcut sayfayı düzenle",
 	"externalguidance-specialpage-createpage-desc": "Bu başlığa sahip yeni bir sayfa $1 oluşturulacak",
 	"externalguidance-specialpage-createpage-page-exist": "Bu başlığa sahip bir sayfa zaten var.",
-	"externalguidance-specialpage-param-missing": "Zorunlu parametrelerden biri eksik."
+	"externalguidance-specialpage-param-missing": "Zorunlu parametrelerden biri (`from`, `to`, `page` ve `language`) eksik.",
+	"externalguidance-specialpage-invalid-language": "Belirtilen $1 dil geçerli bir dil kodu değil.",
+	"externalguidance-specialpage-invalid-service": "Belirtilen hizmet $1, geçerli bir hizmet adı değil."
 }

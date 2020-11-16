@@ -39,5 +39,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Vorhandene Seite bearbeiten",
 	"externalguidance-specialpage-createpage-desc": "Eine neue Seite mit diesem Titel wird auf $1 erstellt",
 	"externalguidance-specialpage-createpage-page-exist": "Eine Seite mit diesem Titel ist bereits vorhanden.",
-	"externalguidance-specialpage-param-missing": "Einer der verpflichtenden Parameter fehlt."
+	"externalguidance-specialpage-param-missing": "Einer der verpflichtenden Parameter („from“, „to“, „page“ und „language“) fehlt.",
+	"externalguidance-specialpage-invalid-language": "Die angegebene Sprache, $1, ist kein gültiger Sprachencode.",
+	"externalguidance-specialpage-invalid-service": "Der angegebene Dienst, $1, ist kein gültiger Dienstname."
 }

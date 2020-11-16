@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"CiaPan"
+			"CiaPan",
+			"Rail"
 		]
 	},
-	"externalguidance-desc": "Zawartość Wikipedii jest udostępniana na zewnątrz na różne sposoby, zaś ten projekt ma na celu ułatwienie ludziom przejście do źródła i rozwijanie go."
+	"externalguidance-desc": "Zawartość Wikipedii jest udostępniana na zewnątrz na różne sposoby, zaś ten projekt ma na celu ułatwienie ludziom przejście do źródła i rozwijanie go.",
+	"externalguidance-specialpage-param-missing": "Brakuje jednego z wymaganych parametrów (`from`, `to`, `page` oraz `language`).",
+	"externalguidance-specialpage-invalid-language": "„$1” nie jest poprawnym kodem języka.",
+	"externalguidance-specialpage-invalid-service": "„$1” nie jest poprawną nazwą usługi."
 }

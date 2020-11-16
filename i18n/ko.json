@@ -25,5 +25,8 @@
 	"externalguidance-specialpage-createpage-button-label": "새 문서 만들기",
 	"externalguidance-specialpage-createpage-button-label-edit": "기존 문서 편집하기",
 	"externalguidance-specialpage-createpage-desc": "이 제목의 새 문서는 $1에 생성됩니다",
-	"externalguidance-specialpage-createpage-page-exist": "이 제목의 문서가 이미 존재합니다."
+	"externalguidance-specialpage-createpage-page-exist": "이 제목의 문서가 이미 존재합니다.",
+	"externalguidance-specialpage-param-missing": "필수 변수(from`, `to`, `page`, `language`) 중 하나가 없습니다.",
+	"externalguidance-specialpage-invalid-language": "지정된 $1 언어는 유효한 언어 코드가 아닙니다.",
+	"externalguidance-specialpage-invalid-service": "지정된 $1 서비스는 유효한 서비스 이름이 아닙니다."
 }

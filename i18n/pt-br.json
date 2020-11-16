@@ -38,5 +38,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Editar página existente",
 	"externalguidance-specialpage-createpage-desc": "Uma nova página com este título será criada em $1",
 	"externalguidance-specialpage-createpage-page-exist": "Uma página com este título já existe.",
-	"externalguidance-specialpage-param-missing": "Falta um dos parâmetros obrigatórios."
+	"externalguidance-specialpage-param-missing": "Um dos parâmetros obrigatórios (`from`, `to`, `page`, and `language`) está faltando.",
+	"externalguidance-specialpage-invalid-language": "O idioma especificado, $1, não é um código de idioma válido.",
+	"externalguidance-specialpage-invalid-service": "O serviço especificado, $1, não é um nome de serviço válido."
 }
