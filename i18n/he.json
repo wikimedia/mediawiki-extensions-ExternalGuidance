@@ -40,5 +40,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "עריכת דף קיים",
 	"externalguidance-specialpage-createpage-desc": "דף חדש עם הכותרת הזאת ייווצר באתר $1",
 	"externalguidance-specialpage-createpage-page-exist": "דף בשם כזה כבר קיים.",
-	"externalguidance-specialpage-param-missing": "חסר אחד מהפרמטרים שחובה לספק."
+	"externalguidance-specialpage-param-missing": "חסר אחד מהפרמטרים שחובה לספק (\"from\"‏, \"to\"‏, \"page\", ו־\"language\").",
+	"externalguidance-specialpage-invalid-language": "השפה שסופקה, $1, אינה קוד שפה תקין.",
+	"externalguidance-specialpage-invalid-service": "השירות שסופק, $1, אינו שם שירות תקין."
 }
