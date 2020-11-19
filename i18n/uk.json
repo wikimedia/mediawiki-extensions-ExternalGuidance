@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Piramidion",
-			"Vlad5250"
+			"Vlad5250",
+			"Ата"
 		]
 	},
 	"externalguidance-desc": "Контент Вікіпедії відтворюється на зовнішніх ресурсах у різні способи, і метою цього проекту є зробити так, щоб людям було легко потрапити туди, звідки була взята інформація, і зробити свій внесок у Вікіпедію.",
@@ -39,5 +40,5 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Редагувати вже наявну сторінку",
 	"externalguidance-specialpage-createpage-desc": "Нову сторінку з такою назвою буде створено на сайті $1",
 	"externalguidance-specialpage-createpage-page-exist": "сторінка з такою назвою вже існує.",
-	"externalguidance-specialpage-param-missing": "Один із обов'язкових параметрів відсутній."
+	"externalguidance-specialpage-param-missing": "Один із обов'язкових параметрів (\"from\", \"to\", \"page\" та \"language\") відсутній."
 }

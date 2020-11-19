@@ -38,5 +38,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Cange 'a pàgene esistende",
 	"externalguidance-specialpage-createpage-desc": "'Na pàgena nove cu stu titole avène ccrejate sus a $1",
 	"externalguidance-specialpage-createpage-page-exist": "'Na pàgene cu stu titole ggià esiste.",
-	"externalguidance-specialpage-param-missing": "Une de le parametre obbligatorie manghe."
+	"externalguidance-specialpage-param-missing": "Une de le parametre obbligatorie (\"from\", \"to\", \"page\", and \"language\") manghe.",
+	"externalguidance-specialpage-invalid-language": "'A lènghe specificate, $1, non g'è 'nu codece de lènghe valide.",
+	"externalguidance-specialpage-invalid-service": "'U servizie specificate, $1, non g'è 'nu nome de servizie valide."
 }
