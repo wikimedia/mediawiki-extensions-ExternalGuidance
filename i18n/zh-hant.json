@@ -38,5 +38,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "編輯現有的頁面",
 	"externalguidance-specialpage-createpage-desc": "帶此標題的新頁面會建在$1上。",
 	"externalguidance-specialpage-createpage-page-exist": "已存在帶此標題的頁面。",
-	"externalguidance-specialpage-param-missing": "缺少所需參數其一。"
+	"externalguidance-specialpage-param-missing": "缺少所需參數其一（「from」、「to」、「page」以及「language」）。",
+	"externalguidance-specialpage-invalid-language": "指定的語言$1不是有效的語言代碼。",
+	"externalguidance-specialpage-invalid-service": "指定的服務$1不是有效的服務名稱。"
 }
