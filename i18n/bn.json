@@ -39,5 +39,5 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "বিদ্যমান পাতা সম্পাদনা করুন",
 	"externalguidance-specialpage-createpage-desc": "এই শিরোনামসহ একটি নতুন পাতা $1-এ তৈরি করা হবে",
 	"externalguidance-specialpage-createpage-page-exist": "এই শিরোনাম সহ একটি পাতা ইতিমধ্যে বিদ্যমান।",
-	"externalguidance-specialpage-param-missing": "বাধ্যতামূলক প্যারামিটারগুলির একটি অনুপস্থিত।"
+	"externalguidance-specialpage-param-missing": "বাধ্যতামূলক প্যারামিটারগুলির (\"থেকে\", \"পর্যন্ত\", \"পাতা\" এবং \"ভাষা\") একটি অনুপস্থিত।"
 }
