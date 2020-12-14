@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Base",
 			"Piramidion",
 			"Vlad5250",
 			"Ата"
@@ -40,5 +41,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Редагувати вже наявну сторінку",
 	"externalguidance-specialpage-createpage-desc": "Нову сторінку з такою назвою буде створено на сайті $1",
 	"externalguidance-specialpage-createpage-page-exist": "сторінка з такою назвою вже існує.",
-	"externalguidance-specialpage-param-missing": "Один із обов'язкових параметрів (\"from\", \"to\", \"page\" та \"language\") відсутній."
+	"externalguidance-specialpage-param-missing": "Один із обов'язкових параметрів (\"from\", \"to\", \"page\" та \"language\") відсутній.",
+	"externalguidance-specialpage-invalid-language": "Вказана мова, $1, не є дійсним кодом мови.",
+	"externalguidance-specialpage-invalid-service": "Вказаний сервіс, $1, не є дійсною назвою сервісу."
 }
