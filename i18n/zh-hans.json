@@ -1,10 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
+			")8",
 			"A Chinese Wikipedian",
 			"WQL"
 		]
 	},
+	"externalguidance-machine-translation-heading": "自动翻译",
 	"externalguidance-machine-translation-contribute": "贡献",
-	"externalguidance-specialpage-createpage-title-label": "职位"
+	"externalguidance-specialpage-createpage-methods-header": "如何开始",
+	"externalguidance-specialpage-createpage-title": "创建一个新页面",
+	"externalguidance-specialpage-createpage-title-label": "职位",
+	"externalguidance-specialpage-createpage-button-label": "创建一个新页面"
 }
