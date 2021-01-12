@@ -39,5 +39,5 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Rediger eksisterende side",
 	"externalguidance-specialpage-createpage-desc": "En ny side med denne tittelen blir opprettet på $1",
 	"externalguidance-specialpage-createpage-page-exist": "En side med denne tittelen eksisterer allerede",
-	"externalguidance-specialpage-param-missing": "Én av de påkrevde parameterne mangler."
+	"externalguidance-specialpage-param-missing": "Én av de påkrevde parameterne («from», «to», «page» eller «language») mangler."
 }
