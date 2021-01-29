@@ -58,7 +58,7 @@
 			"description": "Language to domain name mapping"
 		},
 		"ExternalGuidanceKnownServices": {
-			"value": ["Google"],
+			"value": [ "Google" ],
 			"description": "Valid list of service names"
 		},
 		"ExternalGuidanceEnableContextDetection": {
