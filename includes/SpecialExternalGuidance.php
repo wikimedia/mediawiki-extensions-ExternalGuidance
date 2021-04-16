@@ -10,7 +10,7 @@ namespace MediaWiki\Extension\ExternalGuidance;
 
 use ErrorPageError;
 use Html;
-use Language;
+use MediaWiki\Languages\LanguageNameUtils;
 use OutputPage;
 use SpecialPage;
 use Title;
@@ -20,8 +20,18 @@ use WebRequest;
  * Welcoming page from an ExternalGuidance contribution entry point
  */
 class SpecialExternalGuidance extends SpecialPage {
-	public function __construct() {
+
+	/** @var LanguageNameUtils */
+	private $languageNameUtils;
+
+	/**
+	 * @param LanguageNameUtils $languageNameUtils
+	 */
+	public function __construct(
+		LanguageNameUtils $languageNameUtils
+	) {
 		parent::__construct( 'ExternalGuidance', '', false );
+		$this->languageNameUtils = $languageNameUtils;
 	}
 
 	/**
@@ -66,14 +76,14 @@ class SpecialExternalGuidance extends SpecialPage {
 			);
 		}
 
-		if ( !Language::isKnownLanguageTag( $sourceLanguage ) ) {
+		if ( !$this->languageNameUtils->isKnownLanguageTag( $sourceLanguage ) ) {
 			throw new ErrorPageError(
 				'externalguidance-specialpage-title',
 				'externalguidance-specialpage-invalid-language',
 				[ $sourceLanguage ]
 			);
 		}
-		if ( !Language::isKnownLanguageTag( $targetLanguage ) ) {
+		if ( !$this->languageNameUtils->isKnownLanguageTag( $targetLanguage ) ) {
 			throw new ErrorPageError(
 				'externalguidance-specialpage-title',
 				'externalguidance-specialpage-invalid-language',
@@ -102,15 +112,15 @@ class SpecialExternalGuidance extends SpecialPage {
 		if ( $pageExists ) {
 			$out->addWikiMsg( 'externalguidance-specialpage-mt-intro-pageexist',
 				$wgSitename,
-				Language::fetchLanguageName( $sourceLanguage )
+				$this->languageNameUtils->getLanguageName( $sourceLanguage )
 			);
 			$out->addWikiMsg( "externalguidance-specialpage-mt-pageexist",
-				Language::fetchLanguageName( $targetLanguage ) );
+				$this->languageNameUtils->getLanguageName( $targetLanguage ) );
 		} else {
 			$out->addWikiMsg( 'externalguidance-specialpage-mt-intro',
 				$wgSitename,
-				Language::fetchLanguageName( $sourceLanguage ),
-				Language::fetchLanguageName( $targetLanguage )
+				$this->languageNameUtils->getLanguageName( $sourceLanguage ),
+				$this->languageNameUtils->getLanguageName( $targetLanguage )
 			);
 		}
 		$out->addHTML( '<ul>' );
@@ -154,12 +164,12 @@ class SpecialExternalGuidance extends SpecialPage {
 				$actionLabel
 			) );
 			$out->addWikiMsg( 'externalguidance-specialpage-contribute-create',
-				Language::fetchLanguageName( $targetLanguage ) );
+				$this->languageNameUtils->getLanguageName( $targetLanguage ) );
 
 		}
 
 		$actionLabel = $this->msg( 'externalguidance-specialpage-contribute-improve-source-action',
-			Language::fetchLanguageName( $sourceLanguage ) )->text();
+			$this->languageNameUtils->getLanguageName( $sourceLanguage ) )->text();
 		$out->addHTML( Html::element(
 			'button',
 			[

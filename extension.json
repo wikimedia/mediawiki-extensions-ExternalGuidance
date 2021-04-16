@@ -10,7 +10,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.32.0",
+		"MediaWiki": ">= 1.34.0",
 		"extensions": {
 			"MobileFrontend": ">= 2.1.0",
 			"UniversalLanguageSelector": "*"
@@ -23,7 +23,12 @@
 		"MediaWiki\\Extension\\ExternalGuidance\\": "includes/"
 	},
 	"SpecialPages": {
-		"ExternalGuidance": "MediaWiki\\Extension\\ExternalGuidance\\SpecialExternalGuidance"
+		"ExternalGuidance": {
+			"class": "MediaWiki\\Extension\\ExternalGuidance\\SpecialExternalGuidance",
+			"services": [
+				"LanguageNameUtils"
+			]
+		}
 	},
 	"ConfigRegistry": {
 		"ExternalGuidance": "GlobalVarConfig::newInstance"

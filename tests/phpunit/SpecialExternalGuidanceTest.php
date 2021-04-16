@@ -19,7 +19,10 @@ class SpecialExternalGuidanceTest extends MediaWikiTestCase {
 	 */
 	public function testMTContextGuidanceWithInvalidData( array $params ) {
 		$context = new RequestContext();
-		$page = new SpecialExternalGuidance();
+		$services = $this->getServiceContainer();
+		$page = new SpecialExternalGuidance(
+			$services->getLanguageNameUtils()
+		);
 
 		$request = new FauxRequest( $params );
 		$context->setRequest( $request );
