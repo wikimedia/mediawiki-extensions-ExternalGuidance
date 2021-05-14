@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Florian COLLIN",
 			"Gomoko",
 			"Thibaut120094",
@@ -40,7 +41,7 @@
 	"externalguidance-specialpage-createpage-button-label": "Créer une nouvelle page",
 	"externalguidance-specialpage-createpage-button-label-edit": "Modifier une page existante",
 	"externalguidance-specialpage-createpage-desc": "Une nouvelle page avec ce titre sera créée sur $1",
-	"externalguidance-specialpage-createpage-page-exist": "Une page avec ce titre existe déja.",
+	"externalguidance-specialpage-createpage-page-exist": "Une page avec ce titre existe déjà.",
 	"externalguidance-specialpage-param-missing": "Un paramètre obligatoire (« from », « to », « page » et « language ») est manquant.",
 	"externalguidance-specialpage-invalid-language": "La langue spécifiée, $1, n'est pas un code de langue valide.",
 	"externalguidance-specialpage-invalid-service": "Le service spécifié, $1, n'est pas un nom de service valide."
