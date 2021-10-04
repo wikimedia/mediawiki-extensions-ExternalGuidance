@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"McDutchie",
 			"Robby",
 			"Santhosh Thottingal",
 			"Santhosh.thottingal"
@@ -23,7 +24,7 @@
 	"externalguidance-specialpage-contribute-expand-action": "Button label to expand the existing article.",
 	"externalguidance-specialpage-contribute-improve-source": "A short note to indicate the source article can also be improved.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Button label for improving source article.\n\n$1 is language name",
-	"externalguidance-machine-translation-page-exist": "Message shown when the page exist in target language. \n\n$1 is the URL for target language article",
+	"externalguidance-machine-translation-page-exist": "Message shown when the page exist in target language. \n\n$1 is the URL for target language article. '''Do not change its position within the square brackets; this is [https://www.mediawiki.org/wiki/Help:Links#External_links MediaWiki external link syntax] and moving the URL will break the link.'''",
 	"externalguidance-specialpage-createpage-methods-header": "Header text for the section showing different ways a user can create an article",
 	"externalguidance-specialpage-createpage-create-from-scratch": "Label for the radio button to choose translation as the method to create article. \n $1 is source language autonym \n $2 is target language autonym",
 	"externalguidance-specialpage-createpage-create-from-translation": "Label for the radio button to choose start-from-scratch option to create article.",
