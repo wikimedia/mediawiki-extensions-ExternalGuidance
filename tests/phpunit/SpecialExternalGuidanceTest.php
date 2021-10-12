@@ -4,14 +4,14 @@ namespace MediaWiki\Extension\ExternalGuidance\Tests;
 
 use FauxRequest;
 use MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance;
-use MediaWikiTestCase;
+use MediaWikiIntegrationTestCase;
 use MWException;
 use RequestContext;
 
 /**
  * @coversDefaultClass \MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance
  */
-class SpecialExternalGuidanceTest extends MediaWikiTestCase {
+class SpecialExternalGuidanceTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @covers ::mtContextGuidance
 	 * @param array $params
