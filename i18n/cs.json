@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mormegil"
+		]
+	},
+	"externalguidance-desc": "Obsah Wikipedie bývá jinde zveřejněn různými způsoby a tento projekt se snaží zjednodušit lidem možnost vrátit se ke zdroji a přispět.",
+	"externalguidance-machine-translation-heading": "Automatický překlad",
+	"externalguidance-machine-translation-contribute": "Přispějte",
+	"externalguidance-specialpage-title": "Vylepšení automatického obsahu",
+	"externalguidance-specialpage-mt-intro": "$1 je tvořena dobrovolníky z celého světa. Tento článek byl automaticky přeložen z verze v jazyce $2 a nelze ho přímo editovat v jazyce $3, ale i tak můžete pomoci.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 je tvořena dobrovolníky z celého světa. Tento článek byl automaticky přeložen z verze v jazyce $2 a nelze ho přímo editovat.",
+	"externalguidance-specialpage-mt-pageexist": "Existuje verze této stránky v jazyce $1, ručně založená editory, kterou můžete pomoci rozšířit.",
+	"externalguidance-specialpage-intro-machine": "Automatický překlad poskytuje užitečný přehled, ale není vždy přesný.",
+	"externalguidance-specialpage-intro-human": "Je mnohem lepší mít článek vytvořený lidmi!",
+	"externalguidance-specialpage-contribute-title": "Způsoby, jak přispět",
+	"externalguidance-specialpage-contribute-create": "Vytvořte článek v jazyce $1, zahrnující fakta, která jste se dozvěděli z překladu.",
+	"externalguidance-specialpage-contribute-create-action": "Začít článek na toto téma",
+	"externalguidance-specialpage-contribute-expand": "V existujícím článku mohou chybět informace. Zamyslete se nad rozšířením článku o fakta, která jste se dozvěděli z překladu.",
+	"externalguidance-specialpage-contribute-expand-action": "Rozšířit existující článek",
+	"externalguidance-specialpage-contribute-improve-source": "Vylepšení článku v originále také pomůže lidem, kteří si čtou jeho překlady.",
+	"externalguidance-specialpage-contribute-improve-source-action": "Editovat originální verzi v jazyce $1",
+	"externalguidance-machine-translation-page-exist": "[$1 Je také dostupný] komunitně vytvořený obsah na toto téma",
+	"externalguidance-specialpage-createpage-methods-header": "Jak začít",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Začít přeloženou verzí.</strong> Jako počáteční podoba se použije automatický překlad. Potřebujete dobrou znalost obou jazyků ($1 a $2), abyste prvotní překlad dokázali revidovat a vylepšit.",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>Začít od nuly.</strong> Tvorbu článku začnete od prázdné stránky.",
+	"externalguidance-machine-translation-provider-info-title": "Automatický překlad z jazyka $1",
+	"externalguidance-machine-translation-provider-info": "Tento překlad z $1 byl přeložen a poskytnut službou $2.",
+	"externalguidance-machine-translation-provider-terms": "Zkontrolovat ochranu osobních údajů a podmínky",
+	"externalguidance-specialpage-createpage-title": "Vytvořit novou stránku",
+	"externalguidance-specialpage-createpage-title-label": "Název",
+	"externalguidance-specialpage-createpage-button-label": "Vytvořit novou stránku",
+	"externalguidance-specialpage-createpage-button-label-edit": "Editovat existující stránku",
+	"externalguidance-specialpage-createpage-desc": "Na {{grammar:6sg|$1}} bude založena nová stránka s tímto názvem.",
+	"externalguidance-specialpage-createpage-page-exist": "Stránka s tímto názvem již existuje.",
+	"externalguidance-specialpage-param-missing": "Chybí jeden z povinných parametrů („from“, „to“, „page“ a „language“).",
+	"externalguidance-specialpage-invalid-language": "Uvedený jazyk ($1) není platný kód jazyka.",
+	"externalguidance-specialpage-invalid-service": "Uvedená služba ($1) není platné označení služby."
+}
