@@ -5,6 +5,7 @@
 			"아라"
 		]
 	},
+	"externalguidance-desc": "위키백과 콘텐츠는 여러 방법으로 외부에 노출되며 이 프로젝트의 의도는 사람들이 원래의 장소로 돌아와서 계속 기여하기 더 쉽게 만드는 것입니다.",
 	"externalguidance-machine-translation-heading": "자동 번역",
 	"externalguidance-machine-translation-contribute": "기여",
 	"externalguidance-specialpage-intro-machine": "자동 번역은 유용한 개요를 제공하지만 언제나 정확한 것은 아닙니다.",
@@ -13,6 +14,7 @@
 	"externalguidance-specialpage-contribute-create-action": "이 주제로 문서 시작하기",
 	"externalguidance-specialpage-contribute-expand": "기존 문서에는 없는 정보가 있을 수 있습니다. 번역을 통해 배운 사실로 문서 확장을 고려하십시오.",
 	"externalguidance-specialpage-contribute-expand-action": "기존 문서 확장",
+	"externalguidance-specialpage-contribute-improve-source-action": "$1의 원래의 판을 편집",
 	"externalguidance-specialpage-createpage-methods-header": "시작하기",
 	"externalguidance-machine-translation-page-missing": "$1(으)로 없음",
 	"externalguidance-machine-translation-provider-info-title": "$1에서 자동 번역",

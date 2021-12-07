@@ -1,10 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vahedi"
+			"Vahedi",
+			"Jeeputer"
 		]
 	},
+	"externalguidance-machine-translation-heading": "ترجمهٔ خودکار",
+	"externalguidance-machine-translation-contribute": "مشارکت",
 	"externalguidance-specialpage-intro-machine": "ترجمه خودکار اغلب برای بررسی اجمالی مفید است، اما همیشه دقیق نیست.",
 	"externalguidance-specialpage-intro-human": "بسیار بهتر است که مقالات توسط انسانها ایجاد شده‌باشند!",
-	"externalguidance-specialpage-contribute-improve-source": "بهبود مقاله اصلی به افراد در مطالعه ترجمه‌های آن کمک می‌کند."
+	"externalguidance-specialpage-contribute-title": "راه‌های مشارکت",
+	"externalguidance-specialpage-contribute-expand-action": "گسترش مقالهٔ موجود",
+	"externalguidance-specialpage-contribute-improve-source": "بهبود مقاله اصلی به افراد در مطالعه ترجمه‌های آن کمک می‌کند.",
+	"externalguidance-specialpage-createpage-title": "ایجاد یک صفحهٔ تازه",
+	"externalguidance-specialpage-createpage-title-label": "عنوان",
+	"externalguidance-specialpage-createpage-button-label": "ایجاد یک صفحهٔ تازه",
+	"externalguidance-specialpage-createpage-button-label-edit": "ویرایش صفحهٔ موجود",
+	"externalguidance-specialpage-createpage-page-exist": "صفحه‌ای با این عنوان از پیش موجود است."
 }
