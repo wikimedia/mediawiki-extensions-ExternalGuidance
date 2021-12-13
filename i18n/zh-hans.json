@@ -2,9 +2,43 @@
 	"@metadata": {
 		"authors": [
 			"A Chinese Wikipedian",
-			"WQL"
+			"WQL",
+			")8",
+			"Shizhao"
 		]
 	},
+	"externalguidance-desc": "维基百科的内容以不同的方式对外公开，这个项目旨在让人们能够轻松回到原点并为之做出贡献。",
+	"externalguidance-machine-translation-heading": "自动翻译",
 	"externalguidance-machine-translation-contribute": "贡献",
-	"externalguidance-specialpage-createpage-title-label": "职位"
+	"externalguidance-specialpage-title": "改进自动内容",
+	"externalguidance-specialpage-mt-intro": "$1是由来自世界各地的志愿者编写的。这个条目是从$2的一个版本自动翻译过来的，$3不能直接编辑，不过还是可以帮忙的。",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1是由来自世界各地的志愿者编写的。这个条目是从$2的一个版本自动翻译过来的，不能直接编辑。",
+	"externalguidance-specialpage-mt-pageexist": "此页面有一个版本，由$1的编辑手动启动，您可以帮助扩展。",
+	"externalguidance-specialpage-intro-machine": "自动翻译提供了有用的概述，但并不总是准确。",
+	"externalguidance-specialpage-intro-human": "最好有人类创造的条目！",
+	"externalguidance-specialpage-contribute-title": "贡献方式",
+	"externalguidance-specialpage-contribute-create": "在$1写一个条目，把你从翻译中学到的事实包括进来。",
+	"externalguidance-specialpage-contribute-create-action": "为这个主题开始一个条目",
+	"externalguidance-specialpage-contribute-expand": "现有条目可能缺少信息。考虑使用您从翻译中了解到的事实来扩充条目。",
+	"externalguidance-specialpage-contribute-expand-action": "扩充现有条目",
+	"externalguidance-specialpage-contribute-improve-source": "改进原始条目将帮助人们阅读它的翻译。",
+	"externalguidance-specialpage-contribute-improve-source-action": "在$1编辑原始版本",
+	"externalguidance-machine-translation-page-exist": "社群创建的关于此主题的内容[$1 也可用]",
+	"externalguidance-specialpage-createpage-methods-header": "如何开始",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>从翻译开始。</strong>将使用自动翻译作为起点。您需要熟练掌握$1和$2以查看和改进初始翻译",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>从头开始。</strong>从空白页开始创建条目",
+	"externalguidance-machine-translation-page-missing": "在$1中丢失",
+	"externalguidance-machine-translation-provider-info-title": "从$1自动翻译",
+	"externalguidance-machine-translation-provider-info": "此$1内容由$2翻译并交付给您。",
+	"externalguidance-machine-translation-provider-terms": "检查隐私和条款",
+	"externalguidance-machine-translation-access-source-title": "访问$1",
+	"externalguidance-machine-translation-access-source-page-missing": "使用上面的“查看原文”选项，通过额外的阅读和编辑工具访问$1上的原始内容。您可以随时帮助改进此内容。",
+	"externalguidance-machine-translation-access-source-page-exist": "使用上面的“查看原文”选项，通过额外的阅读和编辑工具访问$1上的原始内容。社区为该主题创建的页面已经存在，您可以随时帮助改进它。",
+	"externalguidance-machine-translation-contribute-link": "了解如何做出贡献",
+	"externalguidance-specialpage-createpage-title": "创建一个新页面",
+	"externalguidance-specialpage-createpage-title-label": "职位",
+	"externalguidance-specialpage-createpage-button-label": "创建一个新页面",
+	"externalguidance-specialpage-createpage-button-label-edit": "编辑现有页面",
+	"externalguidance-specialpage-createpage-desc": "将在$1上创建具有此标题的新页面",
+	"externalguidance-specialpage-createpage-page-exist": "已存在具有此标题的页面。"
 }

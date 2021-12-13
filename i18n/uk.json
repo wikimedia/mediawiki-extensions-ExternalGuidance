@@ -2,10 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Piramidion",
-			"Vlad5250"
+			"Vlad5250",
+			"Base",
+			"DDPAT",
+			"Ата"
 		]
 	},
-	"externalguidance-desc": "Контент Вікіпедії відтворюється на зовнішніх ресурсах у різні способи, і метою цього проекту є зробити так, щоб людям було легко потрапити туди, звідки була взята інформація, і зробити свій внесок у Вікіпедію.",
+	"externalguidance-desc": "Контент Вікіпедії відтворюється на зовнішніх ресурсах у різні способи, і метою цього проєкту є зробити так, щоб людям було легко потрапити туди, звідки була взята інформація, і зробити свій внесок у Вікіпедію.",
 	"externalguidance-machine-translation-heading": "Автоматичний переклад",
 	"externalguidance-machine-translation-contribute": "Зробити внесок",
 	"externalguidance-specialpage-title": "Покращення автоматичного контенту",
@@ -26,7 +29,7 @@
 	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Почніть з перекладу.</strong> Як початкова точка Вам послугує автоматичний переклад. Щоб переглядати і покращувати початковий переклад, Вам потрібні добрі знання $1 і $2",
 	"externalguidance-specialpage-createpage-create-from-translation": "<strong>Почніть з нуля.</strong> Розпочніть порожню сторінку для створення статті",
 	"externalguidance-machine-translation-page-missing": "Відсутня мовою $1",
-	"externalguidance-machine-translation-provider-info-title": "АВтоматичний переклад з мови $1",
+	"externalguidance-machine-translation-provider-info-title": "Автоматичний переклад з мови $1",
 	"externalguidance-machine-translation-provider-info": "Цей контент із сайту $1 перекладено й доставлено Вам за допомогою $2.",
 	"externalguidance-machine-translation-provider-terms": "Переглянути політику й умови приватності",
 	"externalguidance-machine-translation-access-source-title": "Доступ до сайту $1",

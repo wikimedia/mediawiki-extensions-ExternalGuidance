@@ -3,7 +3,9 @@
 		"authors": [
 			"Gomoko",
 			"Thibaut120094",
-			"Wladek92"
+			"Wladek92",
+			"Ajeje Brazorf",
+			"Florian COLLIN"
 		]
 	},
 	"externalguidance-desc": "Le contenu de Wikipédia est exposé en externe de diverses façons, et ce projet tente de faciliter la possibilité pour les gens de revenir à l’origine et d’y contribuer.",
@@ -39,6 +41,6 @@
 	"externalguidance-specialpage-createpage-button-label": "Créer une nouvelle page",
 	"externalguidance-specialpage-createpage-button-label-edit": "Modifier une page existante",
 	"externalguidance-specialpage-createpage-desc": "Une nouvelle page avec ce titre sera créée sur $1",
-	"externalguidance-specialpage-createpage-page-exist": "Une page avec ce titre existe déja.",
+	"externalguidance-specialpage-createpage-page-exist": "Une page avec ce titre existe déjà.",
 	"externalguidance-specialpage-param-missing": "Un des paramètres obligatoires est absent."
 }

@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"externalguidance-desc": "Le contento de Wikipedia se expone externemente de varie manieras. Iste projecto intende facilitar al gente de revenir al origine e contribuer a illo.",
+	"externalguidance-machine-translation-heading": "Traduction automatic",
+	"externalguidance-machine-translation-contribute": "Contribuer",
+	"externalguidance-specialpage-title": "Meliorar contento automatic",
+	"externalguidance-specialpage-mt-intro": "$1 es scribite per voluntarios de tote le mundo. Iste articulo ha essite traducite automaticamente ab un version scribite in $2 e non pote esser modificate directemente in $3, ma tu pote totevia adjutar nos.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 es scribite per voluntarios de tote le mundo. Iste articulo ha essite traducite automaticamente ab un version scribite in $2 e non pote esser modificate directemente.",
+	"externalguidance-specialpage-mt-pageexist": "Existe un version de iste pagina comenciate manualmente per redactores in $1 que tu pote adjutar a disveloppar.",
+	"externalguidance-specialpage-intro-machine": "Le traduction automatic forni un vista general utile ma non es sempre correcte.",
+	"externalguidance-specialpage-intro-human": "Es multo melior haber un articulo create per personas!",
+	"externalguidance-specialpage-contribute-title": "Manieras de contribuer",
+	"externalguidance-specialpage-contribute-create": "Crea un articulo in $1 que include le factos que tu ha apprendite del traduction.",
+	"externalguidance-specialpage-contribute-create-action": "Comenciar un articulo sur iste subjecto",
+	"externalguidance-specialpage-contribute-expand": "Al articulo existente pote mancar informationes. Considera ampliar le articulo con le factos que tu ha apprendite del traduction.",
+	"externalguidance-specialpage-contribute-expand-action": "Ampliar le articulo existente",
+	"externalguidance-specialpage-contribute-improve-source": "Meliorar le articulo original tamben adjuta le personas que lege traductiones de illo.",
+	"externalguidance-specialpage-contribute-improve-source-action": "Modificar le version original in $1",
+	"externalguidance-machine-translation-page-exist": "Tamben es disponibile [$1 contento create per le communitate sur iste subjecto]",
+	"externalguidance-specialpage-createpage-methods-header": "Como initiar",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Comenciar con un traduction.</strong> Un traduction automatic essera usate como puncto de initio. Tu require bon cognoscentia de $1 e $2 pro revider e meliorar le traduction initial.",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>Comenciar de zero.</strong> Comencia con un pagina vacue pro crear le articulo.",
+	"externalguidance-machine-translation-page-missing": "Mancante in $1",
+	"externalguidance-machine-translation-provider-info-title": "Traduction automatic ab $1",
+	"externalguidance-machine-translation-provider-info": "Iste contento de $1 es traducite e livrate per $2.",
+	"externalguidance-machine-translation-provider-terms": "Verificar confidentialitate e conditiones",
+	"externalguidance-machine-translation-access-source-title": "Acceder a $1",
+	"externalguidance-machine-translation-access-source-page-missing": "Usa le option \"Vider original\" supra pro acceder al contento original sur $1 con instrumentos additional de lectura e modification. Tu pote adjutar a meliorar iste contento a omne momento.",
+	"externalguidance-machine-translation-access-source-page-exist": "Usa le option \"Vider original\" supra pro acceder al contento original sur $1 con instrumentos additional de lectura e modification. Un pagina create per le communitate sur iste subjecto ja existe e tu pote adjutar a meliorar lo a omne momento.",
+	"externalguidance-machine-translation-contribute-link": "Apprender como contribuer",
+	"externalguidance-specialpage-createpage-title": "Crear un nove pagina",
+	"externalguidance-specialpage-createpage-title-label": "Titulo",
+	"externalguidance-specialpage-createpage-button-label": "Crear un nove pagina",
+	"externalguidance-specialpage-createpage-button-label-edit": "Modificar pagina existente",
+	"externalguidance-specialpage-createpage-desc": "Un nove pagina con iste titulo essera create sur $1",
+	"externalguidance-specialpage-createpage-page-exist": "Un pagina con iste titulo ja existe."
+}

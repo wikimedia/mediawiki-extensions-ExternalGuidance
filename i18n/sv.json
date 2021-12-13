@@ -1,22 +1,42 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Felba"
 		]
 	},
 	"externalguidance-desc": "Innehåll på Wikipedia exponeras externt på olika sätt och detta projekt avser att göra det enkelt för folk att återvända till ursprunget och bidra till det.",
 	"externalguidance-machine-translation-heading": "Automatisk översättning",
 	"externalguidance-machine-translation-contribute": "Bidra",
 	"externalguidance-specialpage-title": "Förbättrar automatiskt innehåll",
+	"externalguidance-specialpage-mt-intro": "$1 är skriven av volontärer från hela världen. Denna artikel är automatiskt översatt från en version på $2, och kan inte redigeras direkt på $3, fast du kan fortfarande hjälpa till.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 är skriven av volontärer från hela världen. Denna artikel är automatiskt översatt från en version på $2, och kan inte redigeras direkt.",
 	"externalguidance-specialpage-mt-pageexist": "Det finns en version av denna sida som manuellt startades av redigeraren $1 som du hjälpa till att utöka.",
 	"externalguidance-specialpage-intro-machine": "Automatisk översättning ger en användbar översikt men är inte alltid exakt.",
 	"externalguidance-specialpage-intro-human": "Det är mycket bättre att ha en artikel skapad av människor!",
 	"externalguidance-specialpage-contribute-title": "Sätt att bidrag",
+	"externalguidance-specialpage-contribute-create": "Skapa en artikel på $1 för att inkludera den fakta du lärde dig av översättningen.",
+	"externalguidance-specialpage-contribute-create-action": "Skapa en artikel om detta ämne",
+	"externalguidance-specialpage-contribute-expand": "Den existerande artikeln saknar kanske information. Överväg att utöka artikeln med den fakta du lärde från översättningen.",
+	"externalguidance-specialpage-contribute-expand-action": "Utvidga den existerande artikeln",
+	"externalguidance-specialpage-contribute-improve-source": "Att förbättra den originella artikeln hjälper även de som läser översättningen av den.",
 	"externalguidance-specialpage-contribute-improve-source-action": "Redigera originalversionen i $1",
 	"externalguidance-machine-translation-page-exist": "Innehåll om detta ämne som har skapats av gemenskapen [$1 finns också tillgängligt]",
 	"externalguidance-specialpage-createpage-methods-header": "Hur man börjar",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Starta från översättningen.</strong> Automatisk översättning används som en utgångspunkt. Du måste behärska både $1 och $2 väl för att utvärdera och förbättra den första översättningen",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>Starta med blankt ark</strong>. Starta med en blank sida för att skapa artikeln",
 	"externalguidance-machine-translation-page-missing": "Saknas på $1",
+	"externalguidance-machine-translation-provider-info-title": "Automatisk översättning från $1",
+	"externalguidance-machine-translation-provider-info": "Detta $1-innehåll är översatt och levererat till dig av $2",
+	"externalguidance-machine-translation-provider-terms": "Validera personsekretess och villkor",
+	"externalguidance-machine-translation-access-source-title": "Gå till $1",
+	"externalguidance-machine-translation-access-source-page-missing": "Använda \"Visa originalet\" ovan för att få tillgång till ursprungligt innehåll på $1 med ytterligare läs- och redigeringsverktyg. Du kan hjälpa till med att förbättra innehållet när som helst.",
+	"externalguidance-machine-translation-access-source-page-exist": "Använda \"Visa originalet\" ovan för att få tillgång till ursprungligt innehåll på $1 med ytterligare läs- och redigeringsverktyg. En samfundsbaserad sida finns redan för detta ämne och du kan hjälpa till med att förbättra det när som helst.",
+	"externalguidance-machine-translation-contribute-link": "Lär dig hur du kan bidra",
 	"externalguidance-specialpage-createpage-title": "Skapa en ny sida",
 	"externalguidance-specialpage-createpage-title-label": "Titel",
-	"externalguidance-specialpage-createpage-button-label": "Skapa en ny sida"
+	"externalguidance-specialpage-createpage-button-label": "Skapa en ny sida",
+	"externalguidance-specialpage-createpage-button-label-edit": "Redigera befintlig sida",
+	"externalguidance-specialpage-createpage-desc": "En ny sida med denna titel kommer att skapas på $1",
+	"externalguidance-specialpage-createpage-page-exist": "En sida med denna titel finnes redan."
 }
