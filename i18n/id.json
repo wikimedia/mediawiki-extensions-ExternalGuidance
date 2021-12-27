@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Daud I.F. Argana",
 			"Joseagush",
 			"SPramudya (WMF)",
 			"Veracious"
@@ -40,5 +41,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Sunting halaman yang tersedia",
 	"externalguidance-specialpage-createpage-desc": "Laman baru dengan judul ini akan dibuat dengan $1",
 	"externalguidance-specialpage-createpage-page-exist": "Laman dengan judul ini sudah tersedia.",
-	"externalguidance-specialpage-param-missing": "Salah satu dari parameter yang wajib tidak ditemukan."
+	"externalguidance-specialpage-param-missing": "Salah satu dari parameter yang wajib (\"from\", \"to\", \"page\", dan \"language\") tidak ditemukan.",
+	"externalguidance-specialpage-invalid-language": "Bahasa yang diberikan, $1, bukanlah kode bahasa yang sah.",
+	"externalguidance-specialpage-invalid-service": "Layanan yang diberikan, $1, bukanlah nama layanan yang sah."
 }
