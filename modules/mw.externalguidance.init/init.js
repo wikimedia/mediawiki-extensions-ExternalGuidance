@@ -14,7 +14,8 @@
 			no: 'nb',
 			iw: 'he',
 			jw: 'jv',
-			'zh-CN': 'zh'
+			'zh-CN': 'zh',
+			'zh-TW': 'zh'
 		};
 
 		// Google translate sometimes uses lang in the form of
