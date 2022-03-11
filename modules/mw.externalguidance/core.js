@@ -1,4 +1,4 @@
-/* eslint-disable camelcase, mediawiki/class-doc */
+/* eslint-disable mediawiki/class-doc */
 ( function ( M ) {
 	var mobile = M.require( 'mobile.startup' ),
 		Overlay = mobile.Overlay,
@@ -212,14 +212,6 @@
 			trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'mtinfo',
 				this.service, this.sourceLanguage, this.targetLanguage ];
 			mw.track( trackName.join( '.' ), 1 );
-			mw.track( 'event.ExternalGuidance', {
-				action: 'mtinfo',
-				session_token: mw.user.sessionId(),
-				source_language: this.sourceLanguage,
-				target_language: this.targetLanguage,
-				service: this.service,
-				title: this.sourcePage
-			} );
 			return overlay;
 		}.bind( this ) );
 	};
@@ -303,14 +295,6 @@
 		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'init',
 			this.options.service, this.options.from, this.options.to ];
 		mw.track( trackName.join( '.' ), 1 );
-		mw.track( 'event.ExternalGuidance', {
-			action: 'init',
-			session_token: mw.user.sessionId(),
-			source_language: this.options.from,
-			target_language: this.options.to,
-			service: this.options.service,
-			title: this.options.page
-		} );
 	};
 
 	/**
