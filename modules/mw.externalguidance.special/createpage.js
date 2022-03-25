@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 ( function ( M ) {
 	var mobile = M.require( 'mobile.startup' ),
 		View = mobile.View,
@@ -70,14 +69,6 @@
 		];
 
 		mw.track( trackName.join( '.' ), 1 );
-		mw.track( 'event.ExternalGuidance', {
-			action: action,
-			session_token: mw.user.sessionId(),
-			source_language: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
-			target_language: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
-			service: mw.config.get( 'wgExternalGuidanceService' ),
-			title: updatedTitle
-		} );
 
 		if ( action === 'createpage-translate' ) {
 			window.open( this.sitemapper.getCXUrl(
@@ -274,14 +265,6 @@
 			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
 		];
 		mw.track( trackName.join( '.' ), 1 );
-		mw.track( 'event.ExternalGuidance', {
-			action: 'edit-original',
-			session_token: mw.user.sessionId(),
-			source_language: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
-			target_language: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
-			service: mw.config.get( 'wgExternalGuidanceService' ),
-			title: mw.config.get( 'wgExternalGuidanceSourcePage' )
-		} );
 		window.open( sitemapper.getPageUrl(
 			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
 			mw.config.get( 'wgExternalGuidanceSourcePage' ),
@@ -305,14 +288,6 @@
 		];
 
 		mw.track( trackName.join( '.' ), 1 );
-		mw.track( 'event.ExternalGuidance', {
-			action: 'editpage',
-			session_token: mw.user.sessionId(),
-			source_language: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
-			target_language: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
-			service: mw.config.get( 'wgExternalGuidanceService' ),
-			title: mw.config.get( 'wgExternalGuidanceTargetPage' )
-		} );
 		window.open( sitemapper.getPageUrl(
 			mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
 			mw.config.get( 'wgExternalGuidanceTargetPage' ),
@@ -345,14 +320,6 @@
 			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
 		];
 		mw.track( trackName.join( '.' ), 1 );
-		mw.track( 'event.ExternalGuidance', {
-			action: 'specialpage',
-			session_token: mw.user.sessionId(),
-			source_language: mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
-			target_language: mw.config.get( 'wgExternalGuidanceTargetLanguage' ),
-			service: mw.config.get( 'wgExternalGuidanceService' ),
-			title: mw.config.get( 'wgExternalGuidanceSourcePage' )
-		} );
 	} );
 
 }( mw.mobileFrontend ) );
