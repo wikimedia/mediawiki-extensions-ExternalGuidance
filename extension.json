@@ -160,6 +160,7 @@
 				"mediawiki.jqueryMsg",
 				"jquery.uls.data",
 				"mediawiki.ForeignApi",
+				"mediawiki.util",
 				"mw.externalguidance.icons"
 			]
 		}

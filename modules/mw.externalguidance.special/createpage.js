@@ -14,7 +14,7 @@
 		this.sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
 		View.call( this, {
 			events: {
-				'input .eg-create-page-title': $.debounce( 300, RequestTitleForm.prototype.onTitleInput ),
+				'input .eg-create-page-title': mw.util.debounce( RequestTitleForm.prototype.onTitleInput, 300 ),
 				'click .eg-create-page-button': 'onCreateButtonClick'
 			},
 			projectName: options.projectName,
