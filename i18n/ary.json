@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ayoubbouamri"
+			"Ayoubbouamri",
+			"Reda Benkhadra"
 		]
 	},
+	"externalguidance-machine-translation-page-missing": "ناقص ف $1",
 	"externalguidance-specialpage-invalid-language": "هاد لّوغا، $1، ماكايناش"
 }
