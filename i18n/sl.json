@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eleassar",
 			"HairyFotr"
 		]
 	},
+	"externalguidance-specialpage-contribute-create-action": "Začni članek o tej temi",
 	"externalguidance-specialpage-createpage-title-label": "Naslov"
 }
