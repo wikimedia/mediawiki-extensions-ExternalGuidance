@@ -4,7 +4,18 @@
 			"Prevodim"
 		]
 	},
-	"externalguidance-desc": "Sadržaj Vikipedije je izložen na različite načine, i ovaj projekat namerava da olakša posećivanje tog sadržaja i doprinos njemu.",
+	"externalguidance-desc": "Sadržaj Vikipedije je izložen na razne načine. Ovaj projekat namerava da olakša posećivanje tog sadržaja i doprinos njemu.",
 	"externalguidance-machine-translation-heading": "Automatski prevod",
-	"externalguidance-machine-translation-contribute": "Učestvujte"
+	"externalguidance-machine-translation-contribute": "Doprinesite",
+	"externalguidance-specialpage-contribute-title": "Načini da doprinesete",
+	"externalguidance-specialpage-contribute-expand-action": "Proširite postojeći članak",
+	"externalguidance-machine-translation-provider-terms": "Pogledajte privatnost i uslove",
+	"externalguidance-machine-translation-access-source-title": "Pristup projektu $1",
+	"externalguidance-machine-translation-contribute-link": "Naučite kako možete da doprinesete",
+	"externalguidance-specialpage-createpage-title": "Pravljenje nove stranice",
+	"externalguidance-specialpage-createpage-title-label": "Naslov",
+	"externalguidance-specialpage-createpage-button-label": "Napravi novu stranicu",
+	"externalguidance-specialpage-createpage-button-label-edit": "Uredite postojeću stranicu",
+	"externalguidance-specialpage-createpage-desc": "Nova stranica sa ovim naslovom biće napravljena na projektu $1",
+	"externalguidance-specialpage-createpage-page-exist": "Stranica sa ovim naslovom već postoji."
 }

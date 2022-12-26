@@ -29,7 +29,7 @@
 	"externalguidance-specialpage-createpage-methods-header": "Comment démarrer",
 	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Démarrer depuis la traduction.</strong> La traduction automatique sera utilisée comme  point de départ. Vous avez besoin d’une bonne maîtrise à la fois de $1 et $2 pour relire et améliorer la traduction initiale",
 	"externalguidance-specialpage-createpage-create-from-translation": "<strong>Démarrer depuis rien.</strong> Démarrer depuis une page vide pour créer l’article",
-	"externalguidance-machine-translation-page-missing": "Absent en $1",
+	"externalguidance-machine-translation-page-missing": "Manquant en $1",
 	"externalguidance-machine-translation-provider-info-title": "Traduction automatique de $1",
 	"externalguidance-machine-translation-provider-info": "Ce contenu $1 est traduit et vous est fourni par $2.",
 	"externalguidance-machine-translation-provider-terms": "Vérifier la confidentialité et les conditions",
