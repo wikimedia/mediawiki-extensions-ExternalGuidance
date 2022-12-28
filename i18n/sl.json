@@ -6,6 +6,11 @@
 		]
 	},
 	"externalguidance-desc": "Vsebina Wikipedije je na različne načine izpostavljena navzven, namen tega projekta pa je ljudem omogočiti, da se zlahka vrnejo k izvoru in prispevajo k njemu.",
+	"externalguidance-machine-translation-heading": "Avtomatski prevod",
+	"externalguidance-machine-translation-contribute": "Prispevaj",
+	"externalguidance-specialpage-title": "Izboljševanje samodejne vsebine",
+	"externalguidance-specialpage-mt-intro": "$1 pišejo prostovoljci z vsega sveta. Ta članek je avtomatsko preveden iz različice v $2 in ga ni mogoče urejati neposredno v $3, vendar lahko vseeno pomagate.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 pišejo prostovoljci z vsega sveta. Ta članek je avtomatsko preveden iz različice v $2 in ga ni mogoče neposredno urejati.",
 	"externalguidance-specialpage-contribute-create-action": "Začni članek o tej temi",
 	"externalguidance-machine-translation-page-missing": "Manjka v $1",
 	"externalguidance-specialpage-createpage-title-label": "Naslov"
