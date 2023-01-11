@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Brettchenweber",
 			"Kghbln",
 			"Metalhead64"
 		]
@@ -10,13 +11,13 @@
 	"externalguidance-machine-translation-contribute": "Beitragen",
 	"externalguidance-specialpage-title": "Automatischen Inhalt verbessern",
 	"externalguidance-specialpage-mt-intro": "$1 wird von Freiwilligen aus der ganzen Welt geschrieben. Dieser Artikel wurde automatisch von einer Version auf $2 übersetzt und kann nicht direkt auf $3 bearbeitet werden, du kannst jedoch dennoch helfen.",
-	"externalguidance-specialpage-mt-intro-pageexist": "$1 wird von Freiwilligen aus der ganzen Welt geschrieben. Dieser Artikel wurde automatisch von einer Version auf $2 übersetzt, und kann nicht direkt bearbeitet werden.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 wird von Freiwilligen aus der ganzen Welt geschrieben. Dieser Artikel wurde automatisch von einer Version auf $2 übersetzt und kann nicht direkt bearbeitet werden.",
 	"externalguidance-specialpage-mt-pageexist": "Es gibt eine Version dieser Seite, die manuell von Autoren in $1 gestartet wurde, die du erweitern kannst.",
 	"externalguidance-specialpage-intro-machine": "Automatische Übersetzungen bieten eine nützliche Übersicht, können jedoch nicht immer genau sein.",
 	"externalguidance-specialpage-intro-human": "Es ist viel besser, einen Artikel zu haben, der von Menschen erstellt wurde!",
 	"externalguidance-specialpage-contribute-title": "Wege zum Mitmachen",
 	"externalguidance-specialpage-contribute-create": "Erstelle einen Artikel in $1, um die Tatsachen einzufügen, die du von der Übersetzung gelernt hast.",
-	"externalguidance-specialpage-contribute-create-action": "Beginne einen Artikel für dieses Thema",
+	"externalguidance-specialpage-contribute-create-action": "Beginne einen Artikel zu diesem Thema",
 	"externalguidance-specialpage-contribute-expand": "Dem vorhandenen Artikel könnten Informationen fehlen. Ziehe in Erwägung, ihn mit den Tatsachen zu erweitern, die du von der Übersetzung gelernt hast.",
 	"externalguidance-specialpage-contribute-expand-action": "Erweitere den vorhandenen Artikel",
 	"externalguidance-specialpage-contribute-improve-source": "Verbesserungen am ursprünglichen Artikel helfen auch Menschen, die seine Übersetzungen lesen.",
