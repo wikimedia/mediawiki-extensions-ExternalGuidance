@@ -51,7 +51,7 @@ For various reasons, the domain name in the URLs for wikis may not be same as th
 
 ```lang=json
 {
-    "be-tarask": "be-x-old",
+    "be-x-old": "be-tarask",
     "bho": "bh"
 }
 ```
