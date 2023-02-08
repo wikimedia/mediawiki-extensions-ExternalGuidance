@@ -4,7 +4,8 @@
 			"BaRaN6161 TURK",
 			"Hedda",
 			"Mirzali",
-			"MuratTheTurkish"
+			"MuratTheTurkish",
+			"Rapsar"
 		]
 	},
 	"externalguidance-desc": "Vikipedi içeriği dışarıdan farklı şekillerde açığa çıkmaktadır ve bu proje, insanların başnoktaya dönebilmelerini ve katkıda bulunabilmelerini kolaylaştırmayı amaçlamaktadır.",
@@ -38,7 +39,7 @@
 	"externalguidance-specialpage-createpage-title": "Yeni bir sayfa oluştur",
 	"externalguidance-specialpage-createpage-title-label": "Başlık",
 	"externalguidance-specialpage-createpage-button-label": "Yeni bir sayfa oluştur",
-	"externalguidance-specialpage-createpage-button-label-edit": "Mevcut sayfayı düzenle",
+	"externalguidance-specialpage-createpage-button-label-edit": "Mevcut sayfayı değiştir",
 	"externalguidance-specialpage-createpage-desc": "Bu başlığa sahip yeni bir sayfa $1 oluşturulacak",
 	"externalguidance-specialpage-createpage-page-exist": "Bu başlığa sahip bir sayfa zaten var.",
 	"externalguidance-specialpage-param-missing": "Zorunlu parametrelerden biri (\"from\", \"to\", \"page\" ve \"language\") eksik.",
