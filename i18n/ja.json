@@ -7,6 +7,14 @@
 	},
 	"externalguidance-desc": "ウィキペディアのコンテンツはさまざまな方法で外部に公開されている。このプロジェクトでは、人々が元の記事に戻って編集できるようにする。",
 	"externalguidance-machine-translation-heading": "自動翻訳",
+	"externalguidance-specialpage-mt-intro": "$1は世界中のボランティアによって書かれています。この記事は$2版から自動翻訳されており、$3版を直接編集することはできませんが、なお手助けすることができます。",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1は世界中のボランティアによって書かれています。この記事は$2版から自動翻訳されており、$3版を直接編集することはできません。",
 	"externalguidance-specialpage-intro-machine": "自動翻訳は役立つ概要を提供しますが、常に正確なわけではありません。",
-	"externalguidance-machine-translation-provider-info-title": "$1からの自動翻訳"
+	"externalguidance-specialpage-intro-human": "人の手で作られた記事の方がより良いです！",
+	"externalguidance-specialpage-contribute-create": "$1で記事を作成し、翻訳から学んだ事実を盛り込みます。",
+	"externalguidance-specialpage-contribute-create-action": "このトピックで記事を作る",
+	"externalguidance-specialpage-contribute-improve-source": "オリジナルの記事の改善もこの記事を翻訳して読む人の助けになります。",
+	"externalguidance-specialpage-contribute-improve-source-action": "$1版のオリジナルを編集する",
+	"externalguidance-machine-translation-provider-info-title": "$1からの自動翻訳",
+	"externalguidance-machine-translation-access-source-page-missing": "上の“View original”オプションから、閲覧・編集補助ツールが使える $1 のオリジナルのコンテンツにアクセスできます。このコンテンツはいつでも改善できます。"
 }
