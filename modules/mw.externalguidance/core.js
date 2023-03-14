@@ -287,7 +287,7 @@
 		var instance, trackName;
 
 		if ( !ExternalGuidance.contextMap[ this.contextName ] ) {
-			throw Error( 'Unknown context' );
+			throw new Error( 'Unknown context' );
 		}
 		instance = new ExternalGuidance.contextMap[ this.contextName ]( this.options );
 		instance.init();
