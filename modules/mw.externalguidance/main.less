@@ -1,16 +1,16 @@
+@import 'mediawiki.skin.variables.less';
 @import 'mediawiki.mixins';
-@import 'mediawiki.ui/variables';
 
 // Minerva defines styles for #page-actions selector.
 // We need to override to use the same page-actions container.
 /* stylelint-disable selector-max-id */
 #page-actions.eg-machine-translation-banner {
-	box-sizing: border-box;
+	box-sizing: @box-sizing-base;
 	font-size: 1.1em;
 	padding: 8px;
-	background-color: @colorGray15;
-	border-top: solid 1px @colorGray14;
-	border-bottom: solid 1px @colorGray14;
+	background-color: #f8f9fa;
+	border-top: @border-width-base @border-style-base #eaecf0;
+	border-bottom: @border-width-base @border-style-base #eaecf0;
 	overflow: hidden;
 	width: 100%;
 	animation: appear-eg-banner 0.5s;
@@ -40,7 +40,7 @@
 		float: left;
 
 		.eg-machine-translation-banner-header-label {
-			color: @colorGray5;
+			color: @color-subtle;
 			vertical-align: middle;
 			font-size: 18px;
 			font-weight: 500;
@@ -51,10 +51,10 @@
 		cursor: pointer;
 		float: right;
 		text-decoration: none;
-		color: @colorProgressive;
+		color: @color-progressive;
 
 		&:hover {
-			color: @colorProgressiveActive;
+			color: @color-progressive--hover;
 		}
 
 		a.eg-machine-translation-banner-action-label {
@@ -76,12 +76,12 @@
 
 .eg-machine-translation-page-status {
 	font-size: 0.85em;
-	color: @colorGray5;
+	color: @color-subtle;
 	min-height: 1.4em;
 	margin-bottom: 16px;
 
 	&.missing {
-		color: @colorDestructive;
+		color: @color-destructive;
 	}
 }
 
