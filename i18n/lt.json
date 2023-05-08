@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nokeoo"
+		]
+	},
+	"externalguidance-desc": "Vikipedijos turinys išorėje pateikiamas įvairiais būdais, o šiuo projektu siekiama, kad žmonės galėtų lengviau grįžti į pradinę vietą ir prie jos prisidėti.",
+	"externalguidance-machine-translation-heading": "Automatinis vertimas",
+	"externalguidance-machine-translation-contribute": "Prisidėti",
+	"externalguidance-specialpage-title": "Automatinio turinio tobulinimas",
+	"externalguidance-specialpage-mt-intro": "$1 rašo savanoriai iš viso pasaulio. Šis straipsnis automatiškai išverstas iš versijos $2 ir jo negalima redaguoti tiesiogiai $3, bet vis tiek galite padėti.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 rašo savanoriai iš viso pasaulio. Šis straipsnis automatiškai išverstas iš $2 versijos ir jo negalima redaguoti tiesiogiai.",
+	"externalguidance-specialpage-mt-pageexist": "Yra šio puslapio versija, kurią rankiniu būdu pradėjo redaktoriai $1 ir kurią galite išplėsti.",
+	"externalguidance-specialpage-intro-machine": "Automatinis vertimas suteikia naudingą apžvalgą, tačiau jis ne visada tikslus.",
+	"externalguidance-specialpage-intro-human": "Daug geriau, kad straipsnis būtų sukurtas žmonių!",
+	"externalguidance-specialpage-contribute-title": "Būdai prisidėti",
+	"externalguidance-specialpage-contribute-create": "Sukurkite straipsnį $1, kad įtrauktumėte faktus, kuriuos sužinojote iš vertimo.",
+	"externalguidance-specialpage-contribute-create-action": "Pradėkite straipsnį šia tema",
+	"externalguidance-specialpage-contribute-expand": "Esamame straipsnyje gali trūkti informacijos. Apsvarstykite galimybę išplėsti straipsnį įtraukiant faktus, kuriuos sužinojote iš vertimo.",
+	"externalguidance-specialpage-contribute-expand-action": "Išplėsti esamą straipsnį",
+	"externalguidance-specialpage-contribute-improve-source": "Originalaus straipsnio patobulinimas taip pat padės žmonėms, skaitantiems jo vertimus.",
+	"externalguidance-specialpage-contribute-improve-source-action": "Redaguokite originalią versiją $1",
+	"externalguidance-machine-translation-page-exist": "Bendruomenės sukurtas turinys šia tema [$1 taip pat prieinamas]",
+	"externalguidance-specialpage-createpage-methods-header": "Kaip pradėti",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Pradėkite nuo vertimo.</strong> Automatinis vertimas bus naudojamas kaip pradžios taškas. Norint peržiūrėti ir patobulinti pradinį vertimą, reikia gerai mokėti $1 ir $2",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>Pradėkite nuo nulio.</strong> Norėdami sukurti straipsnį, pradėkite nuo tuščio puslapio",
+	"externalguidance-machine-translation-page-missing": "Trūksta $1",
+	"externalguidance-machine-translation-provider-info-title": "Automatinis vertimas iš $1",
+	"externalguidance-machine-translation-provider-info": "Šį $1 turinį išvertė ir jums pristatė $2.",
+	"externalguidance-machine-translation-provider-terms": "Peržiūrėkite privatumą ir sąlygas",
+	"externalguidance-machine-translation-access-source-title": "Prieiga prie $1",
+	"externalguidance-machine-translation-access-source-page-missing": "Naudokite aukščiau esančią parinktį „_Žiūrėti originalą“, kad pasiektumėte originalų turinį $1 su papildomais skaitymo ir redagavimo įrankiais. Bet kada galite padėti patobulinti šį turinį.",
+	"externalguidance-machine-translation-access-source-page-exist": "Naudokite aukščiau esančią parinktį „Žiūrėti originalą“, kad pasiektumėte originalų turinį $1 su papildomais skaitymo ir redagavimo įrankiais. Bendruomenės sukurtas puslapis šiai temai jau egzistuoja ir bet kada galite padėti jį patobulinti.",
+	"externalguidance-machine-translation-contribute-link": "Sužinokite kaip galite prisidėti",
+	"externalguidance-specialpage-createpage-title": "Sukurti naują puslapį",
+	"externalguidance-specialpage-createpage-title-label": "Pavadinimas",
+	"externalguidance-specialpage-createpage-button-label": "Sukurti naują puslapį",
+	"externalguidance-specialpage-createpage-button-label-edit": "Redaguoti egzistuojantį puslapį",
+	"externalguidance-specialpage-createpage-desc": "Naujas puslapis tokiu pavadinimu bus sukurtas $1",
+	"externalguidance-specialpage-createpage-page-exist": "Puslapis tokiu pavadinimu jau egzistuoja."
+}
