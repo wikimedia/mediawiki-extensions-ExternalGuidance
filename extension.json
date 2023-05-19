@@ -64,7 +64,9 @@
 			"description": "Language to domain name mapping"
 		},
 		"ExternalGuidanceKnownServices": {
-			"value": [ "Google" ],
+			"value": [
+				"Google"
+			],
 			"description": "Valid list of service names"
 		},
 		"ExternalGuidanceEnableContextDetection": {
@@ -83,16 +85,24 @@
 	},
 	"ResourceModules": {
 		"mw.externalguidance.init": {
-			"targets": [ "desktop", "mobile" ],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"skinScripts": {
-				"minerva": [ "mw.externalguidance.init/init.js" ]
+				"minerva": [
+					"mw.externalguidance.init/init.js"
+				]
 			},
 			"dependencies": [
 				"mediawiki.Uri"
 			]
 		},
 		"mw.externalguidance": {
-			"targets": [ "desktop", "mobile" ],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"skinScripts": {
 				"minerva": [
 					"mw.externalguidance/core.js",
@@ -135,7 +145,10 @@
 			}
 		},
 		"mw.externalguidance.special": {
-			"targets": [ "desktop", "mobile" ],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"scripts": [
 				"mw.externalguidance/sitemapper.js",
 				"mw.externalguidance.special/createpage.js"

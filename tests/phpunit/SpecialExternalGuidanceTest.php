@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\ExternalGuidance\Tests;
 
-use FauxRequest;
 use MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance;
+use MediaWiki\Request\FauxRequest;
 use MediaWikiIntegrationTestCase;
 use MWException;
 use RequestContext;
