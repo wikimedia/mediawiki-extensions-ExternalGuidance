@@ -32,7 +32,7 @@ class SpecialExternalGuidanceTest extends MediaWikiIntegrationTestCase {
 		$page->mtContextGuidance( $request, $output );
 	}
 
-	public function provideMTContextGuidanceData() {
+	public static function provideMTContextGuidanceData() {
 		return [
 			'With missing parameter but valid language (en)' => [
 				[ 'from' => 'en', 'to' => 'id', 'service' => 'ServiceX' ]
