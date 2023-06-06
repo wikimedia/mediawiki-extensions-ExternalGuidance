@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"捍粵者"
 		]
 	},
 	"externalguidance-desc": "維基百科內容以各種不同方式公開於外，此專案是旨在讓人們能容易返回至原有內容上，並對其做出貢獻。",
@@ -31,7 +32,7 @@
 	"externalguidance-machine-translation-access-source-title": "存取$1",
 	"externalguidance-machine-translation-access-source-page-missing": "使用上方的「檢視原始」選項，以額外閱讀與編輯工具來存取在$1的原始內容。您可以隨時協助改善此內容。",
 	"externalguidance-machine-translation-access-source-page-exist": "使用上方的「檢視原始」選項，以額外閱讀與編輯工具來存取在$1的原始內容。用於此主題的社群所建頁面已存在，因此您可以隨時來協助改善。",
-	"externalguidance-machine-translation-contribute-link": "了解您可以如何來作出貢獻",
+	"externalguidance-machine-translation-contribute-link": "了解您可以如何貢獻",
 	"externalguidance-specialpage-createpage-title": "建立新頁面",
 	"externalguidance-specialpage-createpage-title-label": "標題",
 	"externalguidance-specialpage-createpage-button-label": "建立新頁面",
