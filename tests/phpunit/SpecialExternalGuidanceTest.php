@@ -2,10 +2,10 @@
 
 namespace MediaWiki\Extension\ExternalGuidance\Tests;
 
+use ErrorPageError;
 use MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance;
 use MediaWiki\Request\FauxRequest;
 use MediaWikiIntegrationTestCase;
-use MWException;
 use RequestContext;
 
 /**
@@ -28,7 +28,7 @@ class SpecialExternalGuidanceTest extends MediaWikiIntegrationTestCase {
 		$context->setRequest( $request );
 		$page->setContext( $context );
 		$output = $context->getOutput();
-		$this->expectException( MWException::class );
+		$this->expectException( ErrorPageError::class );
 		$page->mtContextGuidance( $request, $output );
 	}
 
