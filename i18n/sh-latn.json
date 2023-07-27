@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"externalguidance-desc": "Sadržaj Wikipedije je izložen eksterno na različite načine. Ovaj projekat namjerava olakšati ljudima da se vrate izvoru i pridonesu njemu.",
+	"externalguidance-machine-translation-heading": "Automatski prijevod",
+	"externalguidance-machine-translation-contribute": "Doprinesite",
+	"externalguidance-specialpage-mt-intro": "$1 pišu volonteri iz cijelog svijeta. Ovaj je članak automatski preveden s verzije na jeziku: $2 i ne može se uređivati ​​izravno u $3, ali ipak možete pomoći.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 pišu volonteri iz cijelog svijeta. Ovaj je članak automatski preveden s verzije na jeziku: $2 i ne može se uređivati ​​izravno.",
+	"externalguidance-specialpage-mt-pageexist": "Postoji verzija ove stranice koju su ručno pokrenuli urednici na jeziku: $1. Pridružite se i proširite.",
+	"externalguidance-specialpage-intro-machine": "Automatski prijevod pruža koristan pregled, ali nije uvijek točan.",
+	"externalguidance-specialpage-intro-human": "Puno je bolje imati članak koji su stvorili ljudi!"
+}
