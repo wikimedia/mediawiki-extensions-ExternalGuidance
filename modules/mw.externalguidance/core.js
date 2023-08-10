@@ -169,6 +169,7 @@
 							result = item;
 							return true;
 						}
+						return false;
 					} );
 					return result.title;
 				}
