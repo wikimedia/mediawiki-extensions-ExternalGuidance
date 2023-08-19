@@ -11,9 +11,9 @@ namespace MediaWiki\Extension\ExternalGuidance;
 use ErrorPageError;
 use Html;
 use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\Title\Title;
 use OutputPage;
 use SpecialPage;
-use Title;
 use WebRequest;
 
 /**
