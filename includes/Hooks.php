@@ -19,19 +19,24 @@
 
 namespace MediaWiki\Extension\ExternalGuidance;
 
+use Config;
+use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
 use OutputPage;
 use Skin;
 
 /**
  * Hooks for ExternalGuidance extension
  */
-class Hooks {
+class Hooks implements
+	BeforePageDisplayHook,
+	ResourceLoaderGetConfigVarsHook
+{
 	/**
 	 * @param OutputPage $out
 	 * @param Skin $skin
-	 * Hook: BeforePageDisplay
 	 */
-	public static function addModules( OutputPage $out, Skin $skin ) {
+	public function onBeforePageDisplay( $out, $skin ): void {
 		global $wgExternalGuidanceEnableContextDetection;
 
 		if ( $wgExternalGuidanceEnableContextDetection === true &&
@@ -42,10 +47,11 @@ class Hooks {
 	}
 
 	/**
-	 * Hook: ResourceLoaderGetConfigVars
 	 * @param array &$vars
+	 * @param string $skin
+	 * @param Config $config
 	 */
-	public static function addConfig( array &$vars ) {
+	public function onResourceLoaderGetConfigVars( array &$vars, $skin, Config $config ): void {
 		global $wgExternalGuidanceMTReferrers, $wgExternalGuidanceSiteTemplates,
 			$wgExternalGuidanceDomainCodeMapping;
 		$vars['wgExternalGuidanceMTReferrers'] = $wgExternalGuidanceMTReferrers;
