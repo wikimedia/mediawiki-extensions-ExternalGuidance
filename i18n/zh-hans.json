@@ -3,6 +3,7 @@
 		"authors": [
 			")8",
 			"A Chinese Wikipedian",
+			"LittlePaw365",
 			"Shizhao",
 			"WQL"
 		]
@@ -26,7 +27,7 @@
 	"externalguidance-machine-translation-page-exist": "社群创建的关于此主题的内容[$1 也可用]",
 	"externalguidance-specialpage-createpage-methods-header": "如何开始",
 	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>从翻译开始。</strong>将使用自动翻译作为起点。您需要熟练掌握$1和$2以查看和改进初始翻译",
-	"externalguidance-specialpage-createpage-create-from-translation": "<strong>从头开始。</strong>从空白页开始创建条目",
+	"externalguidance-specialpage-createpage-create-from-translation": "<strong>从零开始。</strong>从空白页面开始创建条目",
 	"externalguidance-machine-translation-page-missing": "在$1中丢失",
 	"externalguidance-machine-translation-provider-info-title": "从$1自动翻译",
 	"externalguidance-machine-translation-provider-info": "此$1内容由$2翻译并交付给您。",
