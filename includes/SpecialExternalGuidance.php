@@ -38,7 +38,7 @@ class SpecialExternalGuidance extends SpecialPage {
 	 * @inheritDoc
 	 */
 	public function getDescription() {
-		return $this->msg( 'externalguidance-specialpage-title' )->text();
+		return $this->msg( 'externalguidance-specialpage-title' );
 	}
 
 	/**
