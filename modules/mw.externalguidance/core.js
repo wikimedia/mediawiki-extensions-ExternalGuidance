@@ -18,7 +18,7 @@
 		this.sourcePage = options.page;
 		this.service = options.service;
 		// eslint-disable-next-line no-jquery/no-global-selector
-		this.$container = $( '#page-actions' );
+		this.$container = $( '#page-actions, #p-views' );
 		this.targetPage = null;
 		this.sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
 		this.checkPageExistsRequest = null;
