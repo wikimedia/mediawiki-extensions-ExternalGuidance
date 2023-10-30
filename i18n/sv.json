@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Felba",
+			"McDutchie",
 			"WikiPhoenix"
 		]
 	},
@@ -39,7 +40,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Redigera befintlig sida",
 	"externalguidance-specialpage-createpage-desc": "En ny sida med denna titel kommer att skapas på $1",
 	"externalguidance-specialpage-createpage-page-exist": "En sida med denna titel finnes redan.",
-	"externalguidance-specialpage-param-missing": "En av de obligatoriska parametrarna (\"från\", \"till\", \"sida\", och \"språk\") saknas.",
+	"externalguidance-specialpage-param-missing": "En av de obligatoriska parametrarna (\"from\", \"to\", \"page\", och \"language\") saknas.",
 	"externalguidance-specialpage-invalid-language": "Det valda språket, $1, är inte en giltig språkkod.",
 	"externalguidance-specialpage-invalid-service": "Den valda tjänsten, $1, är inte ett giltigt tjänstnamn."
 }
