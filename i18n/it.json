@@ -20,5 +20,5 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "Modifica pagina esistente",
 	"externalguidance-specialpage-createpage-desc": "Una nuova pagina con questo titolo verrà creata su $1",
 	"externalguidance-specialpage-createpage-page-exist": "Una pagina con questo titolo esiste già.",
-	"externalguidance-specialpage-param-missing": "Manca uno dei parametri obbligatori (\"da\", \"a\", \"pagina\", e \"lingua\")."
+	"externalguidance-specialpage-param-missing": "Manca uno dei parametri obbligatori (\"from\", \"to\", \"page\", e \"language\")."
 }

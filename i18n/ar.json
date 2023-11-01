@@ -3,7 +3,8 @@
 		"authors": [
 			"Meno25",
 			"ديفيد",
-			"علاء"
+			"علاء",
+			"McDutchie"
 		]
 	},
 	"externalguidance-desc": "يعرض محتوى ويكيبيديا خارجيًا بطرقٍ مختلفة، ويهدف هذا المشروع إلى تسهيل قدرة الأشخاص في  العودة إلى الصفحة الأصل والمساهمة فيها.",
@@ -40,7 +41,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "تعديل الصفحة الموجودة",
 	"externalguidance-specialpage-createpage-desc": "سيتم إنشاء صفحة جديدة بهذا العنوان على $1",
 	"externalguidance-specialpage-createpage-page-exist": "توجد صفحة بهذا العنوان بالفعل.",
-	"externalguidance-specialpage-param-missing": "أحد المعلمات الإلزامية (\"من\" و \"إلى\" و \"الصفحة\" و \"اللغة\") مفقود.",
+	"externalguidance-specialpage-param-missing": "أحد المعلمات الإلزامية (\"from\" و \"to\" و \"page\" و \"language\") مفقود.",
 	"externalguidance-specialpage-invalid-language": "اللغة المحددة ، $1 ، ليست رمز لغة صالحًا.",
 	"externalguidance-specialpage-invalid-service": "الخدمة المحددة ، $1 ، ليست اسم خدمة صالحًا."
 }
