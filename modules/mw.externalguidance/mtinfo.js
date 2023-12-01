@@ -1,7 +1,6 @@
-( function ( M ) {
-
-	var mobile = M.require( 'mobile.startup' ),
-		View = mobile.View;
+const mobile = require( 'mobile.startup' );
+( function () {
+	const View = mobile.View;
 
 	/**
 	 * Overlay displaying a Machine Translation service information
@@ -46,6 +45,6 @@
 		View.prototype.postRender.apply( this, arguments );
 	};
 
-	M.define( 'mw.ExternalGuidance/MTServiceInfo', MTServiceInfo );
+	module.exports = MTServiceInfo;
 
-}( mw.mobileFrontend ) );
+}() );

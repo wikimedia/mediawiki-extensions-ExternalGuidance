@@ -1,8 +1,11 @@
 /* eslint-disable mediawiki/class-doc */
-( function ( M ) {
-	var mobile = M.require( 'mobile.startup' ),
-		Overlay = mobile.Overlay,
-		overlayManager = mobile.OverlayManager.getSingleton();
+const mobile = require( 'mobile.startup' ),
+	SiteMapper = require( './sitemapper.js' ),
+	MTServiceInfo = require( './mtinfo.js' );
+
+( function () {
+	const Overlay = mobile.Overlay,
+		overlayManager = mobile.getOverlayManager();
 
 	/**
 	 * @class
@@ -190,7 +193,6 @@
 			mw.loader.using( 'jquery.uls.data' )
 		).then( function ( targetTitle ) {
 			var overlay, trackName,
-				MTServiceInfo = M.require( 'mw.ExternalGuidance/MTServiceInfo' ),
 				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
 					this.privacyLinks.Google : null;
 
@@ -305,5 +307,11 @@
 		'machine-translation': MachineTranslationContext
 	};
 
+	// @todo: Clarify if these are @stable for use by gadgets and/or other extensions.
+	// per https://www.mediawiki.org/wiki/Stable_interface_policy/Frontend.
+	// Consider removing globals and/or adding @private to module.exports if not.
 	mw.ExternalGuidance = ExternalGuidance;
-}( mw.mobileFrontend ) );
+	mw.eg = mw.eg || {};
+	mw.eg.SiteMapper = SiteMapper;
+	module.exports = ExternalGuidance;
+}() );
