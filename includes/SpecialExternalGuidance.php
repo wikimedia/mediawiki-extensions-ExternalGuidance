@@ -149,7 +149,8 @@ class SpecialExternalGuidance extends SpecialPage {
 			$out->addHTML( Html::element(
 				'button',
 				[
-					'class' => 'eg-sp-contribute-expand mw-ui-button mw-ui-primary mw-ui-progressive',
+					'class' => 'eg-sp-contribute-expand cdx-button '
+						. 'cdx-button--action-progressive cdx-button--weight-primary',
 					'disabled' => true
 				],
 				$actionLabel
@@ -160,7 +161,7 @@ class SpecialExternalGuidance extends SpecialPage {
 			$out->addHTML( Html::element(
 				'button',
 				[
-					'class' => 'eg-sp-contribute-create mw-ui-button mw-ui-progressive',
+					'class' => 'eg-sp-contribute-create cdx-button cdx-button--action-progressive',
 					'disabled' => true
 				],
 				$actionLabel
@@ -175,7 +176,8 @@ class SpecialExternalGuidance extends SpecialPage {
 		$out->addHTML( Html::element(
 			'button',
 			[
-				'class' => 'eg-sp-contribute-to-original mw-ui-button mw-ui-progressive mw-ui-quiet',
+				'class' => 'eg-sp-contribute-to-original cdx-button cdx-button--action-progressive '
+					. 'cdx-button--weight-quiet',
 				'disabled' => true
 			],
 			$actionLabel

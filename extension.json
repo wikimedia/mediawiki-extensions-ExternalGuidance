@@ -175,7 +175,7 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mediawiki.ui.radio",
+				"codex-styles",
 				"mediawiki.jqueryMsg",
 				"jquery.uls.data",
 				"mediawiki.ForeignApi",

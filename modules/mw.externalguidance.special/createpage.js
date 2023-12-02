@@ -36,7 +36,7 @@
 			$p = $( '<p>' ).addClass( 'eg-create-page-desc' )
 				.text( mw.msg( 'externalguidance-specialpage-createpage-desc', this.options.projectName ) ),
 			$btn = $( '<button>' )
-				.addClass( 'eg-create-page-button mw-ui-button mw-ui-primary mw-ui-progressive' )
+				.addClass( 'eg-create-page-button cdx-button cdx-button--action-progressive cdx-button--weight-primary' )
 				.text( mw.msg( 'externalguidance-specialpage-createpage-button-label' ) );
 
 		if ( this.isDesktop() ) {
@@ -117,15 +117,20 @@
 			// Header
 			$( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-methods-header' ) ),
 			// Translate option - Default option.
-			$( '<div>' ).addClass( 'mw-ui-radio' ).append(
+			$( '<div>' ).addClass( 'cdx-radio' ).append(
 				$( '<input>' ).attr( {
 					type: 'radio',
+					class: 'cdx-radio__input',
 					value: 'translate',
 					checked: 'checked',
 					id: 'eg-translate',
 					name: 'eg-create-method'
 				} ),
+				$( '<span>' ).attr( {
+					class: 'cdx-radio__icon'
+				} ),
 				$( '<label>' ).attr( {
+					class: 'cdx-radio__label',
 					for: 'eg-translate'
 				} ).html( mw.message( 'externalguidance-specialpage-createpage-create-from-scratch',
 					$.uls.data.getAutonym( this.options.sourceLanguage ),
