@@ -9,12 +9,12 @@
 namespace MediaWiki\Extension\ExternalGuidance;
 
 use ErrorPageError;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\Output\OutputPage;
+use MediaWiki\Request\WebRequest;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
-use OutputPage;
-use SpecialPage;
-use WebRequest;
 
 /**
  * Welcoming page from an ExternalGuidance contribution entry point

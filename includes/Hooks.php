@@ -19,10 +19,10 @@
 
 namespace MediaWiki\Extension\ExternalGuidance;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
-use OutputPage;
 use Skin;
 
 /**

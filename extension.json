@@ -142,7 +142,7 @@
 			]
 		},
 		"mw.externalguidance.icons": {
-			"class": "ResourceLoaderImageModule",
+			"class": "MediaWiki\\ResourceLoader\\ImageModule",
 			"selector": ".mw-ui-icon-eg-{name}:before",
 			"images": {
 				"robot": "images/robot.svg",
