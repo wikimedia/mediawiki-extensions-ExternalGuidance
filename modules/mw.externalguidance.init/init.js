@@ -74,8 +74,9 @@
 		}
 		mw.log( '[ExternalGuidance] Context detected ' + JSON.stringify( context ) );
 
-		mw.loader.using( [ 'mw.externalguidance' ] ).then( function () {
-			var eg = new mw.ExternalGuidance( context.name, context.info );
+		mw.loader.using( [ 'mw.externalguidance' ] ).then( function ( req ) {
+			const ExternalGuidance = req( 'mw.externalguidance' );
+			const eg = new ExternalGuidance( context.name, context.info );
 			eg.init();
 		} );
 	}

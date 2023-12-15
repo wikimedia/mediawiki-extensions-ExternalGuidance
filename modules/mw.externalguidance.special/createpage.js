@@ -1,9 +1,8 @@
-( function ( M ) {
-	var mobile = M.require( 'mobile.startup' ),
-		View = mobile.View,
+const mobile = require( 'mobile.startup' );
+( function () {
+	const View = mobile.View,
 		Overlay = mobile.Overlay,
-		util = mobile.util,
-		overlayManager = mobile.OverlayManager.getSingleton();
+		overlayManager = mobile.getOverlayManager();
 
 	function RequestTitleForm( options ) {
 		this.editParams = {
@@ -195,12 +194,12 @@
 
 		// Short circuit empty titles
 		if ( title === '' ) {
-			return util.Deferred().resolve( false ).promise();
+			return Promise.resolve( false );
 		}
 
 		// Reject titles with pipe in the name, as it has special meaning in the api
 		if ( /\|/.test( title ) ) {
-			return util.Deferred().resolve( false ).promise();
+			return Promise.resolve( false );
 		}
 
 		return api.get( {
@@ -227,7 +226,7 @@
 	 */
 	function createPageOverlay( options ) {
 		var overlay = new Overlay(
-			util.extend( {
+			Object.assign( {
 				className: 'overlay eg-createpage-overlay',
 				heading: mw.msg( 'externalguidance-specialpage-createpage-title' )
 			}, options )
@@ -327,4 +326,4 @@
 		mw.track( trackName.join( '.' ), 1 );
 	} );
 
-}( mw.mobileFrontend ) );
+}() );

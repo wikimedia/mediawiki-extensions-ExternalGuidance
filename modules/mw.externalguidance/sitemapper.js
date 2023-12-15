@@ -112,6 +112,5 @@
 
 	};
 
-	mw.eg = mw.eg || {};
-	mw.eg.SiteMapper = SiteMapper;
+	module.exports = SiteMapper;
 }() );
