@@ -3,7 +3,9 @@
 		"authors": [
 			"Tahmid02016",
 			"আফতাবুজ্জামান",
-			"Tahmid"
+			"Tahmid",
+			"Aishik Rehman",
+			"McDutchie"
 		]
 	},
 	"externalguidance-desc": "উইকিপিডিয়ার বিষয়বস্তু বিভিন্ন উপায়ে বাহ্যিকভাবে প্রকাশিত হয় এবং এই প্রকল্পটি মানুষের পক্ষে উত্সে ফিরে আসতে এবং এতে অবদান রাখার ব্যাপারটিকে সহজ করে তোলে।",
@@ -14,7 +16,7 @@
 	"externalguidance-specialpage-mt-intro-pageexist": "$1 সারা বিশ্বের স্বেচ্ছাসেবকদের দ্বারা লিখিত। এই নিবন্ধটি $2 ভাষার একটি সংস্করণ থেকে স্বয়ংক্রিয়ভাবে অনূদিত এবং এটি সরাসরি সম্পাদনা করা যাবে না।",
 	"externalguidance-specialpage-mt-pageexist": "সম্পাদকদের দ্বারা শুরু করা, $1 ভাষায় এই পাতার একটি সংস্করণ আছে যা আপনি সম্প্রসারণ করতে সহায়তা করতে পারেন।",
 	"externalguidance-specialpage-intro-machine": "স্বয়ংক্রিয় অনুবাদ একটি সার্বিক অবস্থা প্রদান করে তবে এটি সর্বদা সঠিক হয় না।",
-	"externalguidance-specialpage-intro-human": "মানুষের দ্বারা নিবন্ধ তৈরি করা আরো অনেক ভালো!",
+	"externalguidance-specialpage-intro-human": "মানুষের দ্বারা নিবন্ধ তৈরি করা আরও অনেক ভালো!",
 	"externalguidance-specialpage-contribute-title": "অবদান রাখার উপায়",
 	"externalguidance-specialpage-contribute-create": "অনুবাদ থেকে যে তথ্যগুলি জেনেছেন তা দিয়ে $1 ভাষায় একটি নিবন্ধ তৈরি করুন।",
 	"externalguidance-specialpage-contribute-create-action": "এই প্রসঙ্গে একটি নিবন্ধ শুরু করুন",
