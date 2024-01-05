@@ -23,7 +23,7 @@ const mobile = require( 'mobile.startup' ),
 		// eslint-disable-next-line no-jquery/no-global-selector
 		this.$container = $( '#page-actions, #p-views' );
 		this.targetPage = null;
-		this.sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
+		this.sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
 		this.checkPageExistsRequest = null;
 		this.privacyLinks = {
 			Google: 'https://policies.google.com/'
@@ -58,10 +58,11 @@ const mobile = require( 'mobile.startup' ),
 			} );
 		} );
 
-		$header = $( '<span>' )
-			.addClass( 'eg-machine-translation-banner-header-label mw-ui-icon mw-ui-icon-before ' +
-				' mw-ui-icon-eg-robot' )
-			.html( mw.msg( 'externalguidance-machine-translation-heading' ) );
+		$header = $( '<div>' ).append(
+			$( '<span>' ).addClass( 'eg-machine-translation-banner-header-label eg-icon' +
+				' eg-icon-robot' ),
+			$( '<span>' ).html( mw.msg( 'externalguidance-machine-translation-heading' ) )
+		);
 
 		$headerContainer = $( '<li>' )
 			.addClass( 'eg-machine-translation-banner-header-container' )
@@ -72,7 +73,6 @@ const mobile = require( 'mobile.startup' ),
 		$contributeContainer = $( '<li>' )
 			.addClass( 'eg-machine-translation-banner-action-container' )
 			.append( $contribute );
-
 		this.$container
 			.empty() // Remove existing page actions
 			.addClass( 'eg-machine-translation-banner' )
@@ -102,14 +102,14 @@ const mobile = require( 'mobile.startup' ),
 
 	MachineTranslationContext.prototype.getContributeLinkElement = function () {
 		return $( '<a>' )
-			.addClass( 'mw-ui-icon mw-ui-icon-before mw-ui-icon-edit-progressive ' +
-				' eg-machine-translation-banner-action-label' )
+			.addClass( 'eg-machine-translation-banner-action-label' )
 			.attr( {
 				href: this.getContributeLink(),
 				rel: 'noreferrer', // Do not pass the referrer to avoid the target page detected as external context
 				target: '_blank' // Open in new window/tab, not in the iframe (if any) by the MT service
 			} )
 			.append(
+				$( '<span>' ).addClass( 'eg-icon eg-icon-edit-progressive' ),
 				// Wrap the label in a span so that we can hide text and show icon on small screens
 				$( '<span>' ).html( mw.msg( 'externalguidance-machine-translation-contribute' ) )
 			);

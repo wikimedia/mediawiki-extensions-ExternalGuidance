@@ -1,4 +1,6 @@
 const mobile = require( 'mobile.startup' );
+const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
+
 ( function () {
 	const View = mobile.View,
 		Overlay = mobile.Overlay,
@@ -10,7 +12,7 @@ const mobile = require( 'mobile.startup' );
 			campaign: 'external-machine-translation'
 		};
 		this.pageExist = null;
-		this.sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
+		this.sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
 		View.call( this, {
 			events: {
 				'input .eg-create-page-title': mw.util.debounce( RequestTitleForm.prototype.onTitleInput, 300 ),
@@ -27,11 +29,12 @@ const mobile = require( 'mobile.startup' );
 	RequestTitleForm.prototype.postRender = function () {
 		var $pageCreationOptions = $( [] ),
 			$heading = $( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-title-label' ) ),
-			$input = $( '<input>' )
+			$inputElement = $( '<input>' )
 				.attr( 'type', 'text' )
-				.addClass( 'mw-ui-input eg-create-page-title' )
+				.addClass( 'cdx-text-input__input eg-create-page-title' )
 				.attr( 'autofocus', 'autofocus' )
 				.val( this.options.sourcePage ),
+			$input = $( '<div>' ).addClass( 'cdx-text-input' ).append( $inputElement ),
 			$p = $( '<p>' ).addClass( 'eg-create-page-desc' )
 				.text( mw.msg( 'externalguidance-specialpage-createpage-desc', this.options.projectName ) ),
 			$btn = $( '<button>' )
@@ -137,14 +140,19 @@ const mobile = require( 'mobile.startup' );
 				).parseDom() )
 			),
 			// Start from scratch option.
-			$( '<div>' ).addClass( 'mw-ui-radio' ).append(
+			$( '<div>' ).addClass( 'cdx-radio' ).append(
 				$( '<input>' ).attr( {
 					type: 'radio',
 					value: 'create',
 					id: 'eg-create',
+					class: 'cdx-radio__input',
 					name: 'eg-create-method'
 				} ),
+				$( '<span>' ).attr( {
+					class: 'cdx-radio__icon'
+				} ),
 				$( '<label>' ).attr( {
+					class: 'cdx-radio__label',
 					for: 'eg-create'
 				} ).html( mw.message( 'externalguidance-specialpage-createpage-create-from-translation' )
 					.parseDom() )
@@ -256,7 +264,7 @@ const mobile = require( 'mobile.startup' );
 
 	function onContributeToOriginalClick() {
 		var trackName,
-			sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
+			sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
 			editParams = {
 				veaction: 'edit',
 				campaign: 'external-machine-translation'
@@ -278,7 +286,7 @@ const mobile = require( 'mobile.startup' );
 
 	function onExpandTargetArticleClick() {
 		var trackName,
-			sitemapper = new mw.eg.SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
+			sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
 			editParams = {
 				veaction: 'edit',
 				campaign: 'external-machine-translation'

@@ -126,12 +126,12 @@ class SpecialExternalGuidance extends SpecialPage {
 		$out->addHTML( '<ul>' );
 		$out->wrapWikiMsg(
 			"<li class='eg-sp-intro-machine'>" .
-			"<span class='mw-ui-icon mw-ui-icon-eg-robot'></span>" .
+			"<span class='eg-icon-robot'></span>" .
 			'<div>$1</div></li>',
 			'externalguidance-specialpage-intro-machine' );
 		$out->wrapWikiMsg(
 			"<li class='eg-sp-intro-human'>" .
-			"<span class='mw-ui-icon mw-ui-icon-eg-user'></span>" .
+			"<span class='eg-icon-user'></span>" .
 			'<div>$1</div></li>',
 			'externalguidance-specialpage-intro-human' );
 		$out->addHTML( '</ul>' );
