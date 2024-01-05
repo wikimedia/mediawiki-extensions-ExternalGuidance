@@ -4,6 +4,7 @@
 // Minerva defines styles for #page-actions selector.
 // We need to override to use the same page-actions container.
 /* stylelint-disable selector-max-id */
+
 #page-actions.eg-machine-translation-banner {
 	box-sizing: @box-sizing-base;
 	font-size: 1.1em;
@@ -22,16 +23,6 @@
 
 		to {
 			opacity: 1;
-		}
-	}
-
-	.mw-ui-icon {
-		vertical-align: middle;
-
-		&.mw-ui-icon-before::before {
-			background-size: 20px;
-			background-position: center;
-			margin-right: 0;
 		}
 	}
 
@@ -88,4 +79,16 @@
 // Hide edit icons in section headers.
 .content .mw-parser-output span.mw-editsection {
 	display: none;
+}
+
+.eg-icon-user,
+.eg-icon-robot {
+	display: inline-block;
+	.cdx-mixin-css-icon-size( @size-icon-medium );
+	margin-right: 8px;
+}
+
+.eg-icon-edit-progressive {
+	.cdx-mixin-css-icon( @cdx-icon-edit, @color-progressive );
+	margin-right: 8px;
 }

@@ -133,16 +133,16 @@
 		},
 		"mw.externalguidance.icons": {
 			"class": "MediaWiki\\ResourceLoader\\ImageModule",
-			"selector": ".mw-ui-icon-eg-{name}:before",
+			"selector": ".eg-icon-{name}",
 			"images": {
 				"robot": "images/robot.svg",
 				"user": "images/userAvatar.svg"
 			}
 		},
 		"mw.externalguidance.special": {
-			"scripts": [
-				"mw.externalguidance/sitemapper.js",
-				"mw.externalguidance.special/createpage.js"
+			"packageFiles": [
+				"mw.externalguidance.special/createpage.js",
+				"mw.externalguidance/sitemapper.js"
 			],
 			"styles": [
 				"mw.externalguidance.special/specialpage.less",

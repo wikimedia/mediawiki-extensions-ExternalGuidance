@@ -1,7 +1,9 @@
 @import 'mediawiki.skin.variables.less';
 
 .eg-createpage-overlay {
-	margin: 1em;
+	.overlay-content {
+		margin: 1em;
+	}
 
 	.eg-create-page-title {
 		margin: 1em 0;
@@ -19,6 +21,12 @@
 
 	.eg-create-page-error {
 		color: @color-destructive;
+	}
+
+	.eg-create-page-method-selection {
+		.cdx-radio__label {
+			flex-flow: column;
+		}
 	}
 
 	.eg-create-page-error + .eg-create-page-method-selection {
