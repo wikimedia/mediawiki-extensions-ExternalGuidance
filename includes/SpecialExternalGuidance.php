@@ -14,6 +14,7 @@ use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Title\MalformedTitleException;
 use MediaWiki\Title\Title;
 
 /**
@@ -98,13 +99,21 @@ class SpecialExternalGuidance extends SpecialPage {
 			);
 		}
 
-		// Create the title instance after validation. Throws MalformedTitleException if invalid.
-		$sourcePageTitle = Title::newFromTextThrow( $sourcePage );
-		if ( $targetPage ) {
-			$targetPageTitle = Title::newFromTextThrow( $targetPage );
-			// This wiki should match the target language since the "contribute" link takes the user
-			// to this special page in target language.
-			$pageExists = $targetPageTitle->isKnown();
+		// Create the title instance after validation.
+		try {
+			$sourcePageTitle = Title::newFromTextThrow( $sourcePage );
+			if ( $targetPage ) {
+				$targetPageTitle = Title::newFromTextThrow( $targetPage );
+				// This wiki should match the target language since the "contribute" link takes the user
+				// to this special page in target language.
+				$pageExists = $targetPageTitle->isKnown();
+			}
+		} catch ( MalformedTitleException $e ) {
+			// Invalid user input. T353469
+			throw new ErrorPageError(
+				'externalguidance-specialpage-title',
+				$e->getMessageObject()
+			);
 		}
 
 		$out->addHTML( '<div class="eg-sp">' );
