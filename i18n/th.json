@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"B20180",
-			"Horus"
+			"Horus",
+			"Ekminarin"
 		]
 	},
+	"externalguidance-machine-translation-heading": "การแปลอัตโนมัติ",
+	"externalguidance-machine-translation-contribute": "ส่วนร่วม",
 	"externalguidance-specialpage-title": "ปรับปรุงเนื้อหาอัตโนมัติ",
 	"externalguidance-specialpage-mt-pageexist": "มีเวอร์ชันของหน้านี้ที่เริ่มด้วยมือโดยผู้แก้ไขใน $1 ซึ่งคุณสามารถช่วยขยายได้",
 	"externalguidance-specialpage-intro-machine": "การแปลอัตโนมัติให้ภาพรวมที่เป็นประโยชน์ แต่ไม่แม่นยำเสมอไป",
@@ -15,6 +18,7 @@
 	"externalguidance-specialpage-contribute-improve-source": "การปรับปรุงบทความต้นฉบับจะช่วยให้ผู้คนอ่านคำแปลได้",
 	"externalguidance-specialpage-contribute-improve-source-action": "แก้ไขเวอร์ชันต้นฉบับใน $1",
 	"externalguidance-machine-translation-page-exist": "เนื้อหาที่สร้างโดยชุมชนในหัวข้อนี้ [$1 ยังมีอยู่]",
+	"externalguidance-specialpage-createpage-methods-header": "วิธีเริ่มต้น",
 	"externalguidance-machine-translation-page-missing": "ไม่พบใน $1",
 	"externalguidance-machine-translation-provider-info-title": "การแปลอัตโนมัติจาก $1",
 	"externalguidance-machine-translation-provider-terms": "ตรวจสอบภาวะเฉพาะส่วนตัวและข้อกำหนด",
