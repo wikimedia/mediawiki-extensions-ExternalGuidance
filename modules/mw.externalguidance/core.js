@@ -31,7 +31,7 @@ const mobile = require( 'mobile.startup' ),
 	}
 
 	MachineTranslationContext.prototype.init = function () {
-		var $headerContainer, $contribute, $contributeContainer, $header, $status;
+		let $headerContainer, $contribute, $contributeContainer, $header, $status;
 
 		// Start fetching jquery.uls.data - we will need it for autonym
 		// jquery.uls.data is relatively large module. Hence it is not fetched earlier.
@@ -161,7 +161,7 @@ const mobile = require( 'mobile.startup' ),
 			lllang: this.sitemapper.getWikiDomainCode( to ),
 			redirects: true
 		} ).then( function ( response ) {
-			var i, page, result,
+			let i, page, result,
 				pages = response.query.pages;
 			for ( i = 0; i < pages.length; i++ ) {
 				page = pages[ i ];
@@ -192,7 +192,7 @@ const mobile = require( 'mobile.startup' ),
 			this.checkPageExistsRequest,
 			mw.loader.using( 'jquery.uls.data' )
 		).then( function ( targetTitle ) {
-			var overlay, trackName,
+			let overlay, trackName,
 				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
 					this.privacyLinks.Google : null;
 
@@ -226,7 +226,7 @@ const mobile = require( 'mobile.startup' ),
 	 * @param {string} targetLanguage
 	 */
 	MachineTranslationContext.prototype.rewriteMenuUrls = function ( targetLanguage ) {
-		var $menuLinks, titleMap,
+		let $menuLinks, titleMap,
 			sitemapper = this.sitemapper;
 
 		// Map titles to their canonical titles
@@ -242,7 +242,7 @@ const mobile = require( 'mobile.startup' ),
 		// eslint-disable-next-line no-jquery/no-global-selector
 		$menuLinks = $( 'nav .menu a' );
 		$menuLinks.each( function () {
-			var newUri, eventName,
+			let newUri, eventName,
 				originalUri = new mw.Uri( this.href );
 
 			// The key to know which special page this link points is data-event-name
@@ -287,7 +287,7 @@ const mobile = require( 'mobile.startup' ),
 	}
 
 	ExternalGuidance.prototype.init = function () {
-		var instance, trackName;
+		let instance, trackName;
 
 		if ( !ExternalGuidance.contextMap[ this.contextName ] ) {
 			throw new Error( 'Unknown context' );

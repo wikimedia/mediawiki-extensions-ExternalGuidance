@@ -19,13 +19,13 @@
 	 * @return {string}
 	 */
 	SiteMapper.prototype.getWikiDomainCode = function ( language ) {
-		var languageToWikiDomainMapping = mw.config.get( 'wgExternalGuidanceDomainCodeMapping' );
+		const languageToWikiDomainMapping = mw.config.get( 'wgExternalGuidanceDomainCodeMapping' );
 
 		return languageToWikiDomainMapping[ language ] || language;
 	};
 
 	SiteMapper.prototype.getLanguageCodeForWikiDomain = function ( domain ) {
-		var code,
+		let code,
 			mapping = mw.config.get( 'wgExternalGuidanceDomainCodeMapping' );
 
 		for ( code in mapping ) {
@@ -45,7 +45,7 @@
 	 * @return {mw.ForeignApi} api
 	 */
 	SiteMapper.prototype.getApi = function ( language, options ) {
-		var url, domain;
+		let url, domain;
 
 		domain = this.getWikiDomainCode( language );
 		url = this.config.api.replace( '$1', domain );
@@ -62,7 +62,7 @@
 	 * @return {string}
 	 */
 	SiteMapper.prototype.getPageUrl = function ( language, title, params ) {
-		var domain,
+		let domain,
 			base = this.config.view,
 			extra = '';
 
@@ -95,7 +95,7 @@
 		targetLanguage,
 		extra
 	) {
-		var cxPage, queryParams, uri;
+		let cxPage, queryParams, uri;
 
 		cxPage = 'Special:ContentTranslation';
 		queryParams = $.extend( {

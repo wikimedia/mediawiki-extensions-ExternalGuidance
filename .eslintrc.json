@@ -8,6 +8,7 @@
 	"rules": {
 		"no-var": "warn",
 		"no-implicit-globals": "off",
-		"array-callback-return": "warn"
+		"array-callback-return": "warn",
+		"prefer-const": "warn"
 	}
 }

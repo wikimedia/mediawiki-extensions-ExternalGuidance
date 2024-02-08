@@ -1,6 +1,6 @@
 ( function () {
 
-	var context, originalUserLang = mw.config.get( 'wgUserLanguage' );
+	let context, originalUserLang = mw.config.get( 'wgUserLanguage' );
 
 	/**
 	 * Clean up the target language set by MT services to a valid language code
@@ -10,7 +10,7 @@
 	 */
 	function getTargetLanguage( targetLanguage ) {
 		// Google language codes can differ from the language codes that we use.
-		var googleLanguageNameMap = {
+		const googleLanguageNameMap = {
 			no: 'nb',
 			iw: 'he',
 			jw: 'jv',
@@ -41,7 +41,7 @@
 	 * @return {Object} The context object with context name and extra information in 'info' key
 	 */
 	function detectContext() {
-		var parentURL, translatedByMetaElement;
+		let parentURL, translatedByMetaElement;
 
 		// Check if the translated page has
 		// <meta http-equiv="X-Translated-By" content="ServiceName"/>

@@ -27,7 +27,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	OO.inheritClass( RequestTitleForm, View );
 
 	RequestTitleForm.prototype.postRender = function () {
-		var $pageCreationOptions = $( [] ),
+		let $pageCreationOptions = $( [] ),
 			$heading = $( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-title-label' ) ),
 			$inputElement = $( '<input>' )
 				.attr( 'type', 'text' )
@@ -57,7 +57,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	 * @instance
 	 */
 	RequestTitleForm.prototype.onCreateButtonClick = function () {
-		var trackName, action,
+		let trackName, action,
 			updatedTitle = this.$el.find( '.eg-create-page-title' ).val(),
 			method = this.getPageCreateMethod() || 'create';
 
@@ -113,7 +113,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	 * @return {jQuery}
 	 */
 	RequestTitleForm.prototype.showPageCreationOptions = function () {
-		var $container = $( '<div>' ).addClass( 'eg-create-page-method-selection' );
+		const $container = $( '<div>' ).addClass( 'eg-create-page-method-selection' );
 
 		$container.append(
 			// Header
@@ -169,7 +169,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	 * @instance
 	 */
 	RequestTitleForm.prototype.onTitleInput = function () {
-		var form = this,
+		const form = this,
 			$button = this.$el.find( '.eg-create-page-button' ),
 			title = this.$el.find( '.eg-create-page-title' ).val();
 
@@ -198,7 +198,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	};
 
 	RequestTitleForm.prototype.checkPageExist = function ( language, title ) {
-		var api = this.sitemapper.getApi( language );
+		const api = this.sitemapper.getApi( language );
 
 		// Short circuit empty titles
 		if ( title === '' ) {
@@ -216,7 +216,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 			titles: title,
 			redirects: true
 		} ).then( function ( response ) {
-			var page = response.query.pages[ 0 ];
+			const page = response.query.pages[ 0 ];
 
 			if ( page.missing || page.invalid ) {
 				return false;
@@ -233,7 +233,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	 * @return {Overlay}
 	 */
 	function createPageOverlay( options ) {
-		var overlay = new Overlay(
+		const overlay = new Overlay(
 			Object.assign( {
 				className: 'overlay eg-createpage-overlay',
 				heading: mw.msg( 'externalguidance-specialpage-createpage-title' )
@@ -263,7 +263,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	}
 
 	function onContributeToOriginalClick() {
-		var trackName,
+		let trackName,
 			sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
 			editParams = {
 				veaction: 'edit',
@@ -285,7 +285,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	}
 
 	function onExpandTargetArticleClick() {
-		var trackName,
+		let trackName,
 			sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
 			editParams = {
 				veaction: 'edit',
@@ -308,7 +308,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	}
 
 	$( function () {
-		var trackName,
+		let trackName,
 			// eslint-disable-next-line no-jquery/no-global-selector
 			$createButton = $( '.eg-sp-contribute-create' ),
 			// eslint-disable-next-line no-jquery/no-global-selector
