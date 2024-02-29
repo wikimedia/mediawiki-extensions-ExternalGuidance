@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
+			"Milicevic01",
 			"Prevodim"
 		]
 	},
@@ -17,6 +18,6 @@
 	"externalguidance-specialpage-createpage-title-label": "Наслов",
 	"externalguidance-specialpage-createpage-button-label": "Направи нову страницу",
 	"externalguidance-specialpage-createpage-button-label-edit": "Уредите постојећу страницу",
-	"externalguidance-specialpage-createpage-desc": "Нова страница са овим насловом биће направљена на пројекту $1",
+	"externalguidance-specialpage-createpage-desc": "Нова страница са овим насловом биће направљена на $1",
 	"externalguidance-specialpage-createpage-page-exist": "Страница са овим насловом већ постоји."
 }
