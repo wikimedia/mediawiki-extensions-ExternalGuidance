@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz"
+		]
+	},
+	"externalguidance-machine-translation-heading": "Automaattinen käännös",
+	"externalguidance-specialpage-createpage-methods-header": "Kuinka aloittaa",
+	"externalguidance-machine-translation-page-missing": "Puuttuu kielellä $1",
+	"externalguidance-specialpage-createpage-title": "Luo uusi sivu",
+	"externalguidance-specialpage-createpage-title-label": "Otsikko",
+	"externalguidance-specialpage-createpage-button-label": "Luo uusi sivu",
+	"externalguidance-specialpage-createpage-button-label-edit": "Muokkaa olemassa olevaa sivua"
+}
