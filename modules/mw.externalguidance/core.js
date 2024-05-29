@@ -10,10 +10,10 @@ const mobile = require( 'mobile.startup' ),
 	/**
 	 * @class
 	 * @param {Object} options
-	 * @cfg {string} from Source language of translation
-	 * @cfg {string} to Target language of translation
-	 * @cfg {string} page The page being translated
-	 * @cfg {string} service The MT service name
+	 * @param {string} options.from Source language of translation
+	 * @param {string} options.to Target language of translation
+	 * @param {string} options.page The page being translated
+	 * @param {string} options.service The MT service name
 	 */
 	function MachineTranslationContext( options ) {
 		this.sourceLanguage = options.from;
@@ -276,10 +276,10 @@ const mobile = require( 'mobile.startup' ),
 	 * @class
 	 * @param {string} contextName
 	 * @param {Object} options
-	 * @cfg {string} from Source language of translation
-	 * @cfg {string} to Target language of translation
-	 * @cfg {string} page The page being translated
-	 * @cfg {string} service The MT service name
+	 * @param {string} options.from Source language of translation
+	 * @param {string} options.to Target language of translation
+	 * @param {string} options.page The page being translated
+	 * @param {string} options.service The MT service name
 	 */
 	function ExternalGuidance( contextName, options ) {
 		this.contextName = contextName;
