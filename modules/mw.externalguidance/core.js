@@ -43,19 +43,17 @@ const mobile = require( 'mobile.startup' ),
 		this.checkPageExistsRequest = this.checkPageExists(
 			this.sourceLanguage, this.targetLanguage, this.sourcePage );
 
-		this.checkPageExistsRequest.then( function ( targetTitle ) {
+		this.checkPageExistsRequest.then( ( targetTitle ) => {
 			this.showPageStatus( targetTitle, $status );
 			if ( targetTitle ) {
 				this.targetPage = targetTitle;
 				// The page exists. So update the contribute link to use that title.
 				$contribute.attr( 'href', this.getContributeLink() );
 			}
-		}.bind( this ) );
+		} );
 
-		this.showServiceProviderInfo().then( function ( overlay ) {
-			overlayManager.add( '/machine-translation-info', function () {
-				return overlay;
-			} );
+		this.showServiceProviderInfo().then( ( overlay ) => {
+			overlayManager.add( '/machine-translation-info', () => overlay );
 		} );
 
 		$header = $( '<div>' ).append(
@@ -133,13 +131,13 @@ const mobile = require( 'mobile.startup' ),
 				target: '_blank' // Open in new windows/tab, not in the iframe (if any) by the MT service
 			} );
 		} else {
-			mw.loader.using( 'jquery.uls.data' ).then( function () {
+			mw.loader.using( 'jquery.uls.data' ).then( () => {
 				$status
 					.addClass( 'missing' )
 					.text( mw.msg( 'externalguidance-machine-translation-page-missing',
 						$.uls.data.getAutonym( this.targetLanguage )
 					) );
-			}.bind( this ) );
+			} );
 		}
 	};
 
@@ -160,14 +158,14 @@ const mobile = require( 'mobile.startup' ),
 			formatversion: 2,
 			lllang: this.sitemapper.getWikiDomainCode( to ),
 			redirects: true
-		} ).then( function ( response ) {
+		} ).then( ( response ) => {
 			let i, page, result,
 				pages = response.query.pages;
 			for ( i = 0; i < pages.length; i++ ) {
 				page = pages[ i ];
 				if ( page.langlinks && page.langlinks.length > 0 ) {
 					// eslint-disable-next-line no-loop-func
-					page.langlinks.some( function ( item ) {
+					page.langlinks.some( ( item ) => {
 						if ( item.lang === to ) {
 							result = item;
 							return true;
@@ -191,7 +189,7 @@ const mobile = require( 'mobile.startup' ),
 		return $.when(
 			this.checkPageExistsRequest,
 			mw.loader.using( 'jquery.uls.data' )
-		).then( function ( targetTitle ) {
+		).then( ( targetTitle ) => {
 			let overlay, trackName,
 				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
 					this.privacyLinks.Google : null;
@@ -216,7 +214,7 @@ const mobile = require( 'mobile.startup' ),
 				this.service, this.sourceLanguage, this.targetLanguage ];
 			mw.track( trackName.join( '.' ), 1 );
 			return overlay;
-		}.bind( this ) );
+		} );
 	};
 
 	/**
