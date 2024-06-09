@@ -174,7 +174,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 			title = this.$el.find( '.eg-create-page-title' ).val();
 
 		this.checkPageExist( this.options.targetLanguage, title )
-			.then( function ( titleExist ) {
+			.then( ( titleExist ) => {
 				$button.prop( 'disabled', !title );
 
 				if ( titleExist ) {
@@ -194,7 +194,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 						);
 					$button.text( mw.msg( 'externalguidance-specialpage-createpage-button-label' ) );
 				}
-			}.bind( this ) );
+			} );
 	};
 
 	RequestTitleForm.prototype.checkPageExist = function ( language, title ) {
@@ -215,7 +215,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 			action: 'query',
 			titles: title,
 			redirects: true
-		} ).then( function ( response ) {
+		} ).then( ( response ) => {
 			const page = response.query.pages[ 0 ];
 
 			if ( page.missing || page.invalid ) {
@@ -307,7 +307,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 		), '_blank' );
 	}
 
-	$( function () {
+	$( () => {
 		let trackName,
 			// eslint-disable-next-line no-jquery/no-global-selector
 			$createButton = $( '.eg-sp-contribute-create' ),
