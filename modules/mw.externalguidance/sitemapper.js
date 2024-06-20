@@ -49,7 +49,7 @@
 
 		domain = this.getWikiDomainCode( language );
 		url = this.config.api.replace( '$1', domain );
-		options = $.extend( { anonymous: true }, options );
+		options = Object.assign( { anonymous: true }, options );
 		return new mw.ForeignApi( url, options );
 	};
 
@@ -98,7 +98,7 @@
 		let cxPage, queryParams, uri;
 
 		cxPage = 'Special:ContentTranslation';
-		queryParams = $.extend( {
+		queryParams = Object.assign( {
 			page: sourceTitle,
 			from: sourceLanguage,
 			to: targetLanguage,
@@ -106,7 +106,7 @@
 		}, extra );
 
 		uri = new mw.Uri( this.getPageUrl( targetLanguage, cxPage ) );
-		$.extend( uri.query, queryParams );
+		Object.assign( uri.query, queryParams );
 
 		return uri.toString();
 
