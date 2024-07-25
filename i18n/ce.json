@@ -8,9 +8,17 @@
 	"externalguidance-machine-translation-heading": "Автогоч",
 	"externalguidance-machine-translation-contribute": "Ккъинхьегам бе",
 	"externalguidance-specialpage-title": "Авто-контент дика тайар",
+	"externalguidance-specialpage-mt-intro": "$1 дерриг а дуьнентӀера волонтерийн йукъара болх бу. ХӀара йаззам $2 версин авто гочдар ду, нийсса $3 верси чу хийца йиш йац, амма хьан хӀетте а гӀо дан йиш йу.",
 	"externalguidance-specialpage-contribute-create-action": "ХӀокху темехь йаззам болабе",
+	"externalguidance-specialpage-contribute-improve-source-action": "Оригиналал верси хийца $1 тӀехь.",
 	"externalguidance-specialpage-createpage-methods-header": "Стен тӀера доладо",
+	"externalguidance-machine-translation-page-missing": "$1 йац",
+	"externalguidance-machine-translation-contribute-link": "Хьой дакъа муха лаца мегар ду хьажа",
+	"externalguidance-specialpage-createpage-title": "Кхолла керла агӀо",
 	"externalguidance-specialpage-createpage-title-label": "ЦӀе",
 	"externalguidance-specialpage-createpage-button-label": "Кхолла керла агӀо",
-	"externalguidance-specialpage-createpage-button-label-edit": "Йолуш йолу агӀо тойе"
+	"externalguidance-specialpage-createpage-button-label-edit": "Йолуш йолу агӀо тойе",
+	"externalguidance-specialpage-createpage-desc": "$1 тӀехь оцу цӀарца керла агӀо кхоллалур йу",
+	"externalguidance-specialpage-createpage-page-exist": "И цӀе йолу агӀо хӀинцале а йу.",
+	"externalguidance-specialpage-param-missing": "Цхьа оьшу параметр («from», «to», «page», «language») йац."
 }
