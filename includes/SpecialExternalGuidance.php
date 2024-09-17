@@ -11,6 +11,7 @@ namespace MediaWiki\Extension\ExternalGuidance;
 use ErrorPageError;
 use MediaWiki\Html\Html;
 use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\MainConfigNames;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\SpecialPage;
@@ -59,8 +60,6 @@ class SpecialExternalGuidance extends SpecialPage {
 	 * @param OutputPage $out
 	 */
 	public function mtContextGuidance( $request, $out ) {
-		global $wgSitename, $wgExternalGuidanceKnownServices;
-
 		$targetPageTitle = null;
 		$pageExists = false;
 
@@ -91,7 +90,8 @@ class SpecialExternalGuidance extends SpecialPage {
 				[ $targetLanguage ]
 			);
 		}
-		if ( !in_array( $service, $wgExternalGuidanceKnownServices ) ) {
+		$config = $this->getConfig();
+		if ( !in_array( $service, $config->get( 'ExternalGuidanceKnownServices' ) ) ) {
 			throw new ErrorPageError(
 				'externalguidance-specialpage-title',
 				'externalguidance-specialpage-invalid-service',
@@ -118,16 +118,17 @@ class SpecialExternalGuidance extends SpecialPage {
 
 		$out->addHTML( '<div class="eg-sp">' );
 
+		$siteName = $config->get( MainConfigNames::Sitename );
 		if ( $pageExists ) {
 			$out->addWikiMsg( 'externalguidance-specialpage-mt-intro-pageexist',
-				$wgSitename,
+				$siteName,
 				$this->languageNameUtils->getLanguageName( $sourceLanguage )
 			);
 			$out->addWikiMsg( "externalguidance-specialpage-mt-pageexist",
 				$this->languageNameUtils->getLanguageName( $targetLanguage ) );
 		} else {
 			$out->addWikiMsg( 'externalguidance-specialpage-mt-intro',
-				$wgSitename,
+				$siteName,
 				$this->languageNameUtils->getLanguageName( $sourceLanguage ),
 				$this->languageNameUtils->getLanguageName( $targetLanguage )
 			);
