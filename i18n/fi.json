@@ -1,10 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pyscowicz"
+			"Pyscowicz",
+			"Samoasambia"
 		]
 	},
 	"externalguidance-machine-translation-heading": "Automaattinen käännös",
+	"externalguidance-machine-translation-contribute": "Osallistu",
+	"externalguidance-specialpage-title": "Automaattisen sisällön parantaminen",
+	"externalguidance-specialpage-mt-intro": "$1 on vapaaehtoisten kirjoittama. Tämä artikkeli on automaattisesti käännetty versiosta {{GRAMMAR:genitive|$2}} kielellä, eikä sitä voi muokata suoraan {{GRAMMAR:translative|$3}}, mutta voi silti auttaa.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 on vapaaehtoisten kirjoittama. Tämä artikkeli on automaattisesti käännetty versiosta {{GRAMMAR:genitive|$2}} kielellä, eikä sitä voi muokata suoraan.",
+	"externalguidance-specialpage-intro-machine": "Automaattinen käännös tarjoaa hyödyllisen yleiskuvan, mutta se ei aina ole tarkka.",
+	"externalguidance-specialpage-intro-human": "On paljon parempi, että on olemassa ihmisten luonma artikkeli!",
+	"externalguidance-specialpage-contribute-title": "Osallistumistavat",
+	"externalguidance-specialpage-contribute-create-action": "Aloita artikkeli tästä aiheesta",
+	"externalguidance-specialpage-contribute-expand-action": "Laajenna olemassa olevaa artikkelia",
+	"externalguidance-specialpage-contribute-improve-source": "Alkuperäisen artikkelin parantaminen auttaa myös sen käännöksiä lukevia ihmisiä.",
+	"externalguidance-specialpage-contribute-improve-source-action": "Muokkaa alkuperäistä versiota {{GRAMMAR:translative|$1}}",
 	"externalguidance-specialpage-createpage-methods-header": "Kuinka aloittaa",
 	"externalguidance-machine-translation-page-missing": "Puuttuu kielellä $1",
 	"externalguidance-specialpage-createpage-title": "Luo uusi sivu",
