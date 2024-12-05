@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Seipinne",
 			"Yupik"
 		]
 	},
+	"externalguidance-machine-translation-contribute": "Uásálist",
+	"externalguidance-specialpage-contribute-title": "Uásálistemvyevih",
 	"externalguidance-specialpage-createpage-title": "Räähti uđđâ siijđo",
 	"externalguidance-specialpage-createpage-button-label": "Räähti uđđâ siijđo"
 }
