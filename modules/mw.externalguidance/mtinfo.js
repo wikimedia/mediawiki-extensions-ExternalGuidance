@@ -10,16 +10,8 @@ const mobile = require( 'mobile.startup' );
 	 * @param {Object} options Configuration options
 	 */
 	function MTServiceInfo( options ) {
-		MTServiceInfo.super.call( this, options );
-	}
-
-	OO.inheritClass( MTServiceInfo, View );
-
-	/**
-	 * @inheritdoc
-	 */
-	MTServiceInfo.prototype.postRender = function () {
-		this.$el.append( [
+		this.options = options;
+		const elements = [
 			$( '<p>' )
 				.text( mw.msg( 'externalguidance-machine-translation-provider-info',
 					this.options.projectName, this.options.serviceName ) ),
@@ -40,10 +32,9 @@ const mobile = require( 'mobile.startup' );
 					target: '_blank'
 				} )
 				.text( mw.msg( 'externalguidance-machine-translation-contribute-link', this.options.projectName ) )
-		] );
-
-		View.prototype.postRender.apply( this, arguments );
-	};
+		];
+		return View.make( options, elements );
+	}
 
 	module.exports = MTServiceInfo;
 
