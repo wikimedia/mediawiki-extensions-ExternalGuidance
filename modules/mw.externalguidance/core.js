@@ -31,13 +31,13 @@ const mobile = require( 'mobile.startup' ),
 	}
 
 	MachineTranslationContext.prototype.init = function () {
-		let $headerContainer, $contribute, $contributeContainer, $header, $status;
+		let $contribute = null;
 
 		// Start fetching jquery.uls.data - we will need it for autonym
 		// jquery.uls.data is relatively large module. Hence it is not fetched earlier.
 		mw.loader.load( 'jquery.uls.data' );
 
-		$status = $( '<div>' )
+		const $status = $( '<div>' )
 			.addClass( 'eg-machine-translation-page-status' );
 
 		this.checkPageExistsRequest = this.checkPageExists(
@@ -56,19 +56,19 @@ const mobile = require( 'mobile.startup' ),
 			overlayManager.add( '/machine-translation-info', () => overlay );
 		} );
 
-		$header = $( '<div>' ).append(
+		const $header = $( '<div>' ).append(
 			$( '<span>' ).addClass( 'eg-machine-translation-banner-header-label eg-icon' +
 				' eg-icon-robot' ),
 			$( '<span>' ).html( mw.msg( 'externalguidance-machine-translation-heading' ) )
 		);
 
-		$headerContainer = $( '<li>' )
+		const $headerContainer = $( '<li>' )
 			.addClass( 'eg-machine-translation-banner-header-container' )
 			.append( $header )
 			.on( 'click', overlayManager.router.navigate.bind( null, '/machine-translation-info' ) );
 
 		$contribute = this.getContributeLinkElement();
-		$contributeContainer = $( '<li>' )
+		const $contributeContainer = $( '<li>' )
 			.addClass( 'eg-machine-translation-banner-action-container' )
 			.append( $contribute );
 		this.$container
@@ -159,10 +159,10 @@ const mobile = require( 'mobile.startup' ),
 			lllang: this.sitemapper.getWikiDomainCode( to ),
 			redirects: true
 		} ).then( ( response ) => {
-			let i, page, result,
-				pages = response.query.pages;
-			for ( i = 0; i < pages.length; i++ ) {
-				page = pages[ i ];
+			let result;
+			const pages = response.query.pages;
+			for ( let i = 0; i < pages.length; i++ ) {
+				const page = pages[ i ];
 				if ( page.langlinks && page.langlinks.length > 0 ) {
 					// eslint-disable-next-line no-loop-func
 					page.langlinks.some( ( item ) => {
@@ -190,11 +190,10 @@ const mobile = require( 'mobile.startup' ),
 			this.checkPageExistsRequest,
 			mw.loader.using( 'jquery.uls.data' )
 		).then( ( targetTitle ) => {
-			let overlay, trackName,
-				privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
-					this.privacyLinks.Google : null;
+			const privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
+				this.privacyLinks.Google : null;
 
-			overlay = new Overlay( {
+			const overlay = new Overlay( {
 				className: 'overlay eg-mtservice-info-overlay',
 				heading: mw.msg( 'externalguidance-machine-translation-provider-info-title',
 					$.uls.data.getAutonym( this.sourceLanguage ) )
@@ -210,7 +209,7 @@ const mobile = require( 'mobile.startup' ),
 			} ).$el );
 
 			// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.mtinfo
-			trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'mtinfo',
+			const trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'mtinfo',
 				this.service, this.sourceLanguage, this.targetLanguage ];
 			mw.track( trackName.join( '.' ), 1 );
 			return overlay;
@@ -224,11 +223,10 @@ const mobile = require( 'mobile.startup' ),
 	 * @param {string} targetLanguage
 	 */
 	MachineTranslationContext.prototype.rewriteMenuUrls = function ( targetLanguage ) {
-		let $menuLinks, titleMap,
-			sitemapper = this.sitemapper;
+		const sitemapper = this.sitemapper;
 
 		// Map titles to their canonical titles
-		titleMap = {
+		const titleMap = {
 			home: 'Main_Page',
 			random: 'Special:Random',
 			watchlist: 'Special:Watchlist',
@@ -238,14 +236,14 @@ const mobile = require( 'mobile.startup' ),
 		};
 
 		// eslint-disable-next-line no-jquery/no-global-selector
-		$menuLinks = $( 'nav .menu a' );
+		const $menuLinks = $( 'nav .menu a' );
 		$menuLinks.each( function () {
-			let newUri, eventName,
-				originalUri = new mw.Uri( this.href );
+			const originalUri = new mw.Uri( this.href );
 
 			// The key to know which special page this link points is data-event-name
-			eventName = this.dataset.eventName;
+			const eventName = this.dataset.eventName;
 			if ( titleMap[ eventName ] ) {
+				let newUri;
 				if ( originalUri.query.title ) {
 					newUri = originalUri;
 					// Change the host to new domain.
@@ -285,15 +283,13 @@ const mobile = require( 'mobile.startup' ),
 	}
 
 	ExternalGuidance.prototype.init = function () {
-		let instance, trackName;
-
 		if ( !ExternalGuidance.contextMap[ this.contextName ] ) {
 			throw new Error( 'Unknown context' );
 		}
-		instance = new ExternalGuidance.contextMap[ this.contextName ]( this.options );
+		const instance = new ExternalGuidance.contextMap[ this.contextName ]( this.options );
 		instance.init();
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.init
-		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'init',
+		const trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'init',
 			this.options.service, this.options.from, this.options.to ];
 		mw.track( trackName.join( '.' ), 1 );
 	};

@@ -25,10 +25,9 @@
 	};
 
 	SiteMapper.prototype.getLanguageCodeForWikiDomain = function ( domain ) {
-		let code,
-			mapping = mw.config.get( 'wgExternalGuidanceDomainCodeMapping' );
+		const mapping = mw.config.get( 'wgExternalGuidanceDomainCodeMapping' );
 
-		for ( code in mapping ) {
+		for ( const code in mapping ) {
 			if ( mapping[ code ] === domain ) {
 				return code;
 			}
@@ -45,10 +44,8 @@
 	 * @return {mw.ForeignApi} api
 	 */
 	SiteMapper.prototype.getApi = function ( language, options ) {
-		let url, domain;
-
-		domain = this.getWikiDomainCode( language );
-		url = this.config.api.replace( '$1', domain );
+		const domain = this.getWikiDomainCode( language );
+		const url = this.config.api.replace( '$1', domain );
 		options = Object.assign( { anonymous: true }, options );
 		return new mw.ForeignApi( url, options );
 	};
@@ -62,11 +59,10 @@
 	 * @return {string}
 	 */
 	SiteMapper.prototype.getPageUrl = function ( language, title, params ) {
-		let domain,
-			base = this.config.view,
+		let base = this.config.view,
 			extra = '';
 
-		domain = this.getWikiDomainCode( language );
+		const domain = this.getWikiDomainCode( language );
 		if ( params && !$.isEmptyObject( params ) ) {
 			base = this.config.action || this.config.view;
 			extra = ( base.indexOf( '?' ) !== -1 ? '&' : '?' ) + $.param( params );
@@ -95,17 +91,15 @@
 		targetLanguage,
 		extra
 	) {
-		let cxPage, queryParams, uri;
-
-		cxPage = 'Special:ContentTranslation';
-		queryParams = Object.assign( {
+		const cxPage = 'Special:ContentTranslation';
+		const queryParams = Object.assign( {
 			page: sourceTitle,
 			from: sourceLanguage,
 			to: targetLanguage,
 			targettitle: targetTitle
 		}, extra );
 
-		uri = new mw.Uri( this.getPageUrl( targetLanguage, cxPage ) );
+		const uri = new mw.Uri( this.getPageUrl( targetLanguage, cxPage ) );
 		Object.assign( uri.query, queryParams );
 
 		return uri.toString();

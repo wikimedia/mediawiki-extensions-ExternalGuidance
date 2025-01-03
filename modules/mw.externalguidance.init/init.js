@@ -1,6 +1,6 @@
 ( function () {
 
-	let context, originalUserLang = mw.config.get( 'wgUserLanguage' );
+	const originalUserLang = mw.config.get( 'wgUserLanguage' );
 
 	/**
 	 * Clean up the target language set by MT services to a valid language code
@@ -27,7 +27,7 @@
 		return googleLanguageNameMap[ targetLanguage ] || targetLanguage;
 	}
 
-	context = {
+	let context = {
 		info: {
 			from: mw.config.get( 'wgContentLanguage' ),
 			to: getTargetLanguage( document.documentElement.lang ),
@@ -41,11 +41,9 @@
 	 * @return {Object} The context object with context name and extra information in 'info' key
 	 */
 	function detectContext() {
-		let parentURL, translatedByMetaElement;
-
 		// Check if the translated page has
 		// <meta http-equiv="X-Translated-By" content="ServiceName"/>
-		translatedByMetaElement = document.head.querySelector( 'meta[http-equiv="X-Translated-By"]' );
+		const translatedByMetaElement = document.head.querySelector( 'meta[http-equiv="X-Translated-By"]' );
 		if ( translatedByMetaElement ) {
 			context.name = 'machine-translation';
 			context.info.service = translatedByMetaElement.getAttribute( 'content' );
@@ -54,7 +52,7 @@
 
 		// Check If the page is coming via a configured referrer URL
 		if ( document.referrer ) {
-			parentURL = new mw.Uri( document.referrer );
+			const parentURL = new mw.Uri( document.referrer );
 			if ( mw.config.get( 'wgExternalGuidanceMTReferrers' ).indexOf( parentURL.host ) >= 0 ) {
 				context.name = 'machine-translation';
 				context.info.service = parentURL.host;

@@ -27,8 +27,8 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	OO.inheritClass( RequestTitleForm, View );
 
 	RequestTitleForm.prototype.postRender = function () {
-		let $pageCreationOptions = $( [] ),
-			$heading = $( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-title-label' ) ),
+		let $pageCreationOptions = $( [] );
+		const $heading = $( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-title-label' ) ),
 			$inputElement = $( '<input>' )
 				.attr( 'type', 'text' )
 				.addClass( 'cdx-text-input__input eg-create-page-title' )
@@ -57,13 +57,12 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	 * @instance
 	 */
 	RequestTitleForm.prototype.onCreateButtonClick = function () {
-		let trackName, action,
-			updatedTitle = this.$el.find( '.eg-create-page-title' ).val(),
+		const updatedTitle = this.$el.find( '.eg-create-page-title' ).val(),
 			method = this.getPageCreateMethod() || 'create';
 
-		action = this.pageExist ? 'editpage' : ( method === 'translate' ? 'createpage-translate' : 'createpage' );
+		const action = this.pageExist ? 'editpage' : ( method === 'translate' ? 'createpage-translate' : 'createpage' );
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.createpage
-		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance',
+		const trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance',
 			action,
 			mw.config.get( 'wgExternalGuidanceService' ),
 			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
@@ -263,15 +262,14 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	}
 
 	function onContributeToOriginalClick() {
-		let trackName,
-			sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
+		const sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
 			editParams = {
 				veaction: 'edit',
 				campaign: 'external-machine-translation'
 			};
 
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.edit-original
-		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'edit-original',
+		const trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'edit-original',
 			mw.config.get( 'wgExternalGuidanceService' ),
 			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
 			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
@@ -285,15 +283,14 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	}
 
 	function onExpandTargetArticleClick() {
-		let trackName,
-			sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
+		const sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) ),
 			editParams = {
 				veaction: 'edit',
 				campaign: 'external-machine-translation'
 			};
 
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.editpage
-		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'editpage',
+		const trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'editpage',
 			mw.config.get( 'wgExternalGuidanceService' ),
 			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
 			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
@@ -308,9 +305,8 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 	}
 
 	$( () => {
-		let trackName,
-			// eslint-disable-next-line no-jquery/no-global-selector
-			$createButton = $( '.eg-sp-contribute-create' ),
+		// eslint-disable-next-line no-jquery/no-global-selector
+		const $createButton = $( '.eg-sp-contribute-create' ),
 			// eslint-disable-next-line no-jquery/no-global-selector
 			$expandButton = $( '.eg-sp-contribute-expand' ),
 			// eslint-disable-next-line no-jquery/no-global-selector
@@ -326,7 +322,7 @@ const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 			.prop( 'disabled', false )
 			.on( 'click', onExpandTargetArticleClick );
 		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.specialpage
-		trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
+		const trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
 			mw.config.get( 'wgExternalGuidanceService' ),
 			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
 			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
