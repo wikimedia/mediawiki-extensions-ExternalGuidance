@@ -1,110 +1,106 @@
-( function () {
-	'use strict';
+/**
+ * Handles providing URLs to different wikis.
+ *
+ * @class
+ * @param {Object} siteconfig
+ */
+function SiteMapper( siteconfig ) {
+	this.config = siteconfig;
+}
 
-	/**
-	 * Handles providing URLs to different wikis.
-	 *
-	 * @class
-	 * @param {Object} siteconfig
-	 */
-	function SiteMapper( siteconfig ) {
-		this.config = siteconfig;
+/**
+ * Some wikis have domain names that do not match the content language.
+ * See: wgLanguageCode in operations/mediawiki-config/wmf-config/InitialiseSettings.php
+ *
+ * @param {string} language Language code
+ * @return {string}
+ */
+SiteMapper.prototype.getWikiDomainCode = function ( language ) {
+	const languageToWikiDomainMapping = mw.config.get( 'wgExternalGuidanceDomainCodeMapping' );
+
+	return languageToWikiDomainMapping[ language ] || language;
+};
+
+SiteMapper.prototype.getLanguageCodeForWikiDomain = function ( domain ) {
+	const mapping = mw.config.get( 'wgExternalGuidanceDomainCodeMapping' );
+
+	for ( const code in mapping ) {
+		if ( mapping[ code ] === domain ) {
+			return code;
+		}
 	}
 
-	/**
-	 * Some wikis have domain names that do not match the content language.
-	 * See: wgLanguageCode in operations/mediawiki-config/wmf-config/InitialiseSettings.php
-	 *
-	 * @param {string} language Language code
-	 * @return {string}
-	 */
-	SiteMapper.prototype.getWikiDomainCode = function ( language ) {
-		const languageToWikiDomainMapping = mw.config.get( 'wgExternalGuidanceDomainCodeMapping' );
+	return domain;
+};
 
-		return languageToWikiDomainMapping[ language ] || language;
-	};
+/**
+ * Get the API for a remote wiki.
+ *
+ * @param {string} language Language code
+ * @param {Object} [options] Api options
+ * @return {mw.ForeignApi} api
+ */
+SiteMapper.prototype.getApi = function ( language, options ) {
+	const domain = this.getWikiDomainCode( language );
+	const url = this.config.api.replace( '$1', domain );
+	options = Object.assign( { anonymous: true }, options );
+	return new mw.ForeignApi( url, options );
+};
 
-	SiteMapper.prototype.getLanguageCodeForWikiDomain = function ( domain ) {
-		const mapping = mw.config.get( 'wgExternalGuidanceDomainCodeMapping' );
+/**
+ * Get a URL to an article in a wiki for a given language.
+ *
+ * @param {string} language Language code
+ * @param {string} title Page title
+ * @param {Object} [params] Query parameters
+ * @return {string}
+ */
+SiteMapper.prototype.getPageUrl = function ( language, title, params ) {
+	let base = this.config.view,
+		extra = '';
 
-		for ( const code in mapping ) {
-			if ( mapping[ code ] === domain ) {
-				return code;
-			}
-		}
+	const domain = this.getWikiDomainCode( language );
+	if ( params && !$.isEmptyObject( params ) ) {
+		base = this.config.action || this.config.view;
+		extra = ( base.indexOf( '?' ) !== -1 ? '&' : '?' ) + $.param( params );
+	}
 
-		return domain;
-	};
+	return base
+		.replace( '$1', domain.replace( /\$/g, '$$$$' ) )
+		.replace( '$2', mw.util.wikiUrlencode( title ).replace( /\$/g, '$$$$' ) ) + extra;
+};
 
-	/**
-	 * Get the API for a remote wiki.
-	 *
-	 * @param {string} language Language code
-	 * @param {Object} [options] Api options
-	 * @return {mw.ForeignApi} api
-	 */
-	SiteMapper.prototype.getApi = function ( language, options ) {
-		const domain = this.getWikiDomainCode( language );
-		const url = this.config.api.replace( '$1', domain );
-		options = Object.assign( { anonymous: true }, options );
-		return new mw.ForeignApi( url, options );
-	};
+/**
+ * Get the URL for Special:CX on the needed wiki
+ * according to given source and target title and the target language.
+ *
+ * @param {string} sourceTitle
+ * @param {string} targetTitle
+ * @param {string} sourceLanguage
+ * @param {string} targetLanguage
+ * @param {Object} [extra] Additional query parameters
+ * @return {string} URL
+ */
+SiteMapper.prototype.getCXUrl = function (
+	sourceTitle,
+	targetTitle,
+	sourceLanguage,
+	targetLanguage,
+	extra
+) {
+	const cxPage = 'Special:ContentTranslation';
+	const queryParams = Object.assign( {
+		page: sourceTitle,
+		from: sourceLanguage,
+		to: targetLanguage,
+		targettitle: targetTitle
+	}, extra );
 
-	/**
-	 * Get a URL to an article in a wiki for a given language.
-	 *
-	 * @param {string} language Language code
-	 * @param {string} title Page title
-	 * @param {Object} [params] Query parameters
-	 * @return {string}
-	 */
-	SiteMapper.prototype.getPageUrl = function ( language, title, params ) {
-		let base = this.config.view,
-			extra = '';
+	const uri = new mw.Uri( this.getPageUrl( targetLanguage, cxPage ) );
+	Object.assign( uri.query, queryParams );
 
-		const domain = this.getWikiDomainCode( language );
-		if ( params && !$.isEmptyObject( params ) ) {
-			base = this.config.action || this.config.view;
-			extra = ( base.indexOf( '?' ) !== -1 ? '&' : '?' ) + $.param( params );
-		}
+	return uri.toString();
 
-		return base
-			.replace( '$1', domain.replace( /\$/g, '$$$$' ) )
-			.replace( '$2', mw.util.wikiUrlencode( title ).replace( /\$/g, '$$$$' ) ) + extra;
-	};
+};
 
-	/**
-	 * Get the URL for Special:CX on the needed wiki
-	 * according to given source and target title and the target language.
-	 *
-	 * @param {string} sourceTitle
-	 * @param {string} targetTitle
-	 * @param {string} sourceLanguage
-	 * @param {string} targetLanguage
-	 * @param {Object} [extra] Additional query parameters
-	 * @return {string} URL
-	 */
-	SiteMapper.prototype.getCXUrl = function (
-		sourceTitle,
-		targetTitle,
-		sourceLanguage,
-		targetLanguage,
-		extra
-	) {
-		const cxPage = 'Special:ContentTranslation';
-		const queryParams = Object.assign( {
-			page: sourceTitle,
-			from: sourceLanguage,
-			to: targetLanguage,
-			targettitle: targetTitle
-		}, extra );
-
-		const uri = new mw.Uri( this.getPageUrl( targetLanguage, cxPage ) );
-		Object.assign( uri.query, queryParams );
-
-		return uri.toString();
-
-	};
-
-	module.exports = SiteMapper;
-}() );
+module.exports = SiteMapper;
