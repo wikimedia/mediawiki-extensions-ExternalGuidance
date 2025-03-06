@@ -1,251 +1,252 @@
-const mobile = require( 'mobile.startup' );
 const SiteMapper = require( '../mw.externalguidance/sitemapper.js' );
 
-const View = mobile.View,
-	Overlay = mobile.Overlay,
-	overlayManager = mobile.getOverlayManager();
-
-function RequestTitleForm( options ) {
-	this.editParams = {
-		veaction: 'edit',
-		campaign: 'external-machine-translation'
-	};
-	this.pageExist = null;
-	this.sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
-	View.call( this, {
-		events: {
-			'input .eg-create-page-title': mw.util.debounce( RequestTitleForm.prototype.onTitleInput, 300 ),
-			'click .eg-create-page-button': 'onCreateButtonClick'
-		},
-		projectName: options.projectName,
-		sourceLanguage: options.sourceLanguage,
-		targetLanguage: options.targetLanguage,
-		sourcePage: options.sourcePage
-	} );
+/**
+ * Converts a jQuery object to an HTML string.
+ *
+ * @param {jQuery} jObj - The jQuery object to convert.
+ * @return {string} The HTML string representation of the jQuery object.
+ */
+function getHTMLFromjQuery( jObj ) {
+	const $container = $( '<div>' );
+	$container.append( jObj );
+	return $container.html();
 }
-OO.inheritClass( RequestTitleForm, View );
 
-RequestTitleForm.prototype.postRender = function () {
-	let $pageCreationOptions = $( [] );
-	const $heading = $( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-title-label' ) ),
-		$inputElement = $( '<input>' )
-			.attr( 'type', 'text' )
-			.addClass( 'cdx-text-input__input eg-create-page-title' )
-			.attr( 'autofocus', 'autofocus' )
-			.val( this.options.sourcePage ),
-		$input = $( '<div>' ).addClass( 'cdx-text-input' ).append( $inputElement ),
-		$p = $( '<p>' ).addClass( 'eg-create-page-desc' )
-			.text( mw.msg( 'externalguidance-specialpage-createpage-desc', this.options.projectName ) ),
-		$btn = $( '<button>' )
-			.addClass( 'eg-create-page-button cdx-button cdx-button--action-progressive cdx-button--weight-primary' )
-			.text( mw.msg( 'externalguidance-specialpage-createpage-button-label' ) );
-
-	if ( this.isDesktop() ) {
-		$pageCreationOptions = this.showPageCreationOptions();
+class RequestTitleForm {
+	constructor( options ) {
+		this.options = options;
+		this.sitemapper = new SiteMapper( mw.config.get( 'wgExternalGuidanceSiteTemplates' ) );
+		this.editParams = { veaction: 'edit', campaign: 'external-machine-translation' };
+		this.pageExist = null;
+		this.container = this.render();
+		this.attachEventHandlers();
 	}
-	this.$el.append( [ $heading, $input, $p, $pageCreationOptions, $btn ] );
-	this.$el.find( '.eg-create-page-title' ).trigger( 'focus' );
-	this.onTitleInput();
-	View.prototype.postRender.apply( this, arguments );
-};
 
-/**
- * Click handler for create-page button
- *
- * @memberof CreatePageOverlay
- * @instance
- */
-RequestTitleForm.prototype.onCreateButtonClick = function () {
-	const updatedTitle = this.$el.find( '.eg-create-page-title' ).val(),
-		method = this.getPageCreateMethod() || 'create';
+	render() {
+		const container = document.createElement( 'div' );
+		container.classList.add( 'eg-create-page-form', 'overlay-content' );
+		const heading = document.createElement( 'h3' );
+		heading.textContent = mw.msg( 'externalguidance-specialpage-createpage-title-label' );
 
-	const action = this.pageExist ? 'editpage' : ( method === 'translate' ? 'createpage-translate' : 'createpage' );
-	// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.createpage
-	const trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance',
-		action,
-		mw.config.get( 'wgExternalGuidanceService' ),
-		mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
-		mw.config.get( 'wgExternalGuidanceTargetLanguage' )
-	];
+		const inputElement = document.createElement( 'input' );
+		inputElement.type = 'text';
+		inputElement.classList.add( 'cdx-text-input__input', 'eg-create-page-title' );
+		inputElement.setAttribute( 'autofocus', 'autofocus' );
+		inputElement.value = this.options.sourcePage;
 
-	mw.track( trackName.join( '.' ), 1 );
+		const inputDiv = document.createElement( 'div' );
+		inputDiv.classList.add( 'cdx-text-input' );
+		inputDiv.appendChild( inputElement );
 
-	if ( action === 'createpage-translate' ) {
-		window.open( this.sitemapper.getCXUrl(
-			this.options.sourcePage,
-			updatedTitle,
-			this.options.sourceLanguage,
-			this.options.targetLanguage,
-			{ campaign: 'external-machine-translation' }
-		), '_blank' );
-	} else {
-		window.open( this.sitemapper.getPageUrl(
-			this.options.targetLanguage,
-			updatedTitle,
-			this.editParams
-		), '_blank' );
+		const descParagraph = document.createElement( 'p' );
+		descParagraph.classList.add( 'eg-create-page-desc' );
+		descParagraph.textContent = mw.msg( 'externalguidance-specialpage-createpage-desc', this.options.projectName );
+
+		const button = document.createElement( 'button' );
+		button.classList.add( 'eg-create-page-button', 'cdx-button', 'cdx-button--action-progressive', 'cdx-button--weight-primary' );
+		button.textContent = mw.msg( 'externalguidance-specialpage-createpage-button-label' );
+
+		container.appendChild( heading );
+		container.appendChild( inputDiv );
+		container.appendChild( descParagraph );
+
+		const pageCreationOptions = this.showPageCreationOptions();
+		container.appendChild( pageCreationOptions );
+		container.appendChild( button );
+		return container;
+
 	}
-};
 
-/**
- * Get the current selected method for creating new page
- *
- * @return {string} 'create' or 'translate'
- */
-RequestTitleForm.prototype.getPageCreateMethod = function () {
-	return this.$el.find( '[name=eg-create-method]:checked' ).val();
-};
+	attachEventHandlers() {
+		this.container.querySelector( '.eg-create-page-title' ).addEventListener( 'input',
+			mw.util.debounce( this.onTitleInput.bind( this ), 300 )
+		);
+		this.container.querySelector( '.eg-create-page-button' ).addEventListener( 'click', this.onCreateButtonClick.bind( this ) );
+	}
 
-/**
- * Check if the current page is in a desktop context
- *
- * @return {boolean}
- */
-RequestTitleForm.prototype.isDesktop = function () {
-	return mw.config.get( 'wgMFMode', 'desktop' ) === 'desktop';
-};
+	onCreateButtonClick() {
+		const updatedTitle = this.container.querySelector( '.eg-create-page-title' ).value;
+		const method = this.getPageCreateMethod() || 'create';
 
-/**
- * Render the options to create a new page.
- *
- * @return {jQuery}
- */
-RequestTitleForm.prototype.showPageCreationOptions = function () {
-	const $container = $( '<div>' ).addClass( 'eg-create-page-method-selection' );
+		const action = this.pageExist ? 'editpage' : ( method === 'translate' ? 'createpage-translate' : 'createpage' );
+		// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.createpage
+		const trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance',
+			action,
+			mw.config.get( 'wgExternalGuidanceService' ),
+			mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
+			mw.config.get( 'wgExternalGuidanceTargetLanguage' )
+		];
 
-	$container.append(
-		// Header
-		$( '<h3>' ).text( mw.msg( 'externalguidance-specialpage-createpage-methods-header' ) ),
+		mw.track( trackName.join( '.' ), 1 );
+
+		if ( action === 'createpage-translate' ) {
+			window.open( this.sitemapper.getCXUrl(
+				this.options.sourcePage,
+				updatedTitle,
+				this.options.sourceLanguage,
+				this.options.targetLanguage,
+				{ campaign: 'external-machine-translation' }
+			), '_blank' );
+		} else {
+			window.open( this.sitemapper.getPageUrl(
+				this.options.targetLanguage,
+				updatedTitle,
+				this.editParams
+			), '_blank' );
+		}
+	}
+
+	/**
+	 * Get the current selected method for creating new page
+	 *
+	 * @return {string} 'create' or 'translate'
+	 */
+	getPageCreateMethod() {
+		return this.container.querySelector( '[name=eg-create-method]:checked' ).value;
+	}
+
+	showPageCreationOptions() {
+		const container = document.createElement( 'div' );
+		container.classList.add( 'eg-create-page-method-selection' );
+
+		const header = document.createElement( 'h3' );
+		header.textContent = mw.msg( 'externalguidance-specialpage-createpage-methods-header' );
+		container.appendChild( header );
+
 		// Translate option - Default option.
-		$( '<div>' ).addClass( 'cdx-radio' ).append(
-			$( '<input>' ).attr( {
-				type: 'radio',
-				class: 'cdx-radio__input',
-				value: 'translate',
-				checked: 'checked',
-				id: 'eg-translate',
-				name: 'eg-create-method'
-			} ),
-			$( '<span>' ).attr( {
-				class: 'cdx-radio__icon'
-			} ),
-			$( '<label>' ).attr( {
-				class: 'cdx-radio__label',
-				for: 'eg-translate'
-			} ).html( mw.message( 'externalguidance-specialpage-createpage-create-from-scratch',
-				$.uls.data.getAutonym( this.options.sourceLanguage ),
-				$.uls.data.getAutonym( this.options.targetLanguage )
-			).parseDom() )
-		),
+		const translateDiv = document.createElement( 'div' );
+		translateDiv.classList.add( 'cdx-radio' );
+
+		const translateInput = document.createElement( 'input' );
+		translateInput.type = 'radio';
+		translateInput.classList.add( 'cdx-radio__input' );
+		translateInput.value = 'translate';
+		translateInput.checked = true;
+		translateInput.id = 'eg-translate';
+		translateInput.name = 'eg-create-method';
+		translateDiv.appendChild( translateInput );
+
+		const translateIcon = document.createElement( 'span' );
+		translateIcon.classList.add( 'cdx-radio__icon' );
+		translateDiv.appendChild( translateIcon );
+
+		const translateLabel = document.createElement( 'label' );
+		translateLabel.classList.add( 'cdx-radio__label' );
+		translateLabel.setAttribute( 'for', 'eg-translate' );
+
+		translateLabel.innerHTML = getHTMLFromjQuery( mw.message( 'externalguidance-specialpage-createpage-create-from-scratch',
+			$.uls.data.getAutonym( this.options.sourceLanguage ),
+			$.uls.data.getAutonym( this.options.targetLanguage )
+		).parseDom() );
+
+		translateDiv.appendChild( translateLabel );
+
+		container.appendChild( translateDiv );
+
 		// Start from scratch option.
-		$( '<div>' ).addClass( 'cdx-radio' ).append(
-			$( '<input>' ).attr( {
-				type: 'radio',
-				value: 'create',
-				id: 'eg-create',
-				class: 'cdx-radio__input',
-				name: 'eg-create-method'
-			} ),
-			$( '<span>' ).attr( {
-				class: 'cdx-radio__icon'
-			} ),
-			$( '<label>' ).attr( {
-				class: 'cdx-radio__label',
-				for: 'eg-create'
-			} ).html( mw.message( 'externalguidance-specialpage-createpage-create-from-translation' )
-				.parseDom() )
-		)
-	);
+		const createDiv = document.createElement( 'div' );
+		createDiv.classList.add( 'cdx-radio' );
 
-	return $container;
-};
+		const createInput = document.createElement( 'input' );
+		createInput.type = 'radio';
+		createInput.classList.add( 'cdx-radio__input' );
+		createInput.value = 'create';
+		createInput.id = 'eg-create';
+		createInput.name = 'eg-create-method';
+		createDiv.appendChild( createInput );
 
-/**
- * Title input handler
- *
- * @memberof CreatePageOverlay
- * @instance
- */
-RequestTitleForm.prototype.onTitleInput = function () {
-	const form = this,
-		$button = this.$el.find( '.eg-create-page-button' ),
-		title = this.$el.find( '.eg-create-page-title' ).val();
+		const createIcon = document.createElement( 'span' );
+		createIcon.classList.add( 'cdx-radio__icon' );
+		createDiv.appendChild( createIcon );
 
-	this.checkPageExist( this.options.targetLanguage, title )
-		.then( ( titleExist ) => {
-			$button.prop( 'disabled', !title );
+		const createLabel = document.createElement( 'label' );
+		createLabel.classList.add( 'cdx-radio__label' );
+		createLabel.setAttribute( 'for', 'eg-create' );
+		createLabel.innerHTML = getHTMLFromjQuery( mw.message( 'externalguidance-specialpage-createpage-create-from-translation' ).parseDom() );
+		createDiv.appendChild( createLabel );
 
-			if ( titleExist ) {
-				this.pageExist = true;
-				form.$el.find( '.eg-create-page-desc' )
-					.addClass( 'eg-create-page-error' )
-					.text(
-						mw.msg( 'externalguidance-specialpage-createpage-page-exist' )
-					);
-				$button.text( mw.msg( 'externalguidance-specialpage-createpage-button-label-edit' ) );
-			} else {
-				this.pageExist = false;
-				form.$el.find( '.eg-create-page-desc' )
-					.removeClass( 'eg-create-page-error' )
-					.text(
-						mw.msg( 'externalguidance-specialpage-createpage-desc', this.options.projectName )
-					);
-				$button.text( mw.msg( 'externalguidance-specialpage-createpage-button-label' ) );
-			}
-		} );
-};
+		container.appendChild( createDiv );
 
-RequestTitleForm.prototype.checkPageExist = function ( language, title ) {
-	const api = this.sitemapper.getApi( language );
-
-	// Short circuit empty titles
-	if ( title === '' ) {
-		return Promise.resolve( false );
+		return container;
 	}
 
-	// Reject titles with pipe in the name, as it has special meaning in the api
-	if ( /\|/.test( title ) ) {
-		return Promise.resolve( false );
+	/**
+	 * Title input handler
+	 *
+	 */
+	onTitleInput() {
+		const form = this,
+			button = this.container.querySelector( '.eg-create-page-button' ),
+			title = this.container.querySelector( '.eg-create-page-title' ).value;
+
+		this.checkPageExist( this.options.targetLanguage, title )
+			.then( ( titleExist ) => {
+				button.disabled = !title;
+
+				const descElement = form.container.querySelector( '.eg-create-page-desc' );
+
+				if ( titleExist ) {
+					this.pageExist = true;
+					descElement.classList.add( 'eg-create-page-error' );
+					descElement.textContent = mw.msg( 'externalguidance-specialpage-createpage-page-exist' );
+					button.textContent = mw.msg( 'externalguidance-specialpage-createpage-button-label-edit' );
+				} else {
+					this.pageExist = false;
+					descElement.classList.remove( 'eg-create-page-error' );
+					descElement.textContent = mw.msg( 'externalguidance-specialpage-createpage-desc', this.options.projectName );
+					button.textContent = mw.msg( 'externalguidance-specialpage-createpage-button-label' );
+				}
+			} );
 	}
 
-	return api.get( {
-		formatversion: 2,
-		action: 'query',
-		titles: title,
-		redirects: true
-	} ).then( ( response ) => {
-		const page = response.query.pages[ 0 ];
+	checkPageExist( language, title ) {
+		const api = this.sitemapper.getApi( language );
 
-		if ( page.missing || page.invalid ) {
-			return false;
+		// Short circuit empty titles
+		if ( title === '' ) {
+			return Promise.resolve( false );
 		}
 
-		return page.title;
-	} );
-};
+		// Reject titles with pipe in the name, as it has special meaning in the api
+		if ( /\|/.test( title ) ) {
+			return Promise.resolve( false );
+		}
 
+		return api.get( {
+			formatversion: 2,
+			action: 'query',
+			titles: title,
+			redirects: true
+		} ).then( ( response ) => {
+			const page = response.query.pages[ 0 ];
+
+			if ( page.missing || page.invalid ) {
+				return false;
+			}
+
+			return page.title;
+		} );
+	}
+}
 /**
  * Overlay helping to start a new page
  *
  * @param {Object} options Configuration options
- * @return {Overlay}
+ * @return {Element} Overlay element
  */
 function createPageOverlay( options ) {
-	const overlay = new Overlay(
-		Object.assign( {
-			className: 'overlay eg-createpage-overlay',
-			heading: mw.msg( 'externalguidance-specialpage-createpage-title' )
-		}, options )
-	);
+	const overlay = document.createElement( 'dialog' );
+	overlay.classList.add( 'eg-createpage-overlay' );
 
-	overlay.$el.find( '.overlay-content' ).append(
+	overlay.append(
 		new RequestTitleForm( {
 			projectName: options.projectName,
 			sourceLanguage: options.sourceLanguage,
 			targetLanguage: options.targetLanguage,
 			sourcePage: options.sourcePage
-		} ).$el
+		} ).container
 	);
+	document.body.appendChild( overlay );
 	return overlay;
 }
 
@@ -303,28 +304,39 @@ function onExpandTargetArticleClick() {
 	), '_blank' );
 }
 
-$( () => {
-	// eslint-disable-next-line no-jquery/no-global-selector
-	const $createButton = $( '.eg-sp-contribute-create' ),
-		// eslint-disable-next-line no-jquery/no-global-selector
-		$expandButton = $( '.eg-sp-contribute-expand' ),
-		// eslint-disable-next-line no-jquery/no-global-selector
-		$contributeToOriginalButton = $( '.eg-sp-contribute-to-original' );
-	overlayManager.add( '/create-article', openCreatePageOverlay );
-	$createButton
-		.prop( 'disabled', false )
-		.on( 'click', overlayManager.router.navigate.bind( null, '/create-article' ) );
-	$contributeToOriginalButton
-		.prop( 'disabled', false )
-		.on( 'click', onContributeToOriginalClick );
-	$expandButton
-		.prop( 'disabled', false )
-		.on( 'click', onExpandTargetArticleClick );
-	// Define tracker name with prefix counter.MediaWiki.ExternalGuidance.specialpage
+function init() {
+	const createButton = document.querySelector( '.eg-sp-contribute-create' ),
+		expandButton = document.querySelector( '.eg-sp-contribute-expand' ),
+		contributeToOriginalButton = document.querySelector( '.eg-sp-contribute-to-original' );
+
+	const dialog = openCreatePageOverlay();
+	if ( createButton ) {
+		createButton.disabled = false;
+		createButton.addEventListener( 'click', () => {
+			dialog.showModal();
+		} );
+	}
+
+	if ( contributeToOriginalButton ) {
+		contributeToOriginalButton.disabled = false;
+		contributeToOriginalButton.addEventListener( 'click', onContributeToOriginalClick );
+	}
+
+	if ( expandButton ) {
+		expandButton.disabled = false;
+		expandButton.addEventListener( 'click', onExpandTargetArticleClick );
+	}
+
 	const trackName = [ 'counter', 'MediaWiki', 'ExternalGuidance', 'specialpage',
 		mw.config.get( 'wgExternalGuidanceService' ),
 		mw.config.get( 'wgExternalGuidanceSourceLanguage' ),
 		mw.config.get( 'wgExternalGuidanceTargetLanguage' )
 	];
 	mw.track( trackName.join( '.' ), 1 );
-} );
+}
+
+if ( document.readyState === 'loading' ) {
+	document.addEventListener( 'DOMContentLoaded', init );
+} else {
+	init();
+}

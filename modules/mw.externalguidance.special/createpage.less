@@ -1,9 +1,12 @@
 @import 'mediawiki.skin.variables.less';
 
 .eg-createpage-overlay {
-	.overlay-content {
-		margin: 1em;
-	}
+	background-color: @background-color-base;
+	border: 1px solid @border-color-base;
+	border-radius: 2px;
+	box-shadow: 0 4px 8px 0 @box-shadow-color-alpha-base, 0 0 16px 0 @box-shadow-color-alpha-base;
+	max-width: 32rem;
+	max-height: calc( 100vh - 2.5rem );
 
 	.eg-create-page-title {
 		margin: 1em 0;
@@ -32,4 +35,8 @@
 	.eg-create-page-error + .eg-create-page-method-selection {
 		display: none;
 	}
+}
+
+.eg-createpage-overlay:open::backdrop {
+	background-color: @background-color-backdrop-light;
 }

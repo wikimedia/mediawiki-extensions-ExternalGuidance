@@ -160,12 +160,12 @@
 				"externalguidance-specialpage-createpage-create-from-translation"
 			],
 			"dependencies": [
-				"mobile.startup",
 				"codex-styles",
 				"mediawiki.jqueryMsg",
 				"jquery.uls.data",
 				"mediawiki.ForeignApi",
 				"mediawiki.util",
+				"mediawiki.Uri",
 				"mw.externalguidance.icons"
 			]
 		}
