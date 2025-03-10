@@ -40,9 +40,9 @@
 		},
 		"ExternalGuidanceSiteTemplates": {
 			"value": {
-				"view": "//$1.wikipedia.org/wiki/$2",
-				"action": "//$1.wikipedia.org/w/index.php?title=$2",
-				"api": "//$1.wikipedia.org/w/api.php"
+				"view": "https://$1.wikipedia.org/wiki/$2",
+				"action": "https://$1.wikipedia.org/w/index.php?title=$2",
+				"api": "https://$1.wikipedia.org/w/api.php"
 			},
 			"description": "URL templates for sites corresponding to other languages"
 		},
@@ -165,7 +165,6 @@
 				"jquery.uls.data",
 				"mediawiki.ForeignApi",
 				"mediawiki.util",
-				"mediawiki.Uri",
 				"mw.externalguidance.icons"
 			]
 		}

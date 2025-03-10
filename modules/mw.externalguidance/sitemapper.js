@@ -53,7 +53,7 @@ SiteMapper.prototype.getApi = function ( language, options ) {
  * @param {string} language Language code
  * @param {string} title Page title
  * @param {Object} [params] Query parameters
- * @return {string}
+ * @return {string} URL with the given title. The URL is with protocol and domain.
  */
 SiteMapper.prototype.getPageUrl = function ( language, title, params ) {
 	let base = this.config.view,
@@ -62,7 +62,8 @@ SiteMapper.prototype.getPageUrl = function ( language, title, params ) {
 	const domain = this.getWikiDomainCode( language );
 	if ( params && !$.isEmptyObject( params ) ) {
 		base = this.config.action || this.config.view;
-		extra = ( base.indexOf( '?' ) !== -1 ? '&' : '?' ) + $.param( params );
+		// eslint-disable-next-line es-x/no-array-prototype-includes
+		extra = ( base.includes( '?' ) ? '&' : '?' ) + $.param( params );
 	}
 
 	return base
@@ -96,11 +97,13 @@ SiteMapper.prototype.getCXUrl = function (
 		targettitle: targetTitle
 	}, extra );
 
-	const uri = new mw.Uri( this.getPageUrl( targetLanguage, cxPage ) );
-	Object.assign( uri.query, queryParams );
+	// eslint-disable-next-line compat/compat, es-x/no-object-fromentries
+	const currentParams = Object.fromEntries( new URLSearchParams( location.search ) );
+	const uri = new URL( this.getPageUrl( targetLanguage, cxPage ) );
+	// Merge the current params with queryParams
+	uri.search = new URLSearchParams( Object.assign( {}, currentParams, queryParams ) );
 
 	return uri.toString();
-
 };
 
 module.exports = SiteMapper;
