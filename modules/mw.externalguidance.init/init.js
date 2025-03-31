@@ -51,7 +51,7 @@ function detectContext() {
 	// Check If the page is coming via a configured referrer URL
 	if ( document.referrer ) {
 		const parentURL = new mw.Uri( document.referrer );
-		if ( mw.config.get( 'wgExternalGuidanceMTReferrers' ).indexOf( parentURL.host ) >= 0 ) {
+		if ( mw.config.get( 'wgExternalGuidanceMTReferrers' ).includes( parentURL.host ) ) {
 			context.name = 'machine-translation';
 			context.info.service = parentURL.host;
 			return context;

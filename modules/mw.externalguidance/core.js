@@ -189,7 +189,7 @@ MachineTranslationContext.prototype.showServiceProviderInfo = function () {
 		this.checkPageExistsRequest,
 		mw.loader.using( 'jquery.uls.data' )
 	).then( ( targetTitle ) => {
-		const privacyLink = this.service.toLowerCase().indexOf( 'google' ) >= 0 ?
+		const privacyLink = this.service.toLowerCase().includes( 'google' ) ?
 			this.privacyLinks.Google : null;
 
 		const overlay = new Overlay( {
