@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\ExternalGuidance\Tests;
 
-use ErrorPageError;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Exception\ErrorPageError;
 use MediaWiki\Extension\ExternalGuidance\SpecialExternalGuidance;
 use MediaWiki\Request\FauxRequest;
 use MediaWikiIntegrationTestCase;

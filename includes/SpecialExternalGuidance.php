@@ -8,7 +8,7 @@
 
 namespace MediaWiki\Extension\ExternalGuidance;
 
-use ErrorPageError;
+use MediaWiki\Exception\ErrorPageError;
 use MediaWiki\Html\Html;
 use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\MainConfigNames;
