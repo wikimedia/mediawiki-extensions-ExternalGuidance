@@ -105,6 +105,56 @@ class RequestTitleForm {
 		return this.container.querySelector( '[name=eg-create-method]:checked' ).value;
 	}
 
+	/**
+	 * Generate markup for a Codex Radio.
+	 *
+	 * @param {Object} radioData
+	 * @param {string} radioData.id
+	 * @param {string} radioData.value
+	 * @param {string} radioData.name
+	 * @param {string} radioData.label
+	 * @param {boolean} radioData.isChecked
+	 * @return {HTMLDivElement}
+	 */
+	getRadio( radioData ) {
+		const radioDiv = document.createElement( 'div' );
+		radioDiv.classList.add( 'cdx-radio' );
+
+		const radioWrapper = document.createElement( 'div' );
+		radioWrapper.classList.add( 'cdx-radio__wrapper' );
+		radioDiv.appendChild( radioWrapper );
+
+		const radioInput = document.createElement( 'input' );
+		radioInput.type = 'radio';
+		radioInput.classList.add( 'cdx-radio__input' );
+		radioInput.value = radioData.value;
+		radioInput.checked = radioData.isChecked;
+		radioInput.id = radioData.id;
+		radioInput.name = radioData.name;
+		radioWrapper.appendChild( radioInput );
+
+		const radioIcon = document.createElement( 'span' );
+		radioIcon.classList.add( 'cdx-radio__icon' );
+		radioWrapper.appendChild( radioIcon );
+
+		const radioLabel = document.createElement( 'div' );
+		radioLabel.classList.add( 'cdx-label', 'cdx-radio__label' );
+
+		const radioLabelElement = document.createElement( 'label' );
+		radioLabelElement.classList.add( 'cdx-label__label' );
+		radioLabelElement.setAttribute( 'for', radioData.id );
+		radioLabel.appendChild( radioLabelElement );
+
+		const radioLabelText = document.createElement( 'span' );
+		radioLabelText.classList.add( 'cdx-label__label__text' );
+		radioLabelElement.appendChild( radioLabelText );
+
+		radioLabelText.innerHTML = radioData.label;
+
+		radioWrapper.appendChild( radioLabel );
+		return radioDiv;
+	}
+
 	showPageCreationOptions() {
 		const container = document.createElement( 'div' );
 		container.classList.add( 'eg-create-page-method-selection' );
@@ -114,58 +164,29 @@ class RequestTitleForm {
 		container.appendChild( header );
 
 		// Translate option - Default option.
-		const translateDiv = document.createElement( 'div' );
-		translateDiv.classList.add( 'cdx-radio' );
-
-		const translateInput = document.createElement( 'input' );
-		translateInput.type = 'radio';
-		translateInput.classList.add( 'cdx-radio__input' );
-		translateInput.value = 'translate';
-		translateInput.checked = true;
-		translateInput.id = 'eg-translate';
-		translateInput.name = 'eg-create-method';
-		translateDiv.appendChild( translateInput );
-
-		const translateIcon = document.createElement( 'span' );
-		translateIcon.classList.add( 'cdx-radio__icon' );
-		translateDiv.appendChild( translateIcon );
-
-		const translateLabel = document.createElement( 'label' );
-		translateLabel.classList.add( 'cdx-radio__label' );
-		translateLabel.setAttribute( 'for', 'eg-translate' );
-
-		translateLabel.innerHTML = getHTMLFromjQuery( mw.message( 'externalguidance-specialpage-createpage-create-from-scratch',
-			$.uls.data.getAutonym( this.options.sourceLanguage ),
-			$.uls.data.getAutonym( this.options.targetLanguage )
-		).parseDom() );
-
-		translateDiv.appendChild( translateLabel );
-
-		container.appendChild( translateDiv );
+		const translateRadioData = {
+			id: 'eg-translate',
+			value: 'translate',
+			name: 'eg-create-method',
+			label: getHTMLFromjQuery( mw.message( 'externalguidance-specialpage-createpage-create-from-scratch',
+				$.uls.data.getAutonym( this.options.sourceLanguage ),
+				$.uls.data.getAutonym( this.options.targetLanguage )
+			).parseDom() ),
+			isChecked: true
+		};
+		const translateRadio = this.getRadio( translateRadioData );
+		container.appendChild( translateRadio );
 
 		// Start from scratch option.
-		const createDiv = document.createElement( 'div' );
-		createDiv.classList.add( 'cdx-radio' );
-
-		const createInput = document.createElement( 'input' );
-		createInput.type = 'radio';
-		createInput.classList.add( 'cdx-radio__input' );
-		createInput.value = 'create';
-		createInput.id = 'eg-create';
-		createInput.name = 'eg-create-method';
-		createDiv.appendChild( createInput );
-
-		const createIcon = document.createElement( 'span' );
-		createIcon.classList.add( 'cdx-radio__icon' );
-		createDiv.appendChild( createIcon );
-
-		const createLabel = document.createElement( 'label' );
-		createLabel.classList.add( 'cdx-radio__label' );
-		createLabel.setAttribute( 'for', 'eg-create' );
-		createLabel.innerHTML = getHTMLFromjQuery( mw.message( 'externalguidance-specialpage-createpage-create-from-translation' ).parseDom() );
-		createDiv.appendChild( createLabel );
-
-		container.appendChild( createDiv );
+		const createRadioData = {
+			id: 'eg-create',
+			value: 'create',
+			name: 'eg-create-method',
+			label: getHTMLFromjQuery( mw.message( 'externalguidance-specialpage-createpage-create-from-translation' ).parseDom() ),
+			isChecked: false
+		};
+		const createRadio = this.getRadio( createRadioData );
+		container.appendChild( createRadio );
 
 		return container;
 	}
