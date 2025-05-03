@@ -62,7 +62,7 @@ SiteMapper.prototype.getPageUrl = function ( language, title, params ) {
 	const domain = this.getWikiDomainCode( language );
 	if ( params && !$.isEmptyObject( params ) ) {
 		base = this.config.action || this.config.view;
-		// eslint-disable-next-line es-x/no-array-prototype-includes
+
 		extra = ( base.includes( '?' ) ? '&' : '?' ) + $.param( params );
 	}
 
