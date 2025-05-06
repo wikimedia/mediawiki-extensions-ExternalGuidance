@@ -94,10 +94,7 @@
 				"minerva": [
 					"mw.externalguidance.init/init.js"
 				]
-			},
-			"dependencies": [
-				"mediawiki.Uri"
-			]
+			}
 		},
 		"mw.externalguidance": {
 			"packageFiles": [

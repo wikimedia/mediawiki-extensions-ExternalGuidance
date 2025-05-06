@@ -237,21 +237,25 @@ MachineTranslationContext.prototype.rewriteMenuUrls = function ( targetLanguage 
 	// eslint-disable-next-line no-jquery/no-global-selector
 	const $menuLinks = $( 'nav .menu a' );
 	$menuLinks.each( function () {
-		const originalUri = new mw.Uri( this.href );
+		const originalUri = new URL( this.href, location );
 
 		// The key to know which special page this link points is data-event-name
 		const eventName = this.dataset.eventName;
 		if ( titleMap[ eventName ] ) {
 			let newUri;
-			if ( originalUri.query.title ) {
+			if ( originalUri.searchParams.get( 'title' ) ) {
 				newUri = originalUri;
 				// Change the host to new domain.
-				newUri.host = new mw.Uri( sitemapper.getPageUrl( targetLanguage ) ).host;
+				newUri.host = new URL( sitemapper.getPageUrl( targetLanguage ), location ).host;
 				// Change the title query value
-				newUri.query.title = titleMap[ eventName ];
+				newUri.searchParams.set( 'title', titleMap[ eventName ] );
 			} else {
-				newUri = new mw.Uri( sitemapper.getPageUrl(
-					targetLanguage, titleMap[ eventName ], originalUri.query ) );
+				newUri = new URL(
+					sitemapper.getPageUrl(
+						targetLanguage, titleMap[ eventName ], originalUri.query
+					),
+					location
+				);
 			}
 			this.href = newUri.toString();
 		}
