@@ -9,6 +9,8 @@
 	"externalguidance-machine-translation-contribute": "Ккъинхьегам бе",
 	"externalguidance-specialpage-title": "Авто-контент дика тайар",
 	"externalguidance-specialpage-mt-intro": "$1 дерриг а дуьнентӀера волонтерийн йукъара болх бу. ХӀара йаззам $2 версин авто гочдар ду, нийсса $3 верси чу хийца йиш йац, амма хьан хӀетте а гӀо дан йиш йу.",
+	"externalguidance-specialpage-mt-intro-pageexist": "$1 йазбина дерригдуьненан тӀера волонтераша. ХӀара йаззам авто гочбина бу $2 верси тӀера, ма-дарра хийца йиш йац.",
+	"externalguidance-specialpage-mt-pageexist": "ХӀокху агӀонан верси йу редакторша куьйга йолийна $1, ахь гӀо дан мегар ду иза шорйан.",
 	"externalguidance-specialpage-contribute-title": "Шен къинхьегам бан некъ",
 	"externalguidance-specialpage-contribute-create": "$1 йаззам кхолла, гочдарехь хьайна хиъна бакъдерш йукъа а далош.",
 	"externalguidance-specialpage-contribute-create-action": "ХӀокху темехь йаззам болабе",
