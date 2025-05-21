@@ -16,6 +16,6 @@
 	"externalguidance-specialpage-createpage-title-label": "Naslov",
 	"externalguidance-specialpage-createpage-button-label": "Napravi novu stranicu",
 	"externalguidance-specialpage-createpage-button-label-edit": "Uredite postojeću stranicu",
-	"externalguidance-specialpage-createpage-desc": "Nova stranica sa ovim naslovom biće napravljena na projektu $1",
+	"externalguidance-specialpage-createpage-desc": "Nova stranica sa ovim naslovom biće napravljena na $1",
 	"externalguidance-specialpage-createpage-page-exist": "Stranica sa ovim naslovom već postoji."
 }
