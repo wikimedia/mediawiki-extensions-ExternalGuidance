@@ -7,12 +7,12 @@
 #page-actions.eg-machine-translation-banner {
 	box-sizing: @box-sizing-base;
 	font-size: 1.1em;
-	padding: 8px;
-	background-color: #f8f9fa;
+	padding: @spacing-50;
+	background-color: @background-color-neutral-subtle;
 	border-top: @border-width-base @border-style-base #eaecf0;
 	border-bottom: @border-width-base @border-style-base #eaecf0;
 	overflow: hidden;
-	width: 100%;
+	width: @size-full;
 	animation: appear-eg-banner 0.5s;
 
 	@keyframes appear-eg-banner {
@@ -68,7 +68,7 @@
 	font-size: 0.85em;
 	color: @color-subtle;
 	min-height: 1.4em;
-	margin-bottom: 16px;
+	margin-bottom: @spacing-100;
 
 	&.missing {
 		color: @color-destructive;
@@ -84,10 +84,10 @@
 .eg-icon-robot {
 	display: inline-block;
 	.cdx-mixin-css-icon-size( @size-icon-medium );
-	margin-right: 8px;
+	margin-right: @spacing-50;
 }
 
 .eg-icon-edit-progressive {
 	.cdx-mixin-css-icon( @cdx-icon-edit, @color-progressive );
-	margin-right: 8px;
+	margin-right: @spacing-50;
 }
