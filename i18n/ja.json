@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Afaz",
-			"Kkairri"
+			"Kkairri",
+			"Shirayuki"
 		]
 	},
 	"externalguidance-desc": "ウィキペディアのコンテンツはさまざまな方法で外部に公開されている。このプロジェクトでは、人々が元の記事に戻って編集できるようにする。",
 	"externalguidance-machine-translation-heading": "自動翻訳",
-	"externalguidance-specialpage-mt-intro": "$1は世界中のボランティアによって書かれています。この記事は$2版から自動翻訳されており、$3版を直接編集することはできませんが、なお手助けすることができます。",
+	"externalguidance-specialpage-mt-intro": "$1は世界中のボランティアによって書かれています。この記事は$2版から自動翻訳されたもので、$3版は直接編集できませんが、支援する方法はあります。",
 	"externalguidance-specialpage-mt-intro-pageexist": "$1は世界中のボランティアによって書かれています。この記事は$2版から自動翻訳されており、$3版を直接編集することはできません。",
 	"externalguidance-specialpage-intro-machine": "自動翻訳は役立つ概要を提供しますが、常に正確なわけではありません。",
 	"externalguidance-specialpage-intro-human": "人の手で作られた記事の方がより良いです！",
