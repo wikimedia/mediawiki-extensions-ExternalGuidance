@@ -31,7 +31,7 @@
 		}
 	},
 	"ConfigRegistry": {
-		"ExternalGuidance": "GlobalVarConfig::newInstance"
+		"ExternalGuidance": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
 	},
 	"config": {
 		"ExternalGuidanceMTReferrers": {
