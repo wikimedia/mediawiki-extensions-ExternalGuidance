@@ -23,17 +23,10 @@ use MediaWiki\Title\Title;
  */
 class SpecialExternalGuidance extends SpecialPage {
 
-	/** @var LanguageNameUtils */
-	private $languageNameUtils;
-
-	/**
-	 * @param LanguageNameUtils $languageNameUtils
-	 */
 	public function __construct(
-		LanguageNameUtils $languageNameUtils
+		private readonly LanguageNameUtils $languageNameUtils,
 	) {
 		parent::__construct( 'ExternalGuidance', '', false );
-		$this->languageNameUtils = $languageNameUtils;
 	}
 
 	/**
