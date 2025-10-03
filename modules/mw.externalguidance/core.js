@@ -58,7 +58,7 @@
 		$header = $( '<span>' )
 			.addClass( 'eg-machine-translation-banner-header-label mw-ui-icon mw-ui-icon-before ' +
 				' mw-ui-icon-eg-robot' )
-			.html( mw.msg( 'externalguidance-machine-translation-heading' ) );
+			.text( mw.msg( 'externalguidance-machine-translation-heading' ) );
 
 		$headerContainer = $( '<li>' )
 			.addClass( 'eg-machine-translation-banner-header-container' )
@@ -108,7 +108,7 @@
 			} )
 			.append(
 				// Wrap the label in a span so that we can hide text and show icon on small screens
-				$( '<span>' ).html( mw.msg( 'externalguidance-machine-translation-contribute' ) )
+				$( '<span>' ).text( mw.msg( 'externalguidance-machine-translation-contribute' ) )
 			);
 	};
 
