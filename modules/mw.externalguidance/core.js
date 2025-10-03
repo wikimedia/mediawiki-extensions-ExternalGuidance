@@ -59,7 +59,7 @@ const mobile = require( 'mobile.startup' ),
 		$header = $( '<div>' ).append(
 			$( '<span>' ).addClass( 'eg-machine-translation-banner-header-label eg-icon' +
 				' eg-icon-robot' ),
-			$( '<span>' ).html( mw.msg( 'externalguidance-machine-translation-heading' ) )
+			$( '<span>' ).text( mw.msg( 'externalguidance-machine-translation-heading' ) )
 		);
 
 		$headerContainer = $( '<li>' )
@@ -109,7 +109,7 @@ const mobile = require( 'mobile.startup' ),
 			.append(
 				$( '<span>' ).addClass( 'eg-icon eg-icon-edit-progressive' ),
 				// Wrap the label in a span so that we can hide text and show icon on small screens
-				$( '<span>' ).html( mw.msg( 'externalguidance-machine-translation-contribute' ) )
+				$( '<span>' ).text( mw.msg( 'externalguidance-machine-translation-contribute' ) )
 			);
 	};
 
