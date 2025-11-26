@@ -4,6 +4,10 @@
 			"Sveinn í Felli"
 		]
 	},
+	"externalguidance-machine-translation-heading": "Sjálfvirk þýðing",
+	"externalguidance-specialpage-intro-machine": "Sjálfvirk þýðing veitir gagnlega yfirsýn en er ekki alltaf nákvæm.",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Byrja með þýðingu.</strong> Sjálfvirk þýðing verður notuð sem grunnur. Þú þarft gott vald á bæði $1 og $2 til að fara yfir og bæta upphaflegu þýðinguna.",
+	"externalguidance-machine-translation-provider-info-title": "Sjálfvirk þýðing frá $1",
 	"externalguidance-specialpage-createpage-title": "Búa til nýja síðu",
 	"externalguidance-specialpage-createpage-button-label": "Búa til nýja síðu"
 }
