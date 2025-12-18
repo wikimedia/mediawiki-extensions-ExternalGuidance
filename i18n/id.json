@@ -4,7 +4,8 @@
 			"Daud I.F. Argana",
 			"Joseagush",
 			"SPramudya (WMF)",
-			"Veracious"
+			"Veracious",
+			"Penyuwangi"
 		]
 	},
 	"externalguidance-desc": "Konten Wikipedia terekspos secara eksternal melalui berbagai cara yang berbeda, dan proyek ini bermaksud untuk memudahkan seseorang untuk dapat kembali ke laman asal dan berkontribusi didalamnya.",
@@ -13,7 +14,7 @@
 	"externalguidance-specialpage-title": "Meningkatkan konten otomatis",
 	"externalguidance-specialpage-mt-intro": "$1 ditulis oleh para relawan dari seluruh dunia. Artikel ini diterjemahkan secara otomatis dari versi dalam $2, dan tidak dapat disunting secara langsung dalam $3, tetapi Anda masih dapat membantu.",
 	"externalguidance-specialpage-mt-intro-pageexist": "$1 ditulis oleh relawan dari seluruh dunia. Artikel ini diterjemahkan secara otomatis dari versi dalam $2, dan tidak dapat disunting secara langsung.",
-	"externalguidance-specialpage-mt-pageexist": "Terdapat versi lain dari laman ini yang dimulai secara manual oleh para editor dalam $1 yang dapat Anda bantu kembangkan.",
+	"externalguidance-specialpage-mt-pageexist": "Terdapat versi lain dari laman ini yang dimulai secara manual oleh para penyunting dalam $1 yang dapat Anda bantu kembangkan.",
 	"externalguidance-specialpage-intro-machine": "Terjemahan otomatis memberikan gambaran umum yang berguna namun tidak selalu akurat.",
 	"externalguidance-specialpage-intro-human": "Jauh lebih baik memiliki artikel yang dibuat oleh manusia!",
 	"externalguidance-specialpage-contribute-title": "Cara berkontribusi",
