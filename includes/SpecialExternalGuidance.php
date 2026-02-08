@@ -26,7 +26,12 @@ class SpecialExternalGuidance extends SpecialPage {
 	public function __construct(
 		private readonly LanguageNameUtils $languageNameUtils,
 	) {
-		parent::__construct( 'ExternalGuidance', '', false );
+		parent::__construct( 'ExternalGuidance' );
+	}
+
+	/** @inheritDoc */
+	public function isListed() {
+		return false;
 	}
 
 	/**
