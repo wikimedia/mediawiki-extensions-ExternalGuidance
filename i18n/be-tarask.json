@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Red Winged Duck"
+			"Red Winged Duck",
+			"Ucukor"
 		]
 	},
 	"externalguidance-desc": "Зьмест Вікіпэдыі выкладаецца рознымі спосабамі на вонкавых сайтах, а гэты праект скіраваны на тое, каб палегчыць людзям вяртаньне да арыгінальнага зьместу і рабіць свой унёсак у яго.",
 	"externalguidance-machine-translation-heading": "Аўтаматычны пераклад",
-	"externalguidance-machine-translation-contribute": "Зрабіць унёсак"
+	"externalguidance-machine-translation-contribute": "Зрабіць унёсак",
+	"externalguidance-machine-translation-page-missing": "Бракуе ў $1"
 }
