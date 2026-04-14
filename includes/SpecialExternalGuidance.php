@@ -10,7 +10,7 @@ namespace MediaWiki\Extension\ExternalGuidance;
 
 use MediaWiki\Exception\ErrorPageError;
 use MediaWiki\Html\Html;
-use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\Language\LanguageNameUtils;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
