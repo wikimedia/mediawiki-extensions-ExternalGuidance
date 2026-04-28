@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ykhwong",
-			"아라"
+			"아라",
+			"Tensama0415"
 		]
 	},
 	"externalguidance-desc": "위키백과 콘텐츠는 여러 방법으로 외부에 노출되며 이 프로젝트의 의도는 사람들이 원래의 장소로 돌아와서 계속 기여하기 더 쉽게 만드는 것입니다.",
@@ -29,7 +30,7 @@
 	"externalguidance-specialpage-createpage-button-label-edit": "기존 문서 편집하기",
 	"externalguidance-specialpage-createpage-desc": "이 제목의 새 문서는 $1에 생성됩니다",
 	"externalguidance-specialpage-createpage-page-exist": "이 제목의 문서가 이미 존재합니다.",
-	"externalguidance-specialpage-param-missing": "필수 변수(from\", \"to\", \"page\", \"language\") 중 하나가 없습니다.",
+	"externalguidance-specialpage-param-missing": "필수 매개변수(from\", \"to\", \"page\", \"language\") 중 하나가 없습니다.",
 	"externalguidance-specialpage-invalid-language": "지정된 $1 언어는 유효한 언어 코드가 아닙니다.",
 	"externalguidance-specialpage-invalid-service": "지정된 $1 서비스는 유효한 서비스 이름이 아닙니다."
 }
