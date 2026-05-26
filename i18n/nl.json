@@ -4,7 +4,8 @@
 			"Elroy",
 			"Mainframe98",
 			"McDutchie",
-			"Romaine"
+			"Romaine",
+			"Siebrand"
 		]
 	},
 	"externalguidance-desc": "De inhoud van Wikipedia wordt op verschillende manieren extern beschikbaar gesteld. Dit project wil het voor mensen makkelijk maken om terug te keren naar de oorsprong en eraan bij te dragen.",
@@ -43,5 +44,5 @@
 	"externalguidance-specialpage-createpage-page-exist": "Er bestaat al een pagina met deze titel.",
 	"externalguidance-specialpage-param-missing": "Een van de verplichte parameters (“from”, “to”, “page” en “language”) ontbreekt.",
 	"externalguidance-specialpage-invalid-language": "De opgegeven taal, $1, is geen geldige taalcode.",
-	"externalguidance-specialpage-invalid-service": "De opgegeven service, $1, is geen geldige servicenaam."
+	"externalguidance-specialpage-invalid-service": "De opgegeven dienst, $1, is geen geldige servicenaam."
 }
