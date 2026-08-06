@@ -97,7 +97,6 @@ SiteMapper.prototype.getCXUrl = function (
 		targettitle: targetTitle
 	}, extra );
 
-	// eslint-disable-next-line compat/compat, es-x/no-object-fromentries
 	const currentParams = Object.fromEntries( new URLSearchParams( location.search ) );
 	const uri = new URL( this.getPageUrl( targetLanguage, cxPage ) );
 	// Merge the current params with queryParams
