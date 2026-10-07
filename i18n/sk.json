@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"KormiSK",
 			"Luky001"
 		]
 	},
-	"externalguidance-desc": "Obsah Wikipédie sa zobrazuje externe rôznymi spôsobmi a tento projekt má v úmysle uľahčiť ľuďom vrátiť sa k jeho pôvodu a prispieť do neho."
+	"externalguidance-desc": "Obsah Wikipédie sa zobrazuje externe rôznymi spôsobmi a tento projekt má v úmysle uľahčiť ľuďom vrátiť sa k jeho pôvodu a prispieť do neho.",
+	"externalguidance-machine-translation-heading": "Automatický preklad",
+	"externalguidance-specialpage-intro-machine": "Automatický preklad poskytuje užitočný prehľad, ale nie je vždy presný.",
+	"externalguidance-specialpage-createpage-create-from-scratch": "<strong>Začať z prekladu.</strong> Automatický preklad sa použije ako počiatočný bod. Potrebujete dobré znalosti jazykov $1 a $2, aby ste mohli posúdiť a vylepšiť prvotný preklad",
+	"externalguidance-machine-translation-provider-info-title": "Automatický preklad z jazyka $1"
 }
